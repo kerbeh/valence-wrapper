@@ -1,6 +1,8 @@
 <?php
+namespace ValenceWrapper;
 
-interface HttpClient {
+interface HttpClient
+{
 
     public function get($url);
 
