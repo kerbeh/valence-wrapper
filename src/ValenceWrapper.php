@@ -1,12 +1,13 @@
 <?php
 
-namespace ValenceWrapper\ValenceApi;
+namespace ValenceWrapper;
 
-use GuzzleHttp\Client;
 use D2LAppContextFactory;
 use D2LHostSpec;
+use GuzzleHttp\Client;
 
-class ValenceApi {
+class ValenceApi
+{
 
     protected $client;
 
@@ -55,7 +56,8 @@ class ValenceApi {
      * @param type $appId
      * @param type $appKey
      */
-    public function __construct(HttpClient $client, $userId, $userKey, $appId, $appKey) {
+    public function __construct(HttpClient $client, $userId, $userKey, $appId, $appKey)
+    {
 
         // Create a HTTP client
         $this->client = $client;
@@ -78,7 +80,8 @@ class ValenceApi {
      * @param type $userKey
      * @return userContext
      */
-    protected function setUserContext($appContext, $hostSpec, $userId, $userKey) {
+    protected function setUserContext($appContext, $hostSpec, $userId, $userKey)
+    {
 
         $userContext = $appContext->createUserContextFromHostSpec($hostSpec, $userId, $userKey);
 
@@ -91,7 +94,8 @@ class ValenceApi {
      * @param type $appKey
      * @return type
      */
-    protected function setAppContext($appId, $appKey) {
+    protected function setAppContext($appId, $appKey)
+    {
 
         // Create authContext
         $appContextFactory = new D2LAppContextFactory();
@@ -107,7 +111,8 @@ class ValenceApi {
      * @param type $verb
      * @return String
      */
-    public function authenticateUri($route, $verb) {
+    public function authenticateUri($route, $verb)
+    {
         $uri = $this->userContext()->createAuthenticatedUri($route, $verb);
 
         return $uri;
@@ -117,7 +122,8 @@ class ValenceApi {
      * Getter for the HTTP client
      * @return Client
      */
-    public function getClient() {
+    public function getClient()
+    {
         return $this->client;
     }
 
