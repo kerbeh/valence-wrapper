@@ -24,10 +24,8 @@
     },
     "scripts": {},
     "autoload": {
-        "autoload": {
-            "psr-4": {
-                "ValenceWrapper\\": "src/"
-            }
+        "psr-4": {
+            "ValenceWrapper\\": "src/"
         }
     }
 }
