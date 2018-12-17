@@ -1,0 +1,10 @@
+<?xml version="1.0"?>
+<deployment-config>
+    <exclusions>
+        <pattern>/data/*</pattern>
+    </exclusions>
+    <tasks>
+        <pre-deploy>/usr/local/bin/composer install --prefer-dist --optimize-autoloader</pre-deploy>
+        <pre-deploy>/usr/local/bin/composer run test</pre-deploy>
+    </tasks>
+</deployment-config>
