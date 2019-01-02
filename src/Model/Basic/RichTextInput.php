@@ -32,10 +32,17 @@ class RichTextInput {
      */
     private $type;
 
+    /**
+     * Set the content and content type if supplied or set as blank text
+     * @param type $content
+     * @param type $type
+     */
     public function __construct($content, $type) {
 
-        $this->setContent($content);
-        $this->setType($type);
+        $dfaultType = self::TEXT;
+
+        $this->content = (!empty($content)) ? $content : "";
+        (!empty($type)) ? $this->setType($type) : $this->setType($dfaultType);
     }
 
     public function getContent() {
@@ -84,10 +91,10 @@ class RichTextInput {
 
         switch ($lowerType) {
             case "text":
-                $this->type = TEXT;
+                $this->type = self::TEXT;
                 break;
             case "html":
-                $this->type = HTML;
+                $this->type = self::HTML;
                 break;
             default:
                 throw new Exception("$type is not valid for RichTextInput");

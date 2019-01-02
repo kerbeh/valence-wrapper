@@ -8,6 +8,9 @@ use GuzzleHttp\Client;
 
 class ValenceApi {
 
+    const le_version = "1.26";
+    const lp_version = "1.18";
+
     protected $client;
 
     /**
