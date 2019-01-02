@@ -5,22 +5,19 @@ namespace Tests\Unit;
 use PHPUnit\Framework\TestCase;
 use ValenceWrapper\GuzzleAdapter;
 use ValenceWrapper\ValenceApi;
+use ValenceWrapper\Model\Grade\IncomingGradeValueNumeric;
 
-class ValenceWrapperTest extends TestCase
-{
+class ValenceWrapperTest extends TestCase {
 
-/** @test */
-    public function testGuzzleHttpClient()
-    {
+    /** @test */
+    public function testGuzzleHttpClient() {
         $httpClient = new GuzzleAdapter;
 
         $this->assertInstanceOf(GuzzleAdapter::class, $httpClient);
-
     }
 
-/** @test */
-    public function testValenceApi()
-    {
+    /** @test */
+    public function testValenceApi() {
 
         $userId = "1";
         $userKey = "userKey";
@@ -36,7 +33,27 @@ class ValenceWrapperTest extends TestCase
 
         $this->assertInstanceOf(GuzzleAdapter::class, $valenceApi->getClient());
         $this->assertInstanceOf(ValenceApi::class, $valenceApi);
+    }
 
+    /** @test */
+    public function testIncomingGradeValueNumericModel() {
+        $gradeObjectType = "1";
+        $pointsNumerator = "10";
+        $comments = "";
+        $privateComments = "";
+
+        $incomingGradeValueNumericArray = [
+            "GradeObjectType" => $gradeObjectType,
+            "PointsNumerator" => $pointsNumerator,
+            "Comments" => $comments,
+            "PrivateComments" => $privateComments,
+        ];
+
+        $incomingGradeValueNumeric = new IncomingGradeValueNumeric($incomingGradeValueNumericArray);
+        $this->assertInstanceOf(IncomingGradeValueNumeric::class, $incomingGradeValueNumeric);
+
+        $this->assertEquals(10, $incomingGradeValueNumeric->getPointsNumerator());
+        $this->assertEquals(1, $incomingGradeValueNumeric->getGradeObjectType());
     }
 
 }
