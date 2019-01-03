@@ -53,6 +53,13 @@ class RichTextInput {
         return $this->type;
     }
 
+    public function getArray() {
+        return [
+            "Content" => $this->getContent(),
+            "Type" => $this->getType()
+        ];
+    }
+
     /**
      * Checks if the content matches the declared type and assigns the content
      * Throws error is there is a mismatch

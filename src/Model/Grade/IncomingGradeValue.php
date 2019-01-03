@@ -9,6 +9,7 @@
 namespace ValenceWrapper\Model\Grade;
 
 use ValenceWrapper\Model\Basic\RichTextInput;
+use ValenceWrapper\Model\BaseValenceModel;
 
 /**
  * As with grade objects, the framework handles incoming grade values slightly differently
@@ -17,14 +18,14 @@ use ValenceWrapper\Model\Basic\RichTextInput;
  * @url https://docs.valence.desire2learn.com/res/grade.html#Grade.IncomingGradeValue
  * @author ktrist
  */
-class IncomingGradeValue {
+class IncomingGradeValue extends BaseValenceModel {
 
     protected $comments;
     protected $privateComments;
 
     public function __construct($incomingGradeValueNumeric) {
-        $this->comments = (!empty($incomingGradeValueNumeric["Comments"])) ? $incomingGradeValueNumeric["Comments"] : new RichTextInput(null, null);
-        $this->privateComments = (!empty($incomingGradeValueNumeric["PrivateComments"])) ? $incomingGradeValueNumeric["PrivateComments"] : new RichTextInput(null, null);
+        $this->comments = (!empty($incomingGradeValueNumeric["Comments"])) ? $incomingGradeValueNumeric["Comments"] : Null;
+        $this->privateComments = (!empty($incomingGradeValueNumeric["PrivateComments"])) ? $incomingGradeValueNumeric["PrivateComments"] : Null;
     }
 
     public function getComments() {
@@ -35,11 +36,11 @@ class IncomingGradeValue {
         return $this->privateComments;
     }
 
-    public function setComments($comments) {
+    public function setComments(RichTextInput $comments) {
         $this->comments = $comments;
     }
 
-    public function setPrivateComments($privateComments) {
+    public function setPrivateComments(RichTextInput $privateComments) {
         $this->privateComments = $privateComments;
     }
 

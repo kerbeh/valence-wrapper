@@ -19,8 +19,8 @@ class IncomingGradeValueNumeric Extends IncomingGradeValue {
 
     Const GradeObjectType = 1;
 
-    private $gradeObjectType;
-    private $pointsNumerator;
+    protected $gradeObjectType;
+    protected $pointsNumerator;
 
     public function __construct($incomingGradeValueNumeric) {
         parent::__construct($incomingGradeValueNumeric);

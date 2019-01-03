@@ -8,12 +8,14 @@
 
 namespace ValenceWrapper\Model\Grade;
 
+use ValenceWrapper\Model\BaseValenceModel;
+
 /**
  * The framework can provide grade values slightly differently depending upon whether the underlying grade object type is a computable value, or not (basically, only Text (4) grade types are not computable).
  * @url https://docs.valence.desire2learn.com/res/grade.html#Grade.GradeValue
  * @author ktrist
  */
-class GradeValue {
+class GradeValue Extends BaseValenceModel {
 
     const NumericType = 1;
     const PassFailType = 2;
@@ -22,100 +24,100 @@ class GradeValue {
      * D2L defined user UID
      * @var String
      */
-    private $userId;
+    protected $userId;
 
     /**
      * D2L UID for a unit
      * @var String
      */
-    private $orgUnitId;
+    protected $orgUnitId;
 
     /**
      * The grade as displayed to the users.
      * May be a letter grade, percentage etc.
      * @var String
      */
-    private $displayedGrade;
+    protected $displayedGrade;
 
     /**
      * D2L UID for the grade item
      * @var String
      */
-    private $gradeObjectIdentifier;
+    protected $gradeObjectIdentififier;
 
     /**
      * Pretty Name of the Grade Item
      * @var String
      */
-    private $gradeObjectName;
+    protected $gradeObjectName;
 
     /**
      * Numeric value of the Grade item type
      * @var Int
      */
-    private $gradeObjectType;
+    protected $gradeObjectType;
 
     /**
      * Name of the type of grade item i.e. Numeric, Text
      * @var String
      */
-    private $gradeObjectTypeName;
+    protected $gradeObjectTypeName;
 
     /**
      * Composite of text comments, visible to the student
      * @var String
      */
-    private $comments;
+    protected $comments;
 
     /**
      * Text comments of the grade, visible to graders only
      * @var String
      */
-    private $privateComments;
+    protected $privateComments;
 
     /**
      * The numerator of the grade
      * Only used in Commputable non text grades
      * @var String
      */
-    private $pointsNumerator;
+    protected $pointsNumerator;
 
     /**
      * The denominator of the grade
      * Only used in Commputable non text grades
      * @var String
      */
-    private $pointsDenominator;
+    protected $pointsDenominator;
 
     /**
      * The weighted denominator of the grade
      * Only used in Commputable non text grades
      * @var String
      */
-    private $weightedDenominator;
+    protected $weightedDenominator;
 
     /**
      * The numerator of the grade
      * Only used in Commputable non text grades
      * @var String
      */
-    private $weightedNumerator;
+    protected $weightedNumerator;
 
     public function __construct($grade) {
 
-        $this->userId = (!empty($grade[""])) ? $grade[""] : null;
-        $this->orgUnitId = (!empty($grade[""])) ? $grade[""] : null;
-        $this->displayedGrade = (!empty($grade[""])) ? $grade[""] : null;
-        $this->gradeObjectIdentifier = (!empty($grade[""])) ? $grade[""] : null;
-        $this->gradeObjectName = (!empty($grade[""])) ? $grade[""] : null;
-        $this->gradeObjectType = (!empty($grade[""])) ? $grade[""] : null;
-        $this->gradeObjectTypeName = (!empty($grade[""])) ? $grade[""] : null;
-        $this->comments = (!empty($grade[""])) ? $grade[""] : null;
-        $this->privateComments = (!empty($grade[""])) ? $grade[""] : null;
-        $this->pointsNumerator = (!empty($grade[""])) ? $grade[""] : null;
-        $this->pointsDenominator = (!empty($grade[""])) ? $grade[""] : null;
-        $this->weightedDenominator = (!empty($grade[""])) ? $grade[""] : null;
-        $this->weightedNumerator = (!empty($grade[""])) ? $grade[""] : null;
+        $this->userId = (!empty($grade["UserId"])) ? $grade["UserId"] : null;
+        $this->orgUnitId = (!empty($grade["OrgUnitId"])) ? $grade["OrgUnitId"] : null;
+        $this->displayedGrade = (!empty($grade["DisplayedGrade"])) ? $grade["DisplayedGrade"] : null;
+        $this->gradeObjectIdentififier = (!empty($grade["GradeObjectIdentififier"])) ? $grade["GradeObjectIdentififier"] : null;
+        $this->gradeObjectName = (!empty($grade["GradeObjectName"])) ? $grade["GradeObjectName"] : null;
+        $this->gradeObjectType = (!empty($grade["GradeObjectType"])) ? $grade["GradeObjectType"] : null;
+        $this->gradeObjectTypeName = (!empty($grade["GradeObjectTypeName"])) ? $grade["GradeObjectTypeName"] : null;
+        $this->comments = (!empty($grade["Comments"])) ? $grade["Comments"] : null;
+        $this->privateComments = (!empty($grade["PrivateComments"])) ? $grade["PrivateComments"] : null;
+        $this->pointsNumerator = (!empty($grade["PointsNumerator"])) ? $grade["PointsNumerator"] : null;
+        $this->pointsDenominator = (!empty($grade["PointsDenominator"])) ? $grade["PointsDenominator"] : null;
+        $this->weightedDenominator = (!empty($grade["WeightedDenominator"])) ? $grade["WeightedDenominator"] : null;
+        $this->weightedNumerator = (!empty($grade["WeightedNumerator"])) ? $grade["WeightedNumerator"] : null;
     }
 
     public function getUserId(): String {
