@@ -4,13 +4,14 @@ namespace Tests\Unit;
 
 use PHPUnit\Framework\TestCase;
 use ValenceWrapper\GuzzleAdapter;
-use ValenceWrapper\ValenceApi;
+use ValenceWrapper\ValenceInstance;
 use ValenceWrapper\Model\Grade\IncomingGradeValueNumeric;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Grade\GradeObjectCategoryData;
 use DateTime;
 use ValenceWrapper\Model\Grade\GradeObjectNumeric;
 use ValenceWrapper\Model\Grade\GradeValue;
+use ValenceWrapper\Model\User\User;
 
 class ValenceWrapperTest extends TestCase {
 
@@ -22,7 +23,7 @@ class ValenceWrapperTest extends TestCase {
     }
 
     /** @test */
-    public function testValenceApi() {
+    public function testValenceInstance() {
 
         $userId = "1";
         $userKey = "userKey";
@@ -34,10 +35,10 @@ class ValenceWrapperTest extends TestCase {
         $protocol = "HTTPS";
 
         $httpClient = new GuzzleAdapter;
-        $valenceApi = new ValenceApi($httpClient, $userId, $userKey, $appId, $appKey, $host, $port, $protocol);
+        $valenceInstance = new ValenceInstance($httpClient, $userId, $userKey, $appId, $appKey, $host, $port, $protocol);
 
-        $this->assertInstanceOf(GuzzleAdapter::class, $valenceApi->getClient());
-        $this->assertInstanceOf(ValenceApi::class, $valenceApi);
+        $this->assertInstanceOf(GuzzleAdapter::class, $valenceInstance->getClient());
+        $this->assertInstanceOf(ValenceInstance::class, $valenceInstance);
     }
 
     /** @test */
@@ -158,6 +159,21 @@ class ValenceWrapperTest extends TestCase {
 
         $this->assertJsonStringEqualsJsonString($incomingGradeValueNumericTestObject->toJson(), '{"GradeObjectType":1, "PointsNumerator":10, "Comments":null, "PrivateComments":null}');
         $this->assertInstanceOf(IncomingGradeValueNumeric::class, $incomingGradeValueNumericTestObject);
+    }
+
+    public function testUser() {
+
+        $userTestArray = [
+            "Identifier" => 12345,
+            "DisplayName" => "Bob User",
+            "emailAddress" => "bob@example.com",
+            "orgDefinedId" => 12345,
+            "profileBadgeUrl" => null,
+            "profileIdentifier" => null,
+        ];
+
+        $UserTestObject = new User($userTestArray);
+        $this->assertInstanceOf(User::class, $UserTestObject);
     }
 
 }
