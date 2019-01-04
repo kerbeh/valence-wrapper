@@ -8,42 +8,44 @@
 
 namespace ValenceWrapper\Model\User;
 
+use ValenceWrapper\Model\BaseValenceModel;
+
 /**
  * Description of User
  *
  * @author ktrist
  */
-class User {
+class User extends BaseValenceModel {
 
     /**
      * D2L UID for the user
      * @var String
      */
-    private $identifier;
+    protected $identifier;
 
     /**
      * Combined Firstname + Lastname of the user
      * @var String
      */
-    private $displayName;
+    protected $displayName;
 
     /**
      * email address of the user
      * @var String
      */
-    private $emailAddress;
+    protected $emailAddress;
 
     /**
      * The ID of the user as set by the business i/e/ staff Id number
      * @var String
      */
-    private $orgDefinedId;
+    protected $orgDefinedId;
 
     /**
      * Api URL to the users profile image
      * @var type
      */
-    private $profileBadgeUrl;
+    protected $profileBadgeUrl;
 
     /**
      * Opaque UID for a d2l user.
@@ -51,7 +53,7 @@ class User {
      * i.e. when privacy is needed or enforced by permissions
      * @var String
      */
-    private $profileIdentifier;
+    protected $profileIdentifier;
 
     public function __construct($user) {
 

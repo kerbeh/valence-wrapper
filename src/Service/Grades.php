@@ -6,7 +6,10 @@
  * and open the template in the editor.
  */
 
+namespace ValenceWrapper\Service;
+
 use ValenceWrapper\Model\Grade\GradeValue;
+use ValenceWrapper\ValenceInstance;
 
 /**
  * Description of Grades
@@ -14,6 +17,16 @@ use ValenceWrapper\Model\Grade\GradeValue;
  * @author ktrist
  */
 class Grades {
+
+    protected $le_version;
+    protected $valenceInstance;
+    protected $httpClient;
+
+    public function __construct(ValenceInstance $valenceInstance) {
+        $this->valenceInstance = $valenceInstance;
+        $this->le_version = $valenceInstance::le_version;
+        $this->httpClient = $this->valenceInstance->getClient();
+    }
 
     /**
      * Retrieve a specific grade value for a particular user assigned in an org unit.
@@ -23,17 +36,24 @@ class Grades {
      * @param type $iserId
      * @return {Object} ValenceWrapper\Model\Grade\GradeValue
      */
-    public function getUserGrades($orgUnitId, $gradeObjectId, $userId) {
-
-        $urlStem = "/d2l/api/le/(version)/$orgUnitId/grades/$gradeObjectId/values/$userId";
+    public function getUserGrade($orgUnitId, $gradeObjectId, $userId) {
+        $urlStem = "/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/$userId";
+        $apiResponse = $this->httpClient->get($this->valenceInstance->authenticateUri($urlStem, "GET"));
+        $gradeValue = new GradeValue($apiResponse->getJsonResponse());
+        return $gradeValue;
     }
 
     /**
-     * Retrieve each user’s grade value for a particular grade object.
-     * @param type $param
+     * @url https://docs.valence.desire2learn.com/res/grade.html?highlight=displayedgrade#get--d2l-api-le-(version)-(orgUnitId)-grades-(gradeObjectId)-values-
+     * @param type $orgUnitId
+     * @param type $gradeObjectId
+     * @return string
      */
     public function getGrades($orgUnitId, $gradeObjectId) {
-        $urlStem = "/d2l/api/le/(version)/$orgUnitId/grades/$gradeObjectId/values/";
+        $urlStem = "/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/";
+
+        $apiResponse = $this->httpClient->get($this->valenceInstance->authenticateUri($urlStem, "GET"));
+        return $apiResponse->getJsonResponse();
     }
 
 }

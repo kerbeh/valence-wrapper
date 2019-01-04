@@ -172,4 +172,56 @@ class GradeValue Extends BaseValenceModel {
         return $this->weightedNumerator;
     }
 
+    public function setUserId(String $userId) {
+        $this->userId = $userId;
+    }
+
+    public function setOrgUnitId(String $orgUnitId) {
+        $this->orgUnitId = $orgUnitId;
+    }
+
+    public function setDisplayedGrade(String $displayedGrade) {
+        $this->displayedGrade = $displayedGrade;
+    }
+
+    public function setGradeObjectIdentififier(String $gradeObjectIdentififier) {
+        $this->gradeObjectIdentififier = $gradeObjectIdentififier;
+    }
+
+    public function setGradeObjectName(String $gradeObjectName) {
+        $this->gradeObjectName = $gradeObjectName;
+    }
+
+    public function setGradeObjectType(Int $gradeObjectType) {
+        $this->gradeObjectType = $gradeObjectType;
+    }
+
+    public function setGradeObjectTypeName(String $gradeObjectTypeName) {
+        $this->gradeObjectTypeName = $gradeObjectTypeName;
+    }
+
+    public function setComments(String $comments) {
+        $this->comments = $comments;
+    }
+
+    public function setPrivateComments(String $privateComments) {
+        $this->privateComments = $privateComments;
+    }
+
+    public function setPointsNumerator(String $pointsNumerator) {
+        $this->pointsNumerator = $pointsNumerator;
+    }
+
+    public function setPointsDenominator(String $pointsDenominator) {
+        $this->pointsDenominator = $pointsDenominator;
+    }
+
+    public function setWeightedDenominator(String $weightedDenominator) {
+        $this->weightedDenominator = $weightedDenominator;
+    }
+
+    public function setWeightedNumerator(String $weightedNumerator) {
+        $this->weightedNumerator = $weightedNumerator;
+    }
+
 }
