@@ -24,7 +24,7 @@ class IncomingGradeValueNumeric Extends IncomingGradeValue {
 
     public function __construct($incomingGradeValueNumeric) {
         parent::__construct($incomingGradeValueNumeric);
-        $this->pointsNumerator = (!empty($incomingGradeValueNumeric["PointsNumerator"])) ? $incomingGradeValueNumeric["PointsNumerator"] : 0;
+        $this->pointsNumerator = (!empty($incomingGradeValueNumeric["PointsNumerator"])) ? $incomingGradeValueNumeric["PointsNumerator"] : Null;
         $this->gradeObjectType = self::GradeObjectType;
     }
 

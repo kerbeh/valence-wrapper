@@ -157,7 +157,7 @@ class ValenceWrapperTest extends TestCase {
 
         $incomingGradeValueNumericTestObject = new IncomingGradeValueNumeric($testIncomingGradeItemNumericTestArray);
 
-        $this->assertJsonStringEqualsJsonString($incomingGradeValueNumericTestObject->toJson(), '{"GradeObjectType":1, "PointsNumerator":10, "Comments":null, "PrivateComments":null}');
+        $this->assertJsonStringEqualsJsonString($incomingGradeValueNumericTestObject->toJson(), '{"GradeObjectType":1,"PointsNumerator":10,"Comments":{"Content":"","Type":"Text"},"PrivateComments":{"Content":"","Type":"Text"}}');
         $this->assertInstanceOf(IncomingGradeValueNumeric::class, $incomingGradeValueNumericTestObject);
     }
 

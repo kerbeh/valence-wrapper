@@ -20,12 +20,34 @@ use ValenceWrapper\Model\BaseValenceModel;
  */
 class IncomingGradeValue extends BaseValenceModel {
 
+    /**
+     * Cannot be null but can be empty
+     * @var type
+     */
     protected $comments;
+
+    /**
+     * Cannot be null but can be empty
+     * @var type
+     */
     protected $privateComments;
 
     public function __construct($incomingGradeValueNumeric) {
-        $this->comments = (!empty($incomingGradeValueNumeric["Comments"])) ? $incomingGradeValueNumeric["Comments"] : Null;
-        $this->privateComments = (!empty($incomingGradeValueNumeric["PrivateComments"])) ? $incomingGradeValueNumeric["PrivateComments"] : Null;
+
+        /** To do move this if null in seperate setter functions * */
+        if (!empty($incomingGradeValueNumeric["Comments"])) {
+            $this->comments = $incomingGradeValueNumeric["Comments"];
+        } else {
+            $richTextInput = new RichTextInput("", "Text");
+            $this->comments = $richTextInput->toArray();
+        };
+
+        if (!empty($incomingGradeValueNumeric["PrivateComments"])) {
+            $this->privateComments = $incomingGradeValueNumeric["PrivateComments"];
+        } else {
+            $richTextInput = new RichTextInput("", "Text");
+            $this->privateComments = $richTextInput->toArray();
+        };
     }
 
     public function getComments() {

@@ -2,13 +2,15 @@
 
 namespace ValenceWrapper\Model\Basic;
 
+use ValenceWrapper\Model\BaseValenceModel;
+
 /**
  * Object to define a {<composite:RichTextInput>} field in a JSON example
  * Defines the Type of text, either Plain or HTML and the text itself
  * @url https://docs.valence.desire2learn.com/basic/conventions.html#term-richtextinput
  * @author ktrist
  */
-class RichTextInput {
+class RichTextInput extends BaseValenceModel {
 
     /**
      * Const for content type Html
@@ -24,13 +26,13 @@ class RichTextInput {
      * The textual content of the input either as Html or Plain text
      * @var String
      */
-    private $content;
+    protected $content;
 
     /**
      * The type of the content either HTML:Text
      * @var String
      */
-    private $type;
+    protected $type;
 
     /**
      * Set the content and content type if supplied or set as blank text

@@ -28,4 +28,14 @@ class BaseValenceModel {
         return json_encode($jsonArray);
     }
 
+    public function toArray() {
+        $jsonArray = [];
+
+        foreach (get_object_vars($this) as $key => $value) {
+            $jsonArray[ucfirst($key)] = $value;
+        }
+
+        return $jsonArray;
+    }
+
 }
