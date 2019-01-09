@@ -12,6 +12,7 @@ use ValenceWrapper\Model\Grade\GradeValue;
 use ValenceWrapper\ValenceInstance;
 use ValenceWrapper\Model\User\User;
 use ValenceWrapper\Model\Grade\IncomingGradeValueNumeric;
+use ValenceWrapper\Model\Grade\GradeObjectNumeric;
 
 /**
  * Description of Grades
@@ -77,7 +78,7 @@ class Grades {
     }
 
     /**
-     *
+     * Set an individual grade for a grade object
      * @param type $orgUnitId
      * @param type $gradeObjectId
      * @param type $userId
@@ -91,6 +92,16 @@ class Grades {
         $apiResponse = $this->httpClient->put($this->valenceInstance->authenticateUri($urlStem, "PUT"), $json);
 
         return ($apiResponse->getStatusCode() == 200) ? TRUE : FALSE;
+    }
+
+    public function createGradeObjectNumeric($orgUnitId, GradeObjectNumeric $gradeObjectNumeric) {
+
+        $urlStem = "/d2l/api/le/$this->le_version/$orgUnitId/grades/";
+
+        $json = $gradeObjectNumeric->toArray();
+        $apiResponse = $this->httpClient->put($this->valenceInstance->authenticateUri($urlStem, "POST"), $json);
+
+        return new GradeObjectNumeric($apiResponse->getJsonResponse());
     }
 
 }

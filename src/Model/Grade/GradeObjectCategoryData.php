@@ -102,12 +102,12 @@ class GradeObjectCategoryData extends BaseValenceModel {
         $this->excludeFromFinalGrade = (!empty($gradeObjectCategoryData["ExcludeFromFinalGrade"])) ? $gradeObjectCategoryData["ExcludeFromFinalGrade"] : True;
         $this->startDate = (!empty($gradeObjectCategoryData["StartDate"])) ? $gradeObjectCategoryData["StartDate"] : null;
         $this->endDate = (!empty($gradeObjectCategoryData["EndDate"])) ? $gradeObjectCategoryData["EndDate"] : null;
-        $this->weight = (!empty($gradeObjectCategoryData["Weight"])) ? $gradeObjectCategoryData["Weight"] : null;
+        $this->weight = (!empty($gradeObjectCategoryData["Weight"])) ? $gradeObjectCategoryData["Weight"] : 0;
         $this->maxPoints = (!empty($gradeObjectCategoryData["MaxPoints"])) ? $gradeObjectCategoryData["MaxPoints"] : null;
         $this->autoPoints = (!empty($gradeObjectCategoryData["AutoPoints"])) ? $gradeObjectCategoryData["AutoPoints"] : null;
-        $this->weightDistributionType = (!empty($gradeObjectCategoryData["WeightDistributionType"])) ? $gradeObjectCategoryData["WeightDistributionType"] : null;
-        $this->numberOfHighestToDrop = (!empty($gradeObjectCategoryData["NumberOfHighestToDrop"])) ? $gradeObjectCategoryData["NumberOfHighestToDrop"] : null;
-        $this->numberOfLowestToDrop = (!empty($gradeObjectCategoryData["NumberOfLowestToDrop"])) ? $gradeObjectCategoryData["NumberOfLowestToDrop"] : null;
+        $this->weightDistributionType = (!empty($gradeObjectCategoryData["WeightDistributionType"])) ? $gradeObjectCategoryData["WeightDistributionType"] : 0;
+        $this->numberOfHighestToDrop = (!empty($gradeObjectCategoryData["NumberOfHighestToDrop"])) ? $gradeObjectCategoryData["NumberOfHighestToDrop"] : 0;
+        $this->numberOfLowestToDrop = (!empty($gradeObjectCategoryData["NumberOfLowestToDrop"])) ? $gradeObjectCategoryData["NumberOfLowestToDrop"] : 0;
     }
 
     public function getName(): String {
