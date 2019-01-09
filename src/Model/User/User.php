@@ -65,4 +65,28 @@ class User extends BaseValenceModel {
         $this->profileIdentifier = (!empty($user["ProfileIdentifier"])) ? $user["ProfileIdentifier"] : Null;
     }
 
+    public function getIdentifier() {
+        return $this->identifier;
+    }
+
+    public function getDisplayName() {
+        return $this->displayName;
+    }
+
+    public function getEmailAddress() {
+        return $this->emailAddress;
+    }
+
+    public function getOrgDefinedId() {
+        return $this->orgDefinedId;
+    }
+
+    public function getProfileBadgeUrl() {
+        return $this->profileBadgeUrl;
+    }
+
+    public function getProfileIdentifier() {
+        return $this->profileIdentifier;
+    }
+
 }
