@@ -122,23 +122,23 @@ class GradeObjectNumeric extends BaseValenceModel {
         $this->associatedTool = (!empty($numericGrade["AssociatedTool"])) ? $numericGrade["AssociatedTool"] : null;
     }
 
-    public function getMaxPoints(): type {
+    public function getMaxPoints() {
         return $this->maxPoints;
     }
 
-    public function getCanExceedMaxPoints(): Bool {
+    public function getCanExceedMaxPoints() {
         return $this->canExceedMaxPoints;
     }
 
-    public function getIsBonus(): Bool {
+    public function getIsBonus() {
         return $this->isBonus;
     }
 
-    public function getExcludeFromFinalGradeCalculation(): Bool {
+    public function getExcludeFromFinalGradeCalculation() {
         return $this->excludeFromFinalGradeCalculation;
     }
 
-    public function getGradeSchemeId(): type {
+    public function getGradeSchemeId() {
         return $this->gradeSchemeId;
     }
 
@@ -146,35 +146,35 @@ class GradeObjectNumeric extends BaseValenceModel {
         return $this->id;
     }
 
-    public function getName(): String {
+    public function getName() {
         return $this->name;
     }
 
-    public function getShortName(): type {
+    public function getShortName() {
         return $this->shortName;
     }
 
-    public function getGradeType(): String {
+    public function getGradeType() {
         return $this->gradeType;
     }
 
-    public function getCategoryId(): Int {
+    public function getCategoryId() {
         return $this->categoryId;
     }
 
-    public function getDescription(): type {
+    public function getDescription() {
         return $this->description;
     }
 
-    public function getWeight(): Bool {
+    public function getWeight() {
         return $this->weight;
     }
 
-    public function getActivityId(): type {
+    public function getActivityId() {
         return $this->activityId;
     }
 
-    public function getAssociatedTool(): Object {
+    public function getAssociatedTool() {
         return $this->associatedTool;
     }
 
