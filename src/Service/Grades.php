@@ -69,8 +69,8 @@ class Grades {
         $apiResponse = $this->httpClient->get($this->valenceInstance->authenticateUri("$urlStem?$urlQuery", "GET"));
         $compositeUserGradesArray = array_map(function($userGrade) {
             return [
-                new User($userGrade["User"]),
-                new GradeValue($userGrade["GradeValue"])
+                "User" => new User($userGrade["User"]),
+                "Grade" => new GradeValue($userGrade["GradeValue"])
             ];
         }, $apiResponse->getJsonResponse()["Objects"]);
 
