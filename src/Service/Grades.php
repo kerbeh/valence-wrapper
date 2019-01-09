@@ -99,7 +99,7 @@ class Grades {
         $urlStem = "/d2l/api/le/$this->le_version/$orgUnitId/grades/";
 
         $json = $gradeObjectNumeric->toArray();
-        $apiResponse = $this->httpClient->put($this->valenceInstance->authenticateUri($urlStem, "POST"), $json);
+        $apiResponse = $this->httpClient->post($this->valenceInstance->authenticateUri($urlStem, "POST"), $json);
 
         return new GradeObjectNumeric($apiResponse->getJsonResponse());
     }
