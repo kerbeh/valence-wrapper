@@ -120,55 +120,55 @@ class GradeValue Extends BaseValenceModel {
         $this->weightedNumerator = (!empty($grade["WeightedNumerator"])) ? $grade["WeightedNumerator"] : null;
     }
 
-    public function getUserId(): String {
+    public function getUserId() {
         return $this->userId;
     }
 
-    public function getOrgUnitId(): String {
+    public function getOrgUnitId() {
         return $this->orgUnitId;
     }
 
-    public function getDisplayedGrade(): String {
+    public function getDisplayedGrade() {
         return $this->displayedGrade;
     }
 
-    public function getGradeObjectIdentifier(): String {
+    public function getGradeObjectIdentifier() {
         return $this->gradeObjectIdentifier;
     }
 
-    public function getGradeObjectName(): String {
+    public function getGradeObjectName() {
         return $this->gradeObjectName;
     }
 
-    public function getGradeObjectType(): Int {
+    public function getGradeObjectType() {
         return $this->gradeObjectType;
     }
 
-    public function getGradeObjectTypeName(): String {
+    public function getGradeObjectTypeName() {
         return $this->gradeObjectTypeName;
     }
 
-    public function getComments(): String {
+    public function getComments() {
         return $this->comments;
     }
 
-    public function getPrivateComments(): String {
+    public function getPrivateComments() {
         return $this->privateComments;
     }
 
-    public function getPointsNumerator(): String {
+    public function getPointsNumerator() {
         return $this->pointsNumerator;
     }
 
-    public function getPointsDenominator(): String {
+    public function getPointsDenominator() {
         return $this->pointsDenominator;
     }
 
-    public function getWeightedDenominator(): String {
+    public function getWeightedDenominator() {
         return $this->weightedDenominator;
     }
 
-    public function getWeightedNumerator(): String {
+    public function getWeightedNumerator() {
         return $this->weightedNumerator;
     }
 
