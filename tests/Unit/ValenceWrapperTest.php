@@ -96,7 +96,7 @@ class ValenceWrapperTest extends TestCase {
         ];
 
         $gradeObjectCategoryDataTestObject = new GradeObjectCategoryData($gradeObjectCategoryDateTestArray);
-        $this->assertJsonStringEqualsJsonString($gradeObjectCategoryDataTestObject->toJson(), '{"Name":"Test Name","ShortName":"Test Short Name","CanExceedMax":true,"ExcludeFromFinalGrade":true,"StartDate":"2019-01-03T03:23:19.000Z","EndDate":"2019-01-03T03:23:19.000Z","Weight":null,"MaxPoints":100,"AutoPoints":null,"WeightDistributionType":null,"NumberOfHighestToDrop":null,"NumberOfLowestToDrop":null}');
+        $this->assertJsonStringEqualsJsonString($gradeObjectCategoryDataTestObject->toJson(), '{"Name":"Test Name","ShortName":"Test Short Name","CanExceedMax":true,"ExcludeFromFinalGrade":true,"StartDate":"2019-01-03T03:23:19.000Z","EndDate":"2019-01-03T03:23:19.000Z","Weight":0,"MaxPoints":100,"AutoPoints":null,"WeightDistributionType":0,"NumberOfHighestToDrop":0,"NumberOfLowestToDrop":0}');
         $this->assertInstanceOf(GradeObjectCategoryData::class, $gradeObjectCategoryDataTestObject);
     }
 
