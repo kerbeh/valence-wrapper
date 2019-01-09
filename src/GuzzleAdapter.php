@@ -29,7 +29,14 @@ class GuzzleAdapter implements HttpClient {
     }
 
     public function post($url, $json) {
+        $client = new Client;
+        try {
+            $response = $client->request('POST', $url, ['json' => $json]);
+        } catch (HttpClientException $e) {
+            echo 'Caught exception: ', $e->getMessage(), "\n";
+        }
 
+        return new ApiResponse($response);
     }
 
     public function put($url, $json) {
