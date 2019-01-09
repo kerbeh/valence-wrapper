@@ -113,7 +113,7 @@ class GradeObjectNumeric extends BaseValenceModel {
         $this->isBonus = (!empty($numericGrade["IsBonus"])) ? $numericGrade["IsBonus"] : FALSE;
         $this->excludeFromFinalGradeCalculation = (!empty($numericGrade["ExcludeFromFinalGradeCalculation"])) ? $numericGrade["ExcludeFromFinalGradeCalculation"] : True;
         $this->gradeSchemeId = (!empty($numericGrade["GradeSchemeId"])) ? $numericGrade["GradeSchemeId"] : NULL;
-        $this->id = (!empty($numericGrade["id"])) ? $numericGrade["id"] : null;
+        $this->id = (!empty($numericGrade["Id"])) ? $numericGrade["Id"] : null;
         $this->name = (!empty($numericGrade["Name"])) ? $numericGrade["Name"] : "Untitled Grade";
         $this->shortName = (!empty($numericGrade["ShortName"])) ? $numericGrade["ShortName"] : "";
         $this->categoryId = (!empty($numericGrade["CategoryId"])) ? $numericGrade["CategoryId"] : 0;
