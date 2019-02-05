@@ -5,8 +5,9 @@ namespace ValenceWrapper;
 use GuzzleHttp\Client;
 use ValenceWrapper\Exception\HttpClientException;
 use ValenceWrapper\Model\ApiResponse;
+use ValenceWrapper\HttpClientInterface;
 
-class GuzzleAdapter implements HttpClient {
+class GuzzleAdapter implements HttpClientInterface {
 
     protected $protocol;
     protected $host;

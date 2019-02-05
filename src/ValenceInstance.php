@@ -4,14 +4,17 @@ namespace ValenceWrapper;
 
 use D2LAppContextFactory;
 use D2LHostSpec;
-use GuzzleHttp\Client;
+use ValenceWrapper\RequestFactory;
+use Psr\Http\Message\RequestInterface;
+use Psr\Http\Message\UriInterface;
+use ValenceWrapper\Traits;
 
 class ValenceInstance {
 
     const le_version = "1.26";
     const lp_version = "1.18";
 
-    protected $client;
+    protected $le_version = "1.26";
 
     /**
      * Contains the server connection information
@@ -53,23 +56,21 @@ class ValenceInstance {
     /**
      * Constructor to build the App and User contexts as well as prepare a http client
      * @param \ValenceWrapper\ValenceApi\HttpClient $client
+     * @param \ValenceWrapper\RequestFactory; $requestFactory
      * @param type $userId
      * @param type $userKey
      * @param type $appId
      * @param type $appKey
      */
-    public function __construct(HttpClient $client, $userId, $userKey, $appId, $appKey, $host, $port, $protocol) {
+    public function __construct($userId, $userKey, $appId, $appKey, $host, $port, $protocol) {
 
-        // Create a HTTP client
-        $this->client = $client;
-
-        // Create hostSpec
+// Create hostSpec
         $this->hostSpec = new D2LHostSpec($host, $port, strtolower($protocol));
 
-        // Create appContext
+// Create appContext
         $this->appContext = $this->setAppContext($appId, $appKey);
 
-        // Create userContext
+// Create userContext
         $this->userContext = $this->setUserContext($this->appContext, $this->hostSpec, $userId, $userKey);
     }
 
@@ -109,8 +110,8 @@ class ValenceInstance {
      * @param type $verb
      * @return String
      */
-    public function authenticateUri($route, $verb) {
-        $uri = $this->userContext->createAuthenticatedUri($route, $verb);
+    public function authenticateUri($route, $method) {
+        $uri = $this->userContext->createAuthenticatedUri($route, $method);
 
         return $uri;
     }
@@ -121,6 +122,30 @@ class ValenceInstance {
      */
     public function getClient() {
         return $this->client;
+    }
+
+    /**
+     *
+     * @param type $uri
+     * @param type $method
+     * @return type
+     */
+    protected function createRequest($uri, $method) {
+        $signedUri = $this->authenticateUri($uri, $method);
+        return $this->requestFactory->createRequest(stringtoupper($method), $signedUri);
+    }
+
+    public function getGrades($orgUnitId, $gradeObjectId, $searchText = "", $sort = "lastname", $pageSize = 200, $isGraded = true) {
+
+        $urlStem = "/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/";
+        $urlQuery = http_build_query([
+            "searchText" => $searchText,
+            "sort" => $sort,
+            "pageSize" => $pageSize,
+            "isGrade" => $isGraded
+        ]);
+
+        $this->requestFactory->createRequest('get', "$urlStem?$urlQuery");
     }
 
 }

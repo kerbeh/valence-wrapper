@@ -32,7 +32,9 @@ class GradesTests extends TestCase {
         $protocol = "HTTPS";
 
 
-        $valenceInstance = new ValenceInstance($httpClient, $userId, $userKey, $appId, $appKey, $host, $port, $protocol);
+
+
+        $valenceInstance = new ValenceInstance($userId, $userKey, $appId, $appKey, $host, $port, $protocol);
 
 
         $userId = "237486";
@@ -66,11 +68,12 @@ class GradesTests extends TestCase {
         $protocol = "HTTPS";
 
 
-        $valenceInstance = new ValenceInstance($httpClient, $userId, $userKey, $appId, $appKey, $host, $port, $protocol);
+
+        $valenceInstance = new ValenceInstance($userId, $userKey, $appId, $appKey, $host, $port, $protocol);
 
         $userId = "237486";
         $orgUnitId = "376743";
-        $gradeObjectId = "156716";
+        $gradeObjectId = "223603223603";
 
         $gradeService = new Grades($valenceInstance);
         $gradeResponse = $gradeService->getGrades($orgUnitId, $gradeObjectId);
@@ -78,13 +81,13 @@ class GradesTests extends TestCase {
         $this->assertInstanceOf(Grades::class, $gradeService);
     }
 
-    public function SetUserGradesForGradeObject() {
+    public function testSetUserGradesForGradeObject() {
         /**
          * Prepare a HTTP Client
          */
         $httpClient = new GuzzleAdapter;
         $incomingGradeValue = new IncomingGradeValueNumeric([
-//            "PointsNumerator" => 8,
+            "PointsNumerator" => 2,
         ]);
 
         /**
@@ -100,12 +103,13 @@ class GradesTests extends TestCase {
         $protocol = "HTTPS";
 
 
-        $valenceInstance = new ValenceInstance($httpClient, $userId, $userKey, $appId, $appKey, $host, $port, $protocol);
+
+        $valenceInstance = new ValenceInstance($userId, $userKey, $appId, $appKey, $host, $port, $protocol);
 
 
         $userId = "237486";
         $orgUnitId = "376743";
-        $gradeObjectId = "156716";
+        $gradeObjectId = "223603";
 
         $gradeService = new Grades($valenceInstance);
         $gradeResponse = $gradeService->setGradeNumeric($orgUnitId, $gradeObjectId, $userId, $incomingGradeValue);
@@ -114,7 +118,7 @@ class GradesTests extends TestCase {
         $this->assertInstanceOf(Grades::class, $gradeService);
     }
 
-    public function testCreateGradeObjectNumeric() {
+    public function CreateGradeObjectNumeric() {
         /**
          * Prepare a HTTP Client
          */
@@ -131,6 +135,7 @@ class GradesTests extends TestCase {
         $host = "lms.valence.desire2learn.com";
         $port = 443;
         $protocol = "HTTPS";
+
 
 
         $gradeObjectNumericArray = [
@@ -150,7 +155,7 @@ class GradesTests extends TestCase {
         $gradeObjectNumeric = new GradeObjectNumeric($gradeObjectNumericArray);
 
 
-        $valenceInstance = new ValenceInstance($httpClient, $userId, $userKey, $appId, $appKey, $host, $port, $protocol);
+        $valenceInstance = new ValenceInstance($userId, $userKey, $appId, $appKey, $host, $port, $protocol);
 
         $userId = "237486";
         $orgUnitId = "376743";
@@ -159,8 +164,6 @@ class GradesTests extends TestCase {
         $gradeService = new Grades($valenceInstance);
 
         $gradeObject = $gradeService->createGradeObjectNumeric($orgUnitId, $gradeObjectNumeric);
-
-        Var_dump($gradeObject);
 
         $this->assertInternalType(IsType::TYPE_BOOL, TRUE);
     }

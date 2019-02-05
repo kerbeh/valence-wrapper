@@ -13,6 +13,7 @@ use ValenceWrapper\ValenceInstance;
 use ValenceWrapper\Model\User\User;
 use ValenceWrapper\Model\Grade\IncomingGradeValueNumeric;
 use ValenceWrapper\Model\Grade\GradeObjectNumeric;
+use GuzzleHttp\Psr7\Request;
 
 /**
  * Description of Grades
@@ -23,7 +24,6 @@ class Grades {
 
     protected $le_version;
     protected $valenceInstance;
-    protected $httpClient;
 
     public function __construct(ValenceInstance $valenceInstance) {
         $this->valenceInstance = $valenceInstance;

@@ -35,9 +35,8 @@ class ValenceWrapperTest extends TestCase {
         $protocol = "HTTPS";
 
         $httpClient = new GuzzleAdapter;
-        $valenceInstance = new ValenceInstance($httpClient, $userId, $userKey, $appId, $appKey, $host, $port, $protocol);
+        $valenceInstance = new ValenceInstance($userId, $userKey, $appId, $appKey, $host, $port, $protocol);
 
-        $this->assertInstanceOf(GuzzleAdapter::class, $valenceInstance->getClient());
         $this->assertInstanceOf(ValenceInstance::class, $valenceInstance);
     }
 
