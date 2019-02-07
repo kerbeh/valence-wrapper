@@ -30,9 +30,30 @@ Class Dropbox {
         $this->le_version = $valenceInstance::le_version;
     }
 
+    /**
+     * Retrieve all the submissions for a specific dropbox folder.
+     * activeOnly (boolean) Optional. Include only submissions from actively enrolled users.
+     * @param Int $orgUnitId
+     * @param Int $folderId
+     * @param Bool $activeOnly Optional. Include only submissions from actively enrolled users.
+     * @return Request
+     */
     public function getSubmissionsRequest($orgUnitId, $folderId, $activeOnly = TRUE) {
 
         $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/dropbox/folders/$folderId/submissions/?activeOnly=$activeOnly", 'GET');
+        return new Request('GET', $uri);
+    }
+
+    /**
+     * Retrieve all dropbox folders for an org unit.
+     * $onlyCurrentStudentsAndGroups Optional. If true, show only currently enrolled students and active groups.
+     * @param Int $orgUnitId
+     * @param Int $folderId
+     * @param Bool $onlyCurrentStudentsAndGroups Optional. If true, show only currently enrolled students and active groups.
+     * @return Request
+     */
+    public function getDropboxFoldersRequest($orgUnitId, $folderId, $onlyCurrentStudentsAndGroups = TRUE) {
+        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/dropbox/folders/?onlyCurrentStudentsAndGroups=$onlyCurrentStudentsAndGroups", 'GET');
         return new Request('GET', $uri);
     }
 

@@ -9,7 +9,7 @@ use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Assessment\Rubric;
 use ValenceWrapper\Model\Assessment\RubricAssessment;
 
-class ValenceWrapperModelAssessmentModelTest extends TestCase {
+class AssessmentModelTest extends TestCase {
 
     /** @test */
     public function testRubric() {

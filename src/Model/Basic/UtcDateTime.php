@@ -20,6 +20,11 @@ class UtcDateTime {
     protected $utcDateTime;
     protected $milliseconds;
 
+    /**
+     * Convert a date string into a UTC date time with timezone offset
+     * @param String $date
+     * @return type
+     */
     public function __construct($date) {
 
         $dateTime = new DateTime($date);
