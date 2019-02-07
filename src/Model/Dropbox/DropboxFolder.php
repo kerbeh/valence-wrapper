@@ -169,33 +169,33 @@ class DropboxFolder extends BaseValenceModel {
 
     /**
      * Constructor for a dropbox object, takes an array of dropbox information
-     * @param type $gradeObjectCategoryData
+     * @param type $dropbox
      */
-    public function __construct($gradeObjectCategoryData) {
-        $this->id = (!empty($gradeObjectCategoryData["Id"])) ? $gradeObjectCategoryData["Id"] : Null; //CAnnot be missing
-        $this->categoryId = (!empty($gradeObjectCategoryData["CategoryId"])) ? $gradeObjectCategoryData["CategoryId"] : null;
-        $this->name = (!empty($gradeObjectCategoryData["Name"])) ? $gradeObjectCategoryData["Name"] : "";
-        $this->customInstructions = (!empty($gradeObjectCategoryData["CustomInstructions"])) ? new RichText($gradeObjectCategoryData["CustomInstructions"]) : new RichText();
-        $this->attachments = (!empty($gradeObjectCategoryData["Attachments"])) ? $this->setAttachments($gradeObjectCategoryData["Attachments"]) : [];
-        $this->totalFiles = (!empty($gradeObjectCategoryData["TotalFiles"])) ? $gradeObjectCategoryData["TotalFiles"] : 0;
-        $this->unreadFiles = (!empty($gradeObjectCategoryData["UnreadFiles"])) ? $gradeObjectCategoryData["UnreadFiles"] : 0;
-        $this->flaggedFiles = (!empty($gradeObjectCategoryData["FlaggedFiles"])) ? $gradeObjectCategoryData["FlaggedFiles"] : 0;
-        $this->totalUsers = (!empty($gradeObjectCategoryData["TotalUsers"])) ? $gradeObjectCategoryData["TotalUsers"] : 0;
-        $this->totalUsersWithSubmissions = (!empty($gradeObjectCategoryData["TotalUsersWithSubmissions"])) ? $gradeObjectCategoryData["TotalUsersWithSubmissions"] : 0;
-        $this->totalUsersWithFeedback = (!empty($gradeObjectCategoryData["TotalUsersWithFeedback"])) ? $gradeObjectCategoryData["TotalUsersWithFeedback"] : 0;
-        $this->availability = (!empty($gradeObjectCategoryData["Availability"])) ? $this->setAvalibility($gradeObjectCategoryData["Availability"]) : [];
-        $this->groupTypeId = (!empty($gradeObjectCategoryData["GroupTypeId"])) ? $gradeObjectCategoryData["GroupTypeId"] : null;
-        $this->dueDate = (!empty($gradeObjectCategoryData["DueDate"])) ? new UtcDateTime($gradeObjectCategoryData["DueDate"]) : null;
-        $this->displayInCalendar = (!empty($gradeObjectCategoryData["DisplayInCalendar"])) ? $gradeObjectCategoryData["DisplayInCalendar"] : FALSE;
-        $this->assessment = (!empty($gradeObjectCategoryData["Assessment"])) ? $this->setAssesment($gradeObjectCategoryData["Assessment"]) : [];
-        $this->notificationEmail = (!empty($gradeObjectCategoryData["NotificationEmail"])) ? $gradeObjectCategoryData["NotificationEmail"] : NULL;
-        $this->isHidden = (!empty($gradeObjectCategoryData["IsHidden"])) ? $gradeObjectCategoryData["IsHidden"] : FALSE;
-        $this->linkAttachments = (!empty($gradeObjectCategoryData["LinkAttachments"])) ? $this->linkAttachments($gradeObjectCategoryData["LinkAttachments"]) : [];
-        $this->activityId = (!empty($gradeObjectCategoryData["ActivityId"])) ? $this->linkAttachments($gradeObjectCategoryData["ActivityId"]) : null;
-        $this->isAnonymous = (!empty($gradeObjectCategoryData["IsAnonymous"])) ? $this->linkAttachments($gradeObjectCategoryData["IsAnonymous"]) : null;
-        $this->activityId = (!empty($gradeObjectCategoryData["DropboxType"])) ? $this->linkAttachments($gradeObjectCategoryData["DropboxType"]) : null;
-        $this->submissionType = (!empty($gradeObjectCategoryData["SubmissionType"])) ? $this->linkAttachments($gradeObjectCategoryData["SubmissionType"]) : null;
-        $this->completionType = (!empty($gradeObjectCategoryData["CompletionType"])) ? $this->linkAttachments($gradeObjectCategoryData["CompletionType"]) : null;
+    public function __construct($dropbox) {
+        $this->id = (!empty($dropbox["Id"])) ? $dropbox["Id"] : Null; //CAnnot be missing
+        $this->categoryId = (!empty($dropbox["CategoryId"])) ? $dropbox["CategoryId"] : null;
+        $this->name = (!empty($dropbox["Name"])) ? $dropbox["Name"] : "";
+        $this->customInstructions = (!empty($dropbox["CustomInstructions"])) ? new RichText($dropbox["CustomInstructions"]) : new RichText();
+        $this->attachments = (!empty($dropbox["Attachments"])) ? $this->setAttachments($dropbox["Attachments"]) : [];
+        $this->totalFiles = (!empty($dropbox["TotalFiles"])) ? $dropbox["TotalFiles"] : 0;
+        $this->unreadFiles = (!empty($dropbox["UnreadFiles"])) ? $dropbox["UnreadFiles"] : 0;
+        $this->flaggedFiles = (!empty($dropbox["FlaggedFiles"])) ? $dropbox["FlaggedFiles"] : 0;
+        $this->totalUsers = (!empty($dropbox["TotalUsers"])) ? $dropbox["TotalUsers"] : 0;
+        $this->totalUsersWithSubmissions = (!empty($dropbox["TotalUsersWithSubmissions"])) ? $dropbox["TotalUsersWithSubmissions"] : 0;
+        $this->totalUsersWithFeedback = (!empty($dropbox["TotalUsersWithFeedback"])) ? $dropbox["TotalUsersWithFeedback"] : 0;
+        $this->availability = (!empty($dropbox["Availability"])) ? $this->setAvalibility($dropbox["Availability"]) : [];
+        $this->groupTypeId = (!empty($dropbox["GroupTypeId"])) ? $dropbox["GroupTypeId"] : null;
+        $this->dueDate = (!empty($dropbox["DueDate"])) ? new UtcDateTime($dropbox["DueDate"]) : null;
+        $this->displayInCalendar = (!empty($dropbox["DisplayInCalendar"])) ? $dropbox["DisplayInCalendar"] : FALSE;
+        $this->assessment = (!empty($dropbox["Assessment"])) ? $this->setAssesment($dropbox["Assessment"]) : [];
+        $this->notificationEmail = (!empty($dropbox["NotificationEmail"])) ? $dropbox["NotificationEmail"] : NULL;
+        $this->isHidden = (!empty($dropbox["IsHidden"])) ? $dropbox["IsHidden"] : FALSE;
+        $this->linkAttachments = (!empty($dropbox["LinkAttachments"])) ? $this->linkAttachments($dropbox["LinkAttachments"]) : [];
+        $this->activityId = (!empty($dropbox["ActivityId"])) ? $this->linkAttachments($dropbox["ActivityId"]) : null;
+        $this->isAnonymous = (!empty($dropbox["IsAnonymous"])) ? $this->linkAttachments($dropbox["IsAnonymous"]) : null;
+        $this->activityId = (!empty($dropbox["DropboxType"])) ? $this->linkAttachments($dropbox["DropboxType"]) : null;
+        $this->submissionType = (!empty($dropbox["SubmissionType"])) ? $this->linkAttachments($dropbox["SubmissionType"]) : null;
+        $this->completionType = (!empty($dropbox["CompletionType"])) ? $this->linkAttachments($dropbox["CompletionType"]) : null;
     }
 
     /**
