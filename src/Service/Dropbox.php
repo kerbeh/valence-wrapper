@@ -52,7 +52,7 @@ Class Dropbox {
      * @param Bool $onlyCurrentStudentsAndGroups Optional. If true, show only currently enrolled students and active groups.
      * @return Request
      */
-    public function getDropboxFoldersRequest($orgUnitId, $folderId, $onlyCurrentStudentsAndGroups = TRUE) {
+    public function getDropboxFoldersRequest($orgUnitId, $onlyCurrentStudentsAndGroups = TRUE) {
         $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/dropbox/folders/?onlyCurrentStudentsAndGroups=$onlyCurrentStudentsAndGroups", 'GET');
         return new Request('GET', $uri);
     }
