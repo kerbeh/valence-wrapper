@@ -32,7 +32,7 @@ Class Dropbox {
 
     public function getSubmissionsRequest($orgUnitId, $folderId, $activeOnly = TRUE) {
 
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/dropbox/folders/$folderId/submissions?activeOnly=$activeOnly", 'GET');
+        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/dropbox/folders/$folderId/submissions/?activeOnly=$activeOnly", 'GET');
         return new Request('GET', $uri);
     }
 
