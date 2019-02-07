@@ -117,14 +117,6 @@ class ValenceInstance {
     }
 
     /**
-     * Getter for the HTTP client
-     * @return Client
-     */
-    public function getClient() {
-        return $this->client;
-    }
-
-    /**
      *
      * @param type $uri
      * @param type $method
