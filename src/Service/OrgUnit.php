@@ -9,6 +9,7 @@
 namespace ValenceWrapper\Service;
 
 use GuzzleHttp\Psr7\Request;
+use ValenceWrapper\ValenceInstance;
 
 /**
  * Description of Grades
