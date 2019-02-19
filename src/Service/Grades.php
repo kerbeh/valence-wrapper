@@ -82,7 +82,7 @@ class Grades {
         $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/$userId", "POST");
 
         $body = $incomingGradeValue->toArray();
-        $headers = null;
+        $headers = [];
 
         return new Request("POST", $uri, $headers, $body);
     }
@@ -91,7 +91,7 @@ class Grades {
 
         $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/grades/", "POST");
         $body = $gradeObjectNumeric->toArray();
-        $headers = null;
+        $headers = [];
         return new Request("POST", $uri, $headers, $body);
     }
 
