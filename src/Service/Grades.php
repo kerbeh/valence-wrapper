@@ -36,13 +36,12 @@ class Grades {
      * @param type $orgUnitId
      * @param type $gradeObjectId
      * @param type $iserId
-     * @return {Object} ValenceWrapper\Model\Grade\GradeValue
+     * @return /PSR7 Request
      */
     public function getUserGrade($orgUnitId, $gradeObjectId, $userId) {
-        $urlStem = "/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/$userId";
-        $apiResponse = $this->httpClient->get($this->valenceInstance->authenticateUri($urlStem, "GET"));
-        $gradeValue = new GradeValue($apiResponse->getJsonResponse());
-        return $gradeValue;
+
+        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/$userId", 'GET');
+        return new Request('GET', $uri);
     }
 
     /**
@@ -57,23 +56,17 @@ class Grades {
      * @return type
      */
     public function getGrades($orgUnitId, $gradeObjectId, $searchText = "", $sort = "lastname", $pageSize = 200, $isGraded = true) {
-        $urlStem = "/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/";
-        $urlQuery = http_build_query([
+        $queryParrams = [
             "searchText" => $searchText,
             "sort" => $sort,
             "pageSize" => $pageSize,
             "isGrade" => $isGraded
-        ]);
+        ];
 
-        $apiResponse = $this->httpClient->get($this->valenceInstance->authenticateUri("$urlStem?$urlQuery", "GET"));
-        $compositeUserGradesArray = array_map(function($userGrade) {
-            return [
-                "User" => new User($userGrade["User"]),
-                "Grade" => new GradeValue($userGrade["GradeValue"])
-            ];
-        }, $apiResponse->getJsonResponse()["Objects"]);
+        $queryString = http_build_query($queryParrams);
 
-        return $compositeUserGradesArray;
+        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/?$queryString", 'GET');
+        return new Request('GET', $uri);
     }
 
     /**
@@ -85,22 +78,21 @@ class Grades {
      * @return Bool //Returns true if the grade was updated or throws an error;
      */
     public function setGradeNumeric($orgUnitId, $gradeObjectId, $userId, IncomingGradeValueNumeric $incomingGradeValue) {
-        $urlStem = "/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/$userId";
 
-        $json = $incomingGradeValue->toArray();
-        $apiResponse = $this->httpClient->put($this->valenceInstance->authenticateUri($urlStem, "PUT"), $json);
+        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/$userId", "POST");
 
-        return ($apiResponse->getStatusCode() == 200) ? TRUE : FALSE;
+        $body = $incomingGradeValue->toArray();
+        $headers = null;
+
+        return new Request("POST", $uri, $headers, $body);
     }
 
     public function createGradeObjectNumeric($orgUnitId, GradeObjectNumeric $gradeObjectNumeric) {
 
-        $urlStem = "/d2l/api/le/$this->le_version/$orgUnitId/grades/";
-
-        $json = $gradeObjectNumeric->toArray();
-        $apiResponse = $this->httpClient->post($this->valenceInstance->authenticateUri($urlStem, "POST"), $json);
-
-        return new GradeObjectNumeric($apiResponse->getJsonResponse());
+        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/grades/", "POST");
+        $body = $gradeObjectNumeric->toArray();
+        $headers = null;
+        return new Request("POST", $uri, $headers, $body);
     }
 
 }
