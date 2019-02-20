@@ -84,7 +84,7 @@ class Grades {
         $body = $incomingGradeValue->toArray();
         $headers = ["content-type" => 'application/json'];
 
-        return new Request("POST", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, json_encode($body));
     }
 
     public function createGradeObjectNumeric($orgUnitId, GradeObjectNumeric $gradeObjectNumeric) {

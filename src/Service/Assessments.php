@@ -49,7 +49,7 @@ class Assessments {
 
         $this->le_version = 'unstable';
 
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/rubrics/?$queryString", 'GET');
+        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/rubrics?$queryString", 'GET');
         return new Request('GET', $uri);
     }
 
