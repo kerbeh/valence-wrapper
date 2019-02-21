@@ -79,12 +79,12 @@ class Grades {
      */
     public function setGradeNumeric($orgUnitId, $gradeObjectId, $userId, IncomingGradeValueNumeric $incomingGradeValue) {
 
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/$userId", "POST");
+        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/$userId", "PUT");
 
         $body = $incomingGradeValue->toArray();
         $headers = ["content-type" => 'application/json'];
 
-        return new Request("POST", $uri, $headers, json_encode($body));
+        return new Request("PUT", $uri, $headers, json_encode($body));
     }
 
     public function createGradeObjectNumeric($orgUnitId, GradeObjectNumeric $gradeObjectNumeric) {
