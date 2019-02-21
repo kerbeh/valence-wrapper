@@ -27,7 +27,7 @@ Class Dropbox {
 
     public function __construct(ValenceInstance $valenceInstance) {
         $this->valenceInstance = $valenceInstance;
-        $this->le_version = $valenceInstance::le_version;
+        $this->le_version = $valenceInstance->le_version;
     }
 
     /**

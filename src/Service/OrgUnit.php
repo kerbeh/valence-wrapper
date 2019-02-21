@@ -26,7 +26,7 @@ Class OrgUnit {
 
     public function __construct(ValenceInstance $valenceInstance) {
         $this->valenceInstance = $valenceInstance;
-        $this->lp_version = $valenceInstance::lp_version;
+        $this->lp_version = $valenceInstance->lp_version;
     }
 
     /**

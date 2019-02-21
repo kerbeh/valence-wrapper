@@ -11,10 +11,8 @@ use ValenceWrapper\Traits;
 
 class ValenceInstance {
 
-    const le_version = "1.26";
-    const lp_version = "1.18";
-
-    protected $le_version = "1.26";
+    public $le_version = "1.26";
+    public $lp_version = "1.18";
 
     /**
      * Contains the server connection information
