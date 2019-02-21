@@ -16,13 +16,6 @@ use ValenceWrapper\Model\User\User;
 class ValenceWrapperTest extends TestCase {
 
     /** @test */
-    public function testGuzzleHttpClient() {
-        $httpClient = new GuzzleAdapter;
-
-        $this->assertInstanceOf(GuzzleAdapter::class, $httpClient);
-    }
-
-    /** @test */
     public function testValenceInstance() {
 
         $userId = "1";
@@ -34,7 +27,6 @@ class ValenceWrapperTest extends TestCase {
         $port = 443;
         $protocol = "HTTPS";
 
-        $httpClient = new GuzzleAdapter;
         $valenceInstance = new ValenceInstance($userId, $userKey, $appId, $appKey, $host, $port, $protocol);
 
         $this->assertInstanceOf(ValenceInstance::class, $valenceInstance);

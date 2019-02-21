@@ -93,10 +93,6 @@ class OrgUnitTypeModelTest extends TestCase {
                 , true);
         $dropboxFolder = new DropboxFolder($dropboxFolderArray[0]);
 
-
-        var_dump($dropboxFolder);
-
-
         $this->assertInstanceOf(DropboxFolder::class, $dropboxFolder);
     }
 
