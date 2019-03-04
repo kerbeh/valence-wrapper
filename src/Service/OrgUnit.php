@@ -41,6 +41,7 @@ Class OrgUnit {
 
     public function getOrgStructureRequest($orgUnitType = 3, $orgUnitCode = null, $orgUnitName = null, $bookmark = null, $exactOrgUnitCode = null, $exactOrgUnitName = null) {
 
+
         $queryParrams = [
             'orgUnitType' => $orgUnitType,
             'orgUnitCode' => $orgUnitCode,
