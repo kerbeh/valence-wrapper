@@ -40,7 +40,7 @@ Class Course {
         $body = $copyJobRequest->toArray();
         $headers = ["content-type" => 'application/json'];
 
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$le_version/import/$orgUnitId/copy", 'POST');
+        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$le_version/import/$orgUnitId/copy/", 'POST');
 
         return new Request("POST", $uri, $headers, json_encode($body));
     }
