@@ -39,7 +39,18 @@ Class OrgUnit {
         return new Request('GET', $uri);
     }
 
-    public function getOrgStructureRequest($orgUnitType = 3, $orgUnitCode = null, $orgUnitName = null, $bookmark = null, $exactOrgUnitCode = null, $exactOrgUnitName = null) {
+    /**
+     * Query the Org Structure for a unit by name or code
+     * https://docs.valence.desire2learn.com/res/orgunit.html#get--d2l-api-lp-(version)-orgstructure-
+     * @param String $orgUnitCode
+     * @param String $orgUnitName
+     * @param Int $orgUnitType
+     * @param Int $bookmark
+     * @param String $exactOrgUnitCode
+     * @param String $exactOrgUnitName
+     * @return Request
+     */
+    public function getOrgStructureRequest($bookmark = null, $orgUnitCode = null, $orgUnitName = null, $exactOrgUnitCode = null, $exactOrgUnitName = null, $orgUnitType = 3) {
 
 
         $queryParrams = [
