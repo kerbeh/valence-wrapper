@@ -79,7 +79,7 @@ class CreateCopyJobRequest extends BaseValenceModel {
     }
 
     protected function validate() {
-        if (is_int($this->sourceOrgUnitId) != true) {
+        if (is_numeric($this->sourceOrgUnitId) != true) {
             throw new Exception("Source Org Unit Must be a valid number");
         }
     }
