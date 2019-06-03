@@ -35,7 +35,6 @@ Class Course {
     public function enqueueCourseCopy($orgUnitId, CreateCopyJobRequest $copyJobRequest) {
 
         $le_version = $this->le_version;
-        $le_version = 'unstable';
 
         $body = $copyJobRequest->toArray();
         $headers = ["content-type" => 'application/json'];
