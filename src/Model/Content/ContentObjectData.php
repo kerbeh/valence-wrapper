@@ -10,15 +10,13 @@ use ValenceWrapper\Model\Content\ContentObject;
  *
  * @see http://docs.valence.desire2learn.com/res/content.html#Content.ContentObjectData
  */
-class ContentObjectData
-{
+class ContentObjectData extends ContentObject {
 
     /**
      *
      * @param array $topic Array of new topic data
      */
-    public function __construct(array $topic)
-    {
+    public function __construct(array $topic) {
 
         $this->Title = $topic['Title'];
         $this->ShortTitle = (!empty($topic['ShortTitle'])) ? $topic['ShortTitle'] : "";
@@ -36,8 +34,7 @@ class ContentObjectData
         $this->validate();
     }
 
-    private function validate()
-    {
+    private function validate() {
 
         if (empty($this->Title) || is_string($this->Title) != true) {
             throw new Exception("Topic Title must be provided and must be a valid String");
