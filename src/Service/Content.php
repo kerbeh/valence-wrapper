@@ -62,4 +62,36 @@ class Content {
         return new Request('GET', $uri);
     }
 
+    /**
+     * Undocumented function
+     *
+     * @param [type] $orgUnitId
+     * @param [type] $topicId
+     * @param boolean $activeOnly
+     * @return void
+     * @see https://docs.valence.desire2learn.com/res/content.html#put--d2l-api-le-(version)-(orgUnitId)-content-topics-(topicId)-file
+     */
+    public function getTopicUploadRequest($orgUnitId, $moduleId, $file, $fileName, ContentObjectDataTopic $contentObjectData) {
+
+        $boundary = $this::BOUNDARY;
+        $multipart_form = [
+            [
+                'name' => 'file',
+                'contents' => $file,
+            ],
+        ];
+
+        $params = [
+            'headers' => [
+                'Connection' => 'close',
+                'Content-Type' => 'multipart/form-data; boundary=' . $boundary,
+            ],
+            'body' => new MultipartStream($multipart_form, $boundary), // here is all the magic
+        ];
+
+
+        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/content/modules/$moduleId/structure", 'POST');
+        return new Request('POST', $uri);
+    }
+
 }
