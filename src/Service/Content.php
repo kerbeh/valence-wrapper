@@ -71,7 +71,7 @@ class Content {
      * @return void
      * @see https://docs.valence.desire2learn.com/res/content.html#put--d2l-api-le-(version)-(orgUnitId)-content-topics-(topicId)-file
      */
-    public function getTopicUploadRequest($orgUnitId, $moduleId, $file, $fileName, ContentObjectDataTopic $contentObjectData) {
+    public function getTopicUploadRequest($orgUnitId, $moduleId, $file, $fileName, ContentObjectData $contentObjectData) {
 
         $boundary = $this::BOUNDARY;
         $multipart_form = [
