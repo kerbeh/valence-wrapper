@@ -37,6 +37,7 @@ Class Dropbox {
      * @param Int $folderId
      * @param Bool $activeOnly Optional. Include only submissions from actively enrolled users.
      * @return Request
+     * @see https://docs.valence.desire2learn.com/res/dropbox.html#get--d2l-api-le-(version)-(orgUnitId)-dropbox-folders-(folderId)-submissions-
      */
     public function getSubmissionsRequest($orgUnitId, $folderId, $activeOnly = TRUE) {
 
@@ -51,9 +52,23 @@ Class Dropbox {
      * @param Int $folderId
      * @param Bool $onlyCurrentStudentsAndGroups Optional. If true, show only currently enrolled students and active groups.
      * @return Request
+     * @see https://docs.valence.desire2learn.com/res/dropbox.html#get--d2l-api-le-(version)-(orgUnitId)-dropbox-folders-
      */
     public function getDropboxFoldersRequest($orgUnitId, $onlyCurrentStudentsAndGroups = TRUE) {
         $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/dropbox/folders/?onlyCurrentStudentsAndGroups=$onlyCurrentStudentsAndGroups", 'GET');
+        return new Request('GET', $uri);
+    }
+
+    /**
+     * Retrive a single dropbox by d2l id
+     *
+     * @param [type] $orgUnitId
+     * @param [type] $folderId
+     * @return Request
+     * @see https://docs.valence.desire2learn.com/res/dropbox.html#get--d2l-api-le-(version)-(orgUnitId)-dropbox-folders-(folderId)
+     *      */
+    public function getDropboxFolderRequest($orgUnitId, $folderId) {
+        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/dropbox/folders/$folderId", 'GET');
         return new Request('GET', $uri);
     }
 
