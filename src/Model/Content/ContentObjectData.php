@@ -3,6 +3,7 @@
 namespace ValenceWrapper\Model\Content;
 
 use Exception;
+use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Content\ContentObject;
 
 /**
@@ -10,7 +11,7 @@ use ValenceWrapper\Model\Content\ContentObject;
  *
  * @see http://docs.valence.desire2learn.com/res/content.html#Content.ContentObjectData
  */
-class ContentObjectData extends ContentObject {
+class ContentObjectData extends BaseValenceModel {
 
     /**
      *
@@ -22,14 +23,14 @@ class ContentObjectData extends ContentObject {
         $this->ShortTitle = (!empty($topic['ShortTitle'])) ? $topic['ShortTitle'] : "";
         $this->Type = 1;
         $this->TopicType = $topic['TopicType'];
-        $this->Url = (!empty($topic['Url'])) ? $topic['Url'] : null;
+        $this->Url = (!empty($topic['Url'])) ? $topic['Url'] : NULL;
 
-        $this->StartDate = (!empty($topic['StartDate'])) ? $topic['StartDate'] : null;
-        $this->EndDate = (!empty($topic['EndDate'])) ? $topic['EndDate'] : null;
-        $this->DueDate = (!empty($topic['DueDate'])) ? $topic['DueDate'] : null;
+        $this->StartDate = (!empty($topic['StartDate'])) ? $topic['StartDate'] : NULL;
+        $this->EndDate = (!empty($topic['EndDate'])) ? $topic['EndDate'] : NULL;
+        $this->DueDate = (!empty($topic['DueDate'])) ? $topic['DueDate'] : NULL;
 
-        $this->IsHidden = (!empty($topic['IsHidden'])) ? $topic['IsHidden'] : false;
-        $this->IsLocked = (!empty($topic['IsLocked'])) ? $topic['IsLocked'] : false;
+        $this->IsHidden = (!empty($topic['IsHidden'])) ? $topic['IsHidden'] : FALSE;
+        $this->IsLocked = (!empty($topic['IsLocked'])) ? $topic['IsLocked'] : FALSE;
 
         $this->validate();
     }

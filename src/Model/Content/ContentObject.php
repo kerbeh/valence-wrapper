@@ -2,6 +2,8 @@
 
 namespace ValenceWrapper\Model\Content;
 
+use ValenceWrapper\Model\BaseValenceModel;
+
 /**
  * Create ContentObject
  *
@@ -22,7 +24,7 @@ class ContentObject extends BaseValenceModel {
     public $ShortTitle;
     public $Type;
 
-    //  public $Description;
+    //public $Description = null;
     //  public $ParentModuleId;
     //  public $ActivityId;
     //  public $Duration;
