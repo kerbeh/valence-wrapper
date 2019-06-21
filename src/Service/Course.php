@@ -31,6 +31,7 @@ Class Course {
      * Return a psr7 request to add a course copy job to the queue
      * @see https://docs.valence.desire2learn.com/res/course.html#post--d2l-api-le-(version)-import-(orgUnitId)-copy-
      * @return Request
+     * @since LMS 20.19.6.
      */
     public function enqueueCourseCopy($orgUnitId, CreateCopyJobRequest $copyJobRequest) {
 
