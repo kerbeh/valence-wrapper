@@ -11,25 +11,19 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\MultipartStream;
 use GuzzleHttp\Psr7\Request;
 use ValenceWrapper\Model\Content\ContentObjectData;
-use ValenceWrapper\ValenceInstance;
+use ValenceWrapper\ValenceVersion;
 
 /**
  * Description of Grades
  *
  * @author ktrist
  */
-class Content {
-
-    protected $le_version;
-    protected $valenceInstance;
+class Content extends ValenceVersion {
 
     const BOUNDARY = 'xxBOUNDARYxx';
 
-    public function __construct(ValenceInstance $valenceInstance) {
-        $this->valenceInstance = $valenceInstance;
-        $this->le_version = $valenceInstance->le_version;
+    public function __construct() {
 
-        $this->le_version = 1.24;
     }
 
     /**
@@ -60,7 +54,7 @@ class Content {
         ];
 
 
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/content/topics/$topicId/file", 'PUT');
+        $uri = "/d2l/api/le/$this->le_version/$orgUnitId/content/topics/$topicId/file";
         return new Request('GET', $uri);
     }
 
@@ -74,7 +68,6 @@ class Content {
      * @see https://docs.valence.desire2learn.com/res/content.html#post--d2l-api-le-(version)-(orgUnitId)-content-modules-(moduleId)-structure-
      */
     public function getTopicUploadRequest($orgUnitId, $moduleId, $file, $fileName, ContentObjectData $contentObjectData) {
-
 
         $boundary = $this::BOUNDARY;
         $multipart_mixed = [
@@ -99,7 +92,7 @@ class Content {
 
         $body = new MultipartStream($multipart_mixed, $boundary);
 
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/content/modules/$moduleId/structure/", "POST");
+        $uri = "/d2l/api/le/$this->le_version/$orgUnitId/content/modules/$moduleId/structure/";
 
         return new Request("POST", $uri, $headers, $body);
     }

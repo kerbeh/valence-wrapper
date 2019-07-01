@@ -9,22 +9,20 @@
 namespace ValenceWrapper\Service;
 
 use GuzzleHttp\Psr7\Request;
-use ValenceWrapper\ValenceInstance;
 use ValenceWrapper\Model\Course\CreateCopyJobRequest;
+use ValenceWrapper\ValenceVersion;
 
 /**
  * Description of Grades
  *
  * @author ktrist
  */
-Class Course {
+Class Course extends ValenceVersion {
 
-    protected $le_version;
     protected $valenceInstance;
 
-    public function __construct(ValenceInstance $valenceInstance) {
-        $this->valenceInstance = $valenceInstance;
-        $this->le_version = $valenceInstance->le_version;
+    public function __construct() {
+
     }
 
     /**
@@ -35,12 +33,11 @@ Class Course {
      */
     public function enqueueCourseCopy($orgUnitId, CreateCopyJobRequest $copyJobRequest) {
 
-        $le_version = $this->le_version;
 
         $body = $copyJobRequest->toArray();
         $headers = ["content-type" => 'application/json'];
 
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$le_version/import/$orgUnitId/copy/", 'POST');
+        $uri = "/d2l/api/le/$this->le_version/import/$orgUnitId/copy/";
 
         return new Request("POST", $uri, $headers, json_encode($body));
     }

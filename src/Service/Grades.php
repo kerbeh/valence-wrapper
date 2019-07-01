@@ -8,26 +8,20 @@
 
 namespace ValenceWrapper\Service;
 
-use ValenceWrapper\Model\Grade\GradeValue;
-use ValenceWrapper\ValenceInstance;
-use ValenceWrapper\Model\User\User;
 use ValenceWrapper\Model\Grade\IncomingGradeValueNumeric;
 use ValenceWrapper\Model\Grade\GradeObjectNumeric;
 use GuzzleHttp\Psr7\Request;
+use ValenceWrapper\ValenceVersion;
 
 /**
  * Description of Grades
  *
  * @author ktrist
  */
-class Grades {
+class Grades extends ValenceVersion {
 
-    protected $le_version;
-    protected $valenceInstance;
+    public function __construct() {
 
-    public function __construct(ValenceInstance $valenceInstance) {
-        $this->valenceInstance = $valenceInstance;
-        $this->le_version = $valenceInstance->le_version;
     }
 
     /**
@@ -40,7 +34,7 @@ class Grades {
      */
     public function getUserGrade($orgUnitId, $gradeObjectId, $userId) {
 
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/$userId", 'GET');
+        $uri = "/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/$userId";
         return new Request('GET', $uri);
     }
 
@@ -65,7 +59,7 @@ class Grades {
 
         $queryString = http_build_query($queryParrams);
 
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/?$queryString", 'GET');
+        $uri = "/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -79,7 +73,7 @@ class Grades {
      */
     public function setGradeNumeric($orgUnitId, $gradeObjectId, $userId, IncomingGradeValueNumeric $incomingGradeValue) {
 
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/$userId", "PUT");
+        $uri = "/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/$userId";
 
         $body = $incomingGradeValue->toArray();
         $headers = ["content-type" => 'application/json'];
@@ -89,7 +83,7 @@ class Grades {
 
     public function createGradeObjectNumeric($orgUnitId, GradeObjectNumeric $gradeObjectNumeric) {
 
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/grades/", "POST");
+        $uri = "/d2l/api/le/$this->le_version/$orgUnitId/grades/";
         $body = $gradeObjectNumeric->toArray();
         $headers = ["content-type" => 'application/json'];
         return new Request("POST", $uri, $headers, json_encode($body));

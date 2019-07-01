@@ -8,26 +8,18 @@
 
 namespace ValenceWrapper\Service;
 
-use ValenceWrapper\Model\Grade\GradeValue;
-use ValenceWrapper\ValenceInstance;
-use ValenceWrapper\Model\User\User;
-use ValenceWrapper\Model\Grade\IncomingGradeValueNumeric;
-use ValenceWrapper\Model\Grade\GradeObjectNumeric;
 use GuzzleHttp\Psr7\Request;
+use ValenceWrapper\ValenceVersion;
 
 /**
  * Description of Grades
  *
  * @author ktrist
  */
-class Assessments {
+class Assessments extends ValenceVersion {
 
-    protected $le_version;
-    protected $valenceInstance;
+    public function __construct() {
 
-    public function __construct(ValenceInstance $valenceInstance) {
-        $this->valenceInstance = $valenceInstance;
-        $this->le_version = $valenceInstance->le_version;
     }
 
     /**
@@ -49,7 +41,7 @@ class Assessments {
 
         $this->le_version = 'unstable';
 
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/rubrics?$queryString", 'GET');
+        $uri = "/d2l/api/le/$this->le_version/$orgUnitId/rubrics?$queryString";
         return new Request('GET', $uri);
     }
 

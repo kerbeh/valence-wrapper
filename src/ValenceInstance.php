@@ -4,15 +4,10 @@ namespace ValenceWrapper;
 
 use D2LAppContextFactory;
 use D2LHostSpec;
-use ValenceWrapper\RequestFactory;
-use Psr\Http\Message\RequestInterface;
-use Psr\Http\Message\UriInterface;
-use ValenceWrapper\Traits;
+use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Uri;
 
 class ValenceInstance {
-
-    public $le_version = "1.26";
-    public $lp_version = "1.18";
 
     /**
      * Contains the server connection information
@@ -102,40 +97,18 @@ class ValenceInstance {
     }
 
     /**
-     * Adds signed query parameters to an API request URL and verb
-     *
-     * @param type $route
-     * @param type $verb
-     * @return String
+     * Add the authentication params to the request query string
+     * @param Request $request
      */
-    public function authenticateUri($route, $method) {
-        $uri = $this->userContext->createAuthenticatedUri($route, $method);
+    public function authenticateRequest(Request $request) {
 
-        return $uri;
-    }
 
-    /**
-     *
-     * @param type $uri
-     * @param type $method
-     * @return type
-     */
-    protected function createRequest($uri, $method) {
-        $signedUri = $this->authenticateUri($uri, $method);
-        return $this->requestFactory->createRequest(stringtoupper($method), $signedUri);
-    }
+        $uri = new Uri($this->userContext->createAuthenticatedUri($request->getUri(), $request->getMethod()));
 
-    public function getGrades($orgUnitId, $gradeObjectId, $searchText = "", $sort = "lastname", $pageSize = 200, $isGraded = true) {
 
-        $urlStem = "/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId/values/";
-        $urlQuery = http_build_query([
-            "searchText" => $searchText,
-            "sort" => $sort,
-            "pageSize" => $pageSize,
-            "isGrade" => $isGraded
-        ]);
+        $authedRequest = $request->withUri($uri);
 
-        $this->requestFactory->createRequest('get', "$urlStem?$urlQuery");
+        return $authedRequest;
     }
 
 }

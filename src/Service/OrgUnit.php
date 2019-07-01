@@ -9,33 +9,30 @@
 namespace ValenceWrapper\Service;
 
 use GuzzleHttp\Psr7\Request;
-use ValenceWrapper\ValenceInstance;
+use ValenceWrapper\ValenceVersion;
 
 /**
  * Description of Grades
  *
  * @author ktrist
  */
-Class OrgUnit {
+Class OrgUnit extends ValenceVersion {
 
     const CourseOffering = 3;
 
-    protected $lp_version;
-    protected $valenceInstance;
     protected $types;
 
-    public function __construct(ValenceInstance $valenceInstance) {
-        $this->valenceInstance = $valenceInstance;
-        $this->lp_version = $valenceInstance->lp_version;
+    public function __construct() {
+
     }
 
     /**
      * Return a psr7 request to retrieve all the known and visible org unit types.
      * @return Request
      */
-    public function geOuTypesRequest() {
+    public function getOuTypesRequest() {
 
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/lp/$this->lp_version/outypes/", 'GET');
+        $uri = "/d2l/api/lp/$this->lp_version/outypes/";
         return new Request('GET', $uri);
     }
 
@@ -64,7 +61,7 @@ Class OrgUnit {
 
         $queryString = http_build_query($queryParrams);
 
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/lp/$this->lp_version/orgstructure/?$queryString", 'GET');
+        $uri = "/d2l/api/lp/$this->lp_version/orgstructure/?$queryString";
         return new Request('GET', $uri);
     }
 

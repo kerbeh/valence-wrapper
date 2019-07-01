@@ -3,8 +3,7 @@
     <testsuites>
         <testsuite name="Unit">
             <directory>tests/Unit</directory>
-            <directory>tests/Unit/ServiceTest</directory>
-
+            <directory>tests/Unit/ServiceTests</directory>
         </testsuite>
 
 

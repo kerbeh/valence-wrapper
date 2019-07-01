@@ -8,26 +8,18 @@
 
 namespace ValenceWrapper\Service;
 
-use ValenceWrapper\Model\Grade\GradeValue;
-use ValenceWrapper\ValenceInstance;
-use ValenceWrapper\Model\User\User;
-use ValenceWrapper\Model\Grade\IncomingGradeValueNumeric;
-use ValenceWrapper\Model\Grade\GradeObjectNumeric;
 use GuzzleHttp\Psr7\Request;
+use ValenceWrapper\ValenceVersion;
 
 /**
  * Description of Grades
  *
  * @author ktrist
  */
-Class Dropbox {
+Class Dropbox extends ValenceVersion {
 
-    protected $le_version;
-    protected $valenceInstance;
+    public function __construct() {
 
-    public function __construct(ValenceInstance $valenceInstance) {
-        $this->valenceInstance = $valenceInstance;
-        $this->le_version = $valenceInstance->le_version;
     }
 
     /**
@@ -41,7 +33,7 @@ Class Dropbox {
      */
     public function getSubmissionsRequest($orgUnitId, $folderId, $activeOnly = TRUE) {
 
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/dropbox/folders/$folderId/submissions/?activeOnly=$activeOnly", 'GET');
+        $uri = "/d2l/api/le/$this->le_version/$orgUnitId/dropbox/folders/$folderId/submissions/?activeOnly=$activeOnly";
         return new Request('GET', $uri);
     }
 
@@ -55,7 +47,7 @@ Class Dropbox {
      * @see https://docs.valence.desire2learn.com/res/dropbox.html#get--d2l-api-le-(version)-(orgUnitId)-dropbox-folders-
      */
     public function getDropboxFoldersRequest($orgUnitId, $onlyCurrentStudentsAndGroups = TRUE) {
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/dropbox/folders/?onlyCurrentStudentsAndGroups=$onlyCurrentStudentsAndGroups", 'GET');
+        $uri = "/d2l/api/le/$this->le_version/$orgUnitId/dropbox/folders/?onlyCurrentStudentsAndGroups=$onlyCurrentStudentsAndGroups";
         return new Request('GET', $uri);
     }
 
@@ -68,7 +60,7 @@ Class Dropbox {
      * @see https://docs.valence.desire2learn.com/res/dropbox.html#get--d2l-api-le-(version)-(orgUnitId)-dropbox-folders-(folderId)
      *      */
     public function getDropboxFolderRequest($orgUnitId, $folderId) {
-        $uri = $this->valenceInstance->authenticateUri("/d2l/api/le/$this->le_version/$orgUnitId/dropbox/folders/$folderId", 'GET');
+        $uri = "/d2l/api/le/$this->le_version/$orgUnitId/dropbox/folders/$folderId";
         return new Request('GET', $uri);
     }
 
