@@ -3,6 +3,7 @@
 namespace ValenceWrapper;
 
 use GuzzleHttp\Psr7\Request;
+use GuzzleHttp\Psr7\Uri;
 
 class OauthValenceInstance {
 
@@ -41,9 +42,20 @@ class OauthValenceInstance {
         $this->token = $token;
     }
 
+    /**
+     * Add the auth header and environemnt specific base URI to the route request
+     * @param Request $request
+     * @return type
+     */
     public function authenticateRequest(Request $request) {
 
-        return $request->withAddedHeader('Authorization', "Bearer $this->token");
+        $authedRequest = $request->withAddedHeader('Authorization', "Bearer $this->token");
+
+        $uri = $authedRequest->getUri()->withHost($this->host);
+
+        $authedRequestWithHost = $authedRequest->withUri($uri);
+
+        return $authedRequestWithHost;
     }
 
 }

@@ -49,7 +49,8 @@ class Enrollments extends ValenceVersion {
 
         $queryString = http_build_query($queryParrams);
 
-        $uri = "/d2l/api/le/$this->lp_version/enrollments/myenrollments/?$queryString";
+        $uri = "/d2l/api/lp/$this->lp_version/enrollments/myenrollments/?$queryString";
+
         return new Request('GET', $uri);
     }
 
