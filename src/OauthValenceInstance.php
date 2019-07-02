@@ -34,7 +34,7 @@ class OauthValenceInstance {
      *
      */
 
-    public function __construct($host, $port, $protocol, $token) {
+    public function __construct($host, $token, $port = 443, $protocol = "HTTPS") {
         $this->host = $host;
         $this->port = $port;
         $this->protocol = $protocol;
