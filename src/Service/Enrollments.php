@@ -47,7 +47,11 @@ class Enrollments extends ValenceVersion {
             "orgUnitTypeId" => $orgUnitTypeId,
         ];
 
-        $queryString = http_build_query($queryParrams);
+
+
+        $queryString = http_build_query(
+                array_filter($queryParrams, 'strlen')
+        );
 
         $uri = "/d2l/api/lp/$this->lp_version/enrollments/myenrollments/?$queryString";
 
