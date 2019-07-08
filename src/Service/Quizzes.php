@@ -30,7 +30,7 @@ Class Quizzes extends ValenceVersion {
      * @return Request
      * @see ttps://docs.valence.desire2learn.com/res/quiz.html#get--d2l-api-le-(version)-(orgUnitId)-quizzes-
      */
-    public function getSubmissionsRequest($orgUnitId) {
+    public function getQuizzesRequest($orgUnitId) {
 
         $uri = "/d2l/api/le/$this->le_version/$orgUnitId/quizzes/";
         return new Request('GET', $uri);
