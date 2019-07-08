@@ -18,7 +18,7 @@ use ValenceWrapper\ValenceVersion;
  */
 Class Quizzes extends ValenceVersion {
 
-    private $le_version = "unstable"; //This route is currently unstable
+    protected $le_version = "unstable"; //This route is currently unstable
 
     public function __construct() {
 
