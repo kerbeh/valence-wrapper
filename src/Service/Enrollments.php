@@ -58,4 +58,27 @@ class Enrollments extends ValenceVersion {
         return new Request('GET', $uri);
     }
 
+    /**
+     * @see https://docs.valence.desire2learn.com/res/enroll.html#get--d2l-api-lp-(version)-enrollments-orgUnits-(orgUnitId)-users-
+     * @param type $roleId //Default is 105 which is student in the current LMS
+     * @todo get the $roleId from the list of roles with an API call.
+     * @param type $bookmark
+     * @return Request
+     */
+    public function getUsersEnrolledInOrgUnit($orgUnitId, $bookmark, $roleId = 105) {
+
+        $queryParrams = [
+            "roleId" => $roleId,
+            "bookmark" => $bookmark
+        ];
+
+        $queryString = http_build_query(
+                array_filter($queryParrams, 'strlen')
+        );
+
+        $uri = "/d2l/api/lp/$this->lp_version/enrollments/orgUnits/$orgUnitId/users/?$queryString";
+
+        return new Request('GET', $uri);
+    }
+
 }
