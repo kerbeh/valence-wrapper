@@ -88,10 +88,6 @@ class Enrollments extends ValenceVersion {
      */
     public function getGroupsByCategoryId($orgUnitId, $groupCategoryId) {
 
-        $queryParrams = [
-            "roleId" => $roleId,
-            "bookmark" => $bookmark
-        ];
 
         $uri = "/d2l/api/lp/$this->lp_version/$orgUnitId/groupcategories/$groupCategoryId/groups/";
 
