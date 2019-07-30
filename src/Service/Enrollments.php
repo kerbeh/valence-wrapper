@@ -81,4 +81,21 @@ class Enrollments extends ValenceVersion {
         return new Request('GET', $uri);
     }
 
+    /**
+     * @see https://docs.valence.desire2learn.com/res/enroll.html#get--d2l-api-lp-(version)-(orgUnitId)-groupcategories-(groupCategoryId)-groups-
+     * @param type $bookmark
+     * @return Request
+     */
+    public function getGroupsByCategoryId($orgUnitId, $groupCategoryId) {
+
+        $queryParrams = [
+            "roleId" => $roleId,
+            "bookmark" => $bookmark
+        ];
+
+        $uri = "/d2l/api/lp/$this->lp_version/$orgUnitId/groupcategories/$groupCategoryId/groups/";
+
+        return new Request('GET', $uri);
+    }
+
 }
