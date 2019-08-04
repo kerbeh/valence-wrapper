@@ -49,7 +49,7 @@ class Grades extends ValenceVersion {
      * @param Bool $isGraded If true only return users with a non null grade.
      * @return type
      */
-    public function getGrades($orgUnitId, $gradeObjectId, $searchText = "", $sort = "lastname", $pageSize = 200, $isGraded = true) {
+    public function getGradeValues($orgUnitId, $gradeObjectId, $searchText = "", $sort = "lastname", $pageSize = 200, $isGraded = true) {
         $queryParrams = [
             "searchText" => $searchText,
             "sort" => $sort,
@@ -87,6 +87,31 @@ class Grades extends ValenceVersion {
         $body = $gradeObjectNumeric->toArray();
         $headers = ["content-type" => 'application/json'];
         return new Request("POST", $uri, $headers, json_encode($body));
+    }
+
+    /**
+     *
+     * @see https://docs.valence.desire2learn.com/res/grade.html#get--d2l-api-le-(version)-(orgUnitId)-grades-
+     * @param type $orgUnitId
+     * @return Request
+     */
+    public function getGradeObjects($orgUnitId) {
+
+        $uri = "/d2l/api/le/$this->le_version/$orgUnitId/grades/";
+        return new Request('GET', $uri);
+    }
+
+    /**
+     *
+     * @see https://docs.valence.desire2learn.com/res/grade.html#get--d2l-api-le-(version)-(orgUnitId)-grades-(gradeObjectId)
+     * @param Int $orgUnitId
+     * @param Int $gradeObjectId
+     * @return Request
+     */
+    public function getGradeObject($orgUnitId, $gradeObjectId) {
+
+        $uri = "/d2l/api/le/$this->le_version/$orgUnitId/grades/$gradeObjectId";
+        return new Request('GET', $uri);
     }
 
 }
