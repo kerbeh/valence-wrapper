@@ -65,4 +65,17 @@ Class OrgUnit extends ValenceVersion {
         return new Request('GET', $uri);
     }
 
+    public function getChildUnitsofOrgUnit($orgUnitId, $ouTypeId = null) {
+
+
+        $queryParrams = [
+            'ouTypeId' => $ouTypeId,
+        ];
+
+        $queryString = http_build_query($queryParrams);
+
+        $uri = "/d2l/api/lp/$this->lp_version/orgstructure/$orgUnitId/children/?$queryString";
+        return new Request('GET', $uri);
+    }
+
 }
