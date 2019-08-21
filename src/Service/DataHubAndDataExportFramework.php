@@ -1,0 +1,158 @@
+<?php
+namespace ValenceWrapper\Service;
+use ValenceWrapper\Model\BaseValenceModel;
+use ValenceWrapper\Model\Basic\UtcDateTime;
+use ValenceWrapper\Model\Basic\RichText;
+/**
+ * Data Hub and Data Export Framework — Developer Platform (August 2019)
+ * @see https://docs.valence.desire2learn.com/res/dataExport.html
+ */
+class DataHubAndDataExportFramework
+{
+	/**
+	 * Retrieve a data set.
+	 *
+	 * Return. This action retrieves a DataSetData JSON
+	 * block containing the information for the requested data set.
+	 *
+	 * @param [D2LVERSION] $version API version.
+	 * @param [GUID] $dataSetId Data set identifier.
+	 * @see https://docs.valence.desire2learn.com/res/dataExport.html#get--d2l-api-lp-(version)-dataExport-list-(dataSetId)
+	 * @return /PSR7 (Request)
+	 */
+	public function getDataexportList($version, $dataSetId)
+	{
+		$uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/dataExport/list/$dataSetId", 'GET');
+		return new Request('GET', $uri);
+	}
+
+
+	/**
+	 * Create an export job for the requested data set.
+	 *
+	 * Return. This action retrieves a ExportJobData
+	 * JSON block containing the information for the requested export job.
+	 *
+	 * @param [D2LVERSION] $version API version.
+	 * @param [DataExport.CreateExportJobData] $createExportJobData Properties of the export job request
+	 * @see https://docs.valence.desire2learn.com/res/dataExport.html#post--d2l-api-lp-(version)-dataExport-create
+	 * @return /PSR7 (Request)
+	 */
+	public function postDataexportCreate($version, $createExportJobData)
+	{
+		$uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/dataExport/create", 'POST');
+		return new Request('GET', $uri);
+	}
+
+
+	/**
+	 * Retrieves information about a data export job that you have previously submitted.
+	 *
+	 * Return. This action retrieves a ExportJobData
+	 * JSON block with the export job’s information.
+	 *
+	 * @param [D2LVERSION] $version API version.
+	 * @param [GUID] $exportJobId Export job identifier.
+	 * @see https://docs.valence.desire2learn.com/res/dataExport.html#get--d2l-api-lp-(version)-dataExport-jobs-(exportJobId)
+	 * @return /PSR7 (Request)
+	 */
+	public function getDataexportJobs($version, $exportJobId)
+	{
+		$uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/dataExport/jobs/$exportJobId", 'GET');
+		return new Request('GET', $uri);
+	}
+
+
+	/**
+	 * Retrieves a ZIP file containing a CSV file with the data of the requested
+	 * export job that you previously submitted.
+	 *
+	 * Return. This action retrieves a ZIP file containing a CSV file that
+	 * contains the data of the export job that you requested.
+	 *
+	 * @param [D2LVERSION] $version API version.
+	 * @param [GUID] $exportJobId Export job identifier.
+	 * @see https://docs.valence.desire2learn.com/res/dataExport.html#get--d2l-api-lp-(version)-dataExport-download-(exportJobId)
+	 * @return /PSR7 (Request)
+	 */
+	public function getDataexportDownload($version, $exportJobId)
+	{
+		$uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/dataExport/download/$exportJobId", 'GET');
+		return new Request('GET', $uri);
+	}
+
+
+	/**
+	 * Retrieves a list of Brightspace Data Sets plugins that you have permission to see.
+	 *
+	 * Return. This action retrieves a DataSetsReportinfo
+	 * JSON block with a list of plugins that you have permission to see.
+	 *
+	 * @param [D2LVERSION] $version API version.
+	 * @see https://docs.valence.desire2learn.com/res/dataExport.html#get--d2l-api-lp-(version)-dataExport-bds-list
+	 * @return /PSR7 (Request)
+	 */
+	public function getDataexportBdsList($version)
+	{
+		$uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/dataExport/bds/list", 'GET');
+		return new Request('GET', $uri);
+	}
+
+
+	/**
+	 * Retrieves a file stream for the requested Brightspace Data Sets plugin.
+	 *
+	 * Return. This action retrieves a file stream for the requested Brightspace Data Sets plugin.
+	 * If your request exceeds your quota, resulting in a 403 Forbidden,
+	 * the Retry-After response header contains the length of time you must wait,
+	 * in seconds, before your quota is refreshed
+	 *
+	 * @param [D2LVERSION] $version API version.
+	 * @param [GUID] $pluginId Plugin identifier.
+	 * @see https://docs.valence.desire2learn.com/res/dataExport.html#get--d2l-api-lp-(version)-dataExport-bds-download-(pluginid)
+	 * @return /PSR7 (Request)
+	 */
+	public function getDataexportBdsDownload($version, $pluginId)
+	{
+		$uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/dataExport/bds/download/$pluginid", 'GET');
+		return new Request('GET', $uri);
+	}
+
+
+	/**
+	 * Retrieves a file stream for the requested Brightspace Data Sets plugin.
+	 *
+	 * Return. This action retrieves a file stream for the requested Brightspace Data Sets plugin.
+	 * If your request exceeds your quota, resulting in a 403 Forbidden,
+	 * the Retry-After response header contains the length of time you must wait,
+	 * in seconds, before your quota is refreshed
+	 *
+	 * @param [D2LVERSION] $version API version.
+	 * @param [GUID] $pluginId Plugin identifier.
+	 * @param [string] $identifier Scheduled export identifier.
+	 * @see https://docs.valence.desire2learn.com/res/dataExport.html#get--d2l-api-lp-(version)-dataExport-bds-(pluginid)-(identifier)
+	 * @return /PSR7 (Request)
+	 */
+	public function getDataexportBds($version, $pluginId, $identifier)
+	{
+		$uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/dataExport/bds/$pluginid/$identifier", 'GET');
+		return new Request('GET', $uri);
+	}
+
+
+	/**
+	 * Retrieves a list of schema identifiers and related plugin identifiers.
+	 *
+	 * Return. This action retrieves a result set containing
+	 * BrightspaceDataSetSchemaInfo JSON blocks.
+	 *
+	 * @param [D2LVERSION] $version API version.
+	 * @see https://docs.valence.desire2learn.com/res/dataExport.html#get--d2l-api-lp-(version)-dataExport-schema-bds
+	 * @return /PSR7 (Request)
+	 */
+	public function getDataexportSchemaBds($version)
+	{
+		$uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/dataExport/schema/bds", 'GET');
+		return new Request('GET', $uri);
+	}
+}
