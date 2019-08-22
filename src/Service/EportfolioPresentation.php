@@ -18,7 +18,7 @@ class EportfolioPresentation
      */
     public function deletePresentationObjectId($version, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/presentation/$objectId", 'DELETE');
+        $uri = "d2l/api/eP/$version/presentation/$objectId";
         return new Request('GET', $uri);
     }
 
@@ -42,7 +42,7 @@ class EportfolioPresentation
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/presentation/$objectId?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/presentation/$objectId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -58,7 +58,7 @@ class EportfolioPresentation
      */
     public function postPresentationsNew($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/presentations/new", 'POST');
+        $uri = "d2l/api/eP/$version/presentations/new";
         return new Request('GET', $uri);
     }
 
@@ -75,7 +75,7 @@ class EportfolioPresentation
      */
     public function postPresentationObjectId($version, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/presentation/$objectId", 'POST');
+        $uri = "d2l/api/eP/$version/presentation/$objectId";
         return new Request('GET', $uri);
     }
 }

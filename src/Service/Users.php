@@ -18,7 +18,7 @@ class Users
      */
     public function deleteUsersUserId($version, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/users/$userId", 'DELETE');
+        $uri = "d2l/api/lp/$version/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -53,7 +53,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/users/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/users/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -69,7 +69,7 @@ class Users
      */
     public function getUsersNamesUserId($version, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/users/$userId/names", 'GET');
+        $uri = "d2l/api/lp/$version/users/$userId/names";
         return new Request('GET', $uri);
     }
 
@@ -85,7 +85,7 @@ class Users
      */
     public function getUsersUserId($version, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/users/$userId", 'GET');
+        $uri = "d2l/api/lp/$version/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -101,7 +101,7 @@ class Users
      */
     public function getUsersWhoami($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/users/whoami", 'GET');
+        $uri = "d2l/api/lp/$version/users/whoami";
         return new Request('GET', $uri);
     }
 
@@ -119,7 +119,7 @@ class Users
      */
     public function postUsers($version, $createUserData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/users/", 'POST');
+        $uri = "d2l/api/lp/$version/users/";
         return new Request('GET', $uri);
     }
 
@@ -140,7 +140,7 @@ class Users
      */
     public function putUsersUserId($version, $userId, $updateUserData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/users/$userId", 'PUT');
+        $uri = "d2l/api/lp/$version/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -160,7 +160,7 @@ class Users
      */
     public function putUsersNamesUserId($version, $userId, $legalPreferredNames)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/users/$userId/names", 'PUT');
+        $uri = "d2l/api/lp/$version/users/$userId/names";
         return new Request('GET', $uri);
     }
 
@@ -177,7 +177,7 @@ class Users
      */
     public function getUsersActivationUserId($version, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/users/$userId/activation", 'GET');
+        $uri = "d2l/api/lp/$version/users/$userId/activation";
         return new Request('GET', $uri);
     }
 
@@ -192,7 +192,7 @@ class Users
      */
     public function putUsersActivationUserId($version, $userId, $userActivationData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/users/$userId/activation", 'PUT');
+        $uri = "d2l/api/lp/$version/users/$userId/activation";
         return new Request('GET', $uri);
     }
 
@@ -206,7 +206,7 @@ class Users
      */
     public function postLinkuser($version, $googleAppsLinkingItem)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/gae/$version/linkuser", 'POST');
+        $uri = "d2l/api/gae/$version/linkuser";
         return new Request('GET', $uri);
     }
 
@@ -222,7 +222,7 @@ class Users
      */
     public function deleteNotificationsInstantCarriersSubscriptionsCarrierIdMessageTypeId($version, $carrierId, $messageTypeId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId", 'DELETE');
+        $uri = "d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId";
         return new Request('GET', $uri);
     }
 
@@ -238,7 +238,7 @@ class Users
      */
     public function getNotificationsInstantCarriers($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/notifications/instant/carriers/", 'GET');
+        $uri = "d2l/api/lp/$version/notifications/instant/carriers/";
         return new Request('GET', $uri);
     }
 
@@ -255,7 +255,7 @@ class Users
      */
     public function getNotificationsInstantCarriersSubscriptionsCarrierId($version, $carrierId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/", 'GET');
+        $uri = "d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/";
         return new Request('GET', $uri);
     }
 
@@ -271,7 +271,7 @@ class Users
      */
     public function putNotificationsInstantCarriersSubscriptionsCarrierIdMessageTypeId($version, $carrierId, $messageTypeId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId", 'PUT');
+        $uri = "d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId";
         return new Request('GET', $uri);
     }
 
@@ -288,7 +288,7 @@ class Users
      */
     public function getNotificationsInstantUsersNumberUserId($version, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/notifications/instant/users/$userId/number", 'GET');
+        $uri = "d2l/api/lp/$version/notifications/instant/users/$userId/number";
         return new Request('GET', $uri);
     }
 
@@ -309,7 +309,7 @@ class Users
      */
     public function putNotificationsInstantUsersNumberUserId($version, $userId, $notificationNumberUpdateInfo)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/notifications/instant/users/$userId/number", 'PUT');
+        $uri = "d2l/api/lp/$version/notifications/instant/users/$userId/number";
         return new Request('GET', $uri);
     }
 
@@ -323,7 +323,7 @@ class Users
      */
     public function deleteNotificationsInstantUsersNumberUserId($version, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/notifications/instant/users/$userId/number", 'DELETE');
+        $uri = "d2l/api/lp/$version/notifications/instant/users/$userId/number";
         return new Request('GET', $uri);
     }
 
@@ -339,7 +339,7 @@ class Users
      */
     public function getNotificationsInstantNumbersUsersNotificationNumber($version, $notificationNumber)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber/users", 'GET');
+        $uri = "d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber/users";
         return new Request('GET', $uri);
     }
 
@@ -354,7 +354,7 @@ class Users
      */
     public function deleteNotificationsInstantNumbersNotificationNumber($version, $notificationNumber)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber", 'DELETE');
+        $uri = "d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber";
         return new Request('GET', $uri);
     }
 
@@ -370,7 +370,7 @@ class Users
      */
     public function deleteNotificationsInstantNumbersUsersNotificationNumberUserId($version, $notificationNumber, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber/users/$userId", 'DELETE');
+        $uri = "d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -384,7 +384,7 @@ class Users
      */
     public function deleteUsersPasswordUserId($version, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/users/$userId/password", 'DELETE');
+        $uri = "d2l/api/lp/$version/users/$userId/password";
         return new Request('GET', $uri);
     }
 
@@ -398,7 +398,7 @@ class Users
      */
     public function postUsersPasswordUserId($version, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/users/$userId/password", 'POST');
+        $uri = "d2l/api/lp/$version/users/$userId/password";
         return new Request('GET', $uri);
     }
 
@@ -413,7 +413,7 @@ class Users
      */
     public function putUsersPasswordUserId($version, $userId, $userPasswordData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/users/$userId/password", 'PUT');
+        $uri = "d2l/api/lp/$version/users/$userId/password";
         return new Request('GET', $uri);
     }
 
@@ -426,7 +426,7 @@ class Users
      */
     public function deleteProfileMyprofileImage($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/profile/myProfile/image", 'DELETE');
+        $uri = "d2l/api/lp/$version/profile/myProfile/image";
         return new Request('GET', $uri);
     }
 
@@ -440,7 +440,7 @@ class Users
      */
     public function deleteProfileImageProfileId($version, $profileId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/profile/$profileId/image", 'DELETE');
+        $uri = "d2l/api/lp/$version/profile/$profileId/image";
         return new Request('GET', $uri);
     }
 
@@ -454,7 +454,7 @@ class Users
      */
     public function deleteProfileUserImageUserId($version, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/profile/user/$userId/image", 'DELETE');
+        $uri = "d2l/api/lp/$version/profile/user/$userId/image";
         return new Request('GET', $uri);
     }
 
@@ -470,7 +470,7 @@ class Users
      */
     public function getProfileMyprofile($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/profile/myProfile", 'GET');
+        $uri = "d2l/api/lp/$version/profile/myProfile";
         return new Request('GET', $uri);
     }
 
@@ -494,7 +494,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/profile/myProfile/image?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/profile/myProfile/image?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -511,7 +511,7 @@ class Users
      */
     public function getProfileProfileId($version, $profileId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/profile/$profileId", 'GET');
+        $uri = "d2l/api/lp/$version/profile/$profileId";
         return new Request('GET', $uri);
     }
 
@@ -536,7 +536,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/profile/$profileId/image?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/profile/$profileId/image?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -553,7 +553,7 @@ class Users
      */
     public function getProfileUserUserId($version, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/profile/user/$userId", 'GET');
+        $uri = "d2l/api/lp/$version/profile/user/$userId";
         return new Request('GET', $uri);
     }
 
@@ -578,7 +578,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/profile/user/$userId/image?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/profile/user/$userId/image?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -595,7 +595,7 @@ class Users
      */
     public function postProfileMyprofileImage($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/profile/myProfile/image", 'POST');
+        $uri = "d2l/api/lp/$version/profile/myProfile/image";
         return new Request('GET', $uri);
     }
 
@@ -613,7 +613,7 @@ class Users
      */
     public function postProfileImageProfileId($version, $profileId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/profile/$profileId/image", 'POST');
+        $uri = "d2l/api/lp/$version/profile/$profileId/image";
         return new Request('GET', $uri);
     }
 
@@ -631,7 +631,7 @@ class Users
      */
     public function postProfileUserImageUserId($version, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/profile/user/$userId/image", 'POST');
+        $uri = "d2l/api/lp/$version/profile/user/$userId/image";
         return new Request('GET', $uri);
     }
 
@@ -651,7 +651,7 @@ class Users
      */
     public function putProfileMyprofile($version, $userProfileUpdateData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/profile/myProfile", 'PUT');
+        $uri = "d2l/api/lp/$version/profile/myProfile";
         return new Request('GET', $uri);
     }
 
@@ -672,7 +672,7 @@ class Users
      */
     public function putProfileProfileId($version, $profileId, $userProfileUpdateData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/profile/$profileId", 'PUT');
+        $uri = "d2l/api/lp/$version/profile/$profileId";
         return new Request('GET', $uri);
     }
 
@@ -689,7 +689,7 @@ class Users
      */
     public function getRoles($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/roles/", 'GET');
+        $uri = "d2l/api/lp/$version/roles/";
         return new Request('GET', $uri);
     }
 
@@ -706,7 +706,7 @@ class Users
      */
     public function getRolesRoleId($version, $roleId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/roles/$roleId", 'GET');
+        $uri = "d2l/api/lp/$version/roles/$roleId";
         return new Request('GET', $uri);
     }
 
@@ -725,7 +725,7 @@ class Users
      */
     public function getRolesOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/roles/", 'GET');
+        $uri = "d2l/api/lp/$version/$orgUnitId/roles/";
         return new Request('GET', $uri);
     }
 
@@ -754,7 +754,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/roles/?$queryString", 'POST');
+        $uri = "d2l/api/lp/$version/roles/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -781,7 +781,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/imsconfig/roles/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/imsconfig/roles/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -814,7 +814,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/imsconfig/map/roles/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/imsconfig/map/roles/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -839,7 +839,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/imsconfig/map/roles/$roleId?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/imsconfig/map/roles/$roleId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -865,7 +865,7 @@ class Users
      */
     public function putImsconfigMapRolesRoleId($version, $roleId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/imsconfig/map/roles/$roleId", 'PUT');
+        $uri = "d2l/api/lp/$version/imsconfig/map/roles/$roleId";
         return new Request('GET', $uri);
     }
 
@@ -879,7 +879,7 @@ class Users
      */
     public function deleteGlobalusermappingUsersUserId($version, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/globalusermapping/users/$userid", 'DELETE');
+        $uri = "d2l/api/lp/$version/globalusermapping/users/$userid";
         return new Request('GET', $uri);
     }
 
@@ -895,7 +895,7 @@ class Users
      */
     public function getGlobalusermappingUsersUserId($version, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/globalusermapping/users/$userid", 'GET');
+        $uri = "d2l/api/lp/$version/globalusermapping/users/$userid";
         return new Request('GET', $uri);
     }
 
@@ -912,7 +912,7 @@ class Users
      */
     public function getGlobalusermappingIdentifiersIdentifier($version, $identifier)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/globalusermapping/identifiers/$identifier", 'GET');
+        $uri = "d2l/api/lp/$version/globalusermapping/identifiers/$identifier";
         return new Request('GET', $uri);
     }
 
@@ -927,7 +927,7 @@ class Users
      */
     public function putGlobalusermappingUsersUserId($version, $userId, $mapIdentifier)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/globalusermapping/users/$userid", 'PUT');
+        $uri = "d2l/api/lp/$version/globalusermapping/users/$userid";
         return new Request('GET', $uri);
     }
 }

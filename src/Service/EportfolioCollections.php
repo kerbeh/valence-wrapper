@@ -18,7 +18,7 @@ class EportfolioCollections
      */
     public function deleteCollectionObjectId($version, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/collection/$objectId", 'DELETE');
+        $uri = "d2l/api/eP/$version/collection/$objectId";
         return new Request('GET', $uri);
     }
 
@@ -44,7 +44,7 @@ class EportfolioCollections
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/collection/$objectId?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/collection/$objectId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -68,7 +68,7 @@ class EportfolioCollections
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/collection/$objectId/contents/?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/collection/$objectId/contents/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -85,7 +85,7 @@ class EportfolioCollections
      */
     public function postCollectionsNew($version, $collection)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/collections/new", 'POST');
+        $uri = "d2l/api/eP/$version/collections/new";
         return new Request('GET', $uri);
     }
 
@@ -103,7 +103,7 @@ class EportfolioCollections
      */
     public function postCollectionObjectId($version, $objectId, $collection)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/collection/$objectId", 'POST');
+        $uri = "d2l/api/eP/$version/collection/$objectId";
         return new Request('GET', $uri);
     }
 
@@ -118,7 +118,7 @@ class EportfolioCollections
      */
     public function postCollectionAddCollectionIdObjectId($version, $collectionId, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/collection/$collectionId/add/$objectId", 'POST');
+        $uri = "d2l/api/eP/$version/collection/$collectionId/add/$objectId";
         return new Request('GET', $uri);
     }
 
@@ -133,7 +133,7 @@ class EportfolioCollections
      */
     public function postCollectionRemoveCollectionIdObjectId($version, $collectionId, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/collection/$collectionId/remove/$objectId", 'POST');
+        $uri = "d2l/api/eP/$version/collection/$collectionId/remove/$objectId";
         return new Request('GET', $uri);
     }
 }

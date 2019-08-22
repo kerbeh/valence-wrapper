@@ -22,7 +22,7 @@ class Quizzes
      */
     public function getQuizzesOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/quizzes/", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/quizzes/";
         return new Request('GET', $uri);
     }
 
@@ -40,7 +40,7 @@ class Quizzes
      */
     public function getQuizzesOrgUnitIdQuizId($version, $orgUnitId, $quizId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/quizzes/$quizId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/quizzes/$quizId";
         return new Request('GET', $uri);
     }
 
@@ -62,7 +62,7 @@ class Quizzes
      */
     public function putQuizzesOrgUnitIdQuizId($version, $orgUnitId, $quizId, $quizData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/quizzes/$quizId", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/quizzes/$quizId";
         return new Request('GET', $uri);
     }
 }

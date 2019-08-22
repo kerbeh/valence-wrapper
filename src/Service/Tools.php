@@ -35,7 +35,7 @@ class Tools
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/tools/org/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/tools/org/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -52,7 +52,7 @@ class Tools
      */
     public function getToolsOrgToolId($version, $toolId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/tools/org/$toolId", 'GET');
+        $uri = "d2l/api/lp/$version/tools/org/$toolId";
         return new Request('GET', $uri);
     }
 
@@ -69,7 +69,7 @@ class Tools
      */
     public function putToolsOrgToolId($version, $toolId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/tools/org/$toolId", 'PUT');
+        $uri = "d2l/api/lp/$version/tools/org/$toolId";
         return new Request('GET', $uri);
     }
 
@@ -86,7 +86,7 @@ class Tools
      */
     public function putToolsOrgOudefaultToolId($version, $toolId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/tools/org/$toolId/OUDefault", 'PUT');
+        $uri = "d2l/api/lp/$version/tools/org/$toolId/OUDefault";
         return new Request('GET', $uri);
     }
 
@@ -103,7 +103,7 @@ class Tools
      */
     public function putToolsOrgOudefaultOverrideToolId($version, $toolId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/tools/org/$toolId/OUDefault/override", 'PUT');
+        $uri = "d2l/api/lp/$version/tools/org/$toolId/OUDefault/override";
         return new Request('GET', $uri);
     }
 
@@ -136,7 +136,7 @@ class Tools
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/tools/orgUnits/$orgUnitId?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/tools/orgUnits/$orgUnitId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -167,7 +167,7 @@ class Tools
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/tools/orgUnits/$orgUnitId/toolNames?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/tools/orgUnits/$orgUnitId/toolNames?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -194,7 +194,7 @@ class Tools
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/tools/orgUnits/$orgUnitId/$toolId?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/tools/orgUnits/$orgUnitId/$toolId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -212,7 +212,7 @@ class Tools
      */
     public function putToolsOrgunitsOrgUnitIdToolId($version, $orgUnitId, $toolId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/tools/orgUnits/$orgUnitId/$toolId", 'PUT');
+        $uri = "d2l/api/lp/$version/tools/orgUnits/$orgUnitId/$toolId";
         return new Request('GET', $uri);
     }
 }

@@ -24,7 +24,7 @@ class CourseUpdatesForEndUsers
      */
     public function getUpdatesMyupdatesOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/updates/myUpdates", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/updates/myUpdates";
         return new Request('GET', $uri);
     }
 
@@ -46,7 +46,7 @@ class CourseUpdatesForEndUsers
      */
     public function getUpdatesMyupdates($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/updates/myUpdates/", 'GET');
+        $uri = "d2l/api/le/$version/updates/myUpdates/";
         return new Request('GET', $uri);
     }
 }

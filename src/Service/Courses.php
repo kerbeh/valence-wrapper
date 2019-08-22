@@ -18,7 +18,7 @@ class Courses
      */
     public function deleteCoursesOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/courses/$orgUnitId", 'DELETE');
+        $uri = "d2l/api/lp/$version/courses/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -34,7 +34,7 @@ class Courses
      */
     public function getCoursesSchema($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/courses/schema", 'GET');
+        $uri = "d2l/api/lp/$version/courses/schema";
         return new Request('GET', $uri);
     }
 
@@ -51,7 +51,7 @@ class Courses
      */
     public function getCoursesOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/courses/$orgUnitId", 'GET');
+        $uri = "d2l/api/lp/$version/courses/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -77,7 +77,7 @@ class Courses
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/courses/$orgUnitId/image?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/courses/$orgUnitId/image?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -94,7 +94,7 @@ class Courses
      */
     public function postCourses($version, $createCourseOffering)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/courses/", 'POST');
+        $uri = "d2l/api/lp/$version/courses/";
         return new Request('GET', $uri);
     }
 
@@ -112,7 +112,7 @@ class Courses
      */
     public function putCoursesOrgUnitId($version, $orgUnitId, $courseOfferingInfo)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/courses/$orgUnitId", 'PUT');
+        $uri = "d2l/api/lp/$version/courses/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -128,7 +128,7 @@ class Courses
      */
     public function putCoursesImageOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/courses/$orgUnitId/image", 'PUT');
+        $uri = "d2l/api/lp/$version/courses/$orgUnitId/image";
         return new Request('GET', $uri);
     }
 
@@ -142,7 +142,7 @@ class Courses
      */
     public function deleteCoursetemplatesOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/coursetemplates/$orgUnitId", 'DELETE');
+        $uri = "d2l/api/lp/$version/coursetemplates/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -159,7 +159,7 @@ class Courses
      */
     public function getCoursetemplatesOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/coursetemplates/$orgUnitId", 'GET');
+        $uri = "d2l/api/lp/$version/coursetemplates/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -176,7 +176,7 @@ class Courses
      */
     public function getCoursetemplatesSchema($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/coursetemplates/schema", 'GET');
+        $uri = "d2l/api/lp/$version/coursetemplates/schema";
         return new Request('GET', $uri);
     }
 
@@ -193,7 +193,7 @@ class Courses
      */
     public function postCoursetemplates($version, $createCourseTemplate)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/coursetemplates/", 'POST');
+        $uri = "d2l/api/lp/$version/coursetemplates/";
         return new Request('GET', $uri);
     }
 
@@ -211,7 +211,7 @@ class Courses
      */
     public function putCoursetemplatesOrgUnitId($version, $orgUnitId, $courseTemplateInfo)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/coursetemplates/$orgUnitId", 'PUT');
+        $uri = "d2l/api/lp/$version/coursetemplates/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -229,7 +229,7 @@ class Courses
      */
     public function getImportCopyOrgUnitIdJobToken($version, $orgUnitId, $jobToken)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/import/$orgUnitId/copy/$jobToken", 'GET');
+        $uri = "d2l/api/le/$version/import/$orgUnitId/copy/$jobToken";
         return new Request('GET', $uri);
     }
 
@@ -247,7 +247,7 @@ class Courses
      */
     public function postImportCopyOrgUnitId($version, $orgUnitId, $createCopyJobRequest)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/import/$orgUnitId/copy/", 'POST');
+        $uri = "d2l/api/le/$version/import/$orgUnitId/copy/";
         return new Request('GET', $uri);
     }
 
@@ -278,7 +278,7 @@ class Courses
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/ccb/logs?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/ccb/logs?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -296,7 +296,7 @@ class Courses
      */
     public function getImportImportsOrgUnitIdJobToken($version, $orgUnitId, $jobToken)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/import/$orgUnitId/imports/$jobToken", 'GET');
+        $uri = "d2l/api/le/$version/import/$orgUnitId/imports/$jobToken";
         return new Request('GET', $uri);
     }
 
@@ -323,7 +323,7 @@ class Courses
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/import/$orgUnitid/imports/$jobToken/logs/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/import/$orgUnitid/imports/$jobToken/logs/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -352,7 +352,7 @@ class Courses
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/import/$orgUnitId/imports/?$queryString", 'POST');
+        $uri = "d2l/api/le/$version/import/$orgUnitId/imports/?$queryString";
         return new Request('GET', $uri);
     }
 }

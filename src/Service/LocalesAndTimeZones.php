@@ -20,7 +20,7 @@ class LocalesAndTimeZones
      */
     public function getLocales($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/locales/$localeId", 'GET');
+        $uri = "d2l/api/lp/$version/locales/$localeId";
         return new Request('GET', $uri);
     }
 
@@ -50,7 +50,7 @@ class LocalesAndTimeZones
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/timezones/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/timezones/?$queryString";
         return new Request('GET', $uri);
     }
 }

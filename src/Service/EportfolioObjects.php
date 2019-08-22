@@ -27,7 +27,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/object?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/object?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -44,7 +44,7 @@ class EportfolioObjects
      */
     public function getObjectContent($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/object/content", 'GET');
+        $uri = "d2l/api/eP/$version/object/content";
         return new Request('GET', $uri);
     }
 
@@ -67,7 +67,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/object/thumbnail?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/object/thumbnail?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -91,7 +91,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/object/$objectId?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/object/$objectId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -117,7 +117,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/object/$objectId/associations/?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/object/$objectId/associations/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -134,7 +134,7 @@ class EportfolioObjects
      */
     public function getObjectContentObjectId($version, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/object/$objectId/content", 'GET');
+        $uri = "d2l/api/eP/$version/object/$objectId/content";
         return new Request('GET', $uri);
     }
 
@@ -165,7 +165,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/objects/my/?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/objects/my/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -194,7 +194,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/object/sharetargets?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/object/sharetargets?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -223,7 +223,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/object/sharetargets/my?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/object/sharetargets/my?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -252,7 +252,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/object/sharetargets/sharinggroups?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/object/sharetargets/sharinggroups?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -281,7 +281,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/object/sharetargets/users?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/object/sharetargets/users?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -299,7 +299,7 @@ class EportfolioObjects
      */
     public function getObjectSharesObjectId($version, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/object/$objectId/shares/", 'GET');
+        $uri = "d2l/api/eP/$version/object/$objectId/shares/";
         return new Request('GET', $uri);
     }
 
@@ -317,7 +317,7 @@ class EportfolioObjects
      */
     public function getObjectsMySharedModified($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/objects/my/shared/modified/", 'GET');
+        $uri = "d2l/api/eP/$version/objects/my/shared/modified/";
         return new Request('GET', $uri);
     }
 
@@ -348,7 +348,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/objects/shared/?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/objects/shared/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -372,7 +372,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/users/sharing/?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/users/sharing/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -389,7 +389,7 @@ class EportfolioObjects
      */
     public function postObjectShareDeleteObjectId($version, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/object/$objectId/share/delete", 'POST');
+        $uri = "d2l/api/eP/$version/object/$objectId/share/delete";
         return new Request('GET', $uri);
     }
 
@@ -410,7 +410,7 @@ class EportfolioObjects
      */
     public function postObjectShareNewObjectId($version, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/object/$objectId/share/new", 'POST');
+        $uri = "d2l/api/eP/$version/object/$objectId/share/new";
         return new Request('GET', $uri);
     }
 
@@ -426,7 +426,7 @@ class EportfolioObjects
      */
     public function getIgnoredusers($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/ignoredusers/", 'GET');
+        $uri = "d2l/api/eP/$version/ignoredusers/";
         return new Request('GET', $uri);
     }
 
@@ -443,7 +443,7 @@ class EportfolioObjects
      */
     public function postIgnoredusersAdd($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/ignoredusers/add", 'POST');
+        $uri = "d2l/api/eP/$version/ignoredusers/add";
         return new Request('GET', $uri);
     }
 
@@ -460,7 +460,7 @@ class EportfolioObjects
      */
     public function postIgnoredusersRemove($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/ignoredusers/remove", 'POST');
+        $uri = "d2l/api/eP/$version/ignoredusers/remove";
         return new Request('GET', $uri);
     }
 }

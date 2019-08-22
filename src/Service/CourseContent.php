@@ -19,7 +19,7 @@ class CourseContent
      */
     public function deleteContentModulesOrgUnitIdModuleId($version, $orgUnitId, $moduleId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/modules/$moduleId", 'DELETE');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/modules/$moduleId";
         return new Request('GET', $uri);
     }
 
@@ -34,7 +34,7 @@ class CourseContent
      */
     public function deleteContentTopicsOrgUnitIdTopicId($version, $orgUnitId, $topicId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/topics/$topicId", 'DELETE');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId";
         return new Request('GET', $uri);
     }
 
@@ -52,7 +52,7 @@ class CourseContent
      */
     public function getContentModulesOrgUnitIdModuleId($version, $orgUnitId, $moduleId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/modules/$moduleId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/modules/$moduleId";
         return new Request('GET', $uri);
     }
 
@@ -70,7 +70,7 @@ class CourseContent
      */
     public function getContentModulesStructureOrgUnitIdModuleId($version, $orgUnitId, $moduleId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/modules/$moduleId/structure/", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/modules/$moduleId/structure/";
         return new Request('GET', $uri);
     }
 
@@ -87,7 +87,7 @@ class CourseContent
      */
     public function getContentRootOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/root/", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/root/";
         return new Request('GET', $uri);
     }
 
@@ -105,7 +105,7 @@ class CourseContent
      */
     public function getContentTopicsOrgUnitIdTopicId($version, $orgUnitId, $topicId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/topics/$topicId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId";
         return new Request('GET', $uri);
     }
 
@@ -130,7 +130,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/topics/$topicId/file?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId/file?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -161,7 +161,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/modules/$moduleId/structure/?$queryString", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/modules/$moduleId/structure/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -178,7 +178,7 @@ class CourseContent
      */
     public function postContentRootOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/root/", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/root/";
         return new Request('GET', $uri);
     }
 
@@ -196,7 +196,7 @@ class CourseContent
      */
     public function putContentModulesOrgUnitIdModuleId($version, $orgUnitId, $moduleId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/modules/$moduleId", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/modules/$moduleId";
         return new Request('GET', $uri);
     }
 
@@ -217,7 +217,7 @@ class CourseContent
      */
     public function putContentTopicsOrgUnitIdTopicId($version, $orgUnitId, $topicId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/topics/$topicId", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId";
         return new Request('GET', $uri);
     }
 
@@ -237,7 +237,7 @@ class CourseContent
      */
     public function putContentTopicsFileOrgUnitIdTopicId($version, $orgUnitId, $topicId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/topics/$topicId/file", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId/file";
         return new Request('GET', $uri);
     }
 
@@ -254,7 +254,7 @@ class CourseContent
      */
     public function getOverviewOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/overview", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/overview";
         return new Request('GET', $uri);
     }
 
@@ -271,7 +271,7 @@ class CourseContent
      */
     public function getOverviewAttachmentOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/overview/attachment", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/overview/attachment";
         return new Request('GET', $uri);
     }
 
@@ -286,7 +286,7 @@ class CourseContent
      */
     public function deleteContentIsbnOrgUnitIdIsbn($version, $orgUnitId, $isbn)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/isbn/$isbn", 'DELETE');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/isbn/$isbn";
         return new Request('GET', $uri);
     }
 
@@ -303,7 +303,7 @@ class CourseContent
      */
     public function getContentIsbnIsbn($version, $isbn)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/content/isbn/$isbn", 'GET');
+        $uri = "d2l/api/le/$version/content/isbn/$isbn";
         return new Request('GET', $uri);
     }
 
@@ -320,7 +320,7 @@ class CourseContent
      */
     public function getContentIsbnOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/isbn/", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/isbn/";
         return new Request('GET', $uri);
     }
 
@@ -338,7 +338,7 @@ class CourseContent
      */
     public function getContentIsbnOrgUnitIdIsbn($version, $orgUnitId, $isbn)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/isbn/$isbn", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/isbn/$isbn";
         return new Request('GET', $uri);
     }
 
@@ -356,7 +356,7 @@ class CourseContent
      */
     public function postContentIsbnOrgUnitId($version, $orgUnitId, $isbnAssociationData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/isbn/", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/isbn/";
         return new Request('GET', $uri);
     }
 
@@ -391,7 +391,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/content/myItems/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/content/myItems/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -427,7 +427,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/content/myItems/due/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/content/myItems/due/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -462,7 +462,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/content/myItems/itemCounts/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/content/myItems/itemCounts/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -498,7 +498,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/content/myItems/due/itemCounts/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/content/myItems/due/itemCounts/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -529,7 +529,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/content/myItems/completions/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/content/myItems/completions/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -561,7 +561,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/content/myItems/completions/due/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/content/myItems/completions/due/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -595,7 +595,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/myItems/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/myItems/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -630,7 +630,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/myItems/due/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/myItems/due/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -663,7 +663,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/myItems/itemCount?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/myItems/itemCount?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -698,7 +698,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/myItems/due/itemCount?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/myItems/due/itemCount?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -724,7 +724,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/overdueItems/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/overdueItems/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -745,7 +745,7 @@ class CourseContent
      */
     public function getOverdueitemsMyitems($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/overdueItems/myItems", 'GET');
+        $uri = "d2l/api/le/$version/overdueItems/myItems";
         return new Request('GET', $uri);
     }
 
@@ -761,7 +761,7 @@ class CourseContent
      */
     public function getContentBookmarksOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/bookmarks", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/bookmarks";
         return new Request('GET', $uri);
     }
 
@@ -777,7 +777,7 @@ class CourseContent
      */
     public function getContentRecentOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/recent", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/recent";
         return new Request('GET', $uri);
     }
 
@@ -797,7 +797,7 @@ class CourseContent
      */
     public function getContentTocOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/toc", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/toc";
         return new Request('GET', $uri);
     }
 
@@ -828,7 +828,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/topics/$topicId/completions/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId/completions/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -847,7 +847,7 @@ class CourseContent
      */
     public function getContentTopicsCompletionsUsersOrgUnitIdTopicIdUserId($version, $orgUnitId, $topicId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/topics/$topicId/completions/users/$userId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId/completions/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -871,7 +871,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/completions/mycount/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/completions/mycount/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -895,7 +895,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/completions/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/completions/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -919,7 +919,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/content/completions/$userId/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/content/completions/$userId/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -946,7 +946,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/userprogress/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/userprogress/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -972,7 +972,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/userprogress/$topicId?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/userprogress/$topicId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -994,7 +994,7 @@ class CourseContent
      */
     public function postContentUserprogressOrgUnitId($version, $orgUnitId, $userProgressData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/userprogress/", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/userprogress/";
         return new Request('GET', $uri);
     }
 
@@ -1013,7 +1013,7 @@ class CourseContent
      */
     public function putContentTopicsCompletionsUsersOrgUnitIdTopicIdUserId($version, $orgUnitId, $topicId, $userId, $contentTopicCompletionUpdate)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/topics/$topicId/completions/users/$userId", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId/completions/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -1030,7 +1030,7 @@ class CourseContent
      */
     public function getContentPacingOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/pacing", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/pacing";
         return new Request('GET', $uri);
     }
 
@@ -1044,7 +1044,7 @@ class CourseContent
      */
     public function putContentPacingOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/pacing", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/pacing";
         return new Request('GET', $uri);
     }
 
@@ -1059,7 +1059,7 @@ class CourseContent
      */
     public function putContentPacingModulesOrgUnitIdModuleId($version, $orgUnitId, $moduleId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/content/pacing/modules/$moduleId", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/content/pacing/modules/$moduleId";
         return new Request('GET', $uri);
     }
 }

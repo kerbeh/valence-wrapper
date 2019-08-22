@@ -35,7 +35,7 @@ class CourseCompetenciesAndObjectives
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/competencies/structure?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/competencies/structure?$queryString";
         return new Request('GET', $uri);
     }
 }

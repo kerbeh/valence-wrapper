@@ -32,7 +32,7 @@ class LearningRepositoryObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lr/$version/objects/search/?$queryString", 'GET');
+        $uri = "d2l/api/lr/$version/objects/search/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -51,7 +51,7 @@ class LearningRepositoryObjects
      */
     public function getObjectsDownloadObjectId($version, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lr/$version/objects/$objectId/$objectVersion/download/", 'GET');
+        $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/download/";
         return new Request('GET', $uri);
     }
 
@@ -71,7 +71,7 @@ class LearningRepositoryObjects
      */
     public function getObjectsDownloadfileObjectId($version, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lr/$version/objects/$objectId/$objectVersion/downloadfile/", 'GET');
+        $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/downloadfile/";
         return new Request('GET', $uri);
     }
 
@@ -90,7 +90,7 @@ class LearningRepositoryObjects
      */
     public function getObjectsLinkObjectId($version, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lr/$version/objects/$objectId/$objectVersion/link/", 'GET');
+        $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/link/";
         return new Request('GET', $uri);
     }
 
@@ -109,7 +109,7 @@ class LearningRepositoryObjects
      */
     public function getObjectsPropertiesObjectId($version, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lr/$version/objects/$objectId/$objectVersion/properties/", 'GET');
+        $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/properties/";
         return new Request('GET', $uri);
     }
 
@@ -127,7 +127,7 @@ class LearningRepositoryObjects
      */
     public function getObjectsMetadataObjectId($version, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lr/$version/objects/$objectId/$objectVersion/metadata/", 'GET');
+        $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/metadata/";
         return new Request('GET', $uri);
     }
 
@@ -148,7 +148,7 @@ class LearningRepositoryObjects
      */
     public function postObjectsDeleteObjectId($version, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lr/$version/objects/$objectId/delete/", 'POST');
+        $uri = "d2l/api/lr/$version/objects/$objectId/delete/";
         return new Request('GET', $uri);
     }
 
@@ -172,7 +172,7 @@ class LearningRepositoryObjects
      */
     public function postObjectsObjectId($version, $objectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lr/$version/objects/$objectId/", 'POST');
+        $uri = "d2l/api/lr/$version/objects/$objectId/";
         return new Request('GET', $uri);
     }
 
@@ -198,7 +198,7 @@ class LearningRepositoryObjects
      */
     public function postObjectsPropertiesObjectId($version, $objectId, $lRWSObjectPropertiesInput)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lr/$version/objects/$objectId/$objectVersion/properties/", 'POST');
+        $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/properties/";
         return new Request('GET', $uri);
     }
 
@@ -221,7 +221,7 @@ class LearningRepositoryObjects
      */
     public function putObjects($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lr/$version/objects/", 'PUT');
+        $uri = "d2l/api/lr/$version/objects/";
         return new Request('GET', $uri);
     }
 
@@ -250,7 +250,7 @@ class LearningRepositoryObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lr/$version/repository/$repositoryId/listorgUnittrusts/?$queryString", 'GET');
+        $uri = "d2l/api/lr/$version/repository/$repositoryId/listorgUnittrusts/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -275,7 +275,7 @@ class LearningRepositoryObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lr/$version/repositories/all/?$queryString", 'GET');
+        $uri = "d2l/api/lr/$version/repositories/all/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -302,7 +302,7 @@ class LearningRepositoryObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lr/$version/repositories/$type/?$queryString", 'GET');
+        $uri = "d2l/api/lr/$version/repositories/$type/?$queryString";
         return new Request('GET', $uri);
     }
 }

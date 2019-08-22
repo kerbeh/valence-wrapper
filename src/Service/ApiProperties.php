@@ -19,7 +19,7 @@ class ApiProperties
      */
     public function getD2LAuthApiCancel()
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/auth/api/cancel", 'GET');
+        $uri = "d2l/auth/api/cancel";
         return new Request('GET', $uri);
     }
 
@@ -47,7 +47,7 @@ class ApiProperties
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/auth/api/token?$queryString", 'GET');
+        $uri = "d2l/auth/api/token?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -75,7 +75,7 @@ class ApiProperties
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/auth/soaptoken?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/auth/soaptoken?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -129,7 +129,7 @@ class ApiProperties
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/logging/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/logging/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -178,7 +178,7 @@ class ApiProperties
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/logging/grouped/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/logging/grouped/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -202,7 +202,7 @@ class ApiProperties
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/logging/$logMessageId/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/logging/$logMessageId/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -220,7 +220,7 @@ class ApiProperties
      */
     public function getVersionsProductCode($productCode, $version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/$productCode/versions/$version", 'GET');
+        $uri = "d2l/api/$productCode/versions/$version";
         return new Request('GET', $uri);
     }
 
@@ -233,7 +233,7 @@ class ApiProperties
      */
     public function get()
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/versions/", 'GET');
+        $uri = "d2l/api/versions/";
         return new Request('GET', $uri);
     }
 
@@ -252,7 +252,7 @@ class ApiProperties
      */
     public function postCheck($supportedVersionRequest)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/versions/check", 'POST');
+        $uri = "d2l/api/versions/check";
         return new Request('GET', $uri);
     }
 }

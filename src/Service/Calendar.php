@@ -19,7 +19,7 @@ class Calendar
      */
     public function deleteCalendarEventOrgUnitIdEventId($version, $orgUnitId, $eventId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/calendar/event/$eventId", 'DELETE');
+        $uri = "d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
         return new Request('GET', $uri);
     }
 
@@ -37,7 +37,7 @@ class Calendar
      */
     public function getCalendarEventOrgUnitIdEventId($version, $orgUnitId, $eventId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/calendar/event/$eventId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
         return new Request('GET', $uri);
     }
 
@@ -62,7 +62,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/calendar/events/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/calendar/events/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -95,7 +95,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/calendar/events/myEvents/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/calendar/events/myEvents/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -128,7 +128,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/calendar/events/myEvents/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/calendar/events/myEvents/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -162,7 +162,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/calendar/events/myEvents/itemCounts/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/calendar/events/myEvents/itemCounts/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -194,7 +194,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/calendar/events/myEvents/itemCount?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/calendar/events/myEvents/itemCount?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -223,7 +223,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/calendar/events/orgunits/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/calendar/events/orgunits/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -257,7 +257,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/calendar/events/user/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/calendar/events/user/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -280,7 +280,7 @@ class Calendar
      */
     public function postCalendarEventOrgUnitId($version, $orgUnitId, $eventData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/calendar/event/", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/calendar/event/";
         return new Request('GET', $uri);
     }
 
@@ -304,7 +304,7 @@ class Calendar
      */
     public function putCalendarEventOrgUnitIdEventId($version, $orgUnitId, $eventId, $eventData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/calendar/event/$eventId", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
         return new Request('GET', $uri);
     }
 }

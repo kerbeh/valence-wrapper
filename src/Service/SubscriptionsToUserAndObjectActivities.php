@@ -18,7 +18,7 @@ class SubscriptionsToUserAndObjectActivities
      */
     public function deleteSubscriptionsObjectsId($version, $id)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/subscriptions/objects/$objectId", 'DELETE');
+        $uri = "d2l/api/eP/$version/subscriptions/objects/$objectId";
         return new Request('GET', $uri);
     }
 
@@ -35,7 +35,7 @@ class SubscriptionsToUserAndObjectActivities
      */
     public function getSubscriptionsObjects($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/subscriptions/objects/", 'GET');
+        $uri = "d2l/api/eP/$version/subscriptions/objects/";
         return new Request('GET', $uri);
     }
 
@@ -57,7 +57,7 @@ class SubscriptionsToUserAndObjectActivities
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/subscriptions/objects/exists?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/subscriptions/objects/exists?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -71,7 +71,7 @@ class SubscriptionsToUserAndObjectActivities
      */
     public function postSubscriptionsObjectsId($version, $id)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/subscriptions/objects/$objectId", 'POST');
+        $uri = "d2l/api/eP/$version/subscriptions/objects/$objectId";
         return new Request('GET', $uri);
     }
 
@@ -85,7 +85,7 @@ class SubscriptionsToUserAndObjectActivities
      */
     public function deleteSubscriptionsUsersId($version, $id)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/subscriptions/users/$userId", 'DELETE');
+        $uri = "d2l/api/eP/$version/subscriptions/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -101,7 +101,7 @@ class SubscriptionsToUserAndObjectActivities
      */
     public function getSubscriptionsUsers($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/subscriptions/users/", 'GET');
+        $uri = "d2l/api/eP/$version/subscriptions/users/";
         return new Request('GET', $uri);
     }
 
@@ -123,7 +123,7 @@ class SubscriptionsToUserAndObjectActivities
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/subscriptions/users/exists?$queryString", 'GET');
+        $uri = "d2l/api/eP/$version/subscriptions/users/exists?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -137,7 +137,7 @@ class SubscriptionsToUserAndObjectActivities
      */
     public function postSubscriptionsUsersId($version, $id)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/eP/$version/subscriptions/users/$userId", 'POST');
+        $uri = "d2l/api/eP/$version/subscriptions/users/$userId";
         return new Request('GET', $uri);
     }
 }

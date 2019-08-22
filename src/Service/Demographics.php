@@ -27,7 +27,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/demographics/users/$userId?$queryString", 'DELETE');
+        $uri = "d2l/api/lp/$version/demographics/users/$userId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -61,7 +61,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/demographics/orgUnits/$orgUnitId/users/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/demographics/orgUnits/$orgUnitId/users/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -86,7 +86,7 @@ class Demographics
      */
     public function getDemographicsOrgunitsUsersOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/demographics/orgUnits/$orgUnitId/users/$userId", 'GET');
+        $uri = "d2l/api/lp/$version/demographics/orgUnits/$orgUnitId/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -119,7 +119,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/demographics/users/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/demographics/users/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -150,7 +150,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/demographics/users/$userId?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/demographics/users/$userId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -174,7 +174,7 @@ class Demographics
      */
     public function putDemographicsUsersUserId($version, $userId, $demographicsEntryData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/demographics/users/$userId", 'PUT');
+        $uri = "d2l/api/lp/$version/demographics/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -188,7 +188,7 @@ class Demographics
      */
     public function deleteDemographicsFieldsFieldId($version, $fieldId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/demographics/fields/$fieldId", 'DELETE');
+        $uri = "d2l/api/lp/$version/demographics/fields/$fieldId";
         return new Request('GET', $uri);
     }
 
@@ -220,7 +220,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/demographics/fields/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/demographics/fields/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -237,7 +237,7 @@ class Demographics
      */
     public function getDemographicsFieldsFieldId($version, $fieldId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/demographics/fields/$fieldId", 'GET');
+        $uri = "d2l/api/lp/$version/demographics/fields/$fieldId";
         return new Request('GET', $uri);
     }
 
@@ -255,7 +255,7 @@ class Demographics
      */
     public function postDemographicsFields($version, $demographicsField)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/demographics/fields/", 'POST');
+        $uri = "d2l/api/lp/$version/demographics/fields/";
         return new Request('GET', $uri);
     }
 
@@ -274,7 +274,7 @@ class Demographics
      */
     public function putDemographicsFieldsFieldId($version, $fieldId, $demographicsField)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/demographics/fields/$fieldId", 'PUT');
+        $uri = "d2l/api/lp/$version/demographics/fields/$fieldId";
         return new Request('GET', $uri);
     }
 
@@ -306,7 +306,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/demographics/dataTypes/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/demographics/dataTypes/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -323,7 +323,7 @@ class Demographics
      */
     public function getDemographicsDatatypesDataTypeId($version, $dataTypeId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/demographics/dataTypes/$dataTypeId", 'GET');
+        $uri = "d2l/api/lp/$version/demographics/dataTypes/$dataTypeId";
         return new Request('GET', $uri);
     }
 }

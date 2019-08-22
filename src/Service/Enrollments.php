@@ -23,7 +23,7 @@ class Enrollments
      */
     public function deleteEnrollmentsOrgunitsUsersOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId", 'DELETE');
+        $uri = "d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -42,7 +42,7 @@ class Enrollments
      */
     public function deleteEnrollmentsUsersOrgunitsUserIdOrgUnitId($version, $userId, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/enrollments/users/$userId/orgUnits/$orgUnitId", 'DELETE');
+        $uri = "d2l/api/lp/$version/enrollments/users/$userId/orgUnits/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -63,7 +63,7 @@ class Enrollments
      */
     public function getClasslistOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/classlist/", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/classlist/";
         return new Request('GET', $uri);
     }
 
@@ -87,7 +87,7 @@ class Enrollments
      */
     public function getClasslistPagedOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/classlist/paged/", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/classlist/paged/";
         return new Request('GET', $uri);
     }
 
@@ -135,7 +135,7 @@ class Enrollments
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/enrollments/myenrollments/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/enrollments/myenrollments/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -151,7 +151,7 @@ class Enrollments
      */
     public function getEnrollmentsMyenrollmentsOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId", 'GET');
+        $uri = "d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -168,7 +168,7 @@ class Enrollments
      */
     public function getEnrollmentsMyenrollmentsAccessOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/access", 'GET');
+        $uri = "d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/access";
         return new Request('GET', $uri);
     }
 
@@ -200,7 +200,7 @@ class Enrollments
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -217,7 +217,7 @@ class Enrollments
      */
     public function getEnrollmentsOrgunitsUsersOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId", 'GET');
+        $uri = "d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -249,7 +249,7 @@ class Enrollments
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/enrollments/users/$userId/orgUnits/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/enrollments/users/$userId/orgUnits/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -267,7 +267,7 @@ class Enrollments
      */
     public function getEnrollmentsUsersOrgunitsUserIdOrgUnitId($version, $userId, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/enrollments/users/$userId/orgUnits/$orgUnitId", 'GET');
+        $uri = "d2l/api/lp/$version/enrollments/users/$userId/orgUnits/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -284,7 +284,7 @@ class Enrollments
      */
     public function postEnrollments($version, $createEnrollmentData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/enrollments/", 'POST');
+        $uri = "d2l/api/lp/$version/enrollments/";
         return new Request('GET', $uri);
     }
 
@@ -298,7 +298,7 @@ class Enrollments
      */
     public function deleteEnrollmentsMyenrollmentsPinOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/pin", 'DELETE');
+        $uri = "d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/pin";
         return new Request('GET', $uri);
     }
 
@@ -313,7 +313,7 @@ class Enrollments
      */
     public function deleteEnrollmentsOrgunitsUsersPinOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId/pin", 'DELETE');
+        $uri = "d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId/pin";
         return new Request('GET', $uri);
     }
 
@@ -329,7 +329,7 @@ class Enrollments
      */
     public function postEnrollmentsMyenrollmentsPinOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/pin", 'POST');
+        $uri = "d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/pin";
         return new Request('GET', $uri);
     }
 
@@ -344,7 +344,7 @@ class Enrollments
      */
     public function postEnrollmentsOrgunitsUsersPinOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId/pin", 'POST');
+        $uri = "d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId/pin";
         return new Request('GET', $uri);
     }
 
@@ -359,7 +359,7 @@ class Enrollments
      */
     public function deleteGroupcategoriesOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId", 'DELETE');
+        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
         return new Request('GET', $uri);
     }
 
@@ -375,7 +375,7 @@ class Enrollments
      */
     public function deleteGroupcategoriesGroupsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId", 'DELETE');
+        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
         return new Request('GET', $uri);
     }
 
@@ -392,7 +392,7 @@ class Enrollments
      */
     public function deleteGroupcategoriesGroupsEnrollmentsOrgUnitIdGroupCategoryIdGroupIdUserId($version, $orgUnitId, $groupCategoryId, $groupId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId/enrollments/$userId", 'DELETE');
+        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId/enrollments/$userId";
         return new Request('GET', $uri);
     }
 
@@ -409,7 +409,7 @@ class Enrollments
      */
     public function getGroupcategoriesOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/groupcategories/", 'GET');
+        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/";
         return new Request('GET', $uri);
     }
 
@@ -427,7 +427,7 @@ class Enrollments
      */
     public function getGroupcategoriesOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId", 'GET');
+        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
         return new Request('GET', $uri);
     }
 
@@ -445,7 +445,7 @@ class Enrollments
      */
     public function getGroupcategoriesGroupsOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/", 'GET');
+        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/";
         return new Request('GET', $uri);
     }
 
@@ -464,7 +464,7 @@ class Enrollments
      */
     public function getGroupcategoriesGroupsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId", 'GET');
+        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
         return new Request('GET', $uri);
     }
 
@@ -481,7 +481,7 @@ class Enrollments
      */
     public function postGroupcategoriesOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/groupcategories/", 'POST');
+        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/";
         return new Request('GET', $uri);
     }
 
@@ -499,7 +499,7 @@ class Enrollments
      */
     public function postGroupcategoriesGroupsOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/", 'POST');
+        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/";
         return new Request('GET', $uri);
     }
 
@@ -516,7 +516,7 @@ class Enrollments
      */
     public function postGroupcategoriesGroupsEnrollmentsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId, $groupEnrollment)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId/enrollments/", 'POST');
+        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId/enrollments/";
         return new Request('GET', $uri);
     }
 
@@ -534,7 +534,7 @@ class Enrollments
      */
     public function putGroupcategoriesOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId", 'PUT');
+        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
         return new Request('GET', $uri);
     }
 
@@ -553,7 +553,7 @@ class Enrollments
      */
     public function putGroupcategoriesGroupsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId", 'PUT');
+        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
         return new Request('GET', $uri);
     }
 
@@ -568,7 +568,7 @@ class Enrollments
      */
     public function deleteSectionsOrgUnitIdSectionId($version, $orgUnitId, $sectionId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/sections/$sectionId", 'DELETE');
+        $uri = "d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
         return new Request('GET', $uri);
     }
 
@@ -585,7 +585,7 @@ class Enrollments
      */
     public function getSectionsOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/sections/", 'GET');
+        $uri = "d2l/api/lp/$version/$orgUnitId/sections/";
         return new Request('GET', $uri);
     }
 
@@ -602,7 +602,7 @@ class Enrollments
      */
     public function getSectionsSettingsOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/sections/settings", 'GET');
+        $uri = "d2l/api/lp/$version/$orgUnitId/sections/settings";
         return new Request('GET', $uri);
     }
 
@@ -620,7 +620,7 @@ class Enrollments
      */
     public function getSectionsOrgUnitIdSectionId($version, $orgUnitId, $sectionId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/sections/$sectionId", 'GET');
+        $uri = "d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
         return new Request('GET', $uri);
     }
 
@@ -637,7 +637,7 @@ class Enrollments
      */
     public function postSectionsOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/sections/", 'POST');
+        $uri = "d2l/api/lp/$version/$orgUnitId/sections/";
         return new Request('GET', $uri);
     }
 
@@ -653,7 +653,7 @@ class Enrollments
      */
     public function postSectionsEnrollmentsOrgUnitIdSectionId($version, $orgUnitId, $sectionId, $sectionEnrollment)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/sections/$sectionId/enrollments/", 'POST');
+        $uri = "d2l/api/lp/$version/$orgUnitId/sections/$sectionId/enrollments/";
         return new Request('GET', $uri);
     }
 
@@ -670,7 +670,7 @@ class Enrollments
      */
     public function putSectionsOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/sections/", 'PUT');
+        $uri = "d2l/api/lp/$version/$orgUnitId/sections/";
         return new Request('GET', $uri);
     }
 
@@ -687,7 +687,7 @@ class Enrollments
      */
     public function putSectionsSettingsOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/sections/settings", 'PUT');
+        $uri = "d2l/api/lp/$version/$orgUnitId/sections/settings";
         return new Request('GET', $uri);
     }
 
@@ -705,7 +705,7 @@ class Enrollments
      */
     public function putSectionsOrgUnitIdSectionId($version, $orgUnitId, $sectionId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/sections/$sectionId", 'PUT');
+        $uri = "d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
         return new Request('GET', $uri);
     }
 
@@ -723,7 +723,7 @@ class Enrollments
      */
     public function deleteAuditingAuditorsAuditeesAuditorId($version, $auditorId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/auditing/auditors/$auditorId/auditees/", 'DELETE');
+        $uri = "d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
         return new Request('GET', $uri);
     }
 
@@ -740,7 +740,7 @@ class Enrollments
      */
     public function getAuditingAuditeesAuditeeId($version, $auditeeId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/auditing/auditees/$auditeeId", 'GET');
+        $uri = "d2l/api/le/$version/auditing/auditees/$auditeeId";
         return new Request('GET', $uri);
     }
 
@@ -755,7 +755,7 @@ class Enrollments
      */
     public function getAuditingAuditors($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/auditing/auditors/$auditorId", 'GET');
+        $uri = "d2l/api/le/$version/auditing/auditors/$auditorId";
         return new Request('GET', $uri);
     }
 
@@ -771,7 +771,7 @@ class Enrollments
      */
     public function getAuditingAuditorsAuditeesAuditorId($version, $auditorId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/auditing/auditors/$auditorId/auditees/", 'GET');
+        $uri = "d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
         return new Request('GET', $uri);
     }
 
@@ -789,7 +789,7 @@ class Enrollments
      */
     public function postAuditingAuditorsAuditeesAuditorId($version, $auditorId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/auditing/auditors/$auditorId/auditees/", 'POST');
+        $uri = "d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
         return new Request('GET', $uri);
     }
 }

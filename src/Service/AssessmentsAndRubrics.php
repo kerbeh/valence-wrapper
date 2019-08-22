@@ -31,7 +31,7 @@ class AssessmentsAndRubrics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/rubrics?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/rubrics?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -62,7 +62,7 @@ class AssessmentsAndRubrics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/assessment?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/assessment?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -93,7 +93,7 @@ class AssessmentsAndRubrics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/assessment?$queryString", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/assessment?$queryString";
         return new Request('GET', $uri);
     }
 }

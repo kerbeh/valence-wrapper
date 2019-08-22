@@ -23,7 +23,7 @@ class Lockers
      */
     public function deleteLockerMylockerPath($version, $path)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/locker/myLocker/$path", 'DELETE');
+        $uri = "d2l/api/le/$version/locker/myLocker/$path";
         return new Request('GET', $uri);
     }
 
@@ -43,7 +43,7 @@ class Lockers
      */
     public function deleteLockerUserUserIdPath($version, $userId, $path)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/locker/user/$userId/$path", 'DELETE');
+        $uri = "d2l/api/le/$version/locker/user/$userId/$path";
         return new Request('GET', $uri);
     }
 
@@ -66,7 +66,7 @@ class Lockers
      */
     public function getLockerMylockerPath($version, $path)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/locker/myLocker/$path", 'GET');
+        $uri = "d2l/api/le/$version/locker/myLocker/$path";
         return new Request('GET', $uri);
     }
 
@@ -90,7 +90,7 @@ class Lockers
      */
     public function getLockerUserUserIdPath($version, $userId, $path)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/locker/user/$userId/$path", 'GET');
+        $uri = "d2l/api/le/$version/locker/user/$userId/$path";
         return new Request('GET', $uri);
     }
 
@@ -110,7 +110,7 @@ class Lockers
      */
     public function postLockerMylockerPath($version, $path, $folderName)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/locker/myLocker/$path", 'POST');
+        $uri = "d2l/api/le/$version/locker/myLocker/$path";
         return new Request('GET', $uri);
     }
 
@@ -131,7 +131,7 @@ class Lockers
      */
     public function postLockerUserUserIdPath($version, $userId, $path, $folderName)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/locker/user/$userId/$path", 'POST');
+        $uri = "d2l/api/le/$version/locker/user/$userId/$path";
         return new Request('GET', $uri);
     }
 
@@ -149,7 +149,7 @@ class Lockers
      */
     public function putLockerMylockerPath($version, $path, $folderName)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/locker/myLocker/$path", 'PUT');
+        $uri = "d2l/api/le/$version/locker/myLocker/$path";
         return new Request('GET', $uri);
     }
 
@@ -168,7 +168,7 @@ class Lockers
      */
     public function putLockerUserUserIdPath($version, $userId, $path, $folderName)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/locker/user/$userId/$path", 'PUT');
+        $uri = "d2l/api/le/$version/locker/user/$userId/$path";
         return new Request('GET', $uri);
     }
 
@@ -189,7 +189,7 @@ class Lockers
      */
     public function deleteLockerGroupOrgUnitIdGroupIdPath($version, $orgUnitId, $groupId, $path)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/locker/group/$groupId/$path", 'DELETE');
+        $uri = "d2l/api/le/$version/$orgUnitId/locker/group/$groupId/$path";
         return new Request('GET', $uri);
     }
 
@@ -207,7 +207,7 @@ class Lockers
      */
     public function getGroupcategoriesLockerOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/locker", 'GET');
+        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/locker";
         return new Request('GET', $uri);
     }
 
@@ -232,7 +232,7 @@ class Lockers
      */
     public function getLockerGroupOrgUnitIdGroupIdPath($version, $orgUnitId, $groupId, $path)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/locker/group/$groupId/$path", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/locker/group/$groupId/$path";
         return new Request('GET', $uri);
     }
 
@@ -250,7 +250,7 @@ class Lockers
      */
     public function postGroupcategoriesLockerOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/locker", 'POST');
+        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/locker";
         return new Request('GET', $uri);
     }
 
@@ -272,7 +272,7 @@ class Lockers
      */
     public function postLockerGroupOrgUnitIdGroupIdPath($version, $orgUnitId, $groupId, $path, $folderName)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/locker/group/$groupId/$path", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/locker/group/$groupId/$path";
         return new Request('GET', $uri);
     }
 
@@ -292,7 +292,7 @@ class Lockers
      */
     public function putLockerGroupOrgUnitIdGroupIdPath($version, $orgUnitId, $groupId, $path, $folderName)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/locker/group/$groupId/$path", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/locker/group/$groupId/$path";
         return new Request('GET', $uri);
     }
 }

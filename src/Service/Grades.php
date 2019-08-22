@@ -19,7 +19,7 @@ class Grades
      */
     public function deleteGradesOrgUnitIdGradeObjectID($version, $orgUnitId, $gradeObjectID)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId", 'DELETE');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId";
         return new Request('GET', $uri);
     }
 
@@ -35,7 +35,7 @@ class Grades
      */
     public function getGradesOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/";
         return new Request('GET', $uri);
     }
 
@@ -52,7 +52,7 @@ class Grades
      */
     public function getGradesOrgUnitIdGradeObjectId($version, $orgUnitId, $gradeObjectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId";
         return new Request('GET', $uri);
     }
 
@@ -74,7 +74,7 @@ class Grades
      */
     public function postGradesOrgUnitId($version, $orgUnitId, $gradeObject)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/";
         return new Request('GET', $uri);
     }
 
@@ -97,7 +97,7 @@ class Grades
      */
     public function putGradesOrgUnitIdGradeObjectId($version, $orgUnitId, $gradeObjectId, $gradeObject)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId";
         return new Request('GET', $uri);
     }
 
@@ -112,7 +112,7 @@ class Grades
      */
     public function deleteGradesCategoriesOrgUnitIdCategoryId($version, $orgUnitId, $categoryId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/categories/$categoryId", 'DELETE');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/categories/$categoryId";
         return new Request('GET', $uri);
     }
 
@@ -129,7 +129,7 @@ class Grades
      */
     public function getGradesCategoriesOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/categories/", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/categories/";
         return new Request('GET', $uri);
     }
 
@@ -147,7 +147,7 @@ class Grades
      */
     public function getGradesCategoriesOrgUnitIdCategoryId($version, $orgUnitId, $categoryId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/categories/$categoryId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/categories/$categoryId";
         return new Request('GET', $uri);
     }
 
@@ -166,7 +166,7 @@ class Grades
      */
     public function postGradesCategoriesOrgUnitId($version, $orgUnitId, $gradeCategoryData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/categories/", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/categories/";
         return new Request('GET', $uri);
     }
 
@@ -182,7 +182,7 @@ class Grades
      */
     public function getGradesSchemesOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/schemes/", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/schemes/";
         return new Request('GET', $uri);
     }
 
@@ -199,7 +199,7 @@ class Grades
      */
     public function getGradesSchemesOrgUnitIdGradeSchemeId($version, $orgUnitId, $gradeSchemeId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/schemes/$gradeSchemeId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/schemes/$gradeSchemeId";
         return new Request('GET', $uri);
     }
 
@@ -216,7 +216,7 @@ class Grades
      */
     public function getGradesFinalValuesMygradevalueOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/final/values/myGradeValue", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/final/values/myGradeValue";
         return new Request('GET', $uri);
     }
 
@@ -237,7 +237,7 @@ class Grades
      */
     public function getGradesFinalValuesMygradevalues($version)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/grades/final/values/myGradeValues/", 'GET');
+        $uri = "d2l/api/le/$version/grades/final/values/myGradeValues/";
         return new Request('GET', $uri);
     }
 
@@ -264,7 +264,7 @@ class Grades
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/final/values/$userId?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/final/values/$userId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -306,7 +306,7 @@ class Grades
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -340,7 +340,7 @@ class Grades
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/final/values/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/final/values/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -358,7 +358,7 @@ class Grades
      */
     public function getGradesValuesOrgUnitIdGradeObjectIdUserId($version, $orgUnitId, $gradeObjectId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/$userId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/$userId";
         return new Request('GET', $uri);
     }
 
@@ -376,7 +376,7 @@ class Grades
      */
     public function getGradesValuesMygradevalueOrgUnitIdGradeObjectId($version, $orgUnitId, $gradeObjectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/myGradeValue", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/myGradeValue";
         return new Request('GET', $uri);
     }
 
@@ -393,7 +393,7 @@ class Grades
      */
     public function getGradesValuesMygradevaluesOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/values/myGradeValues/", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/values/myGradeValues/";
         return new Request('GET', $uri);
     }
 
@@ -410,7 +410,7 @@ class Grades
      */
     public function getGradesValuesOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/values/$userId/", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/values/$userId/";
         return new Request('GET', $uri);
     }
 
@@ -425,7 +425,7 @@ class Grades
      */
     public function postGradesFinalCalculatedOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/final/calculated/$userId", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/final/calculated/$userId";
         return new Request('GET', $uri);
     }
 
@@ -439,7 +439,7 @@ class Grades
      */
     public function postGradesFinalCalculatedAllOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/final/calculated/all", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/final/calculated/all";
         return new Request('GET', $uri);
     }
 
@@ -455,7 +455,7 @@ class Grades
      */
     public function putGradesFinalValuesOrgUnitIdUserId($version, $orgUnitId, $userId, $finalAdjustedGradeValue)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/final/values/$userId", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/final/values/$userId";
         return new Request('GET', $uri);
     }
 
@@ -475,7 +475,7 @@ class Grades
      */
     public function putGradesValuesOrgUnitIdGradeObjectIdUserId($version, $orgUnitId, $gradeObjectId, $userId, $gradeValue)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/$userId", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/$userId";
         return new Request('GET', $uri);
     }
 
@@ -490,7 +490,7 @@ class Grades
      */
     public function deleteGradesCoursecompletionOrgUnitIdCompletionId($version, $orgUnitId, $completionId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/courseCompletion/$completionId", 'DELETE');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/courseCompletion/$completionId";
         return new Request('GET', $uri);
     }
 
@@ -527,7 +527,7 @@ class Grades
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/courseCompletion/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/courseCompletion/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -560,7 +560,7 @@ class Grades
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/grades/courseCompletion/$userId/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/grades/courseCompletion/$userId/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -578,7 +578,7 @@ class Grades
      */
     public function postGradesCoursecompletionOrgUnitId($version, $orgUnitId, $courseCompletionData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/courseCompletion/", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/courseCompletion/";
         return new Request('GET', $uri);
     }
 
@@ -597,7 +597,7 @@ class Grades
      */
     public function putGradesCoursecompletionOrgUnitIdCompletionId($version, $orgUnitId, $completionId, $courseCompletionData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/courseCompletion/$completionId", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/courseCompletion/$completionId";
         return new Request('GET', $uri);
     }
 
@@ -614,7 +614,7 @@ class Grades
      */
     public function getGradesStatisticsOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/statistics", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/statistics";
         return new Request('GET', $uri);
     }
 
@@ -631,7 +631,7 @@ class Grades
      */
     public function getGradesSetupOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/setup/", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/setup/";
         return new Request('GET', $uri);
     }
 
@@ -651,7 +651,7 @@ class Grades
      */
     public function putGradesSetupOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/setup/", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/setup/";
         return new Request('GET', $uri);
     }
 
@@ -668,7 +668,7 @@ class Grades
      */
     public function getGradesExemptionsOrgUnitIdGradeObjectId($version, $orgUnitId, $gradeObjectId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/";
         return new Request('GET', $uri);
     }
 
@@ -686,7 +686,7 @@ class Grades
      */
     public function getGradesExemptionsOrgUnitIdGradeObjectIdUserId($version, $orgUnitId, $gradeObjectId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/$userId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/$userId";
         return new Request('GET', $uri);
     }
 
@@ -704,7 +704,7 @@ class Grades
      */
     public function postGradesExemptionsOrgUnitIdGradeObjectIdUserId($version, $orgUnitId, $gradeObjectId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/$userId", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/$userId";
         return new Request('GET', $uri);
     }
 
@@ -720,7 +720,7 @@ class Grades
      */
     public function deleteGradesExemptionsOrgUnitIdGradeObjectIdUserId($version, $orgUnitId, $gradeObjectId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/$userId", 'DELETE');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/$userId";
         return new Request('GET', $uri);
     }
 
@@ -736,7 +736,7 @@ class Grades
      */
     public function getGradesExemptionsOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/exemptions/$userId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/exemptions/$userId";
         return new Request('GET', $uri);
     }
 
@@ -758,7 +758,7 @@ class Grades
      */
     public function postGradesExemptionsOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/grades/exemptions/$userId", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/grades/exemptions/$userId";
         return new Request('GET', $uri);
     }
 }

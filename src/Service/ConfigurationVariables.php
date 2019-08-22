@@ -36,7 +36,7 @@ class ConfigurationVariables
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/definitions/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/configVariables/definitions/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -53,7 +53,7 @@ class ConfigurationVariables
      */
     public function getConfigvariablesDefinitionVariableId($version, $variableId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/definition", 'GET');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/definition";
         return new Request('GET', $uri);
     }
 
@@ -71,7 +71,7 @@ class ConfigurationVariables
      */
     public function getConfigvariablesValuesVariableId($version, $variableId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/values", 'GET');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/values";
         return new Request('GET', $uri);
     }
 
@@ -88,7 +88,7 @@ class ConfigurationVariables
      */
     public function getConfigvariablesValuesOrgVariableId($version, $variableId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/values/org", 'GET');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/values/org";
         return new Request('GET', $uri);
     }
 
@@ -118,7 +118,7 @@ class ConfigurationVariables
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/values/orgUnits/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/values/orgUnits/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -136,7 +136,7 @@ class ConfigurationVariables
      */
     public function getConfigvariablesValuesOrgunitsVariableIdOrgUnitId($version, $variableId, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/values/orgUnits/$orgUnitId", 'GET');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/values/orgUnits/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -156,7 +156,7 @@ class ConfigurationVariables
      */
     public function getConfigvariablesEffectivevaluesOrgunitsVariableIdOrgUnitId($version, $variableId, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/effectiveValues/orgUnits/$orgUnitId", 'GET');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/effectiveValues/orgUnits/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -186,7 +186,7 @@ class ConfigurationVariables
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/values/roles/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/values/roles/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -204,7 +204,7 @@ class ConfigurationVariables
      */
     public function getConfigvariablesValuesRolesVariableIdRoleId($version, $variableId, $roleId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/values/roles/$roleId", 'GET');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/values/roles/$roleId";
         return new Request('GET', $uri);
     }
 
@@ -221,7 +221,7 @@ class ConfigurationVariables
      */
     public function getConfigvariablesValuesSystemVariableId($version, $variableId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/values/system", 'GET');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/values/system";
         return new Request('GET', $uri);
     }
 
@@ -238,7 +238,7 @@ class ConfigurationVariables
      */
     public function putConfigvariablesValuesOrgVariableId($version, $variableId, $orgValue)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/values/org", 'PUT');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/values/org";
         return new Request('GET', $uri);
     }
 
@@ -254,7 +254,7 @@ class ConfigurationVariables
      */
     public function putConfigvariablesValuesOrgunitsVariableIdOrgUnitId($version, $variableId, $orgUnitId, $orgUnitValue)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/values/orgUnits/$orgUnitId", 'PUT');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/values/orgUnits/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -270,7 +270,7 @@ class ConfigurationVariables
      */
     public function putConfigvariablesValuesRolesVariableIdRoleId($version, $variableId, $roleId, $roleValue)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/values/roles/$roleId", 'PUT');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/values/roles/$roleId";
         return new Request('GET', $uri);
     }
 
@@ -287,7 +287,7 @@ class ConfigurationVariables
      */
     public function putConfigvariablesValuesSystemVariableId($version, $variableId, $systemValue)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/values/system", 'PUT');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/values/system";
         return new Request('GET', $uri);
     }
 
@@ -301,7 +301,7 @@ class ConfigurationVariables
      */
     public function deleteConfigvariablesResolverVariableId($version, $variableId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/resolver", 'DELETE');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/resolver";
         return new Request('GET', $uri);
     }
 
@@ -317,7 +317,7 @@ class ConfigurationVariables
      */
     public function getConfigvariablesResolverVariableId($version, $variableId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/resolver", 'GET');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/resolver";
         return new Request('GET', $uri);
     }
 
@@ -335,7 +335,7 @@ class ConfigurationVariables
      */
     public function putConfigvariablesResolverVariableId($version, $variableId, $resolverValue)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/configVariables/$variableId/resolver", 'PUT');
+        $uri = "d2l/api/lp/$version/configVariables/$variableId/resolver";
         return new Request('GET', $uri);
     }
 }

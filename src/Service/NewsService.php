@@ -19,7 +19,7 @@ class NewsService
      */
     public function deleteNewsOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/news/$newsItemId", 'DELETE');
+        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId";
         return new Request('GET', $uri);
     }
 
@@ -35,7 +35,7 @@ class NewsService
      */
     public function deleteNewsAttachmentsOrgUnitIdNewsItemIdFileId($version, $orgUnitId, $newsItemId, $fileId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/$fileId", 'DELETE');
+        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/$fileId";
         return new Request('GET', $uri);
     }
 
@@ -65,7 +65,7 @@ class NewsService
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/feed/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/feed/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -93,7 +93,7 @@ class NewsService
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/news/user/$userId/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/news/user/$userId/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -117,7 +117,7 @@ class NewsService
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/news/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/news/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -143,7 +143,7 @@ class NewsService
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/news/deleted/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/news/deleted/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -161,7 +161,7 @@ class NewsService
      */
     public function getNewsUserOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/news/user/$userId/", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/news/user/$userId/";
         return new Request('GET', $uri);
     }
 
@@ -179,7 +179,7 @@ class NewsService
      */
     public function getNewsOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/news/$newsItemId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId";
         return new Request('GET', $uri);
     }
 
@@ -197,7 +197,7 @@ class NewsService
      */
     public function getNewsAttachmentsOrgUnitIdNewsItemIdFileId($version, $orgUnitId, $newsItemId, $fileId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/$fileId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/$fileId";
         return new Request('GET', $uri);
     }
 
@@ -219,7 +219,7 @@ class NewsService
      */
     public function postNewsOrgUnitId($version, $orgUnitId, $newsItemData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/news/", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/news/";
         return new Request('GET', $uri);
     }
 
@@ -237,7 +237,7 @@ class NewsService
      */
     public function postNewsDeletedRestoreOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/news/deleted/$newsItemId/restore", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/news/deleted/$newsItemId/restore";
         return new Request('GET', $uri);
     }
 
@@ -256,7 +256,7 @@ class NewsService
      */
     public function postNewsAttachmentsOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/";
         return new Request('GET', $uri);
     }
 
@@ -271,7 +271,7 @@ class NewsService
      */
     public function postNewsDismissOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/news/$newsItemId/dismiss", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/dismiss";
         return new Request('GET', $uri);
     }
 
@@ -286,7 +286,7 @@ class NewsService
      */
     public function postNewsPublishOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/news/$newsItemId/publish", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/publish";
         return new Request('GET', $uri);
     }
 
@@ -301,7 +301,7 @@ class NewsService
      */
     public function postNewsRestoreOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/news/$newsItemId/restore", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/restore";
         return new Request('GET', $uri);
     }
 
@@ -317,7 +317,7 @@ class NewsService
      */
     public function putNewsOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId, $newsItemData)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/news/$newsItemId", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId";
         return new Request('GET', $uri);
     }
 }

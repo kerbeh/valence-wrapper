@@ -19,7 +19,7 @@ class Permissions
      */
     public function deletePermissionsToolsCapabilitiesToolIdCapabilityId($version, $toolId, $capabilityId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/permissions/tools/$toolId/capabilities/$capabilityId", 'DELETE');
+        $uri = "d2l/api/lp/$version/permissions/tools/$toolId/capabilities/$capabilityId";
         return new Request('GET', $uri);
     }
 
@@ -34,7 +34,7 @@ class Permissions
      */
     public function deletePermissionsToolsClaimsAllowedToolIdGrantId($version, $toolId, $grantId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/$grantId", 'DELETE');
+        $uri = "d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/$grantId";
         return new Request('GET', $uri);
     }
 
@@ -70,7 +70,7 @@ class Permissions
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/permissions/tools/$toolId/capabilities/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/permissions/tools/$toolId/capabilities/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -104,7 +104,7 @@ class Permissions
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/permissions/tools/$toolId/claims/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/permissions/tools/$toolId/claims/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -141,7 +141,7 @@ class Permissions
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -156,7 +156,7 @@ class Permissions
      */
     public function getPermissionsToolsClaimsAllowedToolIdGrantId($version, $toolId, $grantId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/$grantId", 'GET');
+        $uri = "d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/$grantId";
         return new Request('GET', $uri);
     }
 
@@ -186,7 +186,7 @@ class Permissions
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/permissions/tools/$toolId/claims/metadata/?$queryString", 'GET');
+        $uri = "d2l/api/lp/$version/permissions/tools/$toolId/claims/metadata/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -204,7 +204,7 @@ class Permissions
      */
     public function getPermissionsToolsClaimsMetadataToolIdClaimId($version, $toolId, $claimId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/permissions/tools/$toolId/claims/metadata/$claimId", 'GET');
+        $uri = "d2l/api/lp/$version/permissions/tools/$toolId/claims/metadata/$claimId";
         return new Request('GET', $uri);
     }
 
@@ -222,7 +222,7 @@ class Permissions
      */
     public function postPermissionsToolsCapabilitiesToolId($version, $toolId, $capability)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/permissions/tools/$toolId/capabilities/", 'POST');
+        $uri = "d2l/api/lp/$version/permissions/tools/$toolId/capabilities/";
         return new Request('GET', $uri);
     }
 
@@ -241,7 +241,7 @@ class Permissions
      */
     public function putPermissionsToolsClaimsAllowedToolIdGrantId($version, $toolId, $grantId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/$grantId", 'PUT');
+        $uri = "d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/$grantId";
         return new Request('GET', $uri);
     }
 }

@@ -27,7 +27,7 @@ class Dropboxes
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -44,7 +44,7 @@ class Dropboxes
      */
     public function getDropboxFoldersOrgUnitIdFolderId($version, $orgUnitId, $folderId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId";
         return new Request('GET', $uri);
     }
 
@@ -62,7 +62,7 @@ class Dropboxes
      */
     public function getDropboxFoldersAttachmentsOrgUnitIdFolderIdFileId($version, $orgUnitId, $folderId, $fileId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/attachments/$fileId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/attachments/$fileId";
         return new Request('GET', $uri);
     }
 
@@ -80,7 +80,7 @@ class Dropboxes
      */
     public function postDropboxFoldersOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/";
         return new Request('GET', $uri);
     }
 
@@ -99,7 +99,7 @@ class Dropboxes
      */
     public function putDropboxFoldersOrgUnitIdFolderId($version, $orgUnitId, $folderId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId";
         return new Request('GET', $uri);
     }
 
@@ -125,7 +125,7 @@ class Dropboxes
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/dropbox/orgUnits/feedback/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/dropbox/orgUnits/feedback/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -153,7 +153,7 @@ class Dropboxes
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/?$queryString", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -172,7 +172,7 @@ class Dropboxes
      */
     public function getDropboxFoldersSubmissionsFilesOrgUnitIdFolderIdSubmissionIdFileId($version, $orgUnitId, $folderId, $submissionId, $fileId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/$submissionId/files/$fileId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/$submissionId/files/$fileId";
         return new Request('GET', $uri);
     }
 
@@ -195,7 +195,7 @@ class Dropboxes
      */
     public function postDropboxFoldersSubmissionsGroupOrgUnitIdFolderIdGroupId($version, $orgUnitId, $folderId, $groupId, $description)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/group/$groupId", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/group/$groupId";
         return new Request('GET', $uri);
     }
 
@@ -217,7 +217,7 @@ class Dropboxes
      */
     public function postDropboxFoldersSubmissionsMysubmissionsOrgUnitIdFolderId($version, $orgUnitId, $folderId, $description)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/mysubmissions/", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/mysubmissions/";
         return new Request('GET', $uri);
     }
 
@@ -237,7 +237,7 @@ class Dropboxes
      */
     public function postDropboxFoldersSubmissionsFilesMarkasreadOrgUnitIdFolderIdSubmissionId($version, $orgUnitId, $folderId, $submissionId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/$submissionId/files/$fileId/markAsRead", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/$submissionId/files/$fileId/markAsRead";
         return new Request('GET', $uri);
     }
 
@@ -256,7 +256,7 @@ class Dropboxes
      */
     public function deleteDropboxFoldersFeedbackAttachmentsOrgUnitIdFolderIdEntityTypeEntityIdFileId($version, $orgUnitId, $folderId, $entityType, $entityId, $fileId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/attachments/$fileId", 'DELETE');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/attachments/$fileId";
         return new Request('GET', $uri);
     }
 
@@ -275,7 +275,7 @@ class Dropboxes
      */
     public function getDropboxFoldersFeedbackOrgUnitIdFolderIdEntityTypeEntityId($version, $orgUnitId, $folderId, $entityType, $entityId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId";
         return new Request('GET', $uri);
     }
 
@@ -296,7 +296,7 @@ class Dropboxes
      */
     public function getDropboxFoldersFeedbackAttachmentsOrgUnitIdFolderIdEntityTypeEntityIdFileId($version, $orgUnitId, $folderId, $entityType, $entityId, $fileId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/attachments/$fileId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/attachments/$fileId";
         return new Request('GET', $uri);
     }
 
@@ -319,7 +319,7 @@ class Dropboxes
      */
     public function postDropboxFoldersFeedbackOrgUnitIdFolderIdEntityTypeEntityId($version, $orgUnitId, $folderId, $entityType, $entityId, $dropboxFeedback)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId";
         return new Request('GET', $uri);
     }
 
@@ -342,7 +342,7 @@ class Dropboxes
      */
     public function postDropboxFoldersFeedbackAttachOrgUnitIdFolderIdEntityTypeEntityId($version, $orgUnitId, $folderId, $entityType, $entityId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/attach", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/attach";
         return new Request('GET', $uri);
     }
 
@@ -369,7 +369,7 @@ class Dropboxes
      */
     public function postDropboxFoldersFeedbackUploadOrgUnitIdFolderIdEntityTypeEntityId($version, $orgUnitId, $folderId, $entityType, $entityId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/upload", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/upload";
         return new Request('GET', $uri);
     }
 
@@ -390,7 +390,7 @@ class Dropboxes
      */
     public function putDropboxFoldersEntitiesCompletionOrgUnitIdFolderIdEntityId($version, $orgUnitId, $folderId, $entityId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/entities/$entityId/completion", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/entities/$entityId/completion";
         return new Request('GET', $uri);
     }
 
@@ -405,7 +405,7 @@ class Dropboxes
      */
     public function deleteDropboxCategoriesOrgUnitIdCategoryId($version, $orgUnitId, $categoryId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/categories/$categoryId", 'DELETE');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/categories/$categoryId";
         return new Request('GET', $uri);
     }
 
@@ -421,7 +421,7 @@ class Dropboxes
      */
     public function getDropboxCategoriesOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/categories/", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/categories/";
         return new Request('GET', $uri);
     }
 
@@ -438,7 +438,7 @@ class Dropboxes
      */
     public function getDropboxCategoriesOrgUnitIdCategoryId($version, $orgUnitId, $categoryId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/categories/$categoryId", 'GET');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/categories/$categoryId";
         return new Request('GET', $uri);
     }
 
@@ -456,7 +456,7 @@ class Dropboxes
      */
     public function postDropboxCategoriesOrgUnitId($version, $orgUnitId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/categories/", 'POST');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/categories/";
         return new Request('GET', $uri);
     }
 
@@ -475,7 +475,7 @@ class Dropboxes
      */
     public function putDropboxCategoriesOrgUnitIdCategoryId($version, $orgUnitId, $categoryId)
     {
-        $uri = $this->valenceInstance->authenticateUri("d2l/api/le/$version/$orgUnitId/dropbox/categories/$categoryId", 'PUT');
+        $uri = "d2l/api/le/$version/$orgUnitId/dropbox/categories/$categoryId";
         return new Request('GET', $uri);
     }
 }
