@@ -1,10 +1,10 @@
 <?php
 namespace ValenceWrapper\Service;
-use ValenceWrapper\Model\BaseValenceModel;
-use ValenceWrapper\Model\Basic\UtcDateTime;
-use ValenceWrapper\Model\Basic\RichText;
+
+use GuzzleHttp\Psr7\Request;
+
 /**
- * ePortfolio Invites — Developer Platform (August 2019)
+ * ePortfolio Invites — Developer Platform (September 2019)
  * @see https://docs.valence.desire2learn.com/res/invite.html
  */
 class EportfolioInvites
