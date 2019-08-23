@@ -383,6 +383,7 @@ class OrganizationStructure
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID as single JSON number] $orgUnitId Org unit to add as a child.
      */
     public function postOrgstructureChildrenOrgUnitId($version, $orgUnitId)
     {
@@ -401,6 +402,7 @@ class OrganizationStructure
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID as single JSON number] $orgUnitId Org unit to add as a parent.
      */
     public function postOrgstructureParentsOrgUnitId($version, $orgUnitId)
     {

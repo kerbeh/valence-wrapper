@@ -85,13 +85,14 @@ class Calendar
      * association
      * @param [EVENTTYPE_T] $eventType Optional. Calendar event type.
      * eventType
+     * @param [CSV of D2LIDs] $orgUnitIdsCSV List of org units in which to search.
      * @param [UTCDateTime] $startDateTime Start of time window to examine.
      * @param [UTCDateTime] $endDateTime End of time window to examine.
      */
-    public function getCalendarEventsMyevents($version, $association = null, $eventType = null, $startDateTime, $endDateTime)
+    public function getCalendarEventsMyevents($version, $association = null, $eventType = null, $orgUnitIdsCSV, $startDateTime, $endDateTime)
     {
         $queryParrams = [
-                            "association" => $association,                    "eventType" => $eventType,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime
+                            "association" => $association,                    "eventType" => $eventType,                    "orgUnitIdsCSV" => $orgUnitIdsCSV,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -152,13 +153,14 @@ class Calendar
      * association
      * @param [EVENTTYPE_T] $eventType Optional. Calendar event type.
      * eventType
+     * @param [CSV of D2LIDs] $orgUnitIdsCSV List of org units in which to search.
      * @param [UTCDateTime] $startDateTime Start of time window to examine.
      * @param [UTCDateTime] $endDateTime End of time window to examine.
      */
-    public function getCalendarEventsMyeventsItemcounts($version, $association = null, $eventType = null, $startDateTime, $endDateTime)
+    public function getCalendarEventsMyeventsItemcounts($version, $association = null, $eventType = null, $orgUnitIdsCSV, $startDateTime, $endDateTime)
     {
         $queryParrams = [
-                            "association" => $association,                    "eventType" => $eventType,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime
+                            "association" => $association,                    "eventType" => $eventType,                    "orgUnitIdsCSV" => $orgUnitIdsCSV,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime
 
         ];
         $queryString = http_build_query($queryParrams);

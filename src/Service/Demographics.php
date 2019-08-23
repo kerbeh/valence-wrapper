@@ -49,15 +49,28 @@ class Demographics
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [CSV of D2LIDs] $fieldIds Optional. Demographic field IDs.
+     * fieldIds
+     * @param [CSV of D2LIDs] $roleIds Optional. User role IDs.
+     * roleIds
+     * @param [CSV of D2LIDs] $userIds Optional. User IDs.
+     * userIds
      * @param [string] $search Optional. Search string to look for in the demographic field values.
      * search
      * @param [string] $bookmark Optional. Bookmark to use for fetching the next data set segment.
      * bookmark
      */
-    public function getDemographicsOrgunitsUsersOrgUnitId($version, $orgUnitId, $search = null, $bookmark = null)
-    {
+    public function getDemographicsOrgunitsUsersOrgUnitId(
+        $version,
+        $orgUnitId,
+        $fieldIds = null,
+        $roleIds = null,
+        $userIds = null,
+        $search = null,
+        $bookmark = null
+    ) {
         $queryParrams = [
-                            "search" => $search,                    "bookmark" => $bookmark
+                            "fieldIds" => $fieldIds,                    "roleIds" => $roleIds,                    "userIds" => $userIds,                    "search" => $search,                    "bookmark" => $bookmark
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -83,10 +96,17 @@ class Demographics
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
      * @param [D2LID] $userId User ID.
+     * @param [CSV of D2LIDs] $fieldIds Optional. Demographic field IDs.
+     * fieldIds
      */
-    public function getDemographicsOrgunitsUsersOrgUnitIdUserId($version, $orgUnitId, $userId)
+    public function getDemographicsOrgunitsUsersOrgUnitIdUserId($version, $orgUnitId, $userId, $fieldIds = null)
     {
-        $uri = "d2l/api/lp/$version/demographics/orgUnits/$orgUnitId/users/$userId";
+        $queryParrams = [
+                            "fieldIds" => $fieldIds
+
+        ];
+        $queryString = http_build_query($queryParrams);
+        $uri = "d2l/api/lp/$version/demographics/orgUnits/$orgUnitId/users/$userId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -107,15 +127,21 @@ class Demographics
      * missing).
      *
      * @param [D2LVERSION] $version API version.
+     * @param [CSV of D2LIDs] $fieldIds Optional. Demographic field IDs.
+     * fieldIds
+     * @param [CSV of D2LIDs] $roleIds Optional. User role IDs.
+     * roleIds
+     * @param [CSV of D2LIDs] $userIds Optional. User IDs.
+     * userIds
      * @param [string] $search Optional. Search string to look for in the demographic field values.
      * search
      * @param [string] $bookmark Optional. Bookmark to use for fetching the next data set segment.
      * bookmark
      */
-    public function getDemographicsUsers($version, $search = null, $bookmark = null)
+    public function getDemographicsUsers($version, $fieldIds = null, $roleIds = null, $userIds = null, $search = null, $bookmark = null)
     {
         $queryParrams = [
-                            "search" => $search,                    "bookmark" => $bookmark
+                            "fieldIds" => $fieldIds,                    "roleIds" => $roleIds,                    "userIds" => $userIds,                    "search" => $search,                    "bookmark" => $bookmark
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -140,13 +166,15 @@ class Demographics
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $userId User ID.
+     * @param [CSV of D2LIDs] $fieldIds Optional. Comma-separated list of demographic field IDs.
+     * fieldIds
      * @param [string] $bookmark Optional. Bookmark to use for fetching the next data set segment.
      * bookmark
      */
-    public function getDemographicsUsersUserId($version, $userId, $bookmark = null)
+    public function getDemographicsUsersUserId($version, $userId, $fieldIds = null, $bookmark = null)
     {
         $queryParrams = [
-                            "bookmark" => $bookmark
+                            "fieldIds" => $fieldIds,                    "bookmark" => $bookmark
 
         ];
         $queryString = http_build_query($queryParrams);

@@ -175,8 +175,9 @@ class CourseContent
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [Content.ContentObjectData of type Module] $contentObjectData New root module property data.
      */
-    public function postContentRootOrgUnitId($version, $orgUnitId)
+    public function postContentRootOrgUnitId($version, $orgUnitId, $contentObjectData)
     {
         $uri = "d2l/api/le/$version/$orgUnitId/content/root/";
         return new Request('GET', $uri);
@@ -193,8 +194,9 @@ class CourseContent
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
      * @param [D2LID] $moduleId Module ID.
+     * @param [Content.ContentObjectData of type Module] $contentObjectData Updated module property data.
      */
-    public function putContentModulesOrgUnitIdModuleId($version, $orgUnitId, $moduleId)
+    public function putContentModulesOrgUnitIdModuleId($version, $orgUnitId, $moduleId, $contentObjectData)
     {
         $uri = "d2l/api/le/$version/$orgUnitId/content/modules/$moduleId";
         return new Request('GET', $uri);
@@ -214,8 +216,9 @@ class CourseContent
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
      * @param [D2LID] $topicId Topic ID.
+     * @param [Content.ContentObjectData of type Topic] $contentObjectData Updated topic property data.
      */
-    public function putContentTopicsOrgUnitIdTopicId($version, $orgUnitId, $topicId)
+    public function putContentTopicsOrgUnitIdTopicId($version, $orgUnitId, $topicId, $contentObjectData)
     {
         $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId";
         return new Request('GET', $uri);
@@ -379,15 +382,16 @@ class CourseContent
      * @param [D2LVERSION] $version API version.
      * @param [COMPLETION_T] $completion Optional. Completion status.
      * completion
+     * @param [CSV of D2LIDs] $orgUnitIdsCSV List of org unit IDs (limited to 100 or fewer).
      * @param [UTCDateTime] $startDateTime Optional. Start of time window to examine.
      * startDateTime
      * @param [UTCDateTime] $endDateTime Optional. End of time window to examine.
      * endDateTime
      */
-    public function getContentMyitems($version, $completion = null, $startDateTime = null, $endDateTime = null)
+    public function getContentMyitems($version, $completion = null, $orgUnitIdsCSV, $startDateTime = null, $endDateTime = null)
     {
         $queryParrams = [
-                            "completion" => $completion,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime
+                            "completion" => $completion,                    "orgUnitIdsCSV" => $orgUnitIdsCSV,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -415,15 +419,16 @@ class CourseContent
      * @param [D2LVERSION] $version API version.
      * @param [COMPLETION_T] $completion Optional. Completion status.
      * completion
+     * @param [CSV of D2LIDs] $orgUnitIdsCSV List of org unit IDs (limited to 100 or fewer).
      * @param [UTCDateTime] $startDateTime Optional. Start of time window to examine.
      * startDateTime
      * @param [UTCDateTime] $endDateTime Optional. End of time window to examine.
      * endDateTime
      */
-    public function getContentMyitemsDue($version, $completion = null, $startDateTime = null, $endDateTime = null)
+    public function getContentMyitemsDue($version, $completion = null, $orgUnitIdsCSV, $startDateTime = null, $endDateTime = null)
     {
         $queryParrams = [
-                            "completion" => $completion,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime
+                            "completion" => $completion,                    "orgUnitIdsCSV" => $orgUnitIdsCSV,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -450,15 +455,16 @@ class CourseContent
      * @param [D2LVERSION] $version API version.
      * @param [COMPLETION_T] $completion Optional. Completion status.
      * completion
+     * @param [CSV of D2LIDs] $orgUnitIdsCSV List of org unit IDs (limited to 100 or fewer).
      * @param [UTCDateTime] $startDateTime Optional. Start of time window to examine.
      * startDateTime
      * @param [UTCDateTime] $endDateTime Optional. End of time window to examine.
      * endDateTime
      */
-    public function getContentMyitemsItemcounts($version, $completion = null, $startDateTime = null, $endDateTime = null)
+    public function getContentMyitemsItemcounts($version, $completion = null, $orgUnitIdsCSV, $startDateTime = null, $endDateTime = null)
     {
         $queryParrams = [
-                            "completion" => $completion,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime
+                            "completion" => $completion,                    "orgUnitIdsCSV" => $orgUnitIdsCSV,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -486,15 +492,16 @@ class CourseContent
      * @param [D2LVERSION] $version API version.
      * @param [COMPLETION_T] $completion Optional. Completion status.
      * completion
+     * @param [CSV of D2LIDs] $orgUnitIdsCSV List of org unit IDs (limited to 100 or fewer).
      * @param [UTCDateTime] $startDateTime Optional. Start of time window to examine.
      * startDateTime
      * @param [UTCDateTime] $endDateTime Optional. End of time window to examine.
      * endDateTime
      */
-    public function getContentMyitemsDueItemcounts($version, $completion = null, $startDateTime = null, $endDateTime = null)
+    public function getContentMyitemsDueItemcounts($version, $completion = null, $orgUnitIdsCSV, $startDateTime = null, $endDateTime = null)
     {
         $queryParrams = [
-                            "completion" => $completion,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime
+                            "completion" => $completion,                    "orgUnitIdsCSV" => $orgUnitIdsCSV,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -517,15 +524,16 @@ class CourseContent
      * blocks, sorted by completion date that match the provided query parameter filters.
      *
      * @param [D2LVERSION] $version API version.
+     * @param [CSV of D2LIDs] $orgUnitIdsCSV List of org unit IDs (limited to 100 or fewer).
      * @param [UTCDateTime] $completedFromDateTime Optional. Start of time window to examine.
      * completedFromDateTime
      * @param [UTCDateTime] $completedToDateTime Optional. End of time window to examine.
      * completedToDateTime
      */
-    public function getContentMyitemsCompletions($version, $completedFromDateTime = null, $completedToDateTime = null)
+    public function getContentMyitemsCompletions($version, $orgUnitIdsCSV, $completedFromDateTime = null, $completedToDateTime = null)
     {
         $queryParrams = [
-                            "completedFromDateTime" => $completedFromDateTime,                    "completedToDateTime" => $completedToDateTime
+                            "orgUnitIdsCSV" => $orgUnitIdsCSV,                    "completedFromDateTime" => $completedFromDateTime,                    "completedToDateTime" => $completedToDateTime
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -549,15 +557,16 @@ class CourseContent
      * Exempted items are considered not due and will not appear in the result list.
      *
      * @param [D2LVERSION] $version API version.
+     * @param [CSV of D2LIDs] $orgUnitIdsCSV List of org unit IDs (limited to 100 or fewer).
      * @param [UTCDateTime] $completedFromDateTime Optional. Start of time window to examine.
      * completedFromDateTime
      * @param [UTCDateTime] $completedToDateTime Optional. End of time window to examine.
      * completedToDateTime
      */
-    public function getContentMyitemsCompletionsDue($version, $completedFromDateTime = null, $completedToDateTime = null)
+    public function getContentMyitemsCompletionsDue($version, $orgUnitIdsCSV, $completedFromDateTime = null, $completedToDateTime = null)
     {
         $queryParrams = [
-                            "completedFromDateTime" => $completedFromDateTime,                    "completedToDateTime" => $completedToDateTime
+                            "orgUnitIdsCSV" => $orgUnitIdsCSV,                    "completedFromDateTime" => $completedFromDateTime,                    "completedToDateTime" => $completedToDateTime
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -716,11 +725,13 @@ class CourseContent
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $userId User for which to retrieve the overdue activities.
+     * @param [CSV of D2LIDs] $orgUnitIdsCSV Optional. List of Org unit IDs.
+     * orgUnitIdsCSV
      */
-    public function getOverdueitems($version, $userId)
+    public function getOverdueitems($version, $userId, $orgUnitIdsCSV = null)
     {
         $queryParrams = [
-                            "userId" => $userId
+                            "userId" => $userId,                    "orgUnitIdsCSV" => $orgUnitIdsCSV
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -742,10 +753,17 @@ class CourseContent
      * Exempted items are considered not due and will not be counted.
      *
      * @param [D2LVERSION] $version API version.
+     * @param [CSV of D2LIDs] $orgUnitIdsCSV Optional. List of Org unit IDs.
+     * orgUnitIdsCSV
      */
-    public function getOverdueitemsMyitems($version)
+    public function getOverdueitemsMyitems($version, $orgUnitIdsCSV = null)
     {
-        $uri = "d2l/api/le/$version/overdueItems/myItems";
+        $queryParrams = [
+                            "orgUnitIdsCSV" => $orgUnitIdsCSV
+
+        ];
+        $queryString = http_build_query($queryParrams);
+        $uri = "d2l/api/le/$version/overdueItems/myItems?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -887,11 +905,12 @@ class CourseContent
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org Unit ID.
      * @param [boolean] $ignoreInvalid If true, prompt the back-end service to filter out and ignore provided userIdsCSV values that are unauthorized or non-existent.
+     * @param [CSV of D2LIDs] $userIdsCSV List of user IDs (limited to 100 or fewer).
      */
-    public function getContentCompletionsOrgUnitId($version, $orgUnitId, $ignoreInvalid)
+    public function getContentCompletionsOrgUnitId($version, $orgUnitId, $ignoreInvalid, $userIdsCSV)
     {
         $queryParrams = [
-                            "ignoreInvalid" => $ignoreInvalid
+                            "ignoreInvalid" => $ignoreInvalid,                    "userIdsCSV" => $userIdsCSV
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -911,11 +930,12 @@ class CourseContent
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $userId User ID.
      * @param [boolean] $ignoreInvalid If true, prompt the back-end service to filter out and ignore provided orgUnitIdsCSV values that are unauthorized or non-existent.
+     * @param [CSV of D2LIDs] $orgUnitIdsCSV List of org unit IDs (limited to 100 or fewer).
      */
-    public function getContentCompletionsUserId($version, $userId, $ignoreInvalid)
+    public function getContentCompletionsUserId($version, $userId, $ignoreInvalid, $orgUnitIdsCSV)
     {
         $queryParrams = [
-                            "ignoreInvalid" => $ignoreInvalid
+                            "ignoreInvalid" => $ignoreInvalid,                    "orgUnitIdsCSV" => $orgUnitIdsCSV
 
         ];
         $queryString = http_build_query($queryParrams);

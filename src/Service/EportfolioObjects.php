@@ -17,13 +17,14 @@ class EportfolioObjects
      * data block containing the properties of your identified EP object.
      *
      * @param [D2LVERSION] $version API version.
+     * @param [Context chain] $context Context chain of object IDs to follow to find the EP object.
      * @param [boolean] $c Optional. If “true”, include any comments attached to the object.
      * c
      */
-    public function getObject($version, $c = null)
+    public function getObject($version, $context, $c = null)
     {
         $queryParrams = [
-                            "c" => $c
+                            "context" => $context,                    "c" => $c
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -41,10 +42,16 @@ class EportfolioObjects
      * the identified EP object’s associated resource.
      *
      * @param [D2LVERSION] $version API version.
+     * @param [Context chain] $context Context chain of object IDs to follow to find the EP object.
      */
-    public function getObjectContent($version)
+    public function getObjectContent($version, $context)
     {
-        $uri = "d2l/api/eP/$version/object/content";
+        $queryParrams = [
+                            "context" => $context
+
+        ];
+        $queryString = http_build_query($queryParrams);
+        $uri = "d2l/api/eP/$version/object/content?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -58,12 +65,13 @@ class EportfolioObjects
      * contents of the identified EP object’s associated resource.
      *
      * @param [D2LVERSION] $version API verison.
+     * @param [Context chain] $context Context chain of object IDs to follow to find the EP object.
      * @param [THUMBSZ] $size Thumbnail size to generate.
      */
-    public function getObjectThumbnail($version, $size)
+    public function getObjectThumbnail($version, $context, $size)
     {
         $queryParrams = [
-                            "size" => $size
+                            "context" => $context,                    "size" => $size
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -440,8 +448,9 @@ class EportfolioObjects
      * user’s ignored list, your POST body would be:
      *
      * @param [D2LVERSION] $version API version.
+     * @param [D2LID as single JSON number] $userId User to add to the ignored-user list.
      */
-    public function postIgnoredusersAdd($version)
+    public function postIgnoredusersAdd($version, $userId)
     {
         $uri = "d2l/api/eP/$version/ignoredusers/add";
         return new Request('GET', $uri);
@@ -457,8 +466,9 @@ class EportfolioObjects
      * calling user’s ignored list, your POST body would be:
      *
      * @param [D2LVERSION] $version API version.
+     * @param [D2LID as single JSON number] $userId User to remove from the ignored-user list.
      */
-    public function postIgnoredusersRemove($version)
+    public function postIgnoredusersRemove($version, $userId)
     {
         $uri = "d2l/api/eP/$version/ignoredusers/remove";
         return new Request('GET', $uri);

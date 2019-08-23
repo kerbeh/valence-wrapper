@@ -862,8 +862,9 @@ class Users
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $roleId D2L Role ID
+     * @param [string array] $mappings URNs of LIS roles.
      */
-    public function putImsconfigMapRolesRoleId($version, $roleId)
+    public function putImsconfigMapRolesRoleId($version, $roleId, $mappings)
     {
         $uri = "d2l/api/lp/$version/imsconfig/map/roles/$roleId";
         return new Request('GET', $uri);

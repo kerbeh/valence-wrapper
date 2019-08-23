@@ -21,10 +21,17 @@ class CourseUpdatesForEndUsers
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [CSV of UPDATETYPES_T] $updateTypesCSV Optional. List of org unit update types.
+     * updateTypesCSV
      */
-    public function getUpdatesMyupdatesOrgUnitId($version, $orgUnitId)
+    public function getUpdatesMyupdatesOrgUnitId($version, $orgUnitId, $updateTypesCSV = null)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/updates/myUpdates";
+        $queryParrams = [
+                            "updateTypesCSV" => $updateTypesCSV
+
+        ];
+        $queryString = http_build_query($queryParrams);
+        $uri = "d2l/api/le/$version/$orgUnitId/updates/myUpdates?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -43,10 +50,18 @@ class CourseUpdatesForEndUsers
      * block containing a list of OrgUnitUpdates.
      *
      * @param [D2LVERSION] $version API version.
+     * @param [CSV of D2LIDs] $orgUnitIdsCSV List of org units to check (limited to 100 or fewer).
+     * @param [CSV of UPDATETYPES_T] $updateTypesCSV Optional. List of org units update types.
+     * updateTypesCSV
      */
-    public function getUpdatesMyupdates($version)
+    public function getUpdatesMyupdates($version, $orgUnitIdsCSV, $updateTypesCSV = null)
     {
-        $uri = "d2l/api/le/$version/updates/myUpdates/";
+        $queryParrams = [
+                            "orgUnitIdsCSV" => $orgUnitIdsCSV,                    "updateTypesCSV" => $updateTypesCSV
+
+        ];
+        $queryString = http_build_query($queryParrams);
+        $uri = "d2l/api/le/$version/updates/myUpdates/?$queryString";
         return new Request('GET', $uri);
     }
 }

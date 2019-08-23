@@ -108,6 +108,8 @@ class Enrollments
      * fetching the next page.
      *
      * @param [D2LVERSION] $version API version.
+     * @param [CSV of D2LIDs] $orgUnitTypeId Optional. Filter list to specific org unit types.
+     * orgUnitTypeId
      * @param [string] $bookmark Optional. Bookmark to use for fetching next data set segment.
      * bookmark
      * @param [string] $sortBy Optional. Sort by key-expression (see description).
@@ -123,6 +125,7 @@ class Enrollments
      */
     public function getEnrollmentsMyenrollments(
         $version,
+        $orgUnitTypeId = null,
         $bookmark = null,
         $sortBy = null,
         $isActive = null,
@@ -131,7 +134,7 @@ class Enrollments
         $canAccess = null
     ) {
         $queryParrams = [
-                            "bookmark" => $bookmark,                    "sortBy" => $sortBy,                    "isActive" => $isActive,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime,                    "canAccess" => $canAccess
+                            "orgUnitTypeId" => $orgUnitTypeId,                    "bookmark" => $bookmark,                    "sortBy" => $sortBy,                    "isActive" => $isActive,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime,                    "canAccess" => $canAccess
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -237,15 +240,17 @@ class Enrollments
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LVERSION] $userId User ID.
+     * @param [CSV of D2LIDs] $orgUnitTypeId Optional. Filter list to specific org unit types.
+     * orgUnitTypeId
      * @param [D2LID] $roleId Optional. Filter list to a specific user role.
      * roleId
      * @param [string] $bookmark Optional. Bookmark to use for fetching next data set segment.
      * bookmark
      */
-    public function getEnrollmentsUsersOrgunitsUserId($version, $userId, $roleId = null, $bookmark = null)
+    public function getEnrollmentsUsersOrgunitsUserId($version, $userId, $orgUnitTypeId = null, $roleId = null, $bookmark = null)
     {
         $queryParrams = [
-                            "roleId" => $roleId,                    "bookmark" => $bookmark
+                            "orgUnitTypeId" => $orgUnitTypeId,                    "roleId" => $roleId,                    "bookmark" => $bookmark
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -478,8 +483,9 @@ class Enrollments
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [Group.GroupCategoryData in Create form] $groupCategoryData New group category properties.
      */
-    public function postGroupcategoriesOrgUnitId($version, $orgUnitId)
+    public function postGroupcategoriesOrgUnitId($version, $orgUnitId, $groupCategoryData)
     {
         $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/";
         return new Request('GET', $uri);
@@ -496,8 +502,9 @@ class Enrollments
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
      * @param [D2LID] $groupCategoryId Group category ID.
+     * @param [Group.GroupData in Create form] $groupData New group properties.
      */
-    public function postGroupcategoriesGroupsOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
+    public function postGroupcategoriesGroupsOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId, $groupData)
     {
         $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/";
         return new Request('GET', $uri);
@@ -531,8 +538,9 @@ class Enrollments
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
      * @param [D2LID] $groupCategoryId Group category ID.
+     * @param [Group.GroupCategoryData in Update form] $groupCategoryData Updated group category properties.
      */
-    public function putGroupcategoriesOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
+    public function putGroupcategoriesOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId, $groupCategoryData)
     {
         $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
         return new Request('GET', $uri);
@@ -550,8 +558,9 @@ class Enrollments
      * @param [D2LID] $orgUnitId Org unit ID.
      * @param [D2LID] $groupCategoryId Group category ID.
      * @param [D2LID] $groupId Group ID.
+     * @param [Group.GroupData in Update form] $groupData Updated group properties.
      */
-    public function putGroupcategoriesGroupsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId)
+    public function putGroupcategoriesGroupsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId, $groupData)
     {
         $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
         return new Request('GET', $uri);
@@ -634,8 +643,9 @@ class Enrollments
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [Section.SectionData in Create form] $sectionData New section data.
      */
-    public function postSectionsOrgUnitId($version, $orgUnitId)
+    public function postSectionsOrgUnitId($version, $orgUnitId, $sectionData)
     {
         $uri = "d2l/api/lp/$version/$orgUnitId/sections/";
         return new Request('GET', $uri);
@@ -667,8 +677,9 @@ class Enrollments
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [Section.SectionPropertyData in Create form] $sectionPropertyData New properties for org unit sections.
      */
-    public function putSectionsOrgUnitId($version, $orgUnitId)
+    public function putSectionsOrgUnitId($version, $orgUnitId, $sectionPropertyData)
     {
         $uri = "d2l/api/lp/$version/$orgUnitId/sections/";
         return new Request('GET', $uri);
@@ -684,8 +695,9 @@ class Enrollments
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [Section.SectionPropertyData in Update form] $sectionPropertyData Updated properties for org unit sections.
      */
-    public function putSectionsSettingsOrgUnitId($version, $orgUnitId)
+    public function putSectionsSettingsOrgUnitId($version, $orgUnitId, $sectionPropertyData)
     {
         $uri = "d2l/api/lp/$version/$orgUnitId/sections/settings";
         return new Request('GET', $uri);
@@ -702,8 +714,9 @@ class Enrollments
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
      * @param [D2LID] $sectionId Section ID.
+     * @param [Section.SectionData in Update form] $sectionData Updated section data.
      */
-    public function putSectionsOrgUnitIdSectionId($version, $orgUnitId, $sectionId)
+    public function putSectionsOrgUnitIdSectionId($version, $orgUnitId, $sectionId, $sectionData)
     {
         $uri = "d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
         return new Request('GET', $uri);
@@ -720,8 +733,9 @@ class Enrollments
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $auditorId Auditor ID.
+     * @param [D2LID as single JSON number] $auditeeId Auditee to remove.
      */
-    public function deleteAuditingAuditorsAuditeesAuditorId($version, $auditorId)
+    public function deleteAuditingAuditorsAuditeesAuditorId($version, $auditorId, $auditeeId)
     {
         $uri = "d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
         return new Request('GET', $uri);
@@ -786,8 +800,9 @@ class Enrollments
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $auditorId Auditor ID.
+     * @param [D2LID as single JSON number] $auditeeId Auditee to add.
      */
-    public function postAuditingAuditorsAuditeesAuditorId($version, $auditorId)
+    public function postAuditingAuditorsAuditeesAuditorId($version, $auditorId, $auditeeId)
     {
         $uri = "d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
         return new Request('GET', $uri);

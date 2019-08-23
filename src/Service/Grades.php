@@ -234,10 +234,16 @@ class Grades
      * sorted by the OrgUnitIds that match the provided query parameter filters.
      *
      * @param [D2LVERSION] $version API verison.
+     * @param [CSV of D2LIDs] $orgUnitIdsCSV List of org units to check (limited to 100 or fewer).
      */
-    public function getGradesFinalValuesMygradevalues($version)
+    public function getGradesFinalValuesMygradevalues($version, $orgUnitIdsCSV)
     {
-        $uri = "d2l/api/le/$version/grades/final/values/myGradeValues/";
+        $queryParrams = [
+                            "orgUnitIdsCSV" => $orgUnitIdsCSV
+
+        ];
+        $queryString = http_build_query($queryParrams);
+        $uri = "d2l/api/le/$version/grades/final/values/myGradeValues/?$queryString";
         return new Request('GET', $uri);
     }
 

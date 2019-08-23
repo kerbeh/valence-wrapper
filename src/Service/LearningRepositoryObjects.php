@@ -96,20 +96,20 @@ class LearningRepositoryObjects
 
 
     /**
-     * Retrieve the properties for a particular version of a learning object.
-     * @see https://docs.valence.desire2learn.com/res/lor.html#get--d2l-api-lr-(version)-objects-(objectId)-(objectVersion)-properties-
+     * Retrieve the basic properties for the latest version of a learning object.
+     * @see https://docs.valence.desire2learn.com/res/lor.html#get--d2l-api-lr-(version)-objects-(objectId)-properties-
      * @return /PSR7 (Request)
      * Return. This action returns a LRWSObjectProperties
      * JSON data block containing status data for the task as well as (if
-     * successful) the basic property data for a particular version of the learning
-     * object.
+     * successful) the basic property data for the most recent version of the
+     * learning object.
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $objectId Learning object ID.
      */
     public function getObjectsPropertiesObjectId($version, $objectId)
     {
-        $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/properties/";
+        $uri = "d2l/api/lr/$version/objects/$objectId/properties/";
         return new Request('GET', $uri);
     }
 
@@ -124,10 +124,31 @@ class LearningRepositoryObjects
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $objectId Learning object ID.
+     * @param [Number read as a long integer value] $objectVersion Learning object version number, must be greater than 0.
      */
-    public function getObjectsMetadataObjectId($version, $objectId)
+    public function getObjectsMetadataObjectIdObjectVersion($version, $objectId, $objectVersion)
     {
         $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/metadata/";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Retrieve the properties for a particular version of a learning object.
+     * @see https://docs.valence.desire2learn.com/res/lor.html#get--d2l-api-lr-(version)-objects-(objectId)-(objectVersion)-properties-
+     * @return /PSR7 (Request)
+     * Return. This action returns a LRWSObjectProperties
+     * JSON data block containing status data for the task as well as (if
+     * successful) the basic property data for a particular version of the learning
+     * object.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $objectId Learning object ID.
+     * @param [Number read as a long integer value] $objectVersion Learning object version number, must be greater than 0.
+     */
+    public function getObjectsPropertiesObjectIdObjectVersion($version, $objectId, $objectVersion)
+    {
+        $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/properties/";
         return new Request('GET', $uri);
     }
 
@@ -178,9 +199,9 @@ class LearningRepositoryObjects
 
 
     /**
-     * Update the properties for a particular version of a learning object in a
+     * Update the properties for the most recent version of a learning object in a
      * local repository.
-     * @see https://docs.valence.desire2learn.com/res/lor.html#post--d2l-api-lr-(version)-objects-(objectId)-(objectVersion)-properties-
+     * @see https://docs.valence.desire2learn.com/res/lor.html#post--d2l-api-lr-(version)-objects-(objectId)-properties-
      * @return /PSR7 (Request)
      * Input. If the calling user context owns the learning object, then that
      * user context must have Manage My Objects in the LOR permission; otherwise,
@@ -197,6 +218,33 @@ class LearningRepositoryObjects
      * @param [Repository.LRWSObjectPropertiesInput] $lRWSObjectPropertiesInput Updated properties for the learning object.
      */
     public function postObjectsPropertiesObjectId($version, $objectId, $lRWSObjectPropertiesInput)
+    {
+        $uri = "d2l/api/lr/$version/objects/$objectId/properties/";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Update the properties for a particular version of a learning object in a
+     * local repository.
+     * @see https://docs.valence.desire2learn.com/res/lor.html#post--d2l-api-lr-(version)-objects-(objectId)-(objectVersion)-properties-
+     * @return /PSR7 (Request)
+     * Input. If the calling user context owns the learning object, then that
+     * user context must have Manage My Objects in the LOR permission; otherwise,
+     * the user context must have Manage All Objects in the LOR permission. If you
+     * provide a new RepositoryId property (to move the learning object from one
+     * repository to another), the user context must have Publish to the LOR
+     * permission.
+     *
+     * Return. This action returns a LRWSBaseResult
+     * JSON data block containing status data for the task.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $objectId Learning object ID.
+     * @param [Number read as a long integer value] $objectVersion Learning object version number, must be greater than 0.
+     * @param [Repository.LRWSObjectPropertiesInput] $lRWSObjectPropertiesInput Updated properties for the learning object.
+     */
+    public function postObjectsPropertiesObjectIdObjectVersion($version, $objectId, $objectVersion, $lRWSObjectPropertiesInput)
     {
         $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/properties/";
         return new Request('GET', $uri);
@@ -292,10 +340,11 @@ class LearningRepositoryObjects
      * JSON blocks).
      *
      * @param [D2LVERSION] $version API version.
+     * @param [LR_REPOSITORY_T name] $type Repository type identifier.
      * @param [D2LID] $orgUnitId Org unit context for the request.
      * @param [CSV] $trustParams List of LR_TRUST_T names.
      */
-    public function getRepositories($version, $orgUnitId, $trustParams)
+    public function getRepositoriesType($version, $type, $orgUnitId, $trustParams)
     {
         $queryParrams = [
                             "orgUnitId" => $orgUnitId,                    "trustParams" => $trustParams

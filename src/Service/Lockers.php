@@ -107,8 +107,9 @@ class Lockers
      * @param [D2LVERSION] $version API version.
      * @param [string] $path Path below the root folder to a locker folder.
      * @param [string] $folderName Optional. Name of folder to create (see input description).
+     * @param [JSON composite] $fileDescription Optional. File description block for new file (see input description).
      */
-    public function postLockerMylockerPath($version, $path, $folderName)
+    public function postLockerMylockerPath($version, $path, $folderName, $fileDescription)
     {
         $uri = "d2l/api/le/$version/locker/myLocker/$path";
         return new Request('GET', $uri);
@@ -128,8 +129,9 @@ class Lockers
      * @param [D2LID] $userId User ID for owner of locker.
      * @param [string] $path Path below the root folder to a locker folder.
      * @param [string] $folderName Optional. Name of folder to create (see input description).
+     * @param [JSON composite] $fileDescription Optional. File description block for new file (see input description).
      */
-    public function postLockerUserUserIdPath($version, $userId, $path, $folderName)
+    public function postLockerUserUserIdPath($version, $userId, $path, $folderName, $fileDescription)
     {
         $uri = "d2l/api/le/$version/locker/user/$userId/$path";
         return new Request('GET', $uri);
@@ -269,8 +271,9 @@ class Lockers
      * @param [D2LID] $groupId Group ID.
      * @param [string] $path Path below the root folder to a locker folder.
      * @param [string] $folderName Optional. Name of folder to create (see input description).
+     * @param [JSON composite] $fileDescription Optional. File description block for new file (see input description).
      */
-    public function postLockerGroupOrgUnitIdGroupIdPath($version, $orgUnitId, $groupId, $path, $folderName)
+    public function postLockerGroupOrgUnitIdGroupIdPath($version, $orgUnitId, $groupId, $path, $folderName, $fileDescription)
     {
         $uri = "d2l/api/le/$version/$orgUnitId/locker/group/$groupId/$path";
         return new Request('GET', $uri);
