@@ -34,6 +34,7 @@ class UtcDateTime {
         return $this->getUtcDateTime();
     }
 
+    //TODO does this need a getter?
     public function getUtcDateTime() {
         return $this->utcDateTime;
     }
