@@ -18,7 +18,7 @@ class Users
      */
     public function deleteUsersUserId($version, $userId)
     {
-        $uri = "d2l/api/lp/$version/users/$userId";
+        $uri = "/d2l/api/lp/$version/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -53,7 +53,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/users/?$queryString";
+        $uri = "/d2l/api/lp/$version/users/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -69,7 +69,7 @@ class Users
      */
     public function getUsersNamesUserId($version, $userId)
     {
-        $uri = "d2l/api/lp/$version/users/$userId/names";
+        $uri = "/d2l/api/lp/$version/users/$userId/names";
         return new Request('GET', $uri);
     }
 
@@ -85,7 +85,7 @@ class Users
      */
     public function getUsersUserId($version, $userId)
     {
-        $uri = "d2l/api/lp/$version/users/$userId";
+        $uri = "/d2l/api/lp/$version/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -101,7 +101,7 @@ class Users
      */
     public function getUsersWhoami($version)
     {
-        $uri = "d2l/api/lp/$version/users/whoami";
+        $uri = "/d2l/api/lp/$version/users/whoami";
         return new Request('GET', $uri);
     }
 
@@ -119,7 +119,7 @@ class Users
      */
     public function postUsers($version, $createUserData)
     {
-        $uri = "d2l/api/lp/$version/users/";
+        $uri = "/d2l/api/lp/$version/users/";
         return new Request('GET', $uri);
     }
 
@@ -140,7 +140,7 @@ class Users
      */
     public function putUsersUserId($version, $userId, $updateUserData)
     {
-        $uri = "d2l/api/lp/$version/users/$userId";
+        $uri = "/d2l/api/lp/$version/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -160,7 +160,7 @@ class Users
      */
     public function putUsersNamesUserId($version, $userId, $legalPreferredNames)
     {
-        $uri = "d2l/api/lp/$version/users/$userId/names";
+        $uri = "/d2l/api/lp/$version/users/$userId/names";
         return new Request('GET', $uri);
     }
 
@@ -177,7 +177,7 @@ class Users
      */
     public function getUsersActivationUserId($version, $userId)
     {
-        $uri = "d2l/api/lp/$version/users/$userId/activation";
+        $uri = "/d2l/api/lp/$version/users/$userId/activation";
         return new Request('GET', $uri);
     }
 
@@ -192,7 +192,7 @@ class Users
      */
     public function putUsersActivationUserId($version, $userId, $userActivationData)
     {
-        $uri = "d2l/api/lp/$version/users/$userId/activation";
+        $uri = "/d2l/api/lp/$version/users/$userId/activation";
         return new Request('GET', $uri);
     }
 
@@ -206,7 +206,7 @@ class Users
      */
     public function postLinkuser($version, $googleAppsLinkingItem)
     {
-        $uri = "d2l/api/gae/$version/linkuser";
+        $uri = "/d2l/api/gae/$version/linkuser";
         return new Request('GET', $uri);
     }
 
@@ -222,7 +222,7 @@ class Users
      */
     public function deleteNotificationsInstantCarriersSubscriptionsCarrierIdMessageTypeId($version, $carrierId, $messageTypeId)
     {
-        $uri = "d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId";
+        $uri = "/d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId";
         return new Request('GET', $uri);
     }
 
@@ -238,7 +238,7 @@ class Users
      */
     public function getNotificationsInstantCarriers($version)
     {
-        $uri = "d2l/api/lp/$version/notifications/instant/carriers/";
+        $uri = "/d2l/api/lp/$version/notifications/instant/carriers/";
         return new Request('GET', $uri);
     }
 
@@ -255,7 +255,7 @@ class Users
      */
     public function getNotificationsInstantCarriersSubscriptionsCarrierId($version, $carrierId)
     {
-        $uri = "d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/";
+        $uri = "/d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/";
         return new Request('GET', $uri);
     }
 
@@ -271,7 +271,7 @@ class Users
      */
     public function putNotificationsInstantCarriersSubscriptionsCarrierIdMessageTypeId($version, $carrierId, $messageTypeId)
     {
-        $uri = "d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId";
+        $uri = "/d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId";
         return new Request('GET', $uri);
     }
 
@@ -288,7 +288,7 @@ class Users
      */
     public function getNotificationsInstantUsersNumberUserId($version, $userId)
     {
-        $uri = "d2l/api/lp/$version/notifications/instant/users/$userId/number";
+        $uri = "/d2l/api/lp/$version/notifications/instant/users/$userId/number";
         return new Request('GET', $uri);
     }
 
@@ -309,7 +309,7 @@ class Users
      */
     public function putNotificationsInstantUsersNumberUserId($version, $userId, $notificationNumberUpdateInfo)
     {
-        $uri = "d2l/api/lp/$version/notifications/instant/users/$userId/number";
+        $uri = "/d2l/api/lp/$version/notifications/instant/users/$userId/number";
         return new Request('GET', $uri);
     }
 
@@ -323,7 +323,7 @@ class Users
      */
     public function deleteNotificationsInstantUsersNumberUserId($version, $userId)
     {
-        $uri = "d2l/api/lp/$version/notifications/instant/users/$userId/number";
+        $uri = "/d2l/api/lp/$version/notifications/instant/users/$userId/number";
         return new Request('GET', $uri);
     }
 
@@ -339,7 +339,7 @@ class Users
      */
     public function getNotificationsInstantNumbersUsersNotificationNumber($version, $notificationNumber)
     {
-        $uri = "d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber/users";
+        $uri = "/d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber/users";
         return new Request('GET', $uri);
     }
 
@@ -354,7 +354,7 @@ class Users
      */
     public function deleteNotificationsInstantNumbersNotificationNumber($version, $notificationNumber)
     {
-        $uri = "d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber";
+        $uri = "/d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber";
         return new Request('GET', $uri);
     }
 
@@ -370,7 +370,7 @@ class Users
      */
     public function deleteNotificationsInstantNumbersUsersNotificationNumberUserId($version, $notificationNumber, $userId)
     {
-        $uri = "d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber/users/$userId";
+        $uri = "/d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -384,7 +384,7 @@ class Users
      */
     public function deleteUsersPasswordUserId($version, $userId)
     {
-        $uri = "d2l/api/lp/$version/users/$userId/password";
+        $uri = "/d2l/api/lp/$version/users/$userId/password";
         return new Request('GET', $uri);
     }
 
@@ -398,7 +398,7 @@ class Users
      */
     public function postUsersPasswordUserId($version, $userId)
     {
-        $uri = "d2l/api/lp/$version/users/$userId/password";
+        $uri = "/d2l/api/lp/$version/users/$userId/password";
         return new Request('GET', $uri);
     }
 
@@ -413,7 +413,7 @@ class Users
      */
     public function putUsersPasswordUserId($version, $userId, $userPasswordData)
     {
-        $uri = "d2l/api/lp/$version/users/$userId/password";
+        $uri = "/d2l/api/lp/$version/users/$userId/password";
         return new Request('GET', $uri);
     }
 
@@ -426,7 +426,7 @@ class Users
      */
     public function deleteProfileMyprofileImage($version)
     {
-        $uri = "d2l/api/lp/$version/profile/myProfile/image";
+        $uri = "/d2l/api/lp/$version/profile/myProfile/image";
         return new Request('GET', $uri);
     }
 
@@ -440,7 +440,7 @@ class Users
      */
     public function deleteProfileImageProfileId($version, $profileId)
     {
-        $uri = "d2l/api/lp/$version/profile/$profileId/image";
+        $uri = "/d2l/api/lp/$version/profile/$profileId/image";
         return new Request('GET', $uri);
     }
 
@@ -454,7 +454,7 @@ class Users
      */
     public function deleteProfileUserImageUserId($version, $userId)
     {
-        $uri = "d2l/api/lp/$version/profile/user/$userId/image";
+        $uri = "/d2l/api/lp/$version/profile/user/$userId/image";
         return new Request('GET', $uri);
     }
 
@@ -470,7 +470,7 @@ class Users
      */
     public function getProfileMyprofile($version)
     {
-        $uri = "d2l/api/lp/$version/profile/myProfile";
+        $uri = "/d2l/api/lp/$version/profile/myProfile";
         return new Request('GET', $uri);
     }
 
@@ -494,7 +494,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/profile/myProfile/image?$queryString";
+        $uri = "/d2l/api/lp/$version/profile/myProfile/image?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -511,7 +511,7 @@ class Users
      */
     public function getProfileProfileId($version, $profileId)
     {
-        $uri = "d2l/api/lp/$version/profile/$profileId";
+        $uri = "/d2l/api/lp/$version/profile/$profileId";
         return new Request('GET', $uri);
     }
 
@@ -536,7 +536,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/profile/$profileId/image?$queryString";
+        $uri = "/d2l/api/lp/$version/profile/$profileId/image?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -553,7 +553,7 @@ class Users
      */
     public function getProfileUserUserId($version, $userId)
     {
-        $uri = "d2l/api/lp/$version/profile/user/$userId";
+        $uri = "/d2l/api/lp/$version/profile/user/$userId";
         return new Request('GET', $uri);
     }
 
@@ -578,7 +578,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/profile/user/$userId/image?$queryString";
+        $uri = "/d2l/api/lp/$version/profile/user/$userId/image?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -595,7 +595,7 @@ class Users
      */
     public function postProfileMyprofileImage($version)
     {
-        $uri = "d2l/api/lp/$version/profile/myProfile/image";
+        $uri = "/d2l/api/lp/$version/profile/myProfile/image";
         return new Request('GET', $uri);
     }
 
@@ -613,7 +613,7 @@ class Users
      */
     public function postProfileImageProfileId($version, $profileId)
     {
-        $uri = "d2l/api/lp/$version/profile/$profileId/image";
+        $uri = "/d2l/api/lp/$version/profile/$profileId/image";
         return new Request('GET', $uri);
     }
 
@@ -631,7 +631,7 @@ class Users
      */
     public function postProfileUserImageUserId($version, $userId)
     {
-        $uri = "d2l/api/lp/$version/profile/user/$userId/image";
+        $uri = "/d2l/api/lp/$version/profile/user/$userId/image";
         return new Request('GET', $uri);
     }
 
@@ -651,7 +651,7 @@ class Users
      */
     public function putProfileMyprofile($version, $userProfileUpdateData)
     {
-        $uri = "d2l/api/lp/$version/profile/myProfile";
+        $uri = "/d2l/api/lp/$version/profile/myProfile";
         return new Request('GET', $uri);
     }
 
@@ -672,7 +672,7 @@ class Users
      */
     public function putProfileProfileId($version, $profileId, $userProfileUpdateData)
     {
-        $uri = "d2l/api/lp/$version/profile/$profileId";
+        $uri = "/d2l/api/lp/$version/profile/$profileId";
         return new Request('GET', $uri);
     }
 
@@ -689,7 +689,7 @@ class Users
      */
     public function getRoles($version)
     {
-        $uri = "d2l/api/lp/$version/roles/";
+        $uri = "/d2l/api/lp/$version/roles/";
         return new Request('GET', $uri);
     }
 
@@ -706,7 +706,7 @@ class Users
      */
     public function getRolesRoleId($version, $roleId)
     {
-        $uri = "d2l/api/lp/$version/roles/$roleId";
+        $uri = "/d2l/api/lp/$version/roles/$roleId";
         return new Request('GET', $uri);
     }
 
@@ -725,7 +725,7 @@ class Users
      */
     public function getRolesOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/roles/";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/roles/";
         return new Request('GET', $uri);
     }
 
@@ -754,7 +754,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/roles/?$queryString";
+        $uri = "/d2l/api/lp/$version/roles/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -781,7 +781,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/imsconfig/roles/?$queryString";
+        $uri = "/d2l/api/lp/$version/imsconfig/roles/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -814,7 +814,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/imsconfig/map/roles/?$queryString";
+        $uri = "/d2l/api/lp/$version/imsconfig/map/roles/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -839,7 +839,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/imsconfig/map/roles/$roleId?$queryString";
+        $uri = "/d2l/api/lp/$version/imsconfig/map/roles/$roleId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -866,7 +866,7 @@ class Users
      */
     public function putImsconfigMapRolesRoleId($version, $roleId, $mappings)
     {
-        $uri = "d2l/api/lp/$version/imsconfig/map/roles/$roleId";
+        $uri = "/d2l/api/lp/$version/imsconfig/map/roles/$roleId";
         return new Request('GET', $uri);
     }
 
@@ -880,7 +880,7 @@ class Users
      */
     public function deleteGlobalusermappingUsersUserId($version, $userId)
     {
-        $uri = "d2l/api/lp/$version/globalusermapping/users/$userid";
+        $uri = "/d2l/api/lp/$version/globalusermapping/users/$userid";
         return new Request('GET', $uri);
     }
 
@@ -896,7 +896,7 @@ class Users
      */
     public function getGlobalusermappingUsersUserId($version, $userId)
     {
-        $uri = "d2l/api/lp/$version/globalusermapping/users/$userid";
+        $uri = "/d2l/api/lp/$version/globalusermapping/users/$userid";
         return new Request('GET', $uri);
     }
 
@@ -913,7 +913,7 @@ class Users
      */
     public function getGlobalusermappingIdentifiersIdentifier($version, $identifier)
     {
-        $uri = "d2l/api/lp/$version/globalusermapping/identifiers/$identifier";
+        $uri = "/d2l/api/lp/$version/globalusermapping/identifiers/$identifier";
         return new Request('GET', $uri);
     }
 
@@ -928,7 +928,7 @@ class Users
      */
     public function putGlobalusermappingUsersUserId($version, $userId, $mapIdentifier)
     {
-        $uri = "d2l/api/lp/$version/globalusermapping/users/$userid";
+        $uri = "/d2l/api/lp/$version/globalusermapping/users/$userid";
         return new Request('GET', $uri);
     }
 }

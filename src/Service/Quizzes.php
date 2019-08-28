@@ -22,7 +22,7 @@ class Quizzes
      */
     public function getQuizzesOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/quizzes/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/";
         return new Request('GET', $uri);
     }
 
@@ -40,7 +40,7 @@ class Quizzes
      */
     public function getQuizzesOrgUnitIdQuizId($version, $orgUnitId, $quizId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/quizzes/$quizId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/$quizId";
         return new Request('GET', $uri);
     }
 
@@ -62,7 +62,7 @@ class Quizzes
      */
     public function putQuizzesOrgUnitIdQuizId($version, $orgUnitId, $quizId, $quizData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/quizzes/$quizId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/$quizId";
         return new Request('GET', $uri);
     }
 }

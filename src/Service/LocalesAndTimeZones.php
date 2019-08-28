@@ -20,7 +20,7 @@ class LocalesAndTimeZones
      */
     public function getLocales($version)
     {
-        $uri = "d2l/api/lp/$version/locales/$localeId";
+        $uri = "/d2l/api/lp/$version/locales/$localeId";
         return new Request('GET', $uri);
     }
 
@@ -50,7 +50,7 @@ class LocalesAndTimeZones
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/timezones/?$queryString";
+        $uri = "/d2l/api/lp/$version/timezones/?$queryString";
         return new Request('GET', $uri);
     }
 }

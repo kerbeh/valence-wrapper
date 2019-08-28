@@ -19,7 +19,7 @@ class Awards
      */
     public function deleteOrgunitsAssociationsOrgUnitIdAssociationId($version, $orgUnitId, $associationId)
     {
-        $uri = "d2l/api/bas/$version/orgunits/$orgUnitId/associations/$associationId";
+        $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/associations/$associationId";
         return new Request('GET', $uri);
     }
 
@@ -49,7 +49,7 @@ class Awards
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/bas/$version/orgunits/$orgUnitId/associations/?$queryString";
+        $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/associations/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -67,7 +67,7 @@ class Awards
      */
     public function getOrgunitsAssociationsOrgUnitIdAssociationId($version, $orgUnitId, $associationId)
     {
-        $uri = "d2l/api/bas/$version/orgunits/$orgUnitId/associations/$associationId";
+        $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/associations/$associationId";
         return new Request('GET', $uri);
     }
 
@@ -98,7 +98,7 @@ class Awards
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/bas/$version/associations/availableToEarn/?$queryString";
+        $uri = "/d2l/api/bas/$version/associations/availableToEarn/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -137,7 +137,7 @@ class Awards
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/bas/$version/orgunits/$orgUnitId/associations/availableToManage/?$queryString";
+        $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/associations/availableToManage/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -155,7 +155,7 @@ class Awards
      */
     public function postOrgunitsAssociationsOrgUnitId($version, $orgUnitId, $associationCreate)
     {
-        $uri = "d2l/api/bas/$version/orgunits/$orgUnitId/associations/";
+        $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/associations/";
         return new Request('GET', $uri);
     }
 
@@ -174,7 +174,7 @@ class Awards
      */
     public function putOrgunitsAssociationsOrgUnitIdAssociationId($version, $orgUnitId, $associationId, $associationUpdate)
     {
-        $uri = "d2l/api/bas/$version/orgunits/$orgUnitId/associations/$associationId";
+        $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/associations/$associationId";
         return new Request('GET', $uri);
     }
 
@@ -188,7 +188,7 @@ class Awards
      */
     public function deleteAwardsAwardId($version, $awardId)
     {
-        $uri = "d2l/api/bas/$version/awards/$awardId";
+        $uri = "/d2l/api/bas/$version/awards/$awardId";
         return new Request('GET', $uri);
     }
 
@@ -219,7 +219,7 @@ class Awards
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/bas/$version/awards/?$queryString";
+        $uri = "/d2l/api/bas/$version/awards/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -235,7 +235,7 @@ class Awards
      */
     public function getAwardsAwardId($version, $awardId)
     {
-        $uri = "d2l/api/bas/$version/awards/$awardId";
+        $uri = "/d2l/api/bas/$version/awards/$awardId";
         return new Request('GET', $uri);
     }
 
@@ -251,7 +251,7 @@ class Awards
      */
     public function postAwards($version, $awardCreate)
     {
-        $uri = "d2l/api/bas/$version/awards/";
+        $uri = "/d2l/api/bas/$version/awards/";
         return new Request('GET', $uri);
     }
 
@@ -268,7 +268,7 @@ class Awards
      */
     public function putAwardsAwardId($version, $awardId, $awardUpdate)
     {
-        $uri = "d2l/api/bas/$version/awards/$awardId";
+        $uri = "/d2l/api/bas/$version/awards/$awardId";
         return new Request('GET', $uri);
     }
 
@@ -325,7 +325,7 @@ class Awards
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/bas/$version/orgunits/$orgUnitId/classlist/?$queryString";
+        $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/classlist/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -353,7 +353,7 @@ class Awards
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/bas/$version/orgunits/$orgUnitId/classlist/users/$userId?$queryString";
+        $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/classlist/users/$userId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -370,7 +370,7 @@ class Awards
      */
     public function getOrgunitsMyconfigurationOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/bas/$version/orgunits/$orgUnitId/myConfiguration";
+        $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/myConfiguration";
         return new Request('GET', $uri);
     }
 
@@ -385,7 +385,7 @@ class Awards
      */
     public function deleteIssuedOrgUnitIdIssuedId($version, $orgUnitId, $issuedId)
     {
-        $uri = "d2l/api/bas/$version/issued/$issuedId";
+        $uri = "/d2l/api/bas/$version/issued/$issuedId";
         return new Request('GET', $uri);
     }
 
@@ -413,7 +413,7 @@ class Awards
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/bas/$version/creditSummary?$queryString";
+        $uri = "/d2l/api/bas/$version/creditSummary?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -457,7 +457,7 @@ class Awards
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/bas/$version/issued/users/$userId/?$queryString";
+        $uri = "/d2l/api/bas/$version/issued/users/$userId/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -487,7 +487,7 @@ class Awards
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/bas/$version/orgunits/$orgUnitId/revocableawards/?$queryString";
+        $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/revocableawards/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -515,7 +515,7 @@ class Awards
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/bas/$version/orgunits/$orgUnitId/revocableawards/$userId/?$queryString";
+        $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/revocableawards/$userId/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -532,7 +532,7 @@ class Awards
      */
     public function postOrgunitsIssuedOrgUnitId($version, $orgUnitId, $issuedAwardCreate)
     {
-        $uri = "d2l/api/bas/$version/orgunits/$orgUnitId/issued/";
+        $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/issued/";
         return new Request('GET', $uri);
     }
 
@@ -550,7 +550,7 @@ class Awards
      */
     public function putOrgunitsIssuedOrgUnitIdIssuedId($version, $orgUnitId, $issuedId, $issuedAwardUpdate)
     {
-        $uri = "d2l/api/bas/$version/orgunits/$orgUnitId/issued/$issuedId";
+        $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/issued/$issuedId";
         return new Request('GET', $uri);
     }
 
@@ -564,7 +564,7 @@ class Awards
      */
     public function deleteLibraryIconsFileName($version, $fileName)
     {
-        $uri = "d2l/api/bas/$version/library/icons/$fileName";
+        $uri = "/d2l/api/bas/$version/library/icons/$fileName";
         return new Request('GET', $uri);
     }
 
@@ -578,7 +578,7 @@ class Awards
      */
     public function deleteLibraryTemplatesFileName($version, $fileName)
     {
-        $uri = "d2l/api/bas/$version/library/templates/$fileName";
+        $uri = "/d2l/api/bas/$version/library/templates/$fileName";
         return new Request('GET', $uri);
     }
 
@@ -605,7 +605,7 @@ class Awards
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/bas/$version/library/icons/?$queryString";
+        $uri = "/d2l/api/bas/$version/library/icons/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -621,7 +621,7 @@ class Awards
      */
     public function getLibraryIconsFileName($version, $fileName)
     {
-        $uri = "d2l/api/bas/$version/library/icons/$fileName";
+        $uri = "/d2l/api/bas/$version/library/icons/$fileName";
         return new Request('GET', $uri);
     }
 
@@ -648,7 +648,7 @@ class Awards
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/bas/$version/library/templates/?$queryString";
+        $uri = "/d2l/api/bas/$version/library/templates/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -664,7 +664,7 @@ class Awards
      */
     public function getLibraryTemplatesFileName($version, $fileName)
     {
-        $uri = "d2l/api/bas/$version/library/templates/$fileName";
+        $uri = "/d2l/api/bas/$version/library/templates/$fileName";
         return new Request('GET', $uri);
     }
 
@@ -680,7 +680,7 @@ class Awards
      */
     public function postLibraryIcons($version, $libraryInputFileInfo)
     {
-        $uri = "d2l/api/bas/$version/library/icons/";
+        $uri = "/d2l/api/bas/$version/library/icons/";
         return new Request('GET', $uri);
     }
 
@@ -696,7 +696,7 @@ class Awards
      */
     public function postLibraryTemplates($version, $libraryInputFileInfo)
     {
-        $uri = "d2l/api/bas/$version/library/templates/";
+        $uri = "/d2l/api/bas/$version/library/templates/";
         return new Request('GET', $uri);
     }
 
@@ -710,7 +710,7 @@ class Awards
      */
     public function deleteIssuedSharingProfileIssuedId($version, $issuedId)
     {
-        $uri = "d2l/api/bas/$version/issued/$issuedId/sharing/profile";
+        $uri = "/d2l/api/bas/$version/issued/$issuedId/sharing/profile";
         return new Request('GET', $uri);
     }
 
@@ -724,7 +724,7 @@ class Awards
      */
     public function putIssuedSharingProfileIssuedId($version, $issuedId)
     {
-        $uri = "d2l/api/bas/$version/issued/$issuedId/sharing/profile";
+        $uri = "/d2l/api/bas/$version/issued/$issuedId/sharing/profile";
         return new Request('GET', $uri);
     }
 }

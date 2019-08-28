@@ -31,7 +31,7 @@ class AssessmentsAndRubrics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/rubrics?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/rubrics?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -62,7 +62,7 @@ class AssessmentsAndRubrics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/assessment?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/assessment?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -93,7 +93,7 @@ class AssessmentsAndRubrics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/assessment?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/assessment?$queryString";
         return new Request('GET', $uri);
     }
 }

@@ -19,7 +19,7 @@ class CourseContent
      */
     public function deleteContentModulesOrgUnitIdModuleId($version, $orgUnitId, $moduleId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/modules/$moduleId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/modules/$moduleId";
         return new Request('GET', $uri);
     }
 
@@ -34,7 +34,7 @@ class CourseContent
      */
     public function deleteContentTopicsOrgUnitIdTopicId($version, $orgUnitId, $topicId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/topics/$topicId";
         return new Request('GET', $uri);
     }
 
@@ -52,7 +52,7 @@ class CourseContent
      */
     public function getContentModulesOrgUnitIdModuleId($version, $orgUnitId, $moduleId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/modules/$moduleId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/modules/$moduleId";
         return new Request('GET', $uri);
     }
 
@@ -70,7 +70,7 @@ class CourseContent
      */
     public function getContentModulesStructureOrgUnitIdModuleId($version, $orgUnitId, $moduleId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/modules/$moduleId/structure/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/modules/$moduleId/structure/";
         return new Request('GET', $uri);
     }
 
@@ -87,7 +87,7 @@ class CourseContent
      */
     public function getContentRootOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/root/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/root/";
         return new Request('GET', $uri);
     }
 
@@ -105,7 +105,7 @@ class CourseContent
      */
     public function getContentTopicsOrgUnitIdTopicId($version, $orgUnitId, $topicId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/topics/$topicId";
         return new Request('GET', $uri);
     }
 
@@ -130,7 +130,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId/file?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/topics/$topicId/file?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -161,7 +161,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/content/modules/$moduleId/structure/?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/modules/$moduleId/structure/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -179,7 +179,7 @@ class CourseContent
      */
     public function postContentRootOrgUnitId($version, $orgUnitId, $contentObjectData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/root/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/root/";
         return new Request('GET', $uri);
     }
 
@@ -198,7 +198,7 @@ class CourseContent
      */
     public function putContentModulesOrgUnitIdModuleId($version, $orgUnitId, $moduleId, $contentObjectData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/modules/$moduleId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/modules/$moduleId";
         return new Request('GET', $uri);
     }
 
@@ -220,7 +220,7 @@ class CourseContent
      */
     public function putContentTopicsOrgUnitIdTopicId($version, $orgUnitId, $topicId, $contentObjectData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/topics/$topicId";
         return new Request('GET', $uri);
     }
 
@@ -240,7 +240,7 @@ class CourseContent
      */
     public function putContentTopicsFileOrgUnitIdTopicId($version, $orgUnitId, $topicId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId/file";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/topics/$topicId/file";
         return new Request('GET', $uri);
     }
 
@@ -257,7 +257,7 @@ class CourseContent
      */
     public function getOverviewOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/overview";
+        $uri = "/d2l/api/le/$version/$orgUnitId/overview";
         return new Request('GET', $uri);
     }
 
@@ -274,7 +274,7 @@ class CourseContent
      */
     public function getOverviewAttachmentOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/overview/attachment";
+        $uri = "/d2l/api/le/$version/$orgUnitId/overview/attachment";
         return new Request('GET', $uri);
     }
 
@@ -289,7 +289,7 @@ class CourseContent
      */
     public function deleteContentIsbnOrgUnitIdIsbn($version, $orgUnitId, $isbn)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/isbn/$isbn";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/isbn/$isbn";
         return new Request('GET', $uri);
     }
 
@@ -306,7 +306,7 @@ class CourseContent
      */
     public function getContentIsbnIsbn($version, $isbn)
     {
-        $uri = "d2l/api/le/$version/content/isbn/$isbn";
+        $uri = "/d2l/api/le/$version/content/isbn/$isbn";
         return new Request('GET', $uri);
     }
 
@@ -323,7 +323,7 @@ class CourseContent
      */
     public function getContentIsbnOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/isbn/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/isbn/";
         return new Request('GET', $uri);
     }
 
@@ -341,7 +341,7 @@ class CourseContent
      */
     public function getContentIsbnOrgUnitIdIsbn($version, $orgUnitId, $isbn)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/isbn/$isbn";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/isbn/$isbn";
         return new Request('GET', $uri);
     }
 
@@ -359,7 +359,7 @@ class CourseContent
      */
     public function postContentIsbnOrgUnitId($version, $orgUnitId, $isbnAssociationData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/isbn/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/isbn/";
         return new Request('GET', $uri);
     }
 
@@ -395,7 +395,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/content/myItems/?$queryString";
+        $uri = "/d2l/api/le/$version/content/myItems/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -432,7 +432,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/content/myItems/due/?$queryString";
+        $uri = "/d2l/api/le/$version/content/myItems/due/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -468,7 +468,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/content/myItems/itemCounts/?$queryString";
+        $uri = "/d2l/api/le/$version/content/myItems/itemCounts/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -505,7 +505,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/content/myItems/due/itemCounts/?$queryString";
+        $uri = "/d2l/api/le/$version/content/myItems/due/itemCounts/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -537,7 +537,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/content/myItems/completions/?$queryString";
+        $uri = "/d2l/api/le/$version/content/myItems/completions/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -570,7 +570,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/content/myItems/completions/due/?$queryString";
+        $uri = "/d2l/api/le/$version/content/myItems/completions/due/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -604,7 +604,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/content/myItems/?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/myItems/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -639,7 +639,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/content/myItems/due/?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/myItems/due/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -672,7 +672,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/content/myItems/itemCount?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/myItems/itemCount?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -707,7 +707,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/content/myItems/due/itemCount?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/myItems/due/itemCount?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -735,7 +735,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/overdueItems/?$queryString";
+        $uri = "/d2l/api/le/$version/overdueItems/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -763,7 +763,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/overdueItems/myItems?$queryString";
+        $uri = "/d2l/api/le/$version/overdueItems/myItems?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -779,7 +779,7 @@ class CourseContent
      */
     public function getContentBookmarksOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/bookmarks";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/bookmarks";
         return new Request('GET', $uri);
     }
 
@@ -795,7 +795,7 @@ class CourseContent
      */
     public function getContentRecentOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/recent";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/recent";
         return new Request('GET', $uri);
     }
 
@@ -815,7 +815,7 @@ class CourseContent
      */
     public function getContentTocOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/toc";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/toc";
         return new Request('GET', $uri);
     }
 
@@ -846,7 +846,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId/completions/?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/topics/$topicId/completions/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -865,7 +865,7 @@ class CourseContent
      */
     public function getContentTopicsCompletionsUsersOrgUnitIdTopicIdUserId($version, $orgUnitId, $topicId, $userId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId/completions/users/$userId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/topics/$topicId/completions/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -889,7 +889,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/content/completions/mycount/?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/completions/mycount/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -914,7 +914,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/content/completions/?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/completions/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -939,7 +939,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/content/completions/$userId/?$queryString";
+        $uri = "/d2l/api/le/$version/content/completions/$userId/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -966,7 +966,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/content/userprogress/?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/userprogress/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -992,7 +992,7 @@ class CourseContent
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/content/userprogress/$topicId?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/userprogress/$topicId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -1014,7 +1014,7 @@ class CourseContent
      */
     public function postContentUserprogressOrgUnitId($version, $orgUnitId, $userProgressData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/userprogress/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/userprogress/";
         return new Request('GET', $uri);
     }
 
@@ -1033,7 +1033,7 @@ class CourseContent
      */
     public function putContentTopicsCompletionsUsersOrgUnitIdTopicIdUserId($version, $orgUnitId, $topicId, $userId, $contentTopicCompletionUpdate)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/topics/$topicId/completions/users/$userId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/topics/$topicId/completions/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -1050,7 +1050,7 @@ class CourseContent
      */
     public function getContentPacingOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/pacing";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/pacing";
         return new Request('GET', $uri);
     }
 
@@ -1064,7 +1064,7 @@ class CourseContent
      */
     public function putContentPacingOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/pacing";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/pacing";
         return new Request('GET', $uri);
     }
 
@@ -1079,7 +1079,7 @@ class CourseContent
      */
     public function putContentPacingModulesOrgUnitIdModuleId($version, $orgUnitId, $moduleId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/content/pacing/modules/$moduleId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/content/pacing/modules/$moduleId";
         return new Request('GET', $uri);
     }
 }

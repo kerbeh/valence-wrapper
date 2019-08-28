@@ -43,7 +43,7 @@ class EportfolioActivities
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/activity/?$queryString";
+        $uri = "/d2l/api/eP/$version/activity/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -59,7 +59,7 @@ class EportfolioActivities
      */
     public function getActivityFilters($version)
     {
-        $uri = "d2l/api/eP/$version/activity/filters/";
+        $uri = "/d2l/api/eP/$version/activity/filters/";
         return new Request('GET', $uri);
     }
 
@@ -88,7 +88,7 @@ class EportfolioActivities
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/activity/my/?$queryString";
+        $uri = "/d2l/api/eP/$version/activity/my/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -117,7 +117,7 @@ class EportfolioActivities
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/activity/shared/?$queryString";
+        $uri = "/d2l/api/eP/$version/activity/shared/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -164,7 +164,7 @@ class EportfolioActivities
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/newsfeed/?$queryString";
+        $uri = "/d2l/api/eP/$version/newsfeed/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -180,7 +180,7 @@ class EportfolioActivities
      */
     public function getNewsfeedFilters($version)
     {
-        $uri = "d2l/api/eP/$version/newsfeed/filters/";
+        $uri = "/d2l/api/eP/$version/newsfeed/filters/";
         return new Request('GET', $uri);
     }
 
@@ -227,7 +227,7 @@ class EportfolioActivities
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/dashboard/?$queryString";
+        $uri = "/d2l/api/eP/$version/dashboard/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -243,7 +243,7 @@ class EportfolioActivities
      */
     public function getDashboardFilters($version)
     {
-        $uri = "d2l/api/eP/$version/dashboard/filters/";
+        $uri = "/d2l/api/eP/$version/dashboard/filters/";
         return new Request('GET', $uri);
     }
 }

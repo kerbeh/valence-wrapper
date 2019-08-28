@@ -31,7 +31,7 @@ class CourseUpdatesForEndUsers
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/updates/myUpdates?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/updates/myUpdates?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -61,7 +61,7 @@ class CourseUpdatesForEndUsers
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/updates/myUpdates/?$queryString";
+        $uri = "/d2l/api/le/$version/updates/myUpdates/?$queryString";
         return new Request('GET', $uri);
     }
 }

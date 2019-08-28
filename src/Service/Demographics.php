@@ -27,7 +27,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/demographics/users/$userId?$queryString";
+        $uri = "/d2l/api/lp/$version/demographics/users/$userId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -74,7 +74,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/demographics/orgUnits/$orgUnitId/users/?$queryString";
+        $uri = "/d2l/api/lp/$version/demographics/orgUnits/$orgUnitId/users/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -106,7 +106,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/demographics/orgUnits/$orgUnitId/users/$userId?$queryString";
+        $uri = "/d2l/api/lp/$version/demographics/orgUnits/$orgUnitId/users/$userId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -145,7 +145,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/demographics/users/?$queryString";
+        $uri = "/d2l/api/lp/$version/demographics/users/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -178,7 +178,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/demographics/users/$userId?$queryString";
+        $uri = "/d2l/api/lp/$version/demographics/users/$userId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -202,7 +202,7 @@ class Demographics
      */
     public function putDemographicsUsersUserId($version, $userId, $demographicsEntryData)
     {
-        $uri = "d2l/api/lp/$version/demographics/users/$userId";
+        $uri = "/d2l/api/lp/$version/demographics/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -216,7 +216,7 @@ class Demographics
      */
     public function deleteDemographicsFieldsFieldId($version, $fieldId)
     {
-        $uri = "d2l/api/lp/$version/demographics/fields/$fieldId";
+        $uri = "/d2l/api/lp/$version/demographics/fields/$fieldId";
         return new Request('GET', $uri);
     }
 
@@ -248,7 +248,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/demographics/fields/?$queryString";
+        $uri = "/d2l/api/lp/$version/demographics/fields/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -265,7 +265,7 @@ class Demographics
      */
     public function getDemographicsFieldsFieldId($version, $fieldId)
     {
-        $uri = "d2l/api/lp/$version/demographics/fields/$fieldId";
+        $uri = "/d2l/api/lp/$version/demographics/fields/$fieldId";
         return new Request('GET', $uri);
     }
 
@@ -283,7 +283,7 @@ class Demographics
      */
     public function postDemographicsFields($version, $demographicsField)
     {
-        $uri = "d2l/api/lp/$version/demographics/fields/";
+        $uri = "/d2l/api/lp/$version/demographics/fields/";
         return new Request('GET', $uri);
     }
 
@@ -302,7 +302,7 @@ class Demographics
      */
     public function putDemographicsFieldsFieldId($version, $fieldId, $demographicsField)
     {
-        $uri = "d2l/api/lp/$version/demographics/fields/$fieldId";
+        $uri = "/d2l/api/lp/$version/demographics/fields/$fieldId";
         return new Request('GET', $uri);
     }
 
@@ -334,7 +334,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/demographics/dataTypes/?$queryString";
+        $uri = "/d2l/api/lp/$version/demographics/dataTypes/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -351,7 +351,7 @@ class Demographics
      */
     public function getDemographicsDatatypesDataTypeId($version, $dataTypeId)
     {
-        $uri = "d2l/api/lp/$version/demographics/dataTypes/$dataTypeId";
+        $uri = "/d2l/api/lp/$version/demographics/dataTypes/$dataTypeId";
         return new Request('GET', $uri);
     }
 }

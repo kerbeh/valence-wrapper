@@ -19,7 +19,7 @@ class EportfolioLearningObjective
      */
     public function deleteLearningobjectiveAssociationObjectiveIdObjectId($version, $objectiveId, $objectId)
     {
-        $uri = "d2l/api/eP/$version/learningobjective/$objectiveId/association/$objectId";
+        $uri = "/d2l/api/eP/$version/learningobjective/$objectiveId/association/$objectId";
         return new Request('GET', $uri);
     }
 
@@ -33,7 +33,7 @@ class EportfolioLearningObjective
      */
     public function deleteLearningobjectiveObjectiveId($version, $objectiveId)
     {
-        $uri = "d2l/api/eP/$version/learningobjective/$objectiveId";
+        $uri = "/d2l/api/eP/$version/learningobjective/$objectiveId";
         return new Request('GET', $uri);
     }
 
@@ -57,7 +57,7 @@ class EportfolioLearningObjective
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/learningobjective/$objectiveId?$queryString";
+        $uri = "/d2l/api/eP/$version/learningobjective/$objectiveId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -75,7 +75,7 @@ class EportfolioLearningObjective
      */
     public function postLearningobjectiveObjectiveId($version, $objectiveId, $learningObjective)
     {
-        $uri = "d2l/api/eP/$version/learningobjective/$objectiveId";
+        $uri = "/d2l/api/eP/$version/learningobjective/$objectiveId";
         return new Request('GET', $uri);
     }
 
@@ -90,7 +90,7 @@ class EportfolioLearningObjective
      */
     public function postLearningobjectiveAssociationObjectiveIdObjectId($version, $objectiveId, $objectId)
     {
-        $uri = "d2l/api/eP/$version/learningobjective/$objectiveId/association/$objectId";
+        $uri = "/d2l/api/eP/$version/learningobjective/$objectiveId/association/$objectId";
         return new Request('GET', $uri);
     }
 }

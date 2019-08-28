@@ -19,7 +19,7 @@ class Grades
      */
     public function deleteGradesOrgUnitIdGradeObjectID($version, $orgUnitId, $gradeObjectID)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId";
         return new Request('GET', $uri);
     }
 
@@ -35,7 +35,7 @@ class Grades
      */
     public function getGradesOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/";
         return new Request('GET', $uri);
     }
 
@@ -52,7 +52,7 @@ class Grades
      */
     public function getGradesOrgUnitIdGradeObjectId($version, $orgUnitId, $gradeObjectId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId";
         return new Request('GET', $uri);
     }
 
@@ -74,7 +74,7 @@ class Grades
      */
     public function postGradesOrgUnitId($version, $orgUnitId, $gradeObject)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/";
         return new Request('GET', $uri);
     }
 
@@ -97,7 +97,7 @@ class Grades
      */
     public function putGradesOrgUnitIdGradeObjectId($version, $orgUnitId, $gradeObjectId, $gradeObject)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId";
         return new Request('GET', $uri);
     }
 
@@ -112,7 +112,7 @@ class Grades
      */
     public function deleteGradesCategoriesOrgUnitIdCategoryId($version, $orgUnitId, $categoryId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/categories/$categoryId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/categories/$categoryId";
         return new Request('GET', $uri);
     }
 
@@ -129,7 +129,7 @@ class Grades
      */
     public function getGradesCategoriesOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/categories/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/categories/";
         return new Request('GET', $uri);
     }
 
@@ -147,7 +147,7 @@ class Grades
      */
     public function getGradesCategoriesOrgUnitIdCategoryId($version, $orgUnitId, $categoryId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/categories/$categoryId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/categories/$categoryId";
         return new Request('GET', $uri);
     }
 
@@ -166,7 +166,7 @@ class Grades
      */
     public function postGradesCategoriesOrgUnitId($version, $orgUnitId, $gradeCategoryData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/categories/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/categories/";
         return new Request('GET', $uri);
     }
 
@@ -182,7 +182,7 @@ class Grades
      */
     public function getGradesSchemesOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/schemes/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/schemes/";
         return new Request('GET', $uri);
     }
 
@@ -199,7 +199,7 @@ class Grades
      */
     public function getGradesSchemesOrgUnitIdGradeSchemeId($version, $orgUnitId, $gradeSchemeId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/schemes/$gradeSchemeId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/schemes/$gradeSchemeId";
         return new Request('GET', $uri);
     }
 
@@ -216,7 +216,7 @@ class Grades
      */
     public function getGradesFinalValuesMygradevalueOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/final/values/myGradeValue";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/final/values/myGradeValue";
         return new Request('GET', $uri);
     }
 
@@ -243,7 +243,7 @@ class Grades
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/grades/final/values/myGradeValues/?$queryString";
+        $uri = "/d2l/api/le/$version/grades/final/values/myGradeValues/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -270,7 +270,7 @@ class Grades
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/final/values/$userId?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/final/values/$userId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -312,7 +312,7 @@ class Grades
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -346,7 +346,7 @@ class Grades
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/final/values/?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/final/values/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -364,7 +364,7 @@ class Grades
      */
     public function getGradesValuesOrgUnitIdGradeObjectIdUserId($version, $orgUnitId, $gradeObjectId, $userId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/$userId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/$userId";
         return new Request('GET', $uri);
     }
 
@@ -382,7 +382,7 @@ class Grades
      */
     public function getGradesValuesMygradevalueOrgUnitIdGradeObjectId($version, $orgUnitId, $gradeObjectId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/myGradeValue";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/myGradeValue";
         return new Request('GET', $uri);
     }
 
@@ -399,7 +399,7 @@ class Grades
      */
     public function getGradesValuesMygradevaluesOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/values/myGradeValues/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/values/myGradeValues/";
         return new Request('GET', $uri);
     }
 
@@ -416,7 +416,7 @@ class Grades
      */
     public function getGradesValuesOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/values/$userId/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/values/$userId/";
         return new Request('GET', $uri);
     }
 
@@ -431,7 +431,7 @@ class Grades
      */
     public function postGradesFinalCalculatedOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/final/calculated/$userId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/final/calculated/$userId";
         return new Request('GET', $uri);
     }
 
@@ -445,7 +445,7 @@ class Grades
      */
     public function postGradesFinalCalculatedAllOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/final/calculated/all";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/final/calculated/all";
         return new Request('GET', $uri);
     }
 
@@ -461,7 +461,7 @@ class Grades
      */
     public function putGradesFinalValuesOrgUnitIdUserId($version, $orgUnitId, $userId, $finalAdjustedGradeValue)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/final/values/$userId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/final/values/$userId";
         return new Request('GET', $uri);
     }
 
@@ -481,7 +481,7 @@ class Grades
      */
     public function putGradesValuesOrgUnitIdGradeObjectIdUserId($version, $orgUnitId, $gradeObjectId, $userId, $gradeValue)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/$userId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/$userId";
         return new Request('GET', $uri);
     }
 
@@ -496,7 +496,7 @@ class Grades
      */
     public function deleteGradesCoursecompletionOrgUnitIdCompletionId($version, $orgUnitId, $completionId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/courseCompletion/$completionId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/courseCompletion/$completionId";
         return new Request('GET', $uri);
     }
 
@@ -533,7 +533,7 @@ class Grades
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/courseCompletion/?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/courseCompletion/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -566,7 +566,7 @@ class Grades
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/grades/courseCompletion/$userId/?$queryString";
+        $uri = "/d2l/api/le/$version/grades/courseCompletion/$userId/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -584,7 +584,7 @@ class Grades
      */
     public function postGradesCoursecompletionOrgUnitId($version, $orgUnitId, $courseCompletionData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/courseCompletion/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/courseCompletion/";
         return new Request('GET', $uri);
     }
 
@@ -603,7 +603,7 @@ class Grades
      */
     public function putGradesCoursecompletionOrgUnitIdCompletionId($version, $orgUnitId, $completionId, $courseCompletionData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/courseCompletion/$completionId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/courseCompletion/$completionId";
         return new Request('GET', $uri);
     }
 
@@ -620,7 +620,7 @@ class Grades
      */
     public function getGradesStatisticsOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/statistics";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/statistics";
         return new Request('GET', $uri);
     }
 
@@ -637,7 +637,7 @@ class Grades
      */
     public function getGradesSetupOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/setup/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/setup/";
         return new Request('GET', $uri);
     }
 
@@ -657,7 +657,7 @@ class Grades
      */
     public function putGradesSetupOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/setup/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/setup/";
         return new Request('GET', $uri);
     }
 
@@ -674,7 +674,7 @@ class Grades
      */
     public function getGradesExemptionsOrgUnitIdGradeObjectId($version, $orgUnitId, $gradeObjectId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/";
         return new Request('GET', $uri);
     }
 
@@ -692,7 +692,7 @@ class Grades
      */
     public function getGradesExemptionsOrgUnitIdGradeObjectIdUserId($version, $orgUnitId, $gradeObjectId, $userId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/$userId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/$userId";
         return new Request('GET', $uri);
     }
 
@@ -710,7 +710,7 @@ class Grades
      */
     public function postGradesExemptionsOrgUnitIdGradeObjectIdUserId($version, $orgUnitId, $gradeObjectId, $userId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/$userId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/$userId";
         return new Request('GET', $uri);
     }
 
@@ -726,7 +726,7 @@ class Grades
      */
     public function deleteGradesExemptionsOrgUnitIdGradeObjectIdUserId($version, $orgUnitId, $gradeObjectId, $userId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/$userId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/$userId";
         return new Request('GET', $uri);
     }
 
@@ -742,7 +742,7 @@ class Grades
      */
     public function getGradesExemptionsOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/exemptions/$userId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/exemptions/$userId";
         return new Request('GET', $uri);
     }
 
@@ -764,7 +764,7 @@ class Grades
      */
     public function postGradesExemptionsOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/grades/exemptions/$userId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/grades/exemptions/$userId";
         return new Request('GET', $uri);
     }
 }

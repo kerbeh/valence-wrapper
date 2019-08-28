@@ -18,7 +18,7 @@ class Discussions
      */
     public function deleteDiscussionsForumsOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId";
         return new Request('GET', $uri);
     }
 
@@ -35,7 +35,7 @@ class Discussions
      */
     public function getDiscussionsForumsOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId";
         return new Request('GET', $uri);
     }
 
@@ -53,7 +53,7 @@ class Discussions
      */
     public function postDiscussionsForumsOrgUnitId($version, $orgUnitId, $forumData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/";
         return new Request('GET', $uri);
     }
 
@@ -76,7 +76,7 @@ class Discussions
      */
     public function putDiscussionsForumsOrgUnitId($version, $orgUnitId, $forumData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId";
         return new Request('GET', $uri);
     }
 
@@ -92,7 +92,7 @@ class Discussions
      */
     public function deleteDiscussionsForumsTopicsOrgUnitIdForumIdTopicId($version, $orgUnitId, $forumId, $topicId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId";
         return new Request('GET', $uri);
     }
 
@@ -109,7 +109,7 @@ class Discussions
      */
     public function deleteDiscussionsForumsTopicsGrouprestrictionsOrgUnitIdForumIdTopicId($version, $orgUnitId, $forumId, $topicId, $groupRestriction)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/groupRestrictions/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/groupRestrictions/";
         return new Request('GET', $uri);
     }
 
@@ -128,7 +128,7 @@ class Discussions
      */
     public function getDiscussionsForumsTopicsOrgUnitIdForumId($version, $orgUnitId, $forumId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/";
         return new Request('GET', $uri);
     }
 
@@ -147,7 +147,7 @@ class Discussions
      */
     public function getDiscussionsForumsTopicsOrgUnitIdForumIdTopicId($version, $orgUnitId, $forumId, $topicId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId";
         return new Request('GET', $uri);
     }
 
@@ -166,7 +166,7 @@ class Discussions
      */
     public function getDiscussionsForumsTopicsGrouprestrictionsOrgUnitIdForumIdTopicId($version, $orgUnitId, $forumId, $topicId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/groupRestrictions/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/groupRestrictions/";
         return new Request('GET', $uri);
     }
 
@@ -185,7 +185,7 @@ class Discussions
      */
     public function postDiscussionsForumsTopicsOrgUnitIdForumId($version, $orgUnitId, $forumId, $createTopicData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/";
         return new Request('GET', $uri);
     }
 
@@ -205,7 +205,7 @@ class Discussions
      */
     public function putDiscussionsForumsTopicsOrgUnitIdForumIdTopicId($version, $orgUnitId, $forumId, $topicId, $createTopicData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId";
         return new Request('GET', $uri);
     }
 
@@ -222,7 +222,7 @@ class Discussions
      */
     public function putDiscussionsForumsTopicsGrouprestrictionsOrgUnitIdForumIdTopicId($version, $orgUnitId, $forumId, $topicId, $groupRestriction)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/groupRestrictions/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/groupRestrictions/";
         return new Request('GET', $uri);
     }
 
@@ -239,7 +239,7 @@ class Discussions
      */
     public function deleteDiscussionsForumsTopicsPostsOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId";
         return new Request('GET', $uri);
     }
 
@@ -256,7 +256,7 @@ class Discussions
      */
     public function deleteDiscussionsForumsTopicsPostsRatingMyratingOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Rating/MyRating";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Rating/MyRating";
         return new Request('GET', $uri);
     }
 
@@ -303,7 +303,7 @@ class Discussions
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -327,7 +327,7 @@ class Discussions
      */
     public function getDiscussionsForumsTopicsPostsOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId";
         return new Request('GET', $uri);
     }
 
@@ -348,7 +348,7 @@ class Discussions
      */
     public function getDiscussionsForumsTopicsPostsApprovalOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Approval";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Approval";
         return new Request('GET', $uri);
     }
 
@@ -369,7 +369,7 @@ class Discussions
      */
     public function getDiscussionsForumsTopicsPostsFlagOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Flag";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Flag";
         return new Request('GET', $uri);
     }
 
@@ -390,7 +390,7 @@ class Discussions
      */
     public function getDiscussionsForumsTopicsPostsRatingOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Rating";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Rating";
         return new Request('GET', $uri);
     }
 
@@ -412,7 +412,7 @@ class Discussions
      */
     public function getDiscussionsForumsTopicsPostsRatingMyratingOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Rating/MyRating";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Rating/MyRating";
         return new Request('GET', $uri);
     }
 
@@ -432,7 +432,7 @@ class Discussions
      */
     public function getDiscussionsForumsTopicsPostsReadstatusOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/ReadStatus";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/ReadStatus";
         return new Request('GET', $uri);
     }
 
@@ -452,7 +452,7 @@ class Discussions
      */
     public function getDiscussionsForumsTopicsPostsVotesOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Votes";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Votes";
         return new Request('GET', $uri);
     }
 
@@ -474,7 +474,7 @@ class Discussions
      */
     public function getDiscussionsForumsTopicsPostsVotesMyvoteOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Votes/MyVote";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Votes/MyVote";
         return new Request('GET', $uri);
     }
 
@@ -496,7 +496,7 @@ class Discussions
      */
     public function postDiscussionsForumsTopicsPostsOrgUnitIdForumIdTopicId($version, $orgUnitId, $forumId, $topicId, $createPostData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/";
         return new Request('GET', $uri);
     }
 
@@ -521,7 +521,7 @@ class Discussions
      */
     public function putDiscussionsForumsTopicsPostsOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId, $updatePostData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId";
         return new Request('GET', $uri);
     }
 
@@ -543,7 +543,7 @@ class Discussions
      */
     public function putDiscussionsForumsTopicsPostsApprovalOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId, $approvalData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Approval";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Approval";
         return new Request('GET', $uri);
     }
 
@@ -565,7 +565,7 @@ class Discussions
      */
     public function putDiscussionsForumsTopicsPostsFlagOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId, $flagData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Flag";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Flag";
         return new Request('GET', $uri);
     }
 
@@ -590,7 +590,7 @@ class Discussions
      */
     public function putDiscussionsForumsTopicsPostsRatingMyratingOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId, $userRatingData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Rating/MyRating";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Rating/MyRating";
         return new Request('GET', $uri);
     }
 
@@ -612,7 +612,7 @@ class Discussions
      */
     public function putDiscussionsForumsTopicsPostsReadstatusOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId, $readStatusData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/ReadStatus";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/ReadStatus";
         return new Request('GET', $uri);
     }
 
@@ -630,7 +630,7 @@ class Discussions
      */
     public function putDiscussionsForumsTopicsPostsVotesMyvoteOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId, $userVoteData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Votes/MyVote";
+        $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Votes/MyVote";
         return new Request('GET', $uri);
     }
 }

@@ -20,7 +20,7 @@ class SettingsForUserAccounts
      */
     public function getAccountsettingsMysettingsLocale($version)
     {
-        $uri = "d2l/api/lp/$version/accountSettings/mySettings/locale/";
+        $uri = "/d2l/api/lp/$version/accountSettings/mySettings/locale/";
         return new Request('GET', $uri);
     }
 
@@ -37,7 +37,7 @@ class SettingsForUserAccounts
      */
     public function getAccountsettingsLocaleUserId($version, $userId)
     {
-        $uri = "d2l/api/lp/$version/accountSettings/$userId/locale/";
+        $uri = "/d2l/api/lp/$version/accountSettings/$userId/locale/";
         return new Request('GET', $uri);
     }
 
@@ -51,7 +51,7 @@ class SettingsForUserAccounts
      */
     public function putAccountsettingsMysettingsLocale($version, $updateSettings)
     {
-        $uri = "d2l/api/lp/$version/accountSettings/mySettings/locale/";
+        $uri = "/d2l/api/lp/$version/accountSettings/mySettings/locale/";
         return new Request('GET', $uri);
     }
 
@@ -66,7 +66,7 @@ class SettingsForUserAccounts
      */
     public function putAccountsettingsLocaleUserId($version, $userId, $updateSettings)
     {
-        $uri = "d2l/api/lp/$version/accountSettings/$userId/locale/";
+        $uri = "/d2l/api/lp/$version/accountSettings/$userId/locale/";
         return new Request('GET', $uri);
     }
 }

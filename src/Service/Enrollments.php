@@ -23,7 +23,7 @@ class Enrollments
      */
     public function deleteEnrollmentsOrgunitsUsersOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = "d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId";
+        $uri = "/d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -42,7 +42,7 @@ class Enrollments
      */
     public function deleteEnrollmentsUsersOrgunitsUserIdOrgUnitId($version, $userId, $orgUnitId)
     {
-        $uri = "d2l/api/lp/$version/enrollments/users/$userId/orgUnits/$orgUnitId";
+        $uri = "/d2l/api/lp/$version/enrollments/users/$userId/orgUnits/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -63,7 +63,7 @@ class Enrollments
      */
     public function getClasslistOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/classlist/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/classlist/";
         return new Request('GET', $uri);
     }
 
@@ -87,7 +87,7 @@ class Enrollments
      */
     public function getClasslistPagedOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/classlist/paged/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/classlist/paged/";
         return new Request('GET', $uri);
     }
 
@@ -138,7 +138,7 @@ class Enrollments
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/enrollments/myenrollments/?$queryString";
+        $uri = "/d2l/api/lp/$version/enrollments/myenrollments/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -154,7 +154,7 @@ class Enrollments
      */
     public function getEnrollmentsMyenrollmentsOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId";
+        $uri = "/d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -171,7 +171,7 @@ class Enrollments
      */
     public function getEnrollmentsMyenrollmentsAccessOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/access";
+        $uri = "/d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/access";
         return new Request('GET', $uri);
     }
 
@@ -203,7 +203,7 @@ class Enrollments
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/?$queryString";
+        $uri = "/d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -220,7 +220,7 @@ class Enrollments
      */
     public function getEnrollmentsOrgunitsUsersOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = "d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId";
+        $uri = "/d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -254,7 +254,7 @@ class Enrollments
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/enrollments/users/$userId/orgUnits/?$queryString";
+        $uri = "/d2l/api/lp/$version/enrollments/users/$userId/orgUnits/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -272,7 +272,7 @@ class Enrollments
      */
     public function getEnrollmentsUsersOrgunitsUserIdOrgUnitId($version, $userId, $orgUnitId)
     {
-        $uri = "d2l/api/lp/$version/enrollments/users/$userId/orgUnits/$orgUnitId";
+        $uri = "/d2l/api/lp/$version/enrollments/users/$userId/orgUnits/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -289,7 +289,7 @@ class Enrollments
      */
     public function postEnrollments($version, $createEnrollmentData)
     {
-        $uri = "d2l/api/lp/$version/enrollments/";
+        $uri = "/d2l/api/lp/$version/enrollments/";
         return new Request('GET', $uri);
     }
 
@@ -303,7 +303,7 @@ class Enrollments
      */
     public function deleteEnrollmentsMyenrollmentsPinOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/pin";
+        $uri = "/d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/pin";
         return new Request('GET', $uri);
     }
 
@@ -318,7 +318,7 @@ class Enrollments
      */
     public function deleteEnrollmentsOrgunitsUsersPinOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = "d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId/pin";
+        $uri = "/d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId/pin";
         return new Request('GET', $uri);
     }
 
@@ -334,7 +334,7 @@ class Enrollments
      */
     public function postEnrollmentsMyenrollmentsPinOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/pin";
+        $uri = "/d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/pin";
         return new Request('GET', $uri);
     }
 
@@ -349,7 +349,7 @@ class Enrollments
      */
     public function postEnrollmentsOrgunitsUsersPinOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-        $uri = "d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId/pin";
+        $uri = "/d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId/pin";
         return new Request('GET', $uri);
     }
 
@@ -364,7 +364,7 @@ class Enrollments
      */
     public function deleteGroupcategoriesOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
         return new Request('GET', $uri);
     }
 
@@ -380,7 +380,7 @@ class Enrollments
      */
     public function deleteGroupcategoriesGroupsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
         return new Request('GET', $uri);
     }
 
@@ -397,7 +397,7 @@ class Enrollments
      */
     public function deleteGroupcategoriesGroupsEnrollmentsOrgUnitIdGroupCategoryIdGroupIdUserId($version, $orgUnitId, $groupCategoryId, $groupId, $userId)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId/enrollments/$userId";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId/enrollments/$userId";
         return new Request('GET', $uri);
     }
 
@@ -414,7 +414,7 @@ class Enrollments
      */
     public function getGroupcategoriesOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/";
         return new Request('GET', $uri);
     }
 
@@ -432,7 +432,7 @@ class Enrollments
      */
     public function getGroupcategoriesOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
         return new Request('GET', $uri);
     }
 
@@ -450,7 +450,7 @@ class Enrollments
      */
     public function getGroupcategoriesGroupsOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/";
         return new Request('GET', $uri);
     }
 
@@ -469,7 +469,7 @@ class Enrollments
      */
     public function getGroupcategoriesGroupsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
         return new Request('GET', $uri);
     }
 
@@ -487,7 +487,7 @@ class Enrollments
      */
     public function postGroupcategoriesOrgUnitId($version, $orgUnitId, $groupCategoryData)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/";
         return new Request('GET', $uri);
     }
 
@@ -506,7 +506,7 @@ class Enrollments
      */
     public function postGroupcategoriesGroupsOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId, $groupData)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/";
         return new Request('GET', $uri);
     }
 
@@ -523,7 +523,7 @@ class Enrollments
      */
     public function postGroupcategoriesGroupsEnrollmentsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId, $groupEnrollment)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId/enrollments/";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId/enrollments/";
         return new Request('GET', $uri);
     }
 
@@ -542,7 +542,7 @@ class Enrollments
      */
     public function putGroupcategoriesOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId, $groupCategoryData)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
         return new Request('GET', $uri);
     }
 
@@ -562,7 +562,7 @@ class Enrollments
      */
     public function putGroupcategoriesGroupsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId, $groupData)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
         return new Request('GET', $uri);
     }
 
@@ -577,7 +577,7 @@ class Enrollments
      */
     public function deleteSectionsOrgUnitIdSectionId($version, $orgUnitId, $sectionId)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
         return new Request('GET', $uri);
     }
 
@@ -594,7 +594,7 @@ class Enrollments
      */
     public function getSectionsOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/sections/";
         return new Request('GET', $uri);
     }
 
@@ -611,7 +611,7 @@ class Enrollments
      */
     public function getSectionsSettingsOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/settings";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/sections/settings";
         return new Request('GET', $uri);
     }
 
@@ -629,7 +629,7 @@ class Enrollments
      */
     public function getSectionsOrgUnitIdSectionId($version, $orgUnitId, $sectionId)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
         return new Request('GET', $uri);
     }
 
@@ -647,7 +647,7 @@ class Enrollments
      */
     public function postSectionsOrgUnitId($version, $orgUnitId, $sectionData)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/sections/";
         return new Request('GET', $uri);
     }
 
@@ -663,7 +663,7 @@ class Enrollments
      */
     public function postSectionsEnrollmentsOrgUnitIdSectionId($version, $orgUnitId, $sectionId, $sectionEnrollment)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/$sectionId/enrollments/";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/sections/$sectionId/enrollments/";
         return new Request('GET', $uri);
     }
 
@@ -681,7 +681,7 @@ class Enrollments
      */
     public function putSectionsOrgUnitId($version, $orgUnitId, $sectionPropertyData)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/sections/";
         return new Request('GET', $uri);
     }
 
@@ -699,7 +699,7 @@ class Enrollments
      */
     public function putSectionsSettingsOrgUnitId($version, $orgUnitId, $sectionPropertyData)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/settings";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/sections/settings";
         return new Request('GET', $uri);
     }
 
@@ -718,7 +718,7 @@ class Enrollments
      */
     public function putSectionsOrgUnitIdSectionId($version, $orgUnitId, $sectionId, $sectionData)
     {
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
+        $uri = "/d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
         return new Request('GET', $uri);
     }
 
@@ -737,7 +737,7 @@ class Enrollments
      */
     public function deleteAuditingAuditorsAuditeesAuditorId($version, $auditorId, $auditeeId)
     {
-        $uri = "d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
+        $uri = "/d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
         return new Request('GET', $uri);
     }
 
@@ -754,7 +754,7 @@ class Enrollments
      */
     public function getAuditingAuditeesAuditeeId($version, $auditeeId)
     {
-        $uri = "d2l/api/le/$version/auditing/auditees/$auditeeId";
+        $uri = "/d2l/api/le/$version/auditing/auditees/$auditeeId";
         return new Request('GET', $uri);
     }
 
@@ -769,7 +769,7 @@ class Enrollments
      */
     public function getAuditingAuditors($version)
     {
-        $uri = "d2l/api/le/$version/auditing/auditors/$auditorId";
+        $uri = "/d2l/api/le/$version/auditing/auditors/$auditorId";
         return new Request('GET', $uri);
     }
 
@@ -785,7 +785,7 @@ class Enrollments
      */
     public function getAuditingAuditorsAuditeesAuditorId($version, $auditorId)
     {
-        $uri = "d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
+        $uri = "/d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
         return new Request('GET', $uri);
     }
 
@@ -804,7 +804,7 @@ class Enrollments
      */
     public function postAuditingAuditorsAuditeesAuditorId($version, $auditorId, $auditeeId)
     {
-        $uri = "d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
+        $uri = "/d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
         return new Request('GET', $uri);
     }
 }

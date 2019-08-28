@@ -18,7 +18,7 @@ class EportfolioReflection
      */
     public function deleteReflectionObjectId($version, $objectId)
     {
-        $uri = "d2l/api/eP/$version/reflection/$objectId";
+        $uri = "/d2l/api/eP/$version/reflection/$objectId";
         return new Request('GET', $uri);
     }
 
@@ -33,7 +33,7 @@ class EportfolioReflection
      */
     public function deleteReflectionOnReflectionIdObjectId($version, $reflectionId, $objectId)
     {
-        $uri = "d2l/api/eP/$version/reflection/$reflectionId/on/$objectId";
+        $uri = "/d2l/api/eP/$version/reflection/$reflectionId/on/$objectId";
         return new Request('GET', $uri);
     }
 
@@ -57,7 +57,7 @@ class EportfolioReflection
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/reflection/$objectId?$queryString";
+        $uri = "/d2l/api/eP/$version/reflection/$objectId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -74,7 +74,7 @@ class EportfolioReflection
      */
     public function postReflectionsNew($version, $reflection)
     {
-        $uri = "d2l/api/eP/$version/reflections/new";
+        $uri = "/d2l/api/eP/$version/reflections/new";
         return new Request('GET', $uri);
     }
 
@@ -92,7 +92,7 @@ class EportfolioReflection
      */
     public function postReflectionObjectId($version, $objectId, $reflection)
     {
-        $uri = "d2l/api/eP/$version/reflection/$objectId";
+        $uri = "/d2l/api/eP/$version/reflection/$objectId";
         return new Request('GET', $uri);
     }
 
@@ -107,7 +107,7 @@ class EportfolioReflection
      */
     public function postReflectionOnReflectionIdObjectId($version, $reflectionId, $objectId)
     {
-        $uri = "d2l/api/eP/$version/reflection/$reflectionId/on/$objectId";
+        $uri = "/d2l/api/eP/$version/reflection/$reflectionId/on/$objectId";
         return new Request('GET', $uri);
     }
 }

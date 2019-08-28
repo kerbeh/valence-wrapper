@@ -18,7 +18,7 @@ class EportfolioArtifacts
      */
     public function deleteArtifactObjectId($version, $objectId)
     {
-        $uri = "d2l/api/eP/$version/artifact/$objectId";
+        $uri = "/d2l/api/eP/$version/artifact/$objectId";
         return new Request('GET', $uri);
     }
 
@@ -32,7 +32,7 @@ class EportfolioArtifacts
      */
     public function deleteArtifactFileObjectId($version, $objectId)
     {
-        $uri = "d2l/api/eP/$version/artifact/file/$objectId";
+        $uri = "/d2l/api/eP/$version/artifact/file/$objectId";
         return new Request('GET', $uri);
     }
 
@@ -46,7 +46,7 @@ class EportfolioArtifacts
      */
     public function deleteArtifactLinkObjectId($version, $objectId)
     {
-        $uri = "d2l/api/eP/$version/artifact/link/$objectId";
+        $uri = "/d2l/api/eP/$version/artifact/link/$objectId";
         return new Request('GET', $uri);
     }
 
@@ -63,7 +63,7 @@ class EportfolioArtifacts
      */
     public function getArtifactObjectId($version, $objectId)
     {
-        $uri = "d2l/api/eP/$version/artifact/$objectId";
+        $uri = "/d2l/api/eP/$version/artifact/$objectId";
         return new Request('GET', $uri);
     }
 
@@ -87,7 +87,7 @@ class EportfolioArtifacts
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/artifact/file/$objectId?$queryString";
+        $uri = "/d2l/api/eP/$version/artifact/file/$objectId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -111,7 +111,7 @@ class EportfolioArtifacts
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/artifact/link/$objectId?$queryString";
+        $uri = "/d2l/api/eP/$version/artifact/link/$objectId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -133,7 +133,7 @@ class EportfolioArtifacts
      */
     public function postArtifactsFileNew($version, $fileArtifact)
     {
-        $uri = "d2l/api/eP/$version/artifacts/file/new";
+        $uri = "/d2l/api/eP/$version/artifacts/file/new";
         return new Request('GET', $uri);
     }
 
@@ -158,7 +158,7 @@ class EportfolioArtifacts
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/artifacts/file/upload?$queryString";
+        $uri = "/d2l/api/eP/$version/artifacts/file/upload?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -176,7 +176,7 @@ class EportfolioArtifacts
      */
     public function postArtifactFileObjectId($version, $objectId, $fileArtifact)
     {
-        $uri = "d2l/api/eP/$version/artifact/file/$objectId";
+        $uri = "/d2l/api/eP/$version/artifact/file/$objectId";
         return new Request('GET', $uri);
     }
 
@@ -193,7 +193,7 @@ class EportfolioArtifacts
      */
     public function postArtifactsLinkNew($version, $urlArtifact)
     {
-        $uri = "d2l/api/eP/$version/artifacts/link/new";
+        $uri = "/d2l/api/eP/$version/artifacts/link/new";
         return new Request('GET', $uri);
     }
 
@@ -211,7 +211,7 @@ class EportfolioArtifacts
      */
     public function postArtifactLinkObjectId($version, $objectId, $urlArtifact)
     {
-        $uri = "d2l/api/eP/$version/artifact/link/$objectId";
+        $uri = "/d2l/api/eP/$version/artifact/link/$objectId";
         return new Request('GET', $uri);
     }
 }

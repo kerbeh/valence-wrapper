@@ -20,7 +20,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportList($version)
     {
-        $uri = "d2l/api/lp/$version/dataExport/list";
+        $uri = "/d2l/api/lp/$version/dataExport/list";
         return new Request('GET', $uri);
     }
 
@@ -37,7 +37,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportListDataSetId($version, $dataSetId)
     {
-        $uri = "d2l/api/lp/$version/dataExport/list/$dataSetId";
+        $uri = "/d2l/api/lp/$version/dataExport/list/$dataSetId";
         return new Request('GET', $uri);
     }
 
@@ -54,7 +54,7 @@ class DataHubAndDataExportFramework
      */
     public function postDataexportCreate($version, $createExportJobData)
     {
-        $uri = "d2l/api/lp/$version/dataExport/create";
+        $uri = "/d2l/api/lp/$version/dataExport/create";
         return new Request('GET', $uri);
     }
 
@@ -78,7 +78,7 @@ class DataHubAndDataExportFramework
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/dataExport/jobs?$queryString";
+        $uri = "/d2l/api/lp/$version/dataExport/jobs?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -95,7 +95,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportJobsExportJobId($version, $exportJobId)
     {
-        $uri = "d2l/api/lp/$version/dataExport/jobs/$exportJobId";
+        $uri = "/d2l/api/lp/$version/dataExport/jobs/$exportJobId";
         return new Request('GET', $uri);
     }
 
@@ -113,7 +113,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportDownloadExportJobId($version, $exportJobId)
     {
-        $uri = "d2l/api/lp/$version/dataExport/download/$exportJobId";
+        $uri = "/d2l/api/lp/$version/dataExport/download/$exportJobId";
         return new Request('GET', $uri);
     }
 
@@ -129,7 +129,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportBdsList($version)
     {
-        $uri = "d2l/api/lp/$version/dataExport/bds/list";
+        $uri = "/d2l/api/lp/$version/dataExport/bds/list";
         return new Request('GET', $uri);
     }
 
@@ -148,7 +148,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportBdsDownloadPluginId($version, $pluginId)
     {
-        $uri = "d2l/api/lp/$version/dataExport/bds/download/$pluginid";
+        $uri = "/d2l/api/lp/$version/dataExport/bds/download/$pluginid";
         return new Request('GET', $uri);
     }
 
@@ -172,7 +172,7 @@ class DataHubAndDataExportFramework
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/dataExport/bds?$queryString";
+        $uri = "/d2l/api/lp/$version/dataExport/bds?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -192,7 +192,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportBdsPluginIdIdentifier($version, $pluginId, $identifier)
     {
-        $uri = "d2l/api/lp/$version/dataExport/bds/$pluginid/$identifier";
+        $uri = "/d2l/api/lp/$version/dataExport/bds/$pluginid/$identifier";
         return new Request('GET', $uri);
     }
 
@@ -208,7 +208,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportSchemaBds($version)
     {
-        $uri = "d2l/api/lp/$version/dataExport/schema/bds";
+        $uri = "/d2l/api/lp/$version/dataExport/schema/bds";
         return new Request('GET', $uri);
     }
 }

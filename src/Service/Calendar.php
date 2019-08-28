@@ -19,7 +19,7 @@ class Calendar
      */
     public function deleteCalendarEventOrgUnitIdEventId($version, $orgUnitId, $eventId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
         return new Request('GET', $uri);
     }
 
@@ -37,7 +37,7 @@ class Calendar
      */
     public function getCalendarEventOrgUnitIdEventId($version, $orgUnitId, $eventId)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
         return new Request('GET', $uri);
     }
 
@@ -62,7 +62,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/events/?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/calendar/events/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -96,7 +96,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/calendar/events/myEvents/?$queryString";
+        $uri = "/d2l/api/le/$version/calendar/events/myEvents/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -129,7 +129,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/events/myEvents/?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/calendar/events/myEvents/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -164,7 +164,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/calendar/events/myEvents/itemCounts/?$queryString";
+        $uri = "/d2l/api/le/$version/calendar/events/myEvents/itemCounts/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -196,7 +196,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/events/myEvents/itemCount?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/calendar/events/myEvents/itemCount?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -225,7 +225,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/events/orgunits/?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/calendar/events/orgunits/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -259,7 +259,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/events/user/?$queryString";
+        $uri = "/d2l/api/le/$version/$orgUnitId/calendar/events/user/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -282,7 +282,7 @@ class Calendar
      */
     public function postCalendarEventOrgUnitId($version, $orgUnitId, $eventData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/event/";
+        $uri = "/d2l/api/le/$version/$orgUnitId/calendar/event/";
         return new Request('GET', $uri);
     }
 
@@ -306,7 +306,7 @@ class Calendar
      */
     public function putCalendarEventOrgUnitIdEventId($version, $orgUnitId, $eventId, $eventData)
     {
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
+        $uri = "/d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
         return new Request('GET', $uri);
     }
 }

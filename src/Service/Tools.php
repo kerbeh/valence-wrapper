@@ -35,7 +35,7 @@ class Tools
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/tools/org/?$queryString";
+        $uri = "/d2l/api/lp/$version/tools/org/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -52,7 +52,7 @@ class Tools
      */
     public function getToolsOrgToolId($version, $toolId)
     {
-        $uri = "d2l/api/lp/$version/tools/org/$toolId";
+        $uri = "/d2l/api/lp/$version/tools/org/$toolId";
         return new Request('GET', $uri);
     }
 
@@ -69,7 +69,7 @@ class Tools
      */
     public function putToolsOrgToolId($version, $toolId)
     {
-        $uri = "d2l/api/lp/$version/tools/org/$toolId";
+        $uri = "/d2l/api/lp/$version/tools/org/$toolId";
         return new Request('GET', $uri);
     }
 
@@ -86,7 +86,7 @@ class Tools
      */
     public function putToolsOrgOudefaultToolId($version, $toolId)
     {
-        $uri = "d2l/api/lp/$version/tools/org/$toolId/OUDefault";
+        $uri = "/d2l/api/lp/$version/tools/org/$toolId/OUDefault";
         return new Request('GET', $uri);
     }
 
@@ -103,7 +103,7 @@ class Tools
      */
     public function putToolsOrgOudefaultOverrideToolId($version, $toolId)
     {
-        $uri = "d2l/api/lp/$version/tools/org/$toolId/OUDefault/override";
+        $uri = "/d2l/api/lp/$version/tools/org/$toolId/OUDefault/override";
         return new Request('GET', $uri);
     }
 
@@ -136,7 +136,7 @@ class Tools
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/tools/orgUnits/$orgUnitId?$queryString";
+        $uri = "/d2l/api/lp/$version/tools/orgUnits/$orgUnitId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -167,7 +167,7 @@ class Tools
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/tools/orgUnits/$orgUnitId/toolNames?$queryString";
+        $uri = "/d2l/api/lp/$version/tools/orgUnits/$orgUnitId/toolNames?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -194,7 +194,7 @@ class Tools
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/tools/orgUnits/$orgUnitId/$toolId?$queryString";
+        $uri = "/d2l/api/lp/$version/tools/orgUnits/$orgUnitId/$toolId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -212,7 +212,7 @@ class Tools
      */
     public function putToolsOrgunitsOrgUnitIdToolId($version, $orgUnitId, $toolId)
     {
-        $uri = "d2l/api/lp/$version/tools/orgUnits/$orgUnitId/$toolId";
+        $uri = "/d2l/api/lp/$version/tools/orgUnits/$orgUnitId/$toolId";
         return new Request('GET', $uri);
     }
 }

@@ -18,7 +18,7 @@ class LtiManagement
      */
     public function deleteLtiLinkLtiLinkId($version, $ltiLinkId)
     {
-        $uri = "d2l/api/le/$version/lti/link/$ltiLinkId";
+        $uri = "/d2l/api/le/$version/lti/link/$ltiLinkId";
         return new Request('GET', $uri);
     }
 
@@ -36,7 +36,7 @@ class LtiManagement
      */
     public function getLtiLinkOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/lti/link/$orgUnitId/";
+        $uri = "/d2l/api/le/$version/lti/link/$orgUnitId/";
         return new Request('GET', $uri);
     }
 
@@ -54,7 +54,7 @@ class LtiManagement
      */
     public function getLtiLinkOrgUnitIdLtiLinkId($version, $orgUnitId, $ltiLinkId)
     {
-        $uri = "d2l/api/le/$version/lti/link/$orgUnitId/$ltiLinkId";
+        $uri = "/d2l/api/le/$version/lti/link/$orgUnitId/$ltiLinkId";
         return new Request('GET', $uri);
     }
 
@@ -73,7 +73,7 @@ class LtiManagement
      */
     public function postLtiLinkOrgUnitId($version, $orgUnitId, $createLtiLinkData)
     {
-        $uri = "d2l/api/le/$version/lti/link/$orgUnitId";
+        $uri = "/d2l/api/le/$version/lti/link/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -95,7 +95,7 @@ class LtiManagement
      */
     public function postLtiQuicklinkOrgUnitIdLtiLinkId($version, $orgUnitId, $ltiLinkId)
     {
-        $uri = "d2l/api/le/$version/lti/quicklink/$orgUnitId/$ltiLinkId";
+        $uri = "/d2l/api/le/$version/lti/quicklink/$orgUnitId/$ltiLinkId";
         return new Request('GET', $uri);
     }
 
@@ -113,7 +113,7 @@ class LtiManagement
      */
     public function putLtiLinkLtiLinkId($version, $ltiLinkId, $createLtiLinkData)
     {
-        $uri = "d2l/api/le/$version/lti/link/$ltiLinkId";
+        $uri = "/d2l/api/le/$version/lti/link/$ltiLinkId";
         return new Request('GET', $uri);
     }
 
@@ -127,7 +127,7 @@ class LtiManagement
      */
     public function deleteLtiTpTpId($version, $tpId)
     {
-        $uri = "d2l/api/le/$version/lti/tp/$tpId";
+        $uri = "/d2l/api/le/$version/lti/tp/$tpId";
         return new Request('GET', $uri);
     }
 
@@ -146,7 +146,7 @@ class LtiManagement
      */
     public function getLtiTpOrgUnitId($version, $orgUnitId)
     {
-        $uri = "d2l/api/le/$version/lti/tp/$orgUnitId/";
+        $uri = "/d2l/api/le/$version/lti/tp/$orgUnitId/";
         return new Request('GET', $uri);
     }
 
@@ -165,7 +165,7 @@ class LtiManagement
      */
     public function getLtiTpOrgUnitIdTpId($version, $orgUnitId, $tpId)
     {
-        $uri = "d2l/api/le/$version/lti/tp/$orgUnitId/$tpId";
+        $uri = "/d2l/api/le/$version/lti/tp/$orgUnitId/$tpId";
         return new Request('GET', $uri);
     }
 
@@ -184,7 +184,7 @@ class LtiManagement
      */
     public function postLtiTpOrgUnitId($version, $orgUnitId, $createLtiProviderData)
     {
-        $uri = "d2l/api/le/$version/lti/tp/$orgUnitId";
+        $uri = "/d2l/api/le/$version/lti/tp/$orgUnitId";
         return new Request('GET', $uri);
     }
 
@@ -202,7 +202,7 @@ class LtiManagement
      */
     public function putLtiTpTpId($version, $tpId, $createLtiProviderData)
     {
-        $uri = "d2l/api/le/$version/lti/tp/$tpId";
+        $uri = "/d2l/api/le/$version/lti/tp/$tpId";
         return new Request('GET', $uri);
     }
 }

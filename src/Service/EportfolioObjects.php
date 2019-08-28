@@ -28,7 +28,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/object?$queryString";
+        $uri = "/d2l/api/eP/$version/object?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -51,7 +51,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/object/content?$queryString";
+        $uri = "/d2l/api/eP/$version/object/content?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -75,7 +75,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/object/thumbnail?$queryString";
+        $uri = "/d2l/api/eP/$version/object/thumbnail?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -99,7 +99,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/object/$objectId?$queryString";
+        $uri = "/d2l/api/eP/$version/object/$objectId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -125,7 +125,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/object/$objectId/associations/?$queryString";
+        $uri = "/d2l/api/eP/$version/object/$objectId/associations/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -142,7 +142,7 @@ class EportfolioObjects
      */
     public function getObjectContentObjectId($version, $objectId)
     {
-        $uri = "d2l/api/eP/$version/object/$objectId/content";
+        $uri = "/d2l/api/eP/$version/object/$objectId/content";
         return new Request('GET', $uri);
     }
 
@@ -173,7 +173,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/objects/my/?$queryString";
+        $uri = "/d2l/api/eP/$version/objects/my/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -202,7 +202,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/object/sharetargets?$queryString";
+        $uri = "/d2l/api/eP/$version/object/sharetargets?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -231,7 +231,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/object/sharetargets/my?$queryString";
+        $uri = "/d2l/api/eP/$version/object/sharetargets/my?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -260,7 +260,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/object/sharetargets/sharinggroups?$queryString";
+        $uri = "/d2l/api/eP/$version/object/sharetargets/sharinggroups?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -289,7 +289,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/object/sharetargets/users?$queryString";
+        $uri = "/d2l/api/eP/$version/object/sharetargets/users?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -307,7 +307,7 @@ class EportfolioObjects
      */
     public function getObjectSharesObjectId($version, $objectId)
     {
-        $uri = "d2l/api/eP/$version/object/$objectId/shares/";
+        $uri = "/d2l/api/eP/$version/object/$objectId/shares/";
         return new Request('GET', $uri);
     }
 
@@ -325,7 +325,7 @@ class EportfolioObjects
      */
     public function getObjectsMySharedModified($version)
     {
-        $uri = "d2l/api/eP/$version/objects/my/shared/modified/";
+        $uri = "/d2l/api/eP/$version/objects/my/shared/modified/";
         return new Request('GET', $uri);
     }
 
@@ -356,7 +356,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/objects/shared/?$queryString";
+        $uri = "/d2l/api/eP/$version/objects/shared/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -380,7 +380,7 @@ class EportfolioObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/eP/$version/users/sharing/?$queryString";
+        $uri = "/d2l/api/eP/$version/users/sharing/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -397,7 +397,7 @@ class EportfolioObjects
      */
     public function postObjectShareDeleteObjectId($version, $objectId)
     {
-        $uri = "d2l/api/eP/$version/object/$objectId/share/delete";
+        $uri = "/d2l/api/eP/$version/object/$objectId/share/delete";
         return new Request('GET', $uri);
     }
 
@@ -418,7 +418,7 @@ class EportfolioObjects
      */
     public function postObjectShareNewObjectId($version, $objectId)
     {
-        $uri = "d2l/api/eP/$version/object/$objectId/share/new";
+        $uri = "/d2l/api/eP/$version/object/$objectId/share/new";
         return new Request('GET', $uri);
     }
 
@@ -434,7 +434,7 @@ class EportfolioObjects
      */
     public function getIgnoredusers($version)
     {
-        $uri = "d2l/api/eP/$version/ignoredusers/";
+        $uri = "/d2l/api/eP/$version/ignoredusers/";
         return new Request('GET', $uri);
     }
 
@@ -452,7 +452,7 @@ class EportfolioObjects
      */
     public function postIgnoredusersAdd($version, $userId)
     {
-        $uri = "d2l/api/eP/$version/ignoredusers/add";
+        $uri = "/d2l/api/eP/$version/ignoredusers/add";
         return new Request('GET', $uri);
     }
 
@@ -470,7 +470,7 @@ class EportfolioObjects
      */
     public function postIgnoredusersRemove($version, $userId)
     {
-        $uri = "d2l/api/eP/$version/ignoredusers/remove";
+        $uri = "/d2l/api/eP/$version/ignoredusers/remove";
         return new Request('GET', $uri);
     }
 }
