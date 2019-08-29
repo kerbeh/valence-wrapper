@@ -112,7 +112,9 @@ class Lockers
     public function postLockerMylockerPath($version, $path, $folderName, $fileDescription)
     {
         $uri = "/d2l/api/le/$version/locker/myLocker/$path";
-        return new Request('GET', $uri);
+        $body = folderName;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -134,7 +136,9 @@ class Lockers
     public function postLockerUserUserIdPath($version, $userId, $path, $folderName, $fileDescription)
     {
         $uri = "/d2l/api/le/$version/locker/user/$userId/$path";
-        return new Request('GET', $uri);
+        $body = folderName;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -152,7 +156,9 @@ class Lockers
     public function putLockerMylockerPath($version, $path, $folderName)
     {
         $uri = "/d2l/api/le/$version/locker/myLocker/$path";
-        return new Request('GET', $uri);
+        $body = folderName;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -171,7 +177,9 @@ class Lockers
     public function putLockerUserUserIdPath($version, $userId, $path, $folderName)
     {
         $uri = "/d2l/api/le/$version/locker/user/$userId/$path";
-        return new Request('GET', $uri);
+        $body = folderName;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -276,7 +284,9 @@ class Lockers
     public function postLockerGroupOrgUnitIdGroupIdPath($version, $orgUnitId, $groupId, $path, $folderName, $fileDescription)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/locker/group/$groupId/$path";
-        return new Request('GET', $uri);
+        $body = folderName;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -296,6 +306,8 @@ class Lockers
     public function putLockerGroupOrgUnitIdGroupIdPath($version, $orgUnitId, $groupId, $path, $folderName)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/locker/group/$groupId/$path";
-        return new Request('GET', $uri);
+        $body = folderName;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 }

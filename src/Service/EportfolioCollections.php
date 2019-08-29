@@ -86,7 +86,9 @@ class EportfolioCollections
     public function postCollectionsNew($version, $collection)
     {
         $uri = "/d2l/api/eP/$version/collections/new";
-        return new Request('GET', $uri);
+        $body = collection;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -104,7 +106,9 @@ class EportfolioCollections
     public function postCollectionObjectId($version, $objectId, $collection)
     {
         $uri = "/d2l/api/eP/$version/collection/$objectId";
-        return new Request('GET', $uri);
+        $body = collection;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 

@@ -54,7 +54,9 @@ class Discussions
     public function postDiscussionsForumsOrgUnitId($version, $orgUnitId, $forumData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/";
-        return new Request('GET', $uri);
+        $body = forumData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -77,7 +79,9 @@ class Discussions
     public function putDiscussionsForumsOrgUnitId($version, $orgUnitId, $forumData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId";
-        return new Request('GET', $uri);
+        $body = forumData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -110,7 +114,9 @@ class Discussions
     public function deleteDiscussionsForumsTopicsGrouprestrictionsOrgUnitIdForumIdTopicId($version, $orgUnitId, $forumId, $topicId, $groupRestriction)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/groupRestrictions/";
-        return new Request('GET', $uri);
+        $body = groupRestriction;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -186,7 +192,9 @@ class Discussions
     public function postDiscussionsForumsTopicsOrgUnitIdForumId($version, $orgUnitId, $forumId, $createTopicData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/";
-        return new Request('GET', $uri);
+        $body = createTopicData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -206,7 +214,9 @@ class Discussions
     public function putDiscussionsForumsTopicsOrgUnitIdForumIdTopicId($version, $orgUnitId, $forumId, $topicId, $createTopicData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId";
-        return new Request('GET', $uri);
+        $body = createTopicData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -223,7 +233,9 @@ class Discussions
     public function putDiscussionsForumsTopicsGrouprestrictionsOrgUnitIdForumIdTopicId($version, $orgUnitId, $forumId, $topicId, $groupRestriction)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/groupRestrictions/";
-        return new Request('GET', $uri);
+        $body = groupRestriction;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -497,7 +509,9 @@ class Discussions
     public function postDiscussionsForumsTopicsPostsOrgUnitIdForumIdTopicId($version, $orgUnitId, $forumId, $topicId, $createPostData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/";
-        return new Request('GET', $uri);
+        $body = createPostData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -522,7 +536,9 @@ class Discussions
     public function putDiscussionsForumsTopicsPostsOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId, $updatePostData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId";
-        return new Request('GET', $uri);
+        $body = updatePostData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -544,7 +560,9 @@ class Discussions
     public function putDiscussionsForumsTopicsPostsApprovalOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId, $approvalData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Approval";
-        return new Request('GET', $uri);
+        $body = approvalData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -566,7 +584,9 @@ class Discussions
     public function putDiscussionsForumsTopicsPostsFlagOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId, $flagData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Flag";
-        return new Request('GET', $uri);
+        $body = flagData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -591,7 +611,9 @@ class Discussions
     public function putDiscussionsForumsTopicsPostsRatingMyratingOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId, $userRatingData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Rating/MyRating";
-        return new Request('GET', $uri);
+        $body = userRatingData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -613,7 +635,9 @@ class Discussions
     public function putDiscussionsForumsTopicsPostsReadstatusOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId, $readStatusData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/ReadStatus";
-        return new Request('GET', $uri);
+        $body = readStatusData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -631,6 +655,8 @@ class Discussions
     public function putDiscussionsForumsTopicsPostsVotesMyvoteOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId, $userVoteData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Votes/MyVote";
-        return new Request('GET', $uri);
+        $body = userVoteData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 }

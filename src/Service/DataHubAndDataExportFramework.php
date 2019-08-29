@@ -55,7 +55,9 @@ class DataHubAndDataExportFramework
     public function postDataexportCreate($version, $createExportJobData)
     {
         $uri = "/d2l/api/lp/$version/dataExport/create";
-        return new Request('GET', $uri);
+        $body = createExportJobData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 

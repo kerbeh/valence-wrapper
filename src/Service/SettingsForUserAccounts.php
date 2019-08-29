@@ -52,7 +52,9 @@ class SettingsForUserAccounts
     public function putAccountsettingsMysettingsLocale($version, $updateSettings)
     {
         $uri = "/d2l/api/lp/$version/accountSettings/mySettings/locale/";
-        return new Request('GET', $uri);
+        $body = updateSettings;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -67,6 +69,8 @@ class SettingsForUserAccounts
     public function putAccountsettingsLocaleUserId($version, $userId, $updateSettings)
     {
         $uri = "/d2l/api/lp/$version/accountSettings/$userId/locale/";
-        return new Request('GET', $uri);
+        $body = updateSettings;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 }

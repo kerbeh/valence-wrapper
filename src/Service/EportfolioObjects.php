@@ -453,7 +453,9 @@ class EportfolioObjects
     public function postIgnoredusersAdd($version, $userId)
     {
         $uri = "/d2l/api/eP/$version/ignoredusers/add";
-        return new Request('GET', $uri);
+        $body = userId;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -471,6 +473,8 @@ class EportfolioObjects
     public function postIgnoredusersRemove($version, $userId)
     {
         $uri = "/d2l/api/eP/$version/ignoredusers/remove";
-        return new Request('GET', $uri);
+        $body = userId;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 }

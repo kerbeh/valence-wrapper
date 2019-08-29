@@ -223,7 +223,9 @@ class Permissions
     public function postPermissionsToolsCapabilitiesToolId($version, $toolId, $capability)
     {
         $uri = "/d2l/api/lp/$version/permissions/tools/$toolId/capabilities/";
-        return new Request('GET', $uri);
+        $body = capability;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 

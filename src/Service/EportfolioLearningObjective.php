@@ -76,7 +76,9 @@ class EportfolioLearningObjective
     public function postLearningobjectiveObjectiveId($version, $objectiveId, $learningObjective)
     {
         $uri = "/d2l/api/eP/$version/learningobjective/$objectiveId";
-        return new Request('GET', $uri);
+        $body = learningObjective;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 

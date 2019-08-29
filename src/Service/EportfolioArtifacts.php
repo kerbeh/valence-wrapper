@@ -134,7 +134,9 @@ class EportfolioArtifacts
     public function postArtifactsFileNew($version, $fileArtifact)
     {
         $uri = "/d2l/api/eP/$version/artifacts/file/new";
-        return new Request('GET', $uri);
+        $body = fileArtifact;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -177,7 +179,9 @@ class EportfolioArtifacts
     public function postArtifactFileObjectId($version, $objectId, $fileArtifact)
     {
         $uri = "/d2l/api/eP/$version/artifact/file/$objectId";
-        return new Request('GET', $uri);
+        $body = fileArtifact;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -194,7 +198,9 @@ class EportfolioArtifacts
     public function postArtifactsLinkNew($version, $urlArtifact)
     {
         $uri = "/d2l/api/eP/$version/artifacts/link/new";
-        return new Request('GET', $uri);
+        $body = urlArtifact;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -212,6 +218,8 @@ class EportfolioArtifacts
     public function postArtifactLinkObjectId($version, $objectId, $urlArtifact)
     {
         $uri = "/d2l/api/eP/$version/artifact/link/$objectId";
-        return new Request('GET', $uri);
+        $body = urlArtifact;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 }
