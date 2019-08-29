@@ -203,7 +203,7 @@ class Demographics
     public function putDemographicsUsersUserId($version, $userId, $demographicsEntryData)
     {
         $uri = "/d2l/api/lp/$version/demographics/users/$userId";
-        $body = demographicsEntryData;
+        $body = $demographicsEntryData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -286,7 +286,7 @@ class Demographics
     public function postDemographicsFields($version, $demographicsField)
     {
         $uri = "/d2l/api/lp/$version/demographics/fields/";
-        $body = demographicsField;
+        $body = $demographicsField;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -307,7 +307,7 @@ class Demographics
     public function putDemographicsFieldsFieldId($version, $fieldId, $demographicsField)
     {
         $uri = "/d2l/api/lp/$version/demographics/fields/$fieldId";
-        $body = demographicsField;
+        $body = $demographicsField;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

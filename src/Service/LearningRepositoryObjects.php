@@ -220,7 +220,7 @@ class LearningRepositoryObjects
     public function postObjectsPropertiesObjectId($version, $objectId, $lRWSObjectPropertiesInput)
     {
         $uri = "/d2l/api/lr/$version/objects/$objectId/properties/";
-        $body = lRWSObjectPropertiesInput;
+        $body = $lRWSObjectPropertiesInput;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -249,7 +249,7 @@ class LearningRepositoryObjects
     public function postObjectsPropertiesObjectIdObjectVersion($version, $objectId, $objectVersion, $lRWSObjectPropertiesInput)
     {
         $uri = "/d2l/api/lr/$version/objects/$objectId/$objectVersion/properties/";
-        $body = lRWSObjectPropertiesInput;
+        $body = $lRWSObjectPropertiesInput;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

@@ -75,7 +75,7 @@ class Grades
     public function postGradesOrgUnitId($version, $orgUnitId, $gradeObject)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/";
-        $body = gradeObject;
+        $body = $gradeObject;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -100,7 +100,7 @@ class Grades
     public function putGradesOrgUnitIdGradeObjectId($version, $orgUnitId, $gradeObjectId, $gradeObject)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId";
-        $body = gradeObject;
+        $body = $gradeObject;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -171,7 +171,7 @@ class Grades
     public function postGradesCategoriesOrgUnitId($version, $orgUnitId, $gradeCategoryData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/categories/";
-        $body = gradeCategoryData;
+        $body = $gradeCategoryData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -468,7 +468,7 @@ class Grades
     public function putGradesFinalValuesOrgUnitIdUserId($version, $orgUnitId, $userId, $finalAdjustedGradeValue)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/final/values/$userId";
-        $body = finalAdjustedGradeValue;
+        $body = $finalAdjustedGradeValue;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -490,7 +490,7 @@ class Grades
     public function putGradesValuesOrgUnitIdGradeObjectIdUserId($version, $orgUnitId, $gradeObjectId, $userId, $gradeValue)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/values/$userId";
-        $body = gradeValue;
+        $body = $gradeValue;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -595,7 +595,7 @@ class Grades
     public function postGradesCoursecompletionOrgUnitId($version, $orgUnitId, $courseCompletionData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/courseCompletion/";
-        $body = courseCompletionData;
+        $body = $courseCompletionData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -616,7 +616,7 @@ class Grades
     public function putGradesCoursecompletionOrgUnitIdCompletionId($version, $orgUnitId, $completionId, $courseCompletionData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/courseCompletion/$completionId";
-        $body = courseCompletionData;
+        $body = $courseCompletionData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

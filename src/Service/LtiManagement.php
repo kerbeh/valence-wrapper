@@ -74,7 +74,7 @@ class LtiManagement
     public function postLtiLinkOrgUnitId($version, $orgUnitId, $createLtiLinkData)
     {
         $uri = "/d2l/api/le/$version/lti/link/$orgUnitId";
-        $body = createLtiLinkData;
+        $body = $createLtiLinkData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -116,7 +116,7 @@ class LtiManagement
     public function putLtiLinkLtiLinkId($version, $ltiLinkId, $createLtiLinkData)
     {
         $uri = "/d2l/api/le/$version/lti/link/$ltiLinkId";
-        $body = createLtiLinkData;
+        $body = $createLtiLinkData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -189,7 +189,7 @@ class LtiManagement
     public function postLtiTpOrgUnitId($version, $orgUnitId, $createLtiProviderData)
     {
         $uri = "/d2l/api/le/$version/lti/tp/$orgUnitId";
-        $body = createLtiProviderData;
+        $body = $createLtiProviderData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -209,7 +209,7 @@ class LtiManagement
     public function putLtiTpTpId($version, $tpId, $createLtiProviderData)
     {
         $uri = "/d2l/api/le/$version/lti/tp/$tpId";
-        $body = createLtiProviderData;
+        $body = $createLtiProviderData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

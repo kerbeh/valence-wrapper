@@ -239,7 +239,7 @@ class ConfigurationVariables
     public function putConfigvariablesValuesOrgVariableId($version, $variableId, $orgValue)
     {
         $uri = "/d2l/api/lp/$version/configVariables/$variableId/values/org";
-        $body = orgValue;
+        $body = $orgValue;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -257,7 +257,7 @@ class ConfigurationVariables
     public function putConfigvariablesValuesOrgunitsVariableIdOrgUnitId($version, $variableId, $orgUnitId, $orgUnitValue)
     {
         $uri = "/d2l/api/lp/$version/configVariables/$variableId/values/orgUnits/$orgUnitId";
-        $body = orgUnitValue;
+        $body = $orgUnitValue;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -275,7 +275,7 @@ class ConfigurationVariables
     public function putConfigvariablesValuesRolesVariableIdRoleId($version, $variableId, $roleId, $roleValue)
     {
         $uri = "/d2l/api/lp/$version/configVariables/$variableId/values/roles/$roleId";
-        $body = roleValue;
+        $body = $roleValue;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -294,7 +294,7 @@ class ConfigurationVariables
     public function putConfigvariablesValuesSystemVariableId($version, $variableId, $systemValue)
     {
         $uri = "/d2l/api/lp/$version/configVariables/$variableId/values/system";
-        $body = systemValue;
+        $body = $systemValue;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -344,7 +344,7 @@ class ConfigurationVariables
     public function putConfigvariablesResolverVariableId($version, $variableId, $resolverValue)
     {
         $uri = "/d2l/api/lp/$version/configVariables/$variableId/resolver";
-        $body = resolverValue;
+        $body = $resolverValue;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

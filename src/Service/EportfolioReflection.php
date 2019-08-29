@@ -75,7 +75,7 @@ class EportfolioReflection
     public function postReflectionsNew($version, $reflection)
     {
         $uri = "/d2l/api/eP/$version/reflections/new";
-        $body = reflection;
+        $body = $reflection;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -95,7 +95,7 @@ class EportfolioReflection
     public function postReflectionObjectId($version, $objectId, $reflection)
     {
         $uri = "/d2l/api/eP/$version/reflection/$objectId";
-        $body = reflection;
+        $body = $reflection;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

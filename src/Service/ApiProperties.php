@@ -261,7 +261,7 @@ class ApiProperties
     public function postCheck($supportedVersionRequest)
     {
         $uri = "/d2l/api/versions/check";
-        $body = supportedVersionRequest;
+        $body = $supportedVersionRequest;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

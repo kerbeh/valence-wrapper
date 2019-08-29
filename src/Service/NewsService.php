@@ -220,7 +220,7 @@ class NewsService
     public function postNewsOrgUnitId($version, $orgUnitId, $newsItemData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/news/";
-        $body = newsItemData;
+        $body = $newsItemData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -320,7 +320,7 @@ class NewsService
     public function putNewsOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId, $newsItemData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId";
-        $body = newsItemData;
+        $body = $newsItemData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

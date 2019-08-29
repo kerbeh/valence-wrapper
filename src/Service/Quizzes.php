@@ -63,7 +63,7 @@ class Quizzes
     public function putQuizzesOrgUnitIdQuizId($version, $orgUnitId, $quizId, $quizData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/$quizId";
-        $body = quizData;
+        $body = $quizData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

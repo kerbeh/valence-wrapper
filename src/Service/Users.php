@@ -120,7 +120,7 @@ class Users
     public function postUsers($version, $createUserData)
     {
         $uri = "/d2l/api/lp/$version/users/";
-        $body = createUserData;
+        $body = $createUserData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -143,7 +143,7 @@ class Users
     public function putUsersUserId($version, $userId, $updateUserData)
     {
         $uri = "/d2l/api/lp/$version/users/$userId";
-        $body = updateUserData;
+        $body = $updateUserData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -165,7 +165,7 @@ class Users
     public function putUsersNamesUserId($version, $userId, $legalPreferredNames)
     {
         $uri = "/d2l/api/lp/$version/users/$userId/names";
-        $body = legalPreferredNames;
+        $body = $legalPreferredNames;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -199,7 +199,7 @@ class Users
     public function putUsersActivationUserId($version, $userId, $userActivationData)
     {
         $uri = "/d2l/api/lp/$version/users/$userId/activation";
-        $body = userActivationData;
+        $body = $userActivationData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -215,7 +215,7 @@ class Users
     public function postLinkuser($version, $googleAppsLinkingItem)
     {
         $uri = "/d2l/api/gae/$version/linkuser";
-        $body = googleAppsLinkingItem;
+        $body = $googleAppsLinkingItem;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -320,7 +320,7 @@ class Users
     public function putNotificationsInstantUsersNumberUserId($version, $userId, $notificationNumberUpdateInfo)
     {
         $uri = "/d2l/api/lp/$version/notifications/instant/users/$userId/number";
-        $body = notificationNumberUpdateInfo;
+        $body = $notificationNumberUpdateInfo;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -426,7 +426,7 @@ class Users
     public function putUsersPasswordUserId($version, $userId, $userPasswordData)
     {
         $uri = "/d2l/api/lp/$version/users/$userId/password";
-        $body = userPasswordData;
+        $body = $userPasswordData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -666,7 +666,7 @@ class Users
     public function putProfileMyprofile($version, $userProfileUpdateData)
     {
         $uri = "/d2l/api/lp/$version/profile/myProfile";
-        $body = userProfileUpdateData;
+        $body = $userProfileUpdateData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -689,7 +689,7 @@ class Users
     public function putProfileProfileId($version, $profileId, $userProfileUpdateData)
     {
         $uri = "/d2l/api/lp/$version/profile/$profileId";
-        $body = userProfileUpdateData;
+        $body = $userProfileUpdateData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -773,7 +773,7 @@ class Users
         ];
         $queryString = http_build_query($queryParrams);
         $uri = "/d2l/api/lp/$version/roles/?$queryString";
-        $body = roleCopyData;
+        $body = $roleCopyData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -887,7 +887,7 @@ class Users
     public function putImsconfigMapRolesRoleId($version, $roleId, $mappings)
     {
         $uri = "/d2l/api/lp/$version/imsconfig/map/roles/$roleId";
-        $body = mappings;
+        $body = $mappings;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -951,7 +951,7 @@ class Users
     public function putGlobalusermappingUsersUserId($version, $userId, $mapIdentifier)
     {
         $uri = "/d2l/api/lp/$version/globalusermapping/users/$userid";
-        $body = mapIdentifier;
+        $body = $mapIdentifier;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

@@ -95,7 +95,7 @@ class Courses
     public function postCourses($version, $createCourseOffering)
     {
         $uri = "/d2l/api/lp/$version/courses/";
-        $body = createCourseOffering;
+        $body = $createCourseOffering;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -115,7 +115,7 @@ class Courses
     public function putCoursesOrgUnitId($version, $orgUnitId, $courseOfferingInfo)
     {
         $uri = "/d2l/api/lp/$version/courses/$orgUnitId";
-        $body = courseOfferingInfo;
+        $body = $courseOfferingInfo;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -198,7 +198,7 @@ class Courses
     public function postCoursetemplates($version, $createCourseTemplate)
     {
         $uri = "/d2l/api/lp/$version/coursetemplates/";
-        $body = createCourseTemplate;
+        $body = $createCourseTemplate;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -218,7 +218,7 @@ class Courses
     public function putCoursetemplatesOrgUnitId($version, $orgUnitId, $courseTemplateInfo)
     {
         $uri = "/d2l/api/lp/$version/coursetemplates/$orgUnitId";
-        $body = courseTemplateInfo;
+        $body = $courseTemplateInfo;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -256,7 +256,7 @@ class Courses
     public function postImportCopyOrgUnitId($version, $orgUnitId, $createCopyJobRequest)
     {
         $uri = "/d2l/api/le/$version/import/$orgUnitId/copy/";
-        $body = createCopyJobRequest;
+        $body = $createCopyJobRequest;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

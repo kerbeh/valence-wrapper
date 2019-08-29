@@ -196,7 +196,7 @@ class Dropboxes
     public function postDropboxFoldersSubmissionsGroupOrgUnitIdFolderIdGroupId($version, $orgUnitId, $folderId, $groupId, $description)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/group/$groupId";
-        $body = description;
+        $body = $description;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -220,7 +220,7 @@ class Dropboxes
     public function postDropboxFoldersSubmissionsMysubmissionsOrgUnitIdFolderId($version, $orgUnitId, $folderId, $description)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/mysubmissions/";
-        $body = description;
+        $body = $description;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -324,7 +324,7 @@ class Dropboxes
     public function postDropboxFoldersFeedbackOrgUnitIdFolderIdEntityTypeEntityId($version, $orgUnitId, $folderId, $entityType, $entityId, $dropboxFeedback)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId";
-        $body = dropboxFeedback;
+        $body = $dropboxFeedback;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

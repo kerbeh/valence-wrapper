@@ -156,7 +156,7 @@ class Awards
     public function postOrgunitsAssociationsOrgUnitId($version, $orgUnitId, $associationCreate)
     {
         $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/associations/";
-        $body = associationCreate;
+        $body = $associationCreate;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -177,7 +177,7 @@ class Awards
     public function putOrgunitsAssociationsOrgUnitIdAssociationId($version, $orgUnitId, $associationId, $associationUpdate)
     {
         $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/associations/$associationId";
-        $body = associationUpdate;
+        $body = $associationUpdate;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -256,7 +256,7 @@ class Awards
     public function postAwards($version, $awardCreate)
     {
         $uri = "/d2l/api/bas/$version/awards/";
-        $body = awardCreate;
+        $body = $awardCreate;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -275,7 +275,7 @@ class Awards
     public function putAwardsAwardId($version, $awardId, $awardUpdate)
     {
         $uri = "/d2l/api/bas/$version/awards/$awardId";
-        $body = awardUpdate;
+        $body = $awardUpdate;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -541,7 +541,7 @@ class Awards
     public function postOrgunitsIssuedOrgUnitId($version, $orgUnitId, $issuedAwardCreate)
     {
         $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/issued/";
-        $body = issuedAwardCreate;
+        $body = $issuedAwardCreate;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -561,7 +561,7 @@ class Awards
     public function putOrgunitsIssuedOrgUnitIdIssuedId($version, $orgUnitId, $issuedId, $issuedAwardUpdate)
     {
         $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/issued/$issuedId";
-        $body = issuedAwardUpdate;
+        $body = $issuedAwardUpdate;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -693,7 +693,7 @@ class Awards
     public function postLibraryIcons($version, $libraryInputFileInfo)
     {
         $uri = "/d2l/api/bas/$version/library/icons/";
-        $body = libraryInputFileInfo;
+        $body = $libraryInputFileInfo;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -711,7 +711,7 @@ class Awards
     public function postLibraryTemplates($version, $libraryInputFileInfo)
     {
         $uri = "/d2l/api/bas/$version/library/templates/";
-        $body = libraryInputFileInfo;
+        $body = $libraryInputFileInfo;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

@@ -180,7 +180,7 @@ class CourseContent
     public function postContentRootOrgUnitId($version, $orgUnitId, $contentObjectData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/content/root/";
-        $body = contentObjectData;
+        $body = $contentObjectData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -201,7 +201,7 @@ class CourseContent
     public function putContentModulesOrgUnitIdModuleId($version, $orgUnitId, $moduleId, $contentObjectData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/content/modules/$moduleId";
-        $body = contentObjectData;
+        $body = $contentObjectData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -225,7 +225,7 @@ class CourseContent
     public function putContentTopicsOrgUnitIdTopicId($version, $orgUnitId, $topicId, $contentObjectData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/content/topics/$topicId";
-        $body = contentObjectData;
+        $body = $contentObjectData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -366,7 +366,7 @@ class CourseContent
     public function postContentIsbnOrgUnitId($version, $orgUnitId, $isbnAssociationData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/content/isbn/";
-        $body = isbnAssociationData;
+        $body = $isbnAssociationData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -1023,7 +1023,7 @@ class CourseContent
     public function postContentUserprogressOrgUnitId($version, $orgUnitId, $userProgressData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/content/userprogress/";
-        $body = userProgressData;
+        $body = $userProgressData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -1044,7 +1044,7 @@ class CourseContent
     public function putContentTopicsCompletionsUsersOrgUnitIdTopicIdUserId($version, $orgUnitId, $topicId, $userId, $contentTopicCompletionUpdate)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/content/topics/$topicId/completions/users/$userId";
-        $body = contentTopicCompletionUpdate;
+        $body = $contentTopicCompletionUpdate;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

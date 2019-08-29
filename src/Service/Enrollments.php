@@ -290,7 +290,7 @@ class Enrollments
     public function postEnrollments($version, $createEnrollmentData)
     {
         $uri = "/d2l/api/lp/$version/enrollments/";
-        $body = createEnrollmentData;
+        $body = $createEnrollmentData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -490,7 +490,7 @@ class Enrollments
     public function postGroupcategoriesOrgUnitId($version, $orgUnitId, $groupCategoryData)
     {
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/";
-        $body = groupCategoryData;
+        $body = $groupCategoryData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -511,7 +511,7 @@ class Enrollments
     public function postGroupcategoriesGroupsOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId, $groupData)
     {
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/";
-        $body = groupData;
+        $body = $groupData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -530,7 +530,7 @@ class Enrollments
     public function postGroupcategoriesGroupsEnrollmentsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId, $groupEnrollment)
     {
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId/enrollments/";
-        $body = groupEnrollment;
+        $body = $groupEnrollment;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -551,7 +551,7 @@ class Enrollments
     public function putGroupcategoriesOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId, $groupCategoryData)
     {
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
-        $body = groupCategoryData;
+        $body = $groupCategoryData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -573,7 +573,7 @@ class Enrollments
     public function putGroupcategoriesGroupsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId, $groupData)
     {
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
-        $body = groupData;
+        $body = $groupData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -660,7 +660,7 @@ class Enrollments
     public function postSectionsOrgUnitId($version, $orgUnitId, $sectionData)
     {
         $uri = "/d2l/api/lp/$version/$orgUnitId/sections/";
-        $body = sectionData;
+        $body = $sectionData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -678,7 +678,7 @@ class Enrollments
     public function postSectionsEnrollmentsOrgUnitIdSectionId($version, $orgUnitId, $sectionId, $sectionEnrollment)
     {
         $uri = "/d2l/api/lp/$version/$orgUnitId/sections/$sectionId/enrollments/";
-        $body = sectionEnrollment;
+        $body = $sectionEnrollment;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -698,7 +698,7 @@ class Enrollments
     public function putSectionsOrgUnitId($version, $orgUnitId, $sectionPropertyData)
     {
         $uri = "/d2l/api/lp/$version/$orgUnitId/sections/";
-        $body = sectionPropertyData;
+        $body = $sectionPropertyData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -718,7 +718,7 @@ class Enrollments
     public function putSectionsSettingsOrgUnitId($version, $orgUnitId, $sectionPropertyData)
     {
         $uri = "/d2l/api/lp/$version/$orgUnitId/sections/settings";
-        $body = sectionPropertyData;
+        $body = $sectionPropertyData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -739,7 +739,7 @@ class Enrollments
     public function putSectionsOrgUnitIdSectionId($version, $orgUnitId, $sectionId, $sectionData)
     {
         $uri = "/d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
-        $body = sectionData;
+        $body = $sectionData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -760,7 +760,7 @@ class Enrollments
     public function deleteAuditingAuditorsAuditeesAuditorId($version, $auditorId, $auditeeId)
     {
         $uri = "/d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
-        $body = auditeeId;
+        $body = $auditeeId;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -829,7 +829,7 @@ class Enrollments
     public function postAuditingAuditorsAuditeesAuditorId($version, $auditorId, $auditeeId)
     {
         $uri = "/d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
-        $body = auditeeId;
+        $body = $auditeeId;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

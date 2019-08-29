@@ -283,7 +283,7 @@ class Calendar
     public function postCalendarEventOrgUnitId($version, $orgUnitId, $eventData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/calendar/event/";
-        $body = eventData;
+        $body = $eventData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -309,7 +309,7 @@ class Calendar
     public function putCalendarEventOrgUnitIdEventId($version, $orgUnitId, $eventId, $eventData)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
-        $body = eventData;
+        $body = $eventData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }

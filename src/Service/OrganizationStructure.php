@@ -369,7 +369,7 @@ class OrganizationStructure
     public function postOrgstructure($version, $orgUnitCreateData)
     {
         $uri = "/d2l/api/lp/$version/orgstructure/";
-        $body = orgUnitCreateData;
+        $body = $orgUnitCreateData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -390,7 +390,7 @@ class OrganizationStructure
     public function postOrgstructureChildrenOrgUnitId($version, $orgUnitId)
     {
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/children/";
-        $body = orgUnitId;
+        $body = $orgUnitId;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -411,7 +411,7 @@ class OrganizationStructure
     public function postOrgstructureParentsOrgUnitId($version, $orgUnitId)
     {
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/parents/";
-        $body = orgUnitId;
+        $body = $orgUnitId;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -436,7 +436,7 @@ class OrganizationStructure
     public function putOrgstructureOrgUnitId($version, $orgUnitId, $orgUnitProperties)
     {
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId";
-        $body = orgUnitProperties;
+        $body = $orgUnitProperties;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -473,7 +473,7 @@ class OrganizationStructure
     public function putOrgstructureColoursOrgUnitId($version, $orgUnitId, $colourScheme)
     {
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/colours";
-        $body = colourScheme;
+        $body = $colourScheme;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -636,7 +636,7 @@ class OrganizationStructure
     public function postOutypes($version, $createOrgUnitTypeData)
     {
         $uri = "/d2l/api/lp/$version/outypes/";
-        $body = createOrgUnitTypeData;
+        $body = $createOrgUnitTypeData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
@@ -657,7 +657,7 @@ class OrganizationStructure
     public function postOutypesOrgUnitTypeId($version, $orgUnitTypeId, $createOrgUnitTypeData)
     {
         $uri = "/d2l/api/lp/$version/outypes/$orgUnitTypeId";
-        $body = createOrgUnitTypeData;
+        $body = $createOrgUnitTypeData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
     }
