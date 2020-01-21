@@ -1,4 +1,5 @@
 <?php
+
 namespace ValenceWrapper\Service;
 
 use GuzzleHttp\Psr7\Request;
@@ -73,7 +74,7 @@ class Courses
     public function getCoursesImageOrgUnitId($version, $orgUnitId, $width = null, $height = null)
     {
         $queryParrams = [
-                            "width" => $width,                    "height" => $height
+            "width" => $width,                    "height" => $height
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -258,7 +259,7 @@ class Courses
         $uri = "/d2l/api/le/$version/import/$orgUnitId/copy/";
         $body = $createCopyJobRequest;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -284,7 +285,7 @@ class Courses
     public function getCcbLogs($version, $bookmark = null, $pageSize = null, $sourceOrgUnitId = null, $destinationOrgUnitId = null)
     {
         $queryParrams = [
-                            "bookmark" => $bookmark,                    "pageSize" => $pageSize,                    "sourceOrgUnitId" => $sourceOrgUnitId,                    "destinationOrgUnitId" => $destinationOrgUnitId
+            "bookmark" => $bookmark,                    "pageSize" => $pageSize,                    "sourceOrgUnitId" => $sourceOrgUnitId,                    "destinationOrgUnitId" => $destinationOrgUnitId
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -329,7 +330,7 @@ class Courses
     public function getImportImportsLogsOrgUnitIdJobToken($version, $orgUnitId, $jobToken, $bookmark = null)
     {
         $queryParrams = [
-                            "bookmark" => $bookmark
+            "bookmark" => $bookmark
 
         ];
         $queryString = http_build_query($queryParrams);
@@ -358,7 +359,7 @@ class Courses
     public function postImportImportsOrgUnitId($version, $orgUnitId, $callbackUrl)
     {
         $queryParrams = [
-                            "callbackUrl" => $callbackUrl
+            "callbackUrl" => $callbackUrl
 
         ];
         $queryString = http_build_query($queryParrams);
