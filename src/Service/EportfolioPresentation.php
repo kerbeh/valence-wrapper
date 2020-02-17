@@ -18,7 +18,11 @@ class EportfolioPresentation
      */
     public function deletePresentationObjectId($version, $objectId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/eP/$version/presentation/$objectId";
+=======
+        $uri = "/d2l/api/eP/$version/presentation/$objectId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -42,7 +46,11 @@ class EportfolioPresentation
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/eP/$version/presentation/$objectId?$queryString";
+=======
+        $uri = "/d2l/api/eP/$version/presentation/$objectId?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -58,7 +66,11 @@ class EportfolioPresentation
      */
     public function postPresentationsNew($version)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/eP/$version/presentations/new";
+=======
+        $uri = "/d2l/api/eP/$version/presentations/new";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -75,7 +87,11 @@ class EportfolioPresentation
      */
     public function postPresentationObjectId($version, $objectId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/eP/$version/presentation/$objectId";
+=======
+        $uri = "/d2l/api/eP/$version/presentation/$objectId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

@@ -35,7 +35,11 @@ class Tools
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/tools/org/?$queryString";
+=======
+        $uri = "/d2l/api/lp/$version/tools/org/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -52,7 +56,11 @@ class Tools
      */
     public function getToolsOrgToolId($version, $toolId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/tools/org/$toolId";
+=======
+        $uri = "/d2l/api/lp/$version/tools/org/$toolId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -69,7 +77,11 @@ class Tools
      */
     public function putToolsOrgToolId($version, $toolId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/tools/org/$toolId";
+=======
+        $uri = "/d2l/api/lp/$version/tools/org/$toolId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -86,7 +98,11 @@ class Tools
      */
     public function putToolsOrgOudefaultToolId($version, $toolId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/tools/org/$toolId/OUDefault";
+=======
+        $uri = "/d2l/api/lp/$version/tools/org/$toolId/OUDefault";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -103,7 +119,11 @@ class Tools
      */
     public function putToolsOrgOudefaultOverrideToolId($version, $toolId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/tools/org/$toolId/OUDefault/override";
+=======
+        $uri = "/d2l/api/lp/$version/tools/org/$toolId/OUDefault/override";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -136,7 +156,11 @@ class Tools
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/tools/orgUnits/$orgUnitId?$queryString";
+=======
+        $uri = "/d2l/api/lp/$version/tools/orgUnits/$orgUnitId?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -167,7 +191,11 @@ class Tools
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/tools/orgUnits/$orgUnitId/toolNames?$queryString";
+=======
+        $uri = "/d2l/api/lp/$version/tools/orgUnits/$orgUnitId/toolNames?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -194,7 +222,11 @@ class Tools
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/tools/orgUnits/$orgUnitId/$toolId?$queryString";
+=======
+        $uri = "/d2l/api/lp/$version/tools/orgUnits/$orgUnitId/$toolId?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -212,7 +244,11 @@ class Tools
      */
     public function putToolsOrgunitsOrgUnitIdToolId($version, $orgUnitId, $toolId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/tools/orgUnits/$orgUnitId/$toolId";
+=======
+        $uri = "/d2l/api/lp/$version/tools/orgUnits/$orgUnitId/$toolId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

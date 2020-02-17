@@ -18,7 +18,11 @@ class EportfolioCollections
      */
     public function deleteCollectionObjectId($version, $objectId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/eP/$version/collection/$objectId";
+=======
+        $uri = "/d2l/api/eP/$version/collection/$objectId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -44,7 +48,11 @@ class EportfolioCollections
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/eP/$version/collection/$objectId?$queryString";
+=======
+        $uri = "/d2l/api/eP/$version/collection/$objectId?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -68,7 +76,11 @@ class EportfolioCollections
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/eP/$version/collection/$objectId/contents/?$queryString";
+=======
+        $uri = "/d2l/api/eP/$version/collection/$objectId/contents/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -85,8 +97,15 @@ class EportfolioCollections
      */
     public function postCollectionsNew($version, $collection)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/eP/$version/collections/new";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/eP/$version/collections/new";
+        $body = $collection;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -103,8 +122,15 @@ class EportfolioCollections
      */
     public function postCollectionObjectId($version, $objectId, $collection)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/eP/$version/collection/$objectId";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/eP/$version/collection/$objectId";
+        $body = $collection;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -118,7 +144,11 @@ class EportfolioCollections
      */
     public function postCollectionAddCollectionIdObjectId($version, $collectionId, $objectId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/eP/$version/collection/$collectionId/add/$objectId";
+=======
+        $uri = "/d2l/api/eP/$version/collection/$collectionId/add/$objectId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -133,7 +163,11 @@ class EportfolioCollections
      */
     public function postCollectionRemoveCollectionIdObjectId($version, $collectionId, $objectId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/eP/$version/collection/$collectionId/remove/$objectId";
+=======
+        $uri = "/d2l/api/eP/$version/collection/$collectionId/remove/$objectId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

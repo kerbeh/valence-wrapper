@@ -36,7 +36,11 @@ class ConfigurationVariables
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/definitions/?$queryString";
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/definitions/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -53,7 +57,11 @@ class ConfigurationVariables
      */
     public function getConfigvariablesDefinitionVariableId($version, $variableId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/definition";
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/definition";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -71,7 +79,11 @@ class ConfigurationVariables
      */
     public function getConfigvariablesValuesVariableId($version, $variableId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/values";
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/values";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -88,7 +100,11 @@ class ConfigurationVariables
      */
     public function getConfigvariablesValuesOrgVariableId($version, $variableId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/values/org";
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/values/org";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -118,7 +134,11 @@ class ConfigurationVariables
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/values/orgUnits/?$queryString";
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/values/orgUnits/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -136,7 +156,11 @@ class ConfigurationVariables
      */
     public function getConfigvariablesValuesOrgunitsVariableIdOrgUnitId($version, $variableId, $orgUnitId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/values/orgUnits/$orgUnitId";
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/values/orgUnits/$orgUnitId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -156,7 +180,11 @@ class ConfigurationVariables
      */
     public function getConfigvariablesEffectivevaluesOrgunitsVariableIdOrgUnitId($version, $variableId, $orgUnitId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/effectiveValues/orgUnits/$orgUnitId";
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/effectiveValues/orgUnits/$orgUnitId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -186,7 +214,11 @@ class ConfigurationVariables
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/values/roles/?$queryString";
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/values/roles/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -204,7 +236,11 @@ class ConfigurationVariables
      */
     public function getConfigvariablesValuesRolesVariableIdRoleId($version, $variableId, $roleId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/values/roles/$roleId";
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/values/roles/$roleId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -221,7 +257,11 @@ class ConfigurationVariables
      */
     public function getConfigvariablesValuesSystemVariableId($version, $variableId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/values/system";
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/values/system";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -238,8 +278,15 @@ class ConfigurationVariables
      */
     public function putConfigvariablesValuesOrgVariableId($version, $variableId, $orgValue)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/values/org";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/values/org";
+        $body = $orgValue;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -254,8 +301,15 @@ class ConfigurationVariables
      */
     public function putConfigvariablesValuesOrgunitsVariableIdOrgUnitId($version, $variableId, $orgUnitId, $orgUnitValue)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/values/orgUnits/$orgUnitId";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/values/orgUnits/$orgUnitId";
+        $body = $orgUnitValue;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -270,8 +324,15 @@ class ConfigurationVariables
      */
     public function putConfigvariablesValuesRolesVariableIdRoleId($version, $variableId, $roleId, $roleValue)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/values/roles/$roleId";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/values/roles/$roleId";
+        $body = $roleValue;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -287,8 +348,15 @@ class ConfigurationVariables
      */
     public function putConfigvariablesValuesSystemVariableId($version, $variableId, $systemValue)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/values/system";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/values/system";
+        $body = $systemValue;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -301,7 +369,11 @@ class ConfigurationVariables
      */
     public function deleteConfigvariablesResolverVariableId($version, $variableId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/resolver";
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/resolver";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -317,7 +389,11 @@ class ConfigurationVariables
      */
     public function getConfigvariablesResolverVariableId($version, $variableId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/resolver";
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/resolver";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -335,7 +411,14 @@ class ConfigurationVariables
      */
     public function putConfigvariablesResolverVariableId($version, $variableId, $resolverValue)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/configVariables/$variableId/resolver";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/lp/$version/configVariables/$variableId/resolver";
+        $body = $resolverValue;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 }

@@ -27,7 +27,11 @@ class Dropboxes
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/?$queryString";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -44,7 +48,11 @@ class Dropboxes
      */
     public function getDropboxFoldersOrgUnitIdFolderId($version, $orgUnitId, $folderId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -62,7 +70,11 @@ class Dropboxes
      */
     public function getDropboxFoldersAttachmentsOrgUnitIdFolderIdFileId($version, $orgUnitId, $folderId, $fileId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/attachments/$fileId";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/attachments/$fileId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -80,7 +92,11 @@ class Dropboxes
      */
     public function postDropboxFoldersOrgUnitId($version, $orgUnitId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -99,7 +115,11 @@ class Dropboxes
      */
     public function putDropboxFoldersOrgUnitIdFolderId($version, $orgUnitId, $folderId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -125,7 +145,11 @@ class Dropboxes
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/dropbox/orgUnits/feedback/?$queryString";
+=======
+        $uri = "/d2l/api/le/$version/dropbox/orgUnits/feedback/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -153,7 +177,11 @@ class Dropboxes
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/?$queryString";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -172,7 +200,11 @@ class Dropboxes
      */
     public function getDropboxFoldersSubmissionsFilesOrgUnitIdFolderIdSubmissionIdFileId($version, $orgUnitId, $folderId, $submissionId, $fileId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/$submissionId/files/$fileId";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/$submissionId/files/$fileId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -195,8 +227,15 @@ class Dropboxes
      */
     public function postDropboxFoldersSubmissionsGroupOrgUnitIdFolderIdGroupId($version, $orgUnitId, $folderId, $groupId, $description)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/group/$groupId";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/group/$groupId";
+        $body = $description;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -217,8 +256,15 @@ class Dropboxes
      */
     public function postDropboxFoldersSubmissionsMysubmissionsOrgUnitIdFolderId($version, $orgUnitId, $folderId, $description)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/mysubmissions/";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/mysubmissions/";
+        $body = $description;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -237,7 +283,11 @@ class Dropboxes
      */
     public function postDropboxFoldersSubmissionsFilesMarkasreadOrgUnitIdFolderIdSubmissionId($version, $orgUnitId, $folderId, $submissionId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/$submissionId/files/$fileId/markAsRead";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/$submissionId/files/$fileId/markAsRead";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -256,7 +306,11 @@ class Dropboxes
      */
     public function deleteDropboxFoldersFeedbackAttachmentsOrgUnitIdFolderIdEntityTypeEntityIdFileId($version, $orgUnitId, $folderId, $entityType, $entityId, $fileId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/attachments/$fileId";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/attachments/$fileId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -275,7 +329,11 @@ class Dropboxes
      */
     public function getDropboxFoldersFeedbackOrgUnitIdFolderIdEntityTypeEntityId($version, $orgUnitId, $folderId, $entityType, $entityId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -296,7 +354,11 @@ class Dropboxes
      */
     public function getDropboxFoldersFeedbackAttachmentsOrgUnitIdFolderIdEntityTypeEntityIdFileId($version, $orgUnitId, $folderId, $entityType, $entityId, $fileId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/attachments/$fileId";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/attachments/$fileId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -319,8 +381,15 @@ class Dropboxes
      */
     public function postDropboxFoldersFeedbackOrgUnitIdFolderIdEntityTypeEntityId($version, $orgUnitId, $folderId, $entityType, $entityId, $dropboxFeedback)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId";
+        $body = $dropboxFeedback;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -342,7 +411,11 @@ class Dropboxes
      */
     public function postDropboxFoldersFeedbackAttachOrgUnitIdFolderIdEntityTypeEntityId($version, $orgUnitId, $folderId, $entityType, $entityId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/attach";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/attach";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -369,7 +442,11 @@ class Dropboxes
      */
     public function postDropboxFoldersFeedbackUploadOrgUnitIdFolderIdEntityTypeEntityId($version, $orgUnitId, $folderId, $entityType, $entityId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/upload";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/upload";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -390,7 +467,11 @@ class Dropboxes
      */
     public function putDropboxFoldersEntitiesCompletionOrgUnitIdFolderIdEntityId($version, $orgUnitId, $folderId, $entityId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/entities/$entityId/completion";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/entities/$entityId/completion";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -405,7 +486,11 @@ class Dropboxes
      */
     public function deleteDropboxCategoriesOrgUnitIdCategoryId($version, $orgUnitId, $categoryId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/categories/$categoryId";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/categories/$categoryId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -421,7 +506,11 @@ class Dropboxes
      */
     public function getDropboxCategoriesOrgUnitId($version, $orgUnitId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/categories/";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/categories/";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -438,7 +527,11 @@ class Dropboxes
      */
     public function getDropboxCategoriesOrgUnitIdCategoryId($version, $orgUnitId, $categoryId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/categories/$categoryId";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/categories/$categoryId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -456,7 +549,11 @@ class Dropboxes
      */
     public function postDropboxCategoriesOrgUnitId($version, $orgUnitId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/categories/";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/categories/";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -475,7 +572,11 @@ class Dropboxes
      */
     public function putDropboxCategoriesOrgUnitIdCategoryId($version, $orgUnitId, $categoryId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/dropbox/categories/$categoryId";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/categories/$categoryId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

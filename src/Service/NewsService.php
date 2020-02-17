@@ -19,7 +19,11 @@ class NewsService
      */
     public function deleteNewsOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -35,7 +39,11 @@ class NewsService
      */
     public function deleteNewsAttachmentsOrgUnitIdNewsItemIdFileId($version, $orgUnitId, $newsItemId, $fileId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/$fileId";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/$fileId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -65,7 +73,11 @@ class NewsService
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/feed/?$queryString";
+=======
+        $uri = "/d2l/api/lp/$version/feed/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -93,7 +105,11 @@ class NewsService
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/news/user/$userId/?$queryString";
+=======
+        $uri = "/d2l/api/le/$version/news/user/$userId/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -117,7 +133,11 @@ class NewsService
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/news/?$queryString";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/news/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -143,7 +163,11 @@ class NewsService
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/news/deleted/?$queryString";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/news/deleted/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -161,7 +185,11 @@ class NewsService
      */
     public function getNewsUserOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/news/user/$userId/";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/news/user/$userId/";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -179,7 +207,11 @@ class NewsService
      */
     public function getNewsOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -197,7 +229,11 @@ class NewsService
      */
     public function getNewsAttachmentsOrgUnitIdNewsItemIdFileId($version, $orgUnitId, $newsItemId, $fileId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/$fileId";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/$fileId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -219,8 +255,15 @@ class NewsService
      */
     public function postNewsOrgUnitId($version, $orgUnitId, $newsItemData)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/news/";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/news/";
+        $body = $newsItemData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -237,7 +280,11 @@ class NewsService
      */
     public function postNewsDeletedRestoreOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/news/deleted/$newsItemId/restore";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/news/deleted/$newsItemId/restore";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -256,7 +303,11 @@ class NewsService
      */
     public function postNewsAttachmentsOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -271,7 +322,11 @@ class NewsService
      */
     public function postNewsDismissOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/dismiss";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/dismiss";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -286,7 +341,11 @@ class NewsService
      */
     public function postNewsPublishOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/publish";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/publish";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -301,7 +360,11 @@ class NewsService
      */
     public function postNewsRestoreOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/restore";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/restore";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -317,7 +380,14 @@ class NewsService
      */
     public function putNewsOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId, $newsItemData)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId";
+        $body = $newsItemData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 }

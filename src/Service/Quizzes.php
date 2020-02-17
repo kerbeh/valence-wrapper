@@ -22,7 +22,11 @@ class Quizzes
      */
     public function getQuizzesOrgUnitId($version, $orgUnitId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/quizzes/";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -40,7 +44,11 @@ class Quizzes
      */
     public function getQuizzesOrgUnitIdQuizId($version, $orgUnitId, $quizId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/quizzes/$quizId";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/$quizId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -62,7 +70,14 @@ class Quizzes
      */
     public function putQuizzesOrgUnitIdQuizId($version, $orgUnitId, $quizId, $quizData)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/quizzes/$quizId";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/$quizId";
+        $body = $quizData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 }

@@ -19,7 +19,11 @@ class Permissions
      */
     public function deletePermissionsToolsCapabilitiesToolIdCapabilityId($version, $toolId, $capabilityId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/permissions/tools/$toolId/capabilities/$capabilityId";
+=======
+        $uri = "/d2l/api/lp/$version/permissions/tools/$toolId/capabilities/$capabilityId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -34,7 +38,11 @@ class Permissions
      */
     public function deletePermissionsToolsClaimsAllowedToolIdGrantId($version, $toolId, $grantId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/$grantId";
+=======
+        $uri = "/d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/$grantId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -70,7 +78,11 @@ class Permissions
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/permissions/tools/$toolId/capabilities/?$queryString";
+=======
+        $uri = "/d2l/api/lp/$version/permissions/tools/$toolId/capabilities/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -104,7 +116,11 @@ class Permissions
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/permissions/tools/$toolId/claims/?$queryString";
+=======
+        $uri = "/d2l/api/lp/$version/permissions/tools/$toolId/claims/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -141,7 +157,11 @@ class Permissions
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/?$queryString";
+=======
+        $uri = "/d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -156,7 +176,11 @@ class Permissions
      */
     public function getPermissionsToolsClaimsAllowedToolIdGrantId($version, $toolId, $grantId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/$grantId";
+=======
+        $uri = "/d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/$grantId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -186,7 +210,11 @@ class Permissions
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/permissions/tools/$toolId/claims/metadata/?$queryString";
+=======
+        $uri = "/d2l/api/lp/$version/permissions/tools/$toolId/claims/metadata/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -204,7 +232,11 @@ class Permissions
      */
     public function getPermissionsToolsClaimsMetadataToolIdClaimId($version, $toolId, $claimId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/permissions/tools/$toolId/claims/metadata/$claimId";
+=======
+        $uri = "/d2l/api/lp/$version/permissions/tools/$toolId/claims/metadata/$claimId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -222,8 +254,15 @@ class Permissions
      */
     public function postPermissionsToolsCapabilitiesToolId($version, $toolId, $capability)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/permissions/tools/$toolId/capabilities/";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/lp/$version/permissions/tools/$toolId/capabilities/";
+        $body = $capability;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -241,7 +280,11 @@ class Permissions
      */
     public function putPermissionsToolsClaimsAllowedToolIdGrantId($version, $toolId, $grantId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/$grantId";
+=======
+        $uri = "/d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/$grantId";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

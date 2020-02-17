@@ -20,7 +20,11 @@ class SettingsForUserAccounts
      */
     public function getAccountsettingsMysettingsLocale($version)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/accountSettings/mySettings/locale/";
+=======
+        $uri = "/d2l/api/lp/$version/accountSettings/mySettings/locale/";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -37,7 +41,11 @@ class SettingsForUserAccounts
      */
     public function getAccountsettingsLocaleUserId($version, $userId)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/accountSettings/$userId/locale/";
+=======
+        $uri = "/d2l/api/lp/$version/accountSettings/$userId/locale/";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -51,8 +59,15 @@ class SettingsForUserAccounts
      */
     public function putAccountsettingsMysettingsLocale($version, $updateSettings)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/accountSettings/mySettings/locale/";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/lp/$version/accountSettings/mySettings/locale/";
+        $body = $updateSettings;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -66,7 +81,14 @@ class SettingsForUserAccounts
      */
     public function putAccountsettingsLocaleUserId($version, $userId, $updateSettings)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/accountSettings/$userId/locale/";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/lp/$version/accountSettings/$userId/locale/";
+        $body = $updateSettings;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 }

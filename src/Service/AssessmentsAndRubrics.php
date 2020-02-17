@@ -31,7 +31,11 @@ class AssessmentsAndRubrics
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/rubrics?$queryString";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/rubrics?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -62,7 +66,11 @@ class AssessmentsAndRubrics
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/assessment?$queryString";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/assessment?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -93,7 +101,11 @@ class AssessmentsAndRubrics
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/assessment?$queryString";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/assessment?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

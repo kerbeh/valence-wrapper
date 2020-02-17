@@ -35,7 +35,11 @@ class CourseCompetenciesAndObjectives
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/competencies/structure?$queryString";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/competencies/structure?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

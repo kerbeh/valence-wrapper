@@ -31,7 +31,11 @@ class CourseUpdatesForEndUsers
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/$orgUnitId/updates/myUpdates?$queryString";
+=======
+        $uri = "/d2l/api/le/$version/$orgUnitId/updates/myUpdates?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -61,7 +65,11 @@ class CourseUpdatesForEndUsers
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/le/$version/updates/myUpdates/?$queryString";
+=======
+        $uri = "/d2l/api/le/$version/updates/myUpdates/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

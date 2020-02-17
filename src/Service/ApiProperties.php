@@ -19,7 +19,11 @@ class ApiProperties
      */
     public function getD2LAuthApiCancel()
     {
+<<<<<<< HEAD
         $uri = "d2l/auth/api/cancel";
+=======
+        $uri = "/d2l/auth/api/cancel";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -37,6 +41,7 @@ class ApiProperties
      *
      * @param [string] $xState Optional. Session state value the back-end service passes back to the trusted URL callback.
      * xState
+<<<<<<< HEAD
      * @param [string] $type Optional. Client application type: mobile or not present.
      * type
      */
@@ -48,6 +53,21 @@ class ApiProperties
         ];
         $queryString = http_build_query($queryParrams);
         $uri = "d2l/auth/api/token?$queryString";
+=======
+     * @param [Application ID] $xA Unique Application ID issued by D2L for the calling client application.
+     * @param [Application Signature] $xB Application session signature: target URL (not URL encoded) signed with the application key.
+     * @param [string] $type Optional. Client application type: mobile or not present.
+     * type
+     */
+    public function getD2LAuthApiToken($xState = null, $xA, $xB, $type = null)
+    {
+        $queryParrams = [
+                            "xState" => $xState,                    "xA" => $xA,                    "xB" => $xB,                    "type" => $type
+
+        ];
+        $queryString = http_build_query($queryParrams);
+        $uri = "/d2l/auth/api/token?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -75,7 +95,11 @@ class ApiProperties
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/auth/soaptoken?$queryString";
+=======
+        $uri = "/d2l/api/lp/$version/auth/soaptoken?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -99,6 +123,11 @@ class ApiProperties
      * @param [UTCDateTime] $dateRangeEnd Latest log item to show.
      * @param [string] $search Optional. Filter logs to those only including this search string.
      * search
+<<<<<<< HEAD
+=======
+     * @param [CSV of LOGLEVEL_Ts] $logLevel Optional. Filter logs to include particular levels of detail.
+     * logLevel
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
      * @param [string] $loggerAssembly Optional. Filter logs to those emitted by a named application assembly.
      * loggerAssembly
      * @param [D2LID] $userId Optional. Filter logs to those related to identified user.
@@ -117,6 +146,10 @@ class ApiProperties
         $dateRangeStart,
         $dateRangeEnd,
         $search = null,
+<<<<<<< HEAD
+=======
+        $logLevel = null,
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         $loggerAssembly = null,
         $userId = null,
         $messageGroupId = null,
@@ -125,11 +158,19 @@ class ApiProperties
         $bookmark = null
     ) {
         $queryParrams = [
+<<<<<<< HEAD
                             "dateRangeStart" => $dateRangeStart,                    "dateRangeEnd" => $dateRangeEnd,                    "search" => $search,                    "loggerAssembly" => $loggerAssembly,                    "userId" => $userId,                    "messageGroupId" => $messageGroupId,                    "includeTraces" => $includeTraces,                    "orgUnitId" => $orgUnitId,                    "bookmark" => $bookmark
 
         ];
         $queryString = http_build_query($queryParrams);
         $uri = "d2l/api/lp/$version/logging/?$queryString";
+=======
+                            "dateRangeStart" => $dateRangeStart,                    "dateRangeEnd" => $dateRangeEnd,                    "search" => $search,                    "logLevel" => $logLevel,                    "loggerAssembly" => $loggerAssembly,                    "userId" => $userId,                    "messageGroupId" => $messageGroupId,                    "includeTraces" => $includeTraces,                    "orgUnitId" => $orgUnitId,                    "bookmark" => $bookmark
+
+        ];
+        $queryString = http_build_query($queryParrams);
+        $uri = "/d2l/api/lp/$version/logging/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -151,6 +192,11 @@ class ApiProperties
      * @param [UTCDateTime] $dateRangeEnd Latest log item to show.
      * @param [string] $search Optional. Filter logs to those only including this search string.
      * search
+<<<<<<< HEAD
+=======
+     * @param [CSV of LOGLEVEL_Ts] $logLevel Optional. Filter logs to include particular levels of detail.
+     * logLevel
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
      * @param [string] $loggerAssembly Optional. Filter logs to those emitted by a named application assembly.
      * loggerAssembly
      * @param [D2LID] $userId Optional. Filter logs to those related to identified user.
@@ -167,6 +213,10 @@ class ApiProperties
         $dateRangeStart,
         $dateRangeEnd,
         $search = null,
+<<<<<<< HEAD
+=======
+        $logLevel = null,
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         $loggerAssembly = null,
         $userId = null,
         $messageGroupId = null,
@@ -174,11 +224,19 @@ class ApiProperties
         $bookmark = null
     ) {
         $queryParrams = [
+<<<<<<< HEAD
                             "dateRangeStart" => $dateRangeStart,                    "dateRangeEnd" => $dateRangeEnd,                    "search" => $search,                    "loggerAssembly" => $loggerAssembly,                    "userId" => $userId,                    "messageGroupId" => $messageGroupId,                    "orgUnitId" => $orgUnitId,                    "bookmark" => $bookmark
 
         ];
         $queryString = http_build_query($queryParrams);
         $uri = "d2l/api/lp/$version/logging/grouped/?$queryString";
+=======
+                            "dateRangeStart" => $dateRangeStart,                    "dateRangeEnd" => $dateRangeEnd,                    "search" => $search,                    "logLevel" => $logLevel,                    "loggerAssembly" => $loggerAssembly,                    "userId" => $userId,                    "messageGroupId" => $messageGroupId,                    "orgUnitId" => $orgUnitId,                    "bookmark" => $bookmark
+
+        ];
+        $queryString = http_build_query($queryParrams);
+        $uri = "/d2l/api/lp/$version/logging/grouped/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -202,7 +260,11 @@ class ApiProperties
 
         ];
         $queryString = http_build_query($queryParrams);
+<<<<<<< HEAD
         $uri = "d2l/api/lp/$version/logging/$logMessageId/?$queryString";
+=======
+        $uri = "/d2l/api/lp/$version/logging/$logMessageId/?$queryString";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -220,7 +282,11 @@ class ApiProperties
      */
     public function getVersionsProductCode($productCode, $version)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/$productCode/versions/$version";
+=======
+        $uri = "/d2l/api/$productCode/versions/$version";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -233,7 +299,11 @@ class ApiProperties
      */
     public function get()
     {
+<<<<<<< HEAD
         $uri = "d2l/api/versions/";
+=======
+        $uri = "/d2l/api/versions/";
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -252,7 +322,14 @@ class ApiProperties
      */
     public function postCheck($supportedVersionRequest)
     {
+<<<<<<< HEAD
         $uri = "d2l/api/versions/check";
         return new Request('GET', $uri);
+=======
+        $uri = "/d2l/api/versions/check";
+        $body = $supportedVersionRequest;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+>>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 }
