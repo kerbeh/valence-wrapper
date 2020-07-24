@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Subscriptions to user and object activities — Developer Platform (September 2019)
+ * Subscriptions to user and object activities — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/subscription.html
  */
 class SubscriptionsToUserAndObjectActivities
@@ -18,11 +18,7 @@ class SubscriptionsToUserAndObjectActivities
      */
     public function deleteSubscriptionsObjectsId($version, $id)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/subscriptions/objects/$objectId";
-=======
         $uri = "/d2l/api/eP/$version/subscriptions/objects/$objectId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -39,11 +35,7 @@ class SubscriptionsToUserAndObjectActivities
      */
     public function getSubscriptionsObjects($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/subscriptions/objects/";
-=======
         $uri = "/d2l/api/eP/$version/subscriptions/objects/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -65,11 +57,7 @@ class SubscriptionsToUserAndObjectActivities
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/subscriptions/objects/exists?$queryString";
-=======
         $uri = "/d2l/api/eP/$version/subscriptions/objects/exists?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -83,11 +71,7 @@ class SubscriptionsToUserAndObjectActivities
      */
     public function postSubscriptionsObjectsId($version, $id)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/subscriptions/objects/$objectId";
-=======
         $uri = "/d2l/api/eP/$version/subscriptions/objects/$objectId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -101,11 +85,7 @@ class SubscriptionsToUserAndObjectActivities
      */
     public function deleteSubscriptionsUsersId($version, $id)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/subscriptions/users/$userId";
-=======
         $uri = "/d2l/api/eP/$version/subscriptions/users/$userId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -121,11 +101,7 @@ class SubscriptionsToUserAndObjectActivities
      */
     public function getSubscriptionsUsers($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/subscriptions/users/";
-=======
         $uri = "/d2l/api/eP/$version/subscriptions/users/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -147,11 +123,7 @@ class SubscriptionsToUserAndObjectActivities
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/subscriptions/users/exists?$queryString";
-=======
         $uri = "/d2l/api/eP/$version/subscriptions/users/exists?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -165,11 +137,7 @@ class SubscriptionsToUserAndObjectActivities
      */
     public function postSubscriptionsUsersId($version, $id)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/subscriptions/users/$userId";
-=======
         $uri = "/d2l/api/eP/$version/subscriptions/users/$userId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * LTI management (links and tool providers) — Developer Platform (September 2019)
+ * LTI management (links and tool providers) — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/lti.html
  */
 class LtiManagement
@@ -18,11 +18,7 @@ class LtiManagement
      */
     public function deleteLtiLinkLtiLinkId($version, $ltiLinkId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/lti/link/$ltiLinkId";
-=======
         $uri = "/d2l/api/le/$version/lti/link/$ltiLinkId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -40,11 +36,7 @@ class LtiManagement
      */
     public function getLtiLinkOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/lti/link/$orgUnitId/";
-=======
         $uri = "/d2l/api/le/$version/lti/link/$orgUnitId/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -62,11 +54,7 @@ class LtiManagement
      */
     public function getLtiLinkOrgUnitIdLtiLinkId($version, $orgUnitId, $ltiLinkId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/lti/link/$orgUnitId/$ltiLinkId";
-=======
         $uri = "/d2l/api/le/$version/lti/link/$orgUnitId/$ltiLinkId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -85,15 +73,10 @@ class LtiManagement
      */
     public function postLtiLinkOrgUnitId($version, $orgUnitId, $createLtiLinkData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/lti/link/$orgUnitId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/le/$version/lti/link/$orgUnitId";
         $body = $createLtiLinkData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -114,11 +97,7 @@ class LtiManagement
      */
     public function postLtiQuicklinkOrgUnitIdLtiLinkId($version, $orgUnitId, $ltiLinkId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/lti/quicklink/$orgUnitId/$ltiLinkId";
-=======
         $uri = "/d2l/api/le/$version/lti/quicklink/$orgUnitId/$ltiLinkId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -136,15 +115,86 @@ class LtiManagement
      */
     public function putLtiLinkLtiLinkId($version, $ltiLinkId, $createLtiLinkData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/lti/link/$ltiLinkId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/le/$version/lti/link/$ltiLinkId";
         $body = $createLtiLinkData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
+    }
+
+
+    /**
+     * Delete the sharing rule for a particular org unit and LTI link.
+     * @see https://docs.valence.desire2learn.com/res/lti.html#delete--d2l-api-le-(version)-lti-link-(orgUnitId)-(linkId)-sharing-(sharingOrgUnitId)
+     * @return /PSR7 (Request)
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $linkId Link ID.
+     */
+    public function deleteLtiLinkSharingOrgUnitIdLinkId($version, $orgUnitId, $linkId)
+    {
+        $uri = "/d2l/api/le/$version/lti/link/$orgUnitId/$linkId/sharing/$sharingOrgUnitId";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Retrieve the sharing rules for a particular LTI link.
+     * @see https://docs.valence.desire2learn.com/res/lti.html#get--d2l-api-le-(version)-lti-link-(orgUnitId)-(linkId)-sharing-
+     * @return /PSR7 (Request)
+     * Return. This action returns a list of
+     * SharingRuleWithDescendantTypes JSON blocks
+     * containing the data associated with the matching LTI link.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $linkId Link ID.
+     */
+    public function getLtiLinkSharingOrgUnitIdLinkId($version, $orgUnitId, $linkId)
+    {
+        $uri = "/d2l/api/le/$version/lti/link/$orgUnitId/$linkId/sharing/";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Add a sharing rule for a particular LTI link.
+     * @see https://docs.valence.desire2learn.com/res/lti.html#post--d2l-api-le-(version)-lti-link-(orgUnitId)-(linkId)-sharing-
+     * @return /PSR7 (Request)
+     * Return. This action returns a
+     * CreateSharingRule JSON block
+     * containing the data associated with the newly registered sharing rule.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $linkId Link ID.
+     * @param [LTI.CreateSharingRule] $createSharingRule Data for a new or updated sharing rule.
+     */
+    public function postLtiLinkSharingOrgUnitIdLinkId($version, $orgUnitId, $linkId, $createSharingRule)
+    {
+        $uri = "/d2l/api/le/$version/lti/link/$orgUnitId/$linkId/sharing/";
+        $body = $createSharingRule;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+    }
+
+
+    /**
+     * Update the sharing rule for a particular org unit and LTI link.
+     * @see https://docs.valence.desire2learn.com/res/lti.html#put--d2l-api-le-(version)-lti-link-(orgUnitId)-(linkId)-sharing-(sharingOrgUnitId)
+     * @return /PSR7 (Request)
+     * Return. This action returns a
+     * CreateSharingRule JSON block
+     * containing the data associated with the newly updated sharing rule.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $linkId Link ID.
+     * @param [D2LID] $sharingOrgUnitId Org unit ID the link is shared to.
+     */
+    public function putLtiLinkSharingOrgUnitIdLinkIdSharingOrgUnitId($version, $orgUnitId, $linkId, $sharingOrgUnitId)
+    {
+        $uri = "/d2l/api/le/$version/lti/link/$orgUnitId/$linkId/sharing/$sharingOrgUnitId";
+        return new Request('GET', $uri);
     }
 
 
@@ -157,11 +207,7 @@ class LtiManagement
      */
     public function deleteLtiTpTpId($version, $tpId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/lti/tp/$tpId";
-=======
         $uri = "/d2l/api/le/$version/lti/tp/$tpId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -180,11 +226,7 @@ class LtiManagement
      */
     public function getLtiTpOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/lti/tp/$orgUnitId/";
-=======
         $uri = "/d2l/api/le/$version/lti/tp/$orgUnitId/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -203,11 +245,7 @@ class LtiManagement
      */
     public function getLtiTpOrgUnitIdTpId($version, $orgUnitId, $tpId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/lti/tp/$orgUnitId/$tpId";
-=======
         $uri = "/d2l/api/le/$version/lti/tp/$orgUnitId/$tpId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -226,15 +264,10 @@ class LtiManagement
      */
     public function postLtiTpOrgUnitId($version, $orgUnitId, $createLtiProviderData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/lti/tp/$orgUnitId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/le/$version/lti/tp/$orgUnitId";
         $body = $createLtiProviderData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -251,14 +284,85 @@ class LtiManagement
      */
     public function putLtiTpTpId($version, $tpId, $createLtiProviderData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/lti/tp/$tpId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/le/$version/lti/tp/$tpId";
         $body = $createLtiProviderData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
+    }
+
+
+    /**
+     * Delete the sharing rule for a particular org unit and LTI tool provider.
+     * @see https://docs.valence.desire2learn.com/res/lti.html#delete--d2l-api-le-(version)-lti-tp-(orgUnitId)-(tpId)-sharing-(sharingOrgUnitId)
+     * @return /PSR7 (Request)
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $tpId Tool provider ID.
+     */
+    public function deleteLtiTpSharingOrgUnitIdTpId($version, $orgUnitId, $tpId)
+    {
+        $uri = "/d2l/api/le/$version/lti/tp/$orgUnitId/$tpId/sharing/$sharingOrgUnitId";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Retrieve the sharing rules for a particular LTI tool provider.
+     * @see https://docs.valence.desire2learn.com/res/lti.html#get--d2l-api-le-(version)-lti-tp-(orgUnitId)-(tpId)-sharing-
+     * @return /PSR7 (Request)
+     * Return. This action returns a list of
+     * SharingRuleWithDescendantTypes JSON blocks
+     * containing the data associated with the matching LTI tool provider.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $tpId Tool provider ID.
+     */
+    public function getLtiTpSharingOrgUnitIdTpId($version, $orgUnitId, $tpId)
+    {
+        $uri = "/d2l/api/le/$version/lti/tp/$orgUnitId/$tpId/sharing/";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Add a sharing rule for a particular LTI tool provider.
+     * @see https://docs.valence.desire2learn.com/res/lti.html#post--d2l-api-le-(version)-lti-tp-(orgUnitId)-(tpId)-sharing-
+     * @return /PSR7 (Request)
+     * Return. This action returns a
+     * CreateSharingRule JSON block
+     * containing the data associated with the newly registered sharing rule.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $tpId Tool provider ID.
+     * @param [LTI.CreateSharingRule] $createSharingRule Data for a new or updated sharing rule.
+     */
+    public function postLtiTpSharingOrgUnitIdTpId($version, $orgUnitId, $tpId, $createSharingRule)
+    {
+        $uri = "/d2l/api/le/$version/lti/tp/$orgUnitId/$tpId/sharing/";
+        $body = $createSharingRule;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+    }
+
+
+    /**
+     * Update the sharing rule for a particular org unit and LTI tool provider.
+     * @see https://docs.valence.desire2learn.com/res/lti.html#put--d2l-api-le-(version)-lti-tp-(orgUnitId)-(tpId)-sharing-(sharingOrgUnitId)
+     * @return /PSR7 (Request)
+     * Return. This action returns a
+     * CreateSharingRule JSON block
+     * containing the data associated with the newly updated sharing rule.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $tpId Tool provider ID.
+     * @param [D2LID] $sharingOrgUnitId Org unit ID the tool provider is shared to.
+     */
+    public function putLtiTpSharingOrgUnitIdTpIdSharingOrgUnitId($version, $orgUnitId, $tpId, $sharingOrgUnitId)
+    {
+        $uri = "/d2l/api/le/$version/lti/tp/$orgUnitId/$tpId/sharing/$sharingOrgUnitId";
+        return new Request('GET', $uri);
     }
 }

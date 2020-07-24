@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * ePortfolio Artifacts — Developer Platform (September 2019)
+ * ePortfolio Artifacts — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/artifact.html
  */
 class EportfolioArtifacts
@@ -18,11 +18,7 @@ class EportfolioArtifacts
      */
     public function deleteArtifactObjectId($version, $objectId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/artifact/$objectId";
-=======
         $uri = "/d2l/api/eP/$version/artifact/$objectId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -36,11 +32,7 @@ class EportfolioArtifacts
      */
     public function deleteArtifactFileObjectId($version, $objectId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/artifact/file/$objectId";
-=======
         $uri = "/d2l/api/eP/$version/artifact/file/$objectId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -54,11 +46,7 @@ class EportfolioArtifacts
      */
     public function deleteArtifactLinkObjectId($version, $objectId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/artifact/link/$objectId";
-=======
         $uri = "/d2l/api/eP/$version/artifact/link/$objectId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -75,11 +63,7 @@ class EportfolioArtifacts
      */
     public function getArtifactObjectId($version, $objectId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/artifact/$objectId";
-=======
         $uri = "/d2l/api/eP/$version/artifact/$objectId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -103,11 +87,7 @@ class EportfolioArtifacts
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/artifact/file/$objectId?$queryString";
-=======
         $uri = "/d2l/api/eP/$version/artifact/file/$objectId?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -131,11 +111,7 @@ class EportfolioArtifacts
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/artifact/link/$objectId?$queryString";
-=======
         $uri = "/d2l/api/eP/$version/artifact/link/$objectId?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -157,15 +133,10 @@ class EportfolioArtifacts
      */
     public function postArtifactsFileNew($version, $fileArtifact)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/artifacts/file/new";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/eP/$version/artifacts/file/new";
         $body = $fileArtifact;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -189,11 +160,7 @@ class EportfolioArtifacts
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/artifacts/file/upload?$queryString";
-=======
         $uri = "/d2l/api/eP/$version/artifacts/file/upload?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -211,15 +178,10 @@ class EportfolioArtifacts
      */
     public function postArtifactFileObjectId($version, $objectId, $fileArtifact)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/artifact/file/$objectId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/eP/$version/artifact/file/$objectId";
         $body = $fileArtifact;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -235,15 +197,10 @@ class EportfolioArtifacts
      */
     public function postArtifactsLinkNew($version, $urlArtifact)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/artifacts/link/new";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/eP/$version/artifacts/link/new";
         $body = $urlArtifact;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -260,14 +217,9 @@ class EportfolioArtifacts
      */
     public function postArtifactLinkObjectId($version, $objectId, $urlArtifact)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/artifact/link/$objectId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/eP/$version/artifact/link/$objectId";
         $body = $urlArtifact;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 }

@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Demographics (data types, fields, users and org units) — Developer Platform (September 2019)
+ * Demographics (data types, fields, users and org units) — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/demographics.html
  */
 class Demographics
@@ -27,11 +27,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/demographics/users/$userId?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/demographics/users/$userId?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -78,11 +74,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/demographics/orgUnits/$orgUnitId/users/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/demographics/orgUnits/$orgUnitId/users/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -114,11 +106,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/demographics/orgUnits/$orgUnitId/users/$userId?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/demographics/orgUnits/$orgUnitId/users/$userId?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -157,11 +145,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/demographics/users/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/demographics/users/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -194,11 +178,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/demographics/users/$userId?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/demographics/users/$userId?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -222,15 +202,10 @@ class Demographics
      */
     public function putDemographicsUsersUserId($version, $userId, $demographicsEntryData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/demographics/users/$userId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/demographics/users/$userId";
         $body = $demographicsEntryData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -243,11 +218,7 @@ class Demographics
      */
     public function deleteDemographicsFieldsFieldId($version, $fieldId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/demographics/fields/$fieldId";
-=======
         $uri = "/d2l/api/lp/$version/demographics/fields/$fieldId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -279,11 +250,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/demographics/fields/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/demographics/fields/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -300,11 +267,7 @@ class Demographics
      */
     public function getDemographicsFieldsFieldId($version, $fieldId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/demographics/fields/$fieldId";
-=======
         $uri = "/d2l/api/lp/$version/demographics/fields/$fieldId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -322,15 +285,10 @@ class Demographics
      */
     public function postDemographicsFields($version, $demographicsField)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/demographics/fields/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/demographics/fields/";
         $body = $demographicsField;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -348,15 +306,10 @@ class Demographics
      */
     public function putDemographicsFieldsFieldId($version, $fieldId, $demographicsField)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/demographics/fields/$fieldId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/demographics/fields/$fieldId";
         $body = $demographicsField;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -387,11 +340,7 @@ class Demographics
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/demographics/dataTypes/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/demographics/dataTypes/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -408,11 +357,7 @@ class Demographics
      */
     public function getDemographicsDatatypesDataTypeId($version, $dataTypeId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/demographics/dataTypes/$dataTypeId";
-=======
         $uri = "/d2l/api/lp/$version/demographics/dataTypes/$dataTypeId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Users (user data, whoami) — Developer Platform (September 2019)
+ * Users (user data, whoami) — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/user.html
  */
 class Users
@@ -18,11 +18,7 @@ class Users
      */
     public function deleteUsersUserId($version, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/users/$userId";
-=======
         $uri = "/d2l/api/lp/$version/users/$userId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -57,31 +53,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/users/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/users/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
-        return new Request('GET', $uri);
-    }
-
-
-    /**
-     * Retrieve legal and preferred names for a particular user.
-     * @see https://docs.valence.desire2learn.com/res/user.html#get--d2l-api-lp-(version)-users-(userId)-names
-     * @return /PSR7 (Request)
-     * Return. This action returns a LegalPreferredNames JSON block.
-     *
-     * @param [D2LVERSION] $version API version.
-     * @param [D2LID] $userId User ID.
-     */
-    public function getUsersNamesUserId($version, $userId)
-    {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/users/$userId/names";
-=======
-        $uri = "/d2l/api/lp/$version/users/$userId/names";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -97,11 +69,23 @@ class Users
      */
     public function getUsersUserId($version, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/users/$userId";
-=======
         $uri = "/d2l/api/lp/$version/users/$userId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Retrieve legal and preferred names for a particular user.
+     * @see https://docs.valence.desire2learn.com/res/user.html#get--d2l-api-lp-(version)-users-(userId)-names
+     * @return /PSR7 (Request)
+     * Return. This action returns a LegalPreferredNames JSON block.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $userId User ID.
+     */
+    public function getUsersNamesUserId($version, $userId)
+    {
+        $uri = "/d2l/api/lp/$version/users/$userId/names";
         return new Request('GET', $uri);
     }
 
@@ -117,11 +101,7 @@ class Users
      */
     public function getUsersWhoami($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/users/whoami";
-=======
         $uri = "/d2l/api/lp/$version/users/whoami";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -139,15 +119,10 @@ class Users
      */
     public function postUsers($version, $createUserData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/users/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/users/";
         $body = $createUserData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -167,15 +142,10 @@ class Users
      */
     public function putUsersUserId($version, $userId, $updateUserData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/users/$userId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/users/$userId";
         $body = $updateUserData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -194,15 +164,10 @@ class Users
      */
     public function putUsersNamesUserId($version, $userId, $legalPreferredNames)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/users/$userId/names";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/users/$userId/names";
         $body = $legalPreferredNames;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -218,11 +183,7 @@ class Users
      */
     public function getUsersActivationUserId($version, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/users/$userId/activation";
-=======
         $uri = "/d2l/api/lp/$version/users/$userId/activation";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -237,15 +198,10 @@ class Users
      */
     public function putUsersActivationUserId($version, $userId, $userActivationData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/users/$userId/activation";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/users/$userId/activation";
         $body = $userActivationData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -258,15 +214,10 @@ class Users
      */
     public function postLinkuser($version, $googleAppsLinkingItem)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/gae/$version/linkuser";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/gae/$version/linkuser";
         $body = $googleAppsLinkingItem;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -281,11 +232,95 @@ class Users
      */
     public function deleteNotificationsInstantCarriersSubscriptionsCarrierIdMessageTypeId($version, $carrierId, $messageTypeId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId";
-=======
         $uri = "/d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Unsubscribe to notification messages of a particular type, delivered by a
+     * particular carrier, for a particular user.
+     * @see https://docs.valence.desire2learn.com/res/user.html#delete--d2l-api-lp-(version)-notifications-instant-carriers-(carrierId)-subscriptions-(messageTypeId)-users-(userId)
+     * @return /PSR7 (Request)
+     * @param [D2LVERSION] $version API version.
+     * @param [GUID] $carrierId Notification carrier ID.
+     * @param [GUID] $messageTypeId Message type ID.
+     * @param [D2LID] $userId User ID.
+     */
+    public function deleteNotificationsInstantCarriersSubscriptionsUsersCarrierIdMessageTypeIdUserId($version, $carrierId, $messageTypeId, $userId)
+    {
+        $uri = "/d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId/users/$userId";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Delete the notification number settings for users with the provided
+     * notification number.
+     * @see https://docs.valence.desire2learn.com/res/user.html#delete--d2l-api-lp-(version)-notifications-instant-numbers-(notificationNumber)
+     * @return /PSR7 (Request)
+     * @param [D2LVERSION] $version API version.
+     * @param [string] $notificationNumber Notification Number.
+     */
+    public function deleteNotificationsInstantNumbersNotificationNumber($version, $notificationNumber)
+    {
+        $uri = "/d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Delete the notification number settings for provided user with the provided
+     * notification number.
+     * @see https://docs.valence.desire2learn.com/res/user.html#delete--d2l-api-lp-(version)-notifications-instant-numbers-(notificationNumber)-users-(userId)
+     * @return /PSR7 (Request)
+     * @param [D2LVERSION] $version API version.
+     * @param [string] $notificationNumber Notification Number.
+     * @param [D2LID] $userId User ID.
+     */
+    public function deleteNotificationsInstantNumbersUsersNotificationNumberUserId($version, $notificationNumber, $userId)
+    {
+        $uri = "/d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber/users/$userId";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Delete the user’s notification number.
+     * @see https://docs.valence.desire2learn.com/res/user.html#delete--d2l-api-lp-(version)-notifications-instant-users-(userId)-number
+     * @return /PSR7 (Request)
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $userId User ID.
+     */
+    public function deleteNotificationsInstantUsersNumberUserId($version, $userId)
+    {
+        $uri = "/d2l/api/lp/$version/notifications/instant/users/$userId/number";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Retrieve a list of alerts for the given user.
+     * @see https://docs.valence.desire2learn.com/res/user.html#get--d2l-api-lp-(version)-alerts-user-(userId)
+     * @return /PSR7 (Request)
+     * Return. This action returns a object list page
+     * containing the resulting Alert
+     * blocks for the segment following your bookmark parameter (or the first
+     * segment if the parameter is empty or missing).
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $userId User ID.
+     * @param [ALERTCATEGORY_T] $category Optional. The Alert type category or if not present, all categories.
+     * category
+     */
+    public function getAlertsUserUserId($version, $userId, $category = null)
+    {
+        $queryParrams = [
+                            "category" => $category
+
+        ];
+        $queryString = http_build_query($queryParrams);
+        $uri = "/d2l/api/lp/$version/alerts/user/$userId?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -301,11 +336,7 @@ class Users
      */
     public function getNotificationsInstantCarriers($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/notifications/instant/carriers/";
-=======
         $uri = "/d2l/api/lp/$version/notifications/instant/carriers/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -322,31 +353,41 @@ class Users
      */
     public function getNotificationsInstantCarriersSubscriptionsCarrierId($version, $carrierId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/";
-=======
         $uri = "/d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
 
     /**
-     * Subscribe to notification messages of a particular type, delivered by a
-     * particular carrier.
-     * @see https://docs.valence.desire2learn.com/res/user.html#put--d2l-api-lp-(version)-notifications-instant-carriers-(carrierId)-subscriptions-(messageTypeId)
+     * Retrieve all the subscriptions for notification messages for the provided user.
+     * @see https://docs.valence.desire2learn.com/res/user.html#get--d2l-api-lp-(version)-notifications-instant-carriers-(carrierId)-subscriptions-users-(userId)-
      * @return /PSR7 (Request)
+     * Returns. This action returns a JSON array of SubscriptionOutput
+     * data blocks.
+     *
      * @param [D2LVERSION] $version API version.
      * @param [GUID] $carrierId Notification carrier ID.
-     * @param [GUID] $messageTypeId Message type ID.
+     * @param [D2LID] $userId User ID.
      */
-    public function putNotificationsInstantCarriersSubscriptionsCarrierIdMessageTypeId($version, $carrierId, $messageTypeId)
+    public function getNotificationsInstantCarriersSubscriptionsUsersCarrierIdUserId($version, $carrierId, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId";
-=======
-        $uri = "/d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
+        $uri = "/d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/users/$userId/";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Retrieve users with the provided notification number.
+     * @see https://docs.valence.desire2learn.com/res/user.html#get--d2l-api-lp-(version)-notifications-instant-numbers-(notificationNumber)-users
+     * @return /PSR7 (Request)
+     * Returns. This action returns a JSON array of UserIds.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [string] $notificationNumber Notification Number.
+     */
+    public function getNotificationsInstantNumbersUsersNotificationNumber($version, $notificationNumber)
+    {
+        $uri = "/d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber/users";
         return new Request('GET', $uri);
     }
 
@@ -363,11 +404,57 @@ class Users
      */
     public function getNotificationsInstantUsersNumberUserId($version, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/notifications/instant/users/$userId/number";
-=======
         $uri = "/d2l/api/lp/$version/notifications/instant/users/$userId/number";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Retrieve the notification settings for the provided user.
+     * @see https://docs.valence.desire2learn.com/res/user.html#get--d2l-api-lp-(version)-notifications-instant-users-(userId)-settings
+     * @return /PSR7 (Request)
+     * Return. This action returns the UserNotificationSettingsData
+     * JSON data block containing the notification settings for your provided user.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $userId User ID.
+     */
+    public function getNotificationsInstantUsersSettingsUserId($version, $userId)
+    {
+        $uri = "/d2l/api/lp/$version/notifications/instant/users/$userId/settings";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Subscribe to notification messages of a particular type, delivered by a
+     * particular carrier.
+     * @see https://docs.valence.desire2learn.com/res/user.html#put--d2l-api-lp-(version)-notifications-instant-carriers-(carrierId)-subscriptions-(messageTypeId)
+     * @return /PSR7 (Request)
+     * @param [D2LVERSION] $version API version.
+     * @param [GUID] $carrierId Notification carrier ID.
+     * @param [GUID] $messageTypeId Message type ID.
+     */
+    public function putNotificationsInstantCarriersSubscriptionsCarrierIdMessageTypeId($version, $carrierId, $messageTypeId)
+    {
+        $uri = "/d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Subscribe to notification messages of a particular type, delivered by a
+     * particular carrier, for a particular user.
+     * @see https://docs.valence.desire2learn.com/res/user.html#put--d2l-api-lp-(version)-notifications-instant-carriers-(carrierId)-subscriptions-(messageTypeId)-users-(userId)
+     * @return /PSR7 (Request)
+     * @param [D2LVERSION] $version API version.
+     * @param [GUID] $carrierId Notification carrier ID.
+     * @param [GUID] $messageTypeId Message type ID.
+     * @param [D2LID] $userId User ID.
+     */
+    public function putNotificationsInstantCarriersSubscriptionsUsersCarrierIdMessageTypeIdUserId($version, $carrierId, $messageTypeId, $userId)
+    {
+        $uri = "/d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId/users/$userId";
         return new Request('GET', $uri);
     }
 
@@ -388,92 +475,27 @@ class Users
      */
     public function putNotificationsInstantUsersNumberUserId($version, $userId, $notificationNumberUpdateInfo)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/notifications/instant/users/$userId/number";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/notifications/instant/users/$userId/number";
         $body = $notificationNumberUpdateInfo;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
     /**
-     * Delete the user’s notification number.
-     * @see https://docs.valence.desire2learn.com/res/user.html#delete--d2l-api-lp-(version)-notifications-instant-users-(userId)-number
+     * Update the notification settings for the provided user.
+     * @see https://docs.valence.desire2learn.com/res/user.html#put--d2l-api-lp-(version)-notifications-instant-users-(userId)-settings
      * @return /PSR7 (Request)
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $userId User ID.
+     * @param [Notifications.UserNotificationSettingsData] $userNotificationSettingsData Updated notification settings data.
      */
-    public function deleteNotificationsInstantUsersNumberUserId($version, $userId)
+    public function putNotificationsInstantUsersSettingsUserId($version, $userId, $userNotificationSettingsData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/notifications/instant/users/$userId/number";
-=======
-        $uri = "/d2l/api/lp/$version/notifications/instant/users/$userId/number";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
-        return new Request('GET', $uri);
-    }
-
-
-    /**
-     * Retrieve users with the provided notification number.
-     * @see https://docs.valence.desire2learn.com/res/user.html#get--d2l-api-lp-(version)-notifications-instant-numbers-(notificationNumber)-users
-     * @return /PSR7 (Request)
-     * Returns. This action returns a JSON array of UserIds.
-     *
-     * @param [D2LVERSION] $version API version.
-     * @param [string] $notificationNumber Notification Number.
-     */
-    public function getNotificationsInstantNumbersUsersNotificationNumber($version, $notificationNumber)
-    {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber/users";
-=======
-        $uri = "/d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber/users";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
-        return new Request('GET', $uri);
-    }
-
-
-    /**
-     * Delete the notification number settings for users with the provided
-     * notification number.
-     * @see https://docs.valence.desire2learn.com/res/user.html#delete--d2l-api-lp-(version)-notifications-instant-numbers-(notificationNumber)
-     * @return /PSR7 (Request)
-     * @param [D2LVERSION] $version API version.
-     * @param [string] $notificationNumber Notification Number.
-     */
-    public function deleteNotificationsInstantNumbersNotificationNumber($version, $notificationNumber)
-    {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber";
-=======
-        $uri = "/d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
-        return new Request('GET', $uri);
-    }
-
-
-    /**
-     * Delete the notification number settings for provided user with the provided
-     * notification number.
-     * @see https://docs.valence.desire2learn.com/res/user.html#delete--d2l-api-lp-(version)-notifications-instant-numbers-(notificationNumber)-users-(userId)
-     * @return /PSR7 (Request)
-     * @param [D2LVERSION] $version API version.
-     * @param [string] $notificationNumber Notification Number.
-     * @param [D2LID] $userId User ID.
-     */
-    public function deleteNotificationsInstantNumbersUsersNotificationNumberUserId($version, $notificationNumber, $userId)
-    {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber/users/$userId";
-=======
-        $uri = "/d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber/users/$userId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
-        return new Request('GET', $uri);
+        $uri = "/d2l/api/lp/$version/notifications/instant/users/$userId/settings";
+        $body = $userNotificationSettingsData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -486,11 +508,7 @@ class Users
      */
     public function deleteUsersPasswordUserId($version, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/users/$userId/password";
-=======
         $uri = "/d2l/api/lp/$version/users/$userId/password";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -504,11 +522,7 @@ class Users
      */
     public function postUsersPasswordUserId($version, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/users/$userId/password";
-=======
         $uri = "/d2l/api/lp/$version/users/$userId/password";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -523,15 +537,10 @@ class Users
      */
     public function putUsersPasswordUserId($version, $userId, $userPasswordData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/users/$userId/password";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/users/$userId/password";
         $body = $userPasswordData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -543,11 +552,7 @@ class Users
      */
     public function deleteProfileMyprofileImage($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/profile/myProfile/image";
-=======
         $uri = "/d2l/api/lp/$version/profile/myProfile/image";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -561,11 +566,7 @@ class Users
      */
     public function deleteProfileImageProfileId($version, $profileId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/profile/$profileId/image";
-=======
         $uri = "/d2l/api/lp/$version/profile/$profileId/image";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -579,11 +580,7 @@ class Users
      */
     public function deleteProfileUserImageUserId($version, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/profile/user/$userId/image";
-=======
         $uri = "/d2l/api/lp/$version/profile/user/$userId/image";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -599,11 +596,7 @@ class Users
      */
     public function getProfileMyprofile($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/profile/myProfile";
-=======
         $uri = "/d2l/api/lp/$version/profile/myProfile";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -627,11 +620,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/profile/myProfile/image?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/profile/myProfile/image?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -648,11 +637,7 @@ class Users
      */
     public function getProfileProfileId($version, $profileId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/profile/$profileId";
-=======
         $uri = "/d2l/api/lp/$version/profile/$profileId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -677,11 +662,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/profile/$profileId/image?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/profile/$profileId/image?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -698,11 +679,7 @@ class Users
      */
     public function getProfileUserUserId($version, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/profile/user/$userId";
-=======
         $uri = "/d2l/api/lp/$version/profile/user/$userId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -727,11 +704,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/profile/user/$userId/image?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/profile/user/$userId/image?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -748,11 +721,7 @@ class Users
      */
     public function postProfileMyprofileImage($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/profile/myProfile/image";
-=======
         $uri = "/d2l/api/lp/$version/profile/myProfile/image";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -770,11 +739,7 @@ class Users
      */
     public function postProfileImageProfileId($version, $profileId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/profile/$profileId/image";
-=======
         $uri = "/d2l/api/lp/$version/profile/$profileId/image";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -792,11 +757,7 @@ class Users
      */
     public function postProfileUserImageUserId($version, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/profile/user/$userId/image";
-=======
         $uri = "/d2l/api/lp/$version/profile/user/$userId/image";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -816,15 +777,10 @@ class Users
      */
     public function putProfileMyprofile($version, $userProfileUpdateData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/profile/myProfile";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/profile/myProfile";
         $body = $userProfileUpdateData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -844,15 +800,10 @@ class Users
      */
     public function putProfileProfileId($version, $profileId, $userProfileUpdateData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/profile/$profileId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/profile/$profileId";
         $body = $userProfileUpdateData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -868,11 +819,7 @@ class Users
      */
     public function getRoles($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/roles/";
-=======
         $uri = "/d2l/api/lp/$version/roles/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -889,11 +836,7 @@ class Users
      */
     public function getRolesRoleId($version, $roleId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/roles/$roleId";
-=======
         $uri = "/d2l/api/lp/$version/roles/$roleId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -912,11 +855,7 @@ class Users
      */
     public function getRolesOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/roles/";
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/roles/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -945,15 +884,24 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/roles/?$queryString";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/roles/?$queryString";
         $body = $roleCopyData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
+    }
+
+
+    /**
+     * Terminate all active sessions for a user.
+     * @see https://docs.valence.desire2learn.com/res/user.html#delete--d2l-api-lp-(version)-sessions-(userId)
+     * @return /PSR7 (Request)
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $userId User ID.
+     */
+    public function deleteSessionsUserId($version, $userId)
+    {
+        $uri = "/d2l/api/lp/$version/sessions/$userId";
+        return new Request('GET', $uri);
     }
 
 
@@ -979,11 +927,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/imsconfig/roles/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/imsconfig/roles/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -1016,11 +960,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/imsconfig/map/roles/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/imsconfig/map/roles/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -1045,11 +985,7 @@ class Users
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/imsconfig/map/roles/$roleId?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/imsconfig/map/roles/$roleId?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -1076,15 +1012,10 @@ class Users
      */
     public function putImsconfigMapRolesRoleId($version, $roleId, $mappings)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/imsconfig/map/roles/$roleId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/imsconfig/map/roles/$roleId";
         $body = $mappings;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -1097,11 +1028,7 @@ class Users
      */
     public function deleteGlobalusermappingUsersUserId($version, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/globalusermapping/users/$userid";
-=======
         $uri = "/d2l/api/lp/$version/globalusermapping/users/$userid";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -1117,17 +1044,13 @@ class Users
      */
     public function getGlobalusermappingUsersUserId($version, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/globalusermapping/users/$userid";
-=======
         $uri = "/d2l/api/lp/$version/globalusermapping/users/$userid";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
 
     /**
-     * Retrieve the global map identifier for a particular user.
+     * Retrieve the D2L user map identifier for a particular user.
      * @see https://docs.valence.desire2learn.com/res/user.html#get--d2l-api-lp-(version)-globalusermapping-identifiers-(identifier)
      * @return /PSR7 (Request)
      * Return. This route returns a simple JSON block containing the D2L user identifier
@@ -1138,11 +1061,7 @@ class Users
      */
     public function getGlobalusermappingIdentifiersIdentifier($version, $identifier)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/globalusermapping/identifiers/$identifier";
-=======
         $uri = "/d2l/api/lp/$version/globalusermapping/identifiers/$identifier";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -1157,14 +1076,63 @@ class Users
      */
     public function putGlobalusermappingUsersUserId($version, $userId, $mapIdentifier)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/globalusermapping/users/$userid";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/globalusermapping/users/$userid";
         $body = $mapIdentifier;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
+    }
+
+
+    /**
+     * Delete parental relationships for given users.
+     * @see https://docs.valence.desire2learn.com/res/user.html#delete--d2l-api-bfp-(version)-relationships-
+     * @return /PSR7 (Request)
+     * Input. Requires a JSON object in the body of the request. This will
+     * indicate which relationships need to be deleted. This route is capable of
+     * receiving a batch of up to 1000 user relationships in a JSON Object.
+     *
+     * @param [D2LVERSION] $version API version.
+     */
+    public function deleteRelationships($version)
+    {
+        $uri = "/d2l/api/bfp/$version/relationships/";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Retrieve parental relationships for a particular user.
+     * @see https://docs.valence.desire2learn.com/res/user.html#get--d2l-api-bfp-(version)-relationships-(userId)
+     * @return /PSR7 (Request)
+     * Return. This route will return a ParentalRelationshipMappings JSON object listing the relationships
+     * attached to the userId.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $userId User ID.
+     */
+    public function getRelationshipsUserId($version, $userId)
+    {
+        $uri = "/d2l/api/bfp/$version/relationships/$userId";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Create relationships for given users.
+     * @see https://docs.valence.desire2learn.com/res/user.html#put--d2l-api-bfp-(version)-relationships-
+     * @return /PSR7 (Request)
+     * Input. Requires a JSON object in the body of the request. This will
+     * indicate the relationships to be created. This route is capable of receiving
+     * a batch of up to 1000 user relationships in a JSON Object.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [ParentalRelationshipMapping] $parentalRelationshipMapping Parental relationship mapping.
+     */
+    public function putRelationships($version, $parentalRelationshipMapping)
+    {
+        $uri = "/d2l/api/bfp/$version/relationships/";
+        $body = $parentalRelationshipMapping;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 }

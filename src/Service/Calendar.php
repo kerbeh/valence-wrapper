@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Calendar (Events and scheduling) — Developer Platform (September 2019)
+ * Calendar (Events and scheduling) — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/calendar.html
  */
 class Calendar
@@ -19,11 +19,7 @@ class Calendar
      */
     public function deleteCalendarEventOrgUnitIdEventId($version, $orgUnitId, $eventId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -41,11 +37,7 @@ class Calendar
      */
     public function getCalendarEventOrgUnitIdEventId($version, $orgUnitId, $eventId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -70,11 +62,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/events/?$queryString";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/calendar/events/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -108,11 +96,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/calendar/events/myEvents/?$queryString";
-=======
         $uri = "/d2l/api/le/$version/calendar/events/myEvents/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -145,11 +129,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/events/myEvents/?$queryString";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/calendar/events/myEvents/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -184,11 +164,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/calendar/events/myEvents/itemCounts/?$queryString";
-=======
         $uri = "/d2l/api/le/$version/calendar/events/myEvents/itemCounts/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -220,11 +196,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/events/myEvents/itemCount?$queryString";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/calendar/events/myEvents/itemCount?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -253,11 +225,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/events/orgunits/?$queryString";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/calendar/events/orgunits/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -291,11 +259,7 @@ class Calendar
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/events/user/?$queryString";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/calendar/events/user/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -318,15 +282,10 @@ class Calendar
      */
     public function postCalendarEventOrgUnitId($version, $orgUnitId, $eventData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/event/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/calendar/event/";
         $body = $eventData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -349,14 +308,38 @@ class Calendar
      */
     public function putCalendarEventOrgUnitIdEventId($version, $orgUnitId, $eventId, $eventData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
         $body = $eventData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
+    }
+
+
+    /**
+     * Retrieve a list of users with access to a specified calendar event.
+     * @see https://docs.valence.desire2learn.com/res/calendar.html#get--d2l-api-le-(version)-(orgUnitId)-calendar-event-(eventId)-access-
+     * @return /PSR7 (Request)
+     * Return. This action returns a object list page
+     * containing the resulting UserAccess
+     * blocks for the segment following your bookmark parameter (or the first
+     * segment if that parameter is empty or missing).
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $eventId Event ID.
+     * @param [D2LID] $userId Optional. Retrieve access for a single user.
+     * userId
+     * @param [D2LID] $roleId Optional. Retrieve access for users with the given role.
+     * roleId
+     */
+    public function getCalendarEventAccessOrgUnitIdEventId($version, $orgUnitId, $eventId, $userId = null, $roleId = null)
+    {
+        $queryParrams = [
+                            "userId" => $userId,                    "roleId" => $roleId
+
+        ];
+        $queryString = http_build_query($queryParrams);
+        $uri = "/d2l/api/le/$version/$orgUnitId/calendar/event/$eventId/access/?$queryString";
+        return new Request('GET', $uri);
     }
 }

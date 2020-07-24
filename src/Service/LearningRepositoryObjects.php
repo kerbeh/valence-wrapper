@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Learning Repository objects — Developer Platform (September 2019)
+ * Learning Repository objects — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/lor.html
  */
 class LearningRepositoryObjects
@@ -32,11 +32,7 @@ class LearningRepositoryObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lr/$version/objects/search/?$queryString";
-=======
         $uri = "/d2l/api/lr/$version/objects/search/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -55,11 +51,7 @@ class LearningRepositoryObjects
      */
     public function getObjectsDownloadObjectId($version, $objectId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/download/";
-=======
         $uri = "/d2l/api/lr/$version/objects/$objectId/$objectVersion/download/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -79,11 +71,7 @@ class LearningRepositoryObjects
      */
     public function getObjectsDownloadfileObjectId($version, $objectId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/downloadfile/";
-=======
         $uri = "/d2l/api/lr/$version/objects/$objectId/$objectVersion/downloadfile/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -102,11 +90,7 @@ class LearningRepositoryObjects
      */
     public function getObjectsLinkObjectId($version, $objectId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/link/";
-=======
         $uri = "/d2l/api/lr/$version/objects/$objectId/$objectVersion/link/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -125,11 +109,7 @@ class LearningRepositoryObjects
      */
     public function getObjectsPropertiesObjectId($version, $objectId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lr/$version/objects/$objectId/properties/";
-=======
         $uri = "/d2l/api/lr/$version/objects/$objectId/properties/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -148,11 +128,7 @@ class LearningRepositoryObjects
      */
     public function getObjectsMetadataObjectIdObjectVersion($version, $objectId, $objectVersion)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/metadata/";
-=======
         $uri = "/d2l/api/lr/$version/objects/$objectId/$objectVersion/metadata/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -172,11 +148,7 @@ class LearningRepositoryObjects
      */
     public function getObjectsPropertiesObjectIdObjectVersion($version, $objectId, $objectVersion)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/properties/";
-=======
         $uri = "/d2l/api/lr/$version/objects/$objectId/$objectVersion/properties/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -197,11 +169,7 @@ class LearningRepositoryObjects
      */
     public function postObjectsDeleteObjectId($version, $objectId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lr/$version/objects/$objectId/delete/";
-=======
         $uri = "/d2l/api/lr/$version/objects/$objectId/delete/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -225,11 +193,7 @@ class LearningRepositoryObjects
      */
     public function postObjectsObjectId($version, $objectId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lr/$version/objects/$objectId/";
-=======
         $uri = "/d2l/api/lr/$version/objects/$objectId/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -255,15 +219,10 @@ class LearningRepositoryObjects
      */
     public function postObjectsPropertiesObjectId($version, $objectId, $lRWSObjectPropertiesInput)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lr/$version/objects/$objectId/properties/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lr/$version/objects/$objectId/properties/";
         $body = $lRWSObjectPropertiesInput;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -289,15 +248,10 @@ class LearningRepositoryObjects
      */
     public function postObjectsPropertiesObjectIdObjectVersion($version, $objectId, $objectVersion, $lRWSObjectPropertiesInput)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lr/$version/objects/$objectId/$objectVersion/properties/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lr/$version/objects/$objectId/$objectVersion/properties/";
         $body = $lRWSObjectPropertiesInput;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -319,11 +273,7 @@ class LearningRepositoryObjects
      */
     public function putObjects($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lr/$version/objects/";
-=======
         $uri = "/d2l/api/lr/$version/objects/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -352,11 +302,7 @@ class LearningRepositoryObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lr/$version/repository/$repositoryId/listorgUnittrusts/?$queryString";
-=======
         $uri = "/d2l/api/lr/$version/repository/$repositoryId/listorgUnittrusts/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -381,11 +327,7 @@ class LearningRepositoryObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lr/$version/repositories/all/?$queryString";
-=======
         $uri = "/d2l/api/lr/$version/repositories/all/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -413,11 +355,7 @@ class LearningRepositoryObjects
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lr/$version/repositories/$type/?$queryString";
-=======
         $uri = "/d2l/api/lr/$version/repositories/$type/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

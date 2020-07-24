@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Data Hub and Data Export Framework — Developer Platform (September 2019)
+ * Data Hub and Data Export Framework — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/dataExport.html
  */
 class DataHubAndDataExportFramework
@@ -20,11 +20,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportList($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/dataExport/list";
-=======
         $uri = "/d2l/api/lp/$version/dataExport/list";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -41,11 +37,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportListDataSetId($version, $dataSetId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/dataExport/list/$dataSetId";
-=======
         $uri = "/d2l/api/lp/$version/dataExport/list/$dataSetId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -62,15 +54,10 @@ class DataHubAndDataExportFramework
      */
     public function postDataexportCreate($version, $createExportJobData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/dataExport/create";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/dataExport/create";
         $body = $createExportJobData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -93,11 +80,7 @@ class DataHubAndDataExportFramework
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/dataExport/jobs?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/dataExport/jobs?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -114,11 +97,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportJobsExportJobId($version, $exportJobId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/dataExport/jobs/$exportJobId";
-=======
         $uri = "/d2l/api/lp/$version/dataExport/jobs/$exportJobId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -136,11 +115,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportDownloadExportJobId($version, $exportJobId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/dataExport/download/$exportJobId";
-=======
         $uri = "/d2l/api/lp/$version/dataExport/download/$exportJobId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -156,11 +131,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportBdsList($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/dataExport/bds/list";
-=======
         $uri = "/d2l/api/lp/$version/dataExport/bds/list";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -179,11 +150,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportBdsDownloadPluginId($version, $pluginId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/dataExport/bds/download/$pluginid";
-=======
         $uri = "/d2l/api/lp/$version/dataExport/bds/download/$pluginid";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -207,11 +174,7 @@ class DataHubAndDataExportFramework
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/dataExport/bds?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/dataExport/bds?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -231,11 +194,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportBdsPluginIdIdentifier($version, $pluginId, $identifier)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/dataExport/bds/$pluginid/$identifier";
-=======
         $uri = "/d2l/api/lp/$version/dataExport/bds/$pluginid/$identifier";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -251,11 +210,7 @@ class DataHubAndDataExportFramework
      */
     public function getDataexportSchemaBds($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/dataExport/schema/bds";
-=======
         $uri = "/d2l/api/lp/$version/dataExport/schema/bds";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

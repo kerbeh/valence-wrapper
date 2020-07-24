@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * ePortfolio Reflection — Developer Platform (September 2019)
+ * ePortfolio Reflection — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/reflection.html
  */
 class EportfolioReflection
@@ -18,11 +18,7 @@ class EportfolioReflection
      */
     public function deleteReflectionObjectId($version, $objectId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/reflection/$objectId";
-=======
         $uri = "/d2l/api/eP/$version/reflection/$objectId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -37,11 +33,7 @@ class EportfolioReflection
      */
     public function deleteReflectionOnReflectionIdObjectId($version, $reflectionId, $objectId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/reflection/$reflectionId/on/$objectId";
-=======
         $uri = "/d2l/api/eP/$version/reflection/$reflectionId/on/$objectId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -65,11 +57,7 @@ class EportfolioReflection
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/reflection/$objectId?$queryString";
-=======
         $uri = "/d2l/api/eP/$version/reflection/$objectId?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -86,15 +74,10 @@ class EportfolioReflection
      */
     public function postReflectionsNew($version, $reflection)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/reflections/new";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/eP/$version/reflections/new";
         $body = $reflection;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -111,15 +94,10 @@ class EportfolioReflection
      */
     public function postReflectionObjectId($version, $objectId, $reflection)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/reflection/$objectId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/eP/$version/reflection/$objectId";
         $body = $reflection;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -133,11 +111,7 @@ class EportfolioReflection
      */
     public function postReflectionOnReflectionIdObjectId($version, $reflectionId, $objectId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/reflection/$reflectionId/on/$objectId";
-=======
         $uri = "/d2l/api/eP/$version/reflection/$reflectionId/on/$objectId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * ePortfolio Learning Objective — Developer Platform (September 2019)
+ * ePortfolio Learning Objective — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/epobjective.html
  */
 class EportfolioLearningObjective
@@ -19,11 +19,7 @@ class EportfolioLearningObjective
      */
     public function deleteLearningobjectiveAssociationObjectiveIdObjectId($version, $objectiveId, $objectId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/learningobjective/$objectiveId/association/$objectId";
-=======
         $uri = "/d2l/api/eP/$version/learningobjective/$objectiveId/association/$objectId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -37,11 +33,7 @@ class EportfolioLearningObjective
      */
     public function deleteLearningobjectiveObjectiveId($version, $objectiveId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/learningobjective/$objectiveId";
-=======
         $uri = "/d2l/api/eP/$version/learningobjective/$objectiveId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -65,11 +57,7 @@ class EportfolioLearningObjective
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/learningobjective/$objectiveId?$queryString";
-=======
         $uri = "/d2l/api/eP/$version/learningobjective/$objectiveId?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -87,15 +75,10 @@ class EportfolioLearningObjective
      */
     public function postLearningobjectiveObjectiveId($version, $objectiveId, $learningObjective)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/learningobjective/$objectiveId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/eP/$version/learningobjective/$objectiveId";
         $body = $learningObjective;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -109,11 +92,7 @@ class EportfolioLearningObjective
      */
     public function postLearningobjectiveAssociationObjectiveIdObjectId($version, $objectiveId, $objectId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/learningobjective/$objectiveId/association/$objectId";
-=======
         $uri = "/d2l/api/eP/$version/learningobjective/$objectiveId/association/$objectId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

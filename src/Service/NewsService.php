@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * News service (news items, user feed) — Developer Platform (September 2019)
+ * News service (news items, user feed) — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/news.html
  */
 class NewsService
@@ -19,11 +19,7 @@ class NewsService
      */
     public function deleteNewsOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -39,11 +35,7 @@ class NewsService
      */
     public function deleteNewsAttachmentsOrgUnitIdNewsItemIdFileId($version, $orgUnitId, $newsItemId, $fileId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/$fileId";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/$fileId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -58,7 +50,7 @@ class NewsService
      * Return. This action returns a JSON array of
      * UserFeedResource data blocks. Note that
      * each element in this list will be named appropriately for the kind of
-     * resource it envelops.
+     * resource it envelopes.
      *
      * @param [D2LVERSION] $version API version.
      * @param [UTCDateTime] $since Optional. Earliest publication time to retrieve.
@@ -73,11 +65,7 @@ class NewsService
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/feed/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/feed/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -105,11 +93,7 @@ class NewsService
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/news/user/$userId/?$queryString";
-=======
         $uri = "/d2l/api/le/$version/news/user/$userId/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -133,11 +117,7 @@ class NewsService
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/news/?$queryString";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/news/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -163,11 +143,7 @@ class NewsService
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/news/deleted/?$queryString";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/news/deleted/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -185,11 +161,7 @@ class NewsService
      */
     public function getNewsUserOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/news/user/$userId/";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/news/user/$userId/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -207,11 +179,34 @@ class NewsService
      */
     public function getNewsOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Retrieve a list of users with access to a specified news item.
+     * @see https://docs.valence.desire2learn.com/res/news.html#get--d2l-api-le-(version)-(orgUnitId)-news-(newsItemId)-access-
+     * @return /PSR7 (Request)
+     * Return. This action returns a paged result set containing the resulting UserAccess blocks for the segment following your bookmark
+     * parameter (or the first segment if that parameter is empty or missing).
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $newsItemId News Item ID.
+     * @param [D2LID] $userId Optional. Retrieve access for a single user.
+     * userId
+     * @param [D2LID] $roleId Optional. Retrieve access for users with the given role.
+     * roleId
+     */
+    public function getNewsAccessOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId, $userId = null, $roleId = null)
+    {
+        $queryParrams = [
+                            "userId" => $userId,                    "roleId" => $roleId
+
+        ];
+        $queryString = http_build_query($queryParrams);
+        $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/access/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -229,11 +224,7 @@ class NewsService
      */
     public function getNewsAttachmentsOrgUnitIdNewsItemIdFileId($version, $orgUnitId, $newsItemId, $fileId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/$fileId";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/$fileId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -255,15 +246,10 @@ class NewsService
      */
     public function postNewsOrgUnitId($version, $orgUnitId, $newsItemData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/news/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/news/";
         $body = $newsItemData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -280,11 +266,7 @@ class NewsService
      */
     public function postNewsDeletedRestoreOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/news/deleted/$newsItemId/restore";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/news/deleted/$newsItemId/restore";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -303,11 +285,7 @@ class NewsService
      */
     public function postNewsAttachmentsOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -322,11 +300,7 @@ class NewsService
      */
     public function postNewsDismissOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/dismiss";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/dismiss";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -341,11 +315,7 @@ class NewsService
      */
     public function postNewsPublishOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/publish";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/publish";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -360,11 +330,7 @@ class NewsService
      */
     public function postNewsRestoreOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId/restore";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/restore";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -380,14 +346,9 @@ class NewsService
      */
     public function putNewsOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId, $newsItemData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/news/$newsItemId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId";
         $body = $newsItemData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 }

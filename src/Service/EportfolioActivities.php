@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * ePortfolio Activities — Developer Platform (September 2019)
+ * ePortfolio Activities — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/epactivity.html
  */
 class EportfolioActivities
@@ -43,11 +43,7 @@ class EportfolioActivities
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/activity/?$queryString";
-=======
         $uri = "/d2l/api/eP/$version/activity/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -63,11 +59,7 @@ class EportfolioActivities
      */
     public function getActivityFilters($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/activity/filters/";
-=======
         $uri = "/d2l/api/eP/$version/activity/filters/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -96,11 +88,7 @@ class EportfolioActivities
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/activity/my/?$queryString";
-=======
         $uri = "/d2l/api/eP/$version/activity/my/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -129,11 +117,7 @@ class EportfolioActivities
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/activity/shared/?$queryString";
-=======
         $uri = "/d2l/api/eP/$version/activity/shared/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -180,11 +164,7 @@ class EportfolioActivities
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/newsfeed/?$queryString";
-=======
         $uri = "/d2l/api/eP/$version/newsfeed/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -200,11 +180,7 @@ class EportfolioActivities
      */
     public function getNewsfeedFilters($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/newsfeed/filters/";
-=======
         $uri = "/d2l/api/eP/$version/newsfeed/filters/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -251,11 +227,7 @@ class EportfolioActivities
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/dashboard/?$queryString";
-=======
         $uri = "/d2l/api/eP/$version/dashboard/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -271,11 +243,7 @@ class EportfolioActivities
      */
     public function getDashboardFilters($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/eP/$version/dashboard/filters/";
-=======
         $uri = "/d2l/api/eP/$version/dashboard/filters/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

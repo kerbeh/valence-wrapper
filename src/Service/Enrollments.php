@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Enrollments (groups, sections, auditors) — Developer Platform (September 2019)
+ * Enrollments (groups, sections, auditors) — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/enroll.html
  */
 class Enrollments
@@ -23,11 +23,7 @@ class Enrollments
      */
     public function deleteEnrollmentsOrgunitsUsersOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId";
-=======
         $uri = "/d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -46,11 +42,7 @@ class Enrollments
      */
     public function deleteEnrollmentsUsersOrgunitsUserIdOrgUnitId($version, $userId, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/enrollments/users/$userId/orgUnits/$orgUnitId";
-=======
         $uri = "/d2l/api/lp/$version/enrollments/users/$userId/orgUnits/$orgUnitId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -71,11 +63,7 @@ class Enrollments
      */
     public function getClasslistOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/classlist/";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/classlist/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -87,7 +75,7 @@ class Enrollments
      * Input. You can provide a searchTerm query parameter string to filter
      * results returned; the back-end service looks for fields that contain your
      * search term in these ClasslistUser
-     * fields: Identifier, UserName, OrgDefinedId, FirstName, LastName.
+     * fields: UserName, OrgDefinedId, FirstName, LastName.
      *
      * Return. This action returns an object list page
      * JSON block containing a list of ClasslistUser
@@ -99,11 +87,7 @@ class Enrollments
      */
     public function getClasslistPagedOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/classlist/paged/";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/classlist/paged/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -154,11 +138,7 @@ class Enrollments
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/enrollments/myenrollments/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/enrollments/myenrollments/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -174,11 +154,7 @@ class Enrollments
      */
     public function getEnrollmentsMyenrollmentsOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId";
-=======
         $uri = "/d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -195,11 +171,7 @@ class Enrollments
      */
     public function getEnrollmentsMyenrollmentsAccessOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/access";
-=======
         $uri = "/d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/access";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -221,21 +193,19 @@ class Enrollments
      * @param [D2LID] $orgUnitId Org unit ID.
      * @param [D2LID] $roleId Optional. Filter list to a specific user role.
      * roleId
+     * @param [bool] $isActive Optional. Filter list to only active or inactive users.
+     * isActive
      * @param [string] $bookmark Optional. Bookmark to use for fetching next data set segment.
      * bookmark
      */
-    public function getEnrollmentsOrgunitsUsersOrgUnitId($version, $orgUnitId, $roleId = null, $bookmark = null)
+    public function getEnrollmentsOrgunitsUsersOrgUnitId($version, $orgUnitId, $roleId = null, $isActive = null, $bookmark = null)
     {
         $queryParrams = [
-                            "roleId" => $roleId,                    "bookmark" => $bookmark
+                            "roleId" => $roleId,                    "isActive" => $isActive,                    "bookmark" => $bookmark
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -252,11 +222,7 @@ class Enrollments
      */
     public function getEnrollmentsOrgunitsUsersOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId";
-=======
         $uri = "/d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -290,11 +256,7 @@ class Enrollments
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/enrollments/users/$userId/orgUnits/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/enrollments/users/$userId/orgUnits/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -312,11 +274,7 @@ class Enrollments
      */
     public function getEnrollmentsUsersOrgunitsUserIdOrgUnitId($version, $userId, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/enrollments/users/$userId/orgUnits/$orgUnitId";
-=======
         $uri = "/d2l/api/lp/$version/enrollments/users/$userId/orgUnits/$orgUnitId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -333,15 +291,10 @@ class Enrollments
      */
     public function postEnrollments($version, $createEnrollmentData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/enrollments/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/enrollments/";
         $body = $createEnrollmentData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -354,11 +307,7 @@ class Enrollments
      */
     public function deleteEnrollmentsMyenrollmentsPinOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/pin";
-=======
         $uri = "/d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/pin";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -373,11 +322,7 @@ class Enrollments
      */
     public function deleteEnrollmentsOrgunitsUsersPinOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId/pin";
-=======
         $uri = "/d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId/pin";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -393,11 +338,7 @@ class Enrollments
      */
     public function postEnrollmentsMyenrollmentsPinOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/pin";
-=======
         $uri = "/d2l/api/lp/$version/enrollments/myenrollments/$orgUnitId/pin";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -412,11 +353,7 @@ class Enrollments
      */
     public function postEnrollmentsOrgunitsUsersPinOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId/pin";
-=======
         $uri = "/d2l/api/lp/$version/enrollments/orgUnits/$orgUnitId/users/$userId/pin";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -431,11 +368,7 @@ class Enrollments
      */
     public function deleteGroupcategoriesOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -451,11 +384,7 @@ class Enrollments
      */
     public function deleteGroupcategoriesGroupsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -472,11 +401,7 @@ class Enrollments
      */
     public function deleteGroupcategoriesGroupsEnrollmentsOrgUnitIdGroupCategoryIdGroupIdUserId($version, $orgUnitId, $groupCategoryId, $groupId, $userId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId/enrollments/$userId";
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId/enrollments/$userId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -493,11 +418,7 @@ class Enrollments
      */
     public function getGroupcategoriesOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/";
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -515,11 +436,7 @@ class Enrollments
      */
     public function getGroupcategoriesOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -537,11 +454,7 @@ class Enrollments
      */
     public function getGroupcategoriesGroupsOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/";
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -560,11 +473,7 @@ class Enrollments
      */
     public function getGroupcategoriesGroupsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -582,15 +491,10 @@ class Enrollments
      */
     public function postGroupcategoriesOrgUnitId($version, $orgUnitId, $groupCategoryData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/";
         $body = $groupCategoryData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -608,15 +512,10 @@ class Enrollments
      */
     public function postGroupcategoriesGroupsOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId, $groupData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/";
         $body = $groupData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -632,15 +531,10 @@ class Enrollments
      */
     public function postGroupcategoriesGroupsEnrollmentsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId, $groupEnrollment)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId/enrollments/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId/enrollments/";
         $body = $groupEnrollment;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -658,15 +552,10 @@ class Enrollments
      */
     public function putGroupcategoriesOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId, $groupCategoryData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId";
         $body = $groupCategoryData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -685,15 +574,10 @@ class Enrollments
      */
     public function putGroupcategoriesGroupsOrgUnitIdGroupCategoryIdGroupId($version, $orgUnitId, $groupCategoryId, $groupId, $groupData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/groups/$groupId";
         $body = $groupData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -707,11 +591,7 @@ class Enrollments
      */
     public function deleteSectionsOrgUnitIdSectionId($version, $orgUnitId, $sectionId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -728,11 +608,7 @@ class Enrollments
      */
     public function getSectionsOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/";
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/sections/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -749,11 +625,7 @@ class Enrollments
      */
     public function getSectionsSettingsOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/settings";
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/sections/settings";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -771,11 +643,7 @@ class Enrollments
      */
     public function getSectionsOrgUnitIdSectionId($version, $orgUnitId, $sectionId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -793,15 +661,10 @@ class Enrollments
      */
     public function postSectionsOrgUnitId($version, $orgUnitId, $sectionData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/sections/";
         $body = $sectionData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -816,15 +679,10 @@ class Enrollments
      */
     public function postSectionsEnrollmentsOrgUnitIdSectionId($version, $orgUnitId, $sectionId, $sectionEnrollment)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/$sectionId/enrollments/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/sections/$sectionId/enrollments/";
         $body = $sectionEnrollment;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -841,15 +699,10 @@ class Enrollments
      */
     public function putSectionsOrgUnitId($version, $orgUnitId, $sectionPropertyData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/sections/";
         $body = $sectionPropertyData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -866,15 +719,10 @@ class Enrollments
      */
     public function putSectionsSettingsOrgUnitId($version, $orgUnitId, $sectionPropertyData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/settings";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/sections/settings";
         $body = $sectionPropertyData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -892,15 +740,10 @@ class Enrollments
      */
     public function putSectionsOrgUnitIdSectionId($version, $orgUnitId, $sectionId, $sectionData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/$orgUnitId/sections/$sectionId";
         $body = $sectionData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -918,15 +761,10 @@ class Enrollments
      */
     public function deleteAuditingAuditorsAuditeesAuditorId($version, $auditorId, $auditeeId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
         $body = $auditeeId;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -942,11 +780,7 @@ class Enrollments
      */
     public function getAuditingAuditeesAuditeeId($version, $auditeeId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/auditing/auditees/$auditeeId";
-=======
         $uri = "/d2l/api/le/$version/auditing/auditees/$auditeeId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -961,11 +795,7 @@ class Enrollments
      */
     public function getAuditingAuditors($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/auditing/auditors/$auditorId";
-=======
         $uri = "/d2l/api/le/$version/auditing/auditors/$auditorId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -981,11 +811,7 @@ class Enrollments
      */
     public function getAuditingAuditorsAuditeesAuditorId($version, $auditorId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
-=======
         $uri = "/d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -1004,14 +830,9 @@ class Enrollments
      */
     public function postAuditingAuditorsAuditeesAuditorId($version, $auditorId, $auditeeId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/le/$version/auditing/auditors/$auditorId/auditees/";
         $body = $auditeeId;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 }

@@ -1,14 +1,10 @@
 <?php
-<<<<<<< HEAD
-=======
-
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
 namespace ValenceWrapper\Service;
 
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Courses (course offerings, templates, schemas) — Developer Platform (September 2019)
+ * Courses (course offerings, templates, schemas) — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/course.html
  */
 class Courses
@@ -22,11 +18,7 @@ class Courses
      */
     public function deleteCoursesOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/courses/$orgUnitId";
-=======
         $uri = "/d2l/api/lp/$version/courses/$orgUnitId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -42,11 +34,7 @@ class Courses
      */
     public function getCoursesSchema($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/courses/schema";
-=======
         $uri = "/d2l/api/lp/$version/courses/schema";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -63,11 +51,7 @@ class Courses
      */
     public function getCoursesOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/courses/$orgUnitId";
-=======
         $uri = "/d2l/api/lp/$version/courses/$orgUnitId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -89,19 +73,11 @@ class Courses
     public function getCoursesImageOrgUnitId($version, $orgUnitId, $width = null, $height = null)
     {
         $queryParrams = [
-<<<<<<< HEAD
                             "width" => $width,                    "height" => $height
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/lp/$version/courses/$orgUnitId/image?$queryString";
-=======
-            "width" => $width,                    "height" => $height
-
-        ];
-        $queryString = http_build_query($queryParrams);
         $uri = "/d2l/api/lp/$version/courses/$orgUnitId/image?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -118,15 +94,10 @@ class Courses
      */
     public function postCourses($version, $createCourseOffering)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/courses/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/courses/";
         $body = $createCourseOffering;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -143,15 +114,10 @@ class Courses
      */
     public function putCoursesOrgUnitId($version, $orgUnitId, $courseOfferingInfo)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/courses/$orgUnitId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/courses/$orgUnitId";
         $body = $courseOfferingInfo;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -166,11 +132,7 @@ class Courses
      */
     public function putCoursesImageOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/courses/$orgUnitId/image";
-=======
         $uri = "/d2l/api/lp/$version/courses/$orgUnitId/image";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -184,11 +146,7 @@ class Courses
      */
     public function deleteCoursetemplatesOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/coursetemplates/$orgUnitId";
-=======
         $uri = "/d2l/api/lp/$version/coursetemplates/$orgUnitId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -205,11 +163,7 @@ class Courses
      */
     public function getCoursetemplatesOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/coursetemplates/$orgUnitId";
-=======
         $uri = "/d2l/api/lp/$version/coursetemplates/$orgUnitId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -226,11 +180,7 @@ class Courses
      */
     public function getCoursetemplatesSchema($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/coursetemplates/schema";
-=======
         $uri = "/d2l/api/lp/$version/coursetemplates/schema";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -247,15 +197,10 @@ class Courses
      */
     public function postCoursetemplates($version, $createCourseTemplate)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/coursetemplates/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/coursetemplates/";
         $body = $createCourseTemplate;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -272,15 +217,10 @@ class Courses
      */
     public function putCoursetemplatesOrgUnitId($version, $orgUnitId, $courseTemplateInfo)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/coursetemplates/$orgUnitId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/coursetemplates/$orgUnitId";
         $body = $courseTemplateInfo;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -297,11 +237,7 @@ class Courses
      */
     public function getImportCopyOrgUnitIdJobToken($version, $orgUnitId, $jobToken)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/import/$orgUnitId/copy/$jobToken";
-=======
         $uri = "/d2l/api/le/$version/import/$orgUnitId/copy/$jobToken";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -319,15 +255,10 @@ class Courses
      */
     public function postImportCopyOrgUnitId($version, $orgUnitId, $createCopyJobRequest)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/import/$orgUnitId/copy/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/le/$version/import/$orgUnitId/copy/";
         $body = $createCopyJobRequest;
         $headers = ["content-type" => 'application/json'];
-        return new Request("POST", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -353,19 +284,11 @@ class Courses
     public function getCcbLogs($version, $bookmark = null, $pageSize = null, $sourceOrgUnitId = null, $destinationOrgUnitId = null)
     {
         $queryParrams = [
-<<<<<<< HEAD
                             "bookmark" => $bookmark,                    "pageSize" => $pageSize,                    "sourceOrgUnitId" => $sourceOrgUnitId,                    "destinationOrgUnitId" => $destinationOrgUnitId
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/ccb/logs?$queryString";
-=======
-            "bookmark" => $bookmark,                    "pageSize" => $pageSize,                    "sourceOrgUnitId" => $sourceOrgUnitId,                    "destinationOrgUnitId" => $destinationOrgUnitId
-
-        ];
-        $queryString = http_build_query($queryParrams);
         $uri = "/d2l/api/le/$version/ccb/logs?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -383,11 +306,7 @@ class Courses
      */
     public function getImportImportsOrgUnitIdJobToken($version, $orgUnitId, $jobToken)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/import/$orgUnitId/imports/$jobToken";
-=======
         $uri = "/d2l/api/le/$version/import/$orgUnitId/imports/$jobToken";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -410,19 +329,11 @@ class Courses
     public function getImportImportsLogsOrgUnitIdJobToken($version, $orgUnitId, $jobToken, $bookmark = null)
     {
         $queryParrams = [
-<<<<<<< HEAD
                             "bookmark" => $bookmark
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/import/$orgUnitid/imports/$jobToken/logs/?$queryString";
-=======
-            "bookmark" => $bookmark
-
-        ];
-        $queryString = http_build_query($queryParrams);
         $uri = "/d2l/api/le/$version/import/$orgUnitid/imports/$jobToken/logs/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -447,19 +358,11 @@ class Courses
     public function postImportImportsOrgUnitId($version, $orgUnitId, $callbackUrl)
     {
         $queryParrams = [
-<<<<<<< HEAD
                             "callbackUrl" => $callbackUrl
 
         ];
         $queryString = http_build_query($queryParrams);
-        $uri = "d2l/api/le/$version/import/$orgUnitId/imports/?$queryString";
-=======
-            "callbackUrl" => $callbackUrl
-
-        ];
-        $queryString = http_build_query($queryParrams);
         $uri = "/d2l/api/le/$version/import/$orgUnitId/imports/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }

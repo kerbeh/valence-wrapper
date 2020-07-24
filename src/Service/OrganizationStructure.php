@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Organization structure (Org units, structure) — Developer Platform (September 2019)
+ * Organization structure (Org units, structure) — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/orgunit.html
  */
 class OrganizationStructure
@@ -20,11 +20,7 @@ class OrganizationStructure
      */
     public function getOrganizationInfo($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/organization/info";
-=======
         $uri = "/d2l/api/lp/$version/organization/info";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -41,11 +37,7 @@ class OrganizationStructure
      */
     public function getOrganizationPrimaryUrl($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/organization/primary/url";
-=======
         $uri = "/d2l/api/lp/$version/organization/primary/url";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -60,11 +52,7 @@ class OrganizationStructure
      */
     public function deleteOrgstructureChildrenOrgUnitIdChildOrgUnitId($version, $orgUnitId, $childOrgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/$orgUnitId/children/$childOrgUnitId";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/children/$childOrgUnitId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -79,11 +67,7 @@ class OrganizationStructure
      */
     public function deleteOrgstructureParentsOrgUnitIdParentOrgUnitId($version, $orgUnitId, $parentOrgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/$orgUnitId/parents/$parentOrgUnitId";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/parents/$parentOrgUnitId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -131,11 +115,7 @@ class OrganizationStructure
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -152,11 +132,7 @@ class OrganizationStructure
      */
     public function getOrgstructureOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/$orgUnitId";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -191,11 +167,7 @@ class OrganizationStructure
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/childless/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/childless/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -230,11 +202,7 @@ class OrganizationStructure
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/orphans/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/orphans/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -252,11 +220,7 @@ class OrganizationStructure
      */
     public function getOrgstructureAncestorsOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/$orgUnitId/ancestors/";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/ancestors/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -281,11 +245,7 @@ class OrganizationStructure
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/$orgUnitId/children/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/children/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -313,11 +273,7 @@ class OrganizationStructure
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/$orgUnitId/children/paged/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/children/paged/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -342,11 +298,7 @@ class OrganizationStructure
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/$orgUnitId/descendants/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/descendants/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -374,11 +326,7 @@ class OrganizationStructure
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/$orgUnitId/descendants/paged/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/descendants/paged/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -403,11 +351,7 @@ class OrganizationStructure
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/$orgUnitId/parents/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/parents/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -424,15 +368,10 @@ class OrganizationStructure
      */
     public function postOrgstructure($version, $orgUnitCreateData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/";
         $body = $orgUnitCreateData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -450,15 +389,10 @@ class OrganizationStructure
      */
     public function postOrgstructureChildrenOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/$orgUnitId/children/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/children/";
         $body = $orgUnitId;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -476,15 +410,10 @@ class OrganizationStructure
      */
     public function postOrgstructureParentsOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/$orgUnitId/parents/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/parents/";
         $body = $orgUnitId;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -506,15 +435,10 @@ class OrganizationStructure
      */
     public function putOrgstructureOrgUnitId($version, $orgUnitId, $orgUnitProperties)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/$orgUnitId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId";
         $body = $orgUnitProperties;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -530,11 +454,7 @@ class OrganizationStructure
      */
     public function getOrgstructureColoursOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/$orgUnitId/colours";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/colours";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -552,15 +472,10 @@ class OrganizationStructure
      */
     public function putOrgstructureColoursOrgUnitId($version, $orgUnitId, $colourScheme)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/$orgUnitId/colours";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/colours";
         $body = $colourScheme;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -573,11 +488,7 @@ class OrganizationStructure
      */
     public function deleteOrgstructureRecyclebinOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/recyclebin/$orgUnitId";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/recyclebin/$orgUnitId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -602,11 +513,7 @@ class OrganizationStructure
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/recyclebin/?$queryString";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/recyclebin/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -620,11 +527,7 @@ class OrganizationStructure
      */
     public function postOrgstructureRecyclebinRecycleOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/recyclebin/$orgUnitId/recycle";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/recyclebin/$orgUnitId/recycle";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -638,11 +541,7 @@ class OrganizationStructure
      */
     public function postOrgstructureRecyclebinRestoreOrgUnitId($version, $orgUnitId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/orgstructure/recyclebin/$orgUnitId/restore";
-=======
         $uri = "/d2l/api/lp/$version/orgstructure/recyclebin/$orgUnitId/restore";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -656,11 +555,7 @@ class OrganizationStructure
      */
     public function deleteOutypesOrgUnitTypeId($version, $orgUnitTypeId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/outypes/$orgUnitTypeId";
-=======
         $uri = "/d2l/api/lp/$version/outypes/$orgUnitTypeId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -677,11 +572,7 @@ class OrganizationStructure
      */
     public function getOutypes($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/outypes/";
-=======
         $uri = "/d2l/api/lp/$version/outypes/";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -695,11 +586,7 @@ class OrganizationStructure
      */
     public function getOutypesOrgUnitTypeId($version, $orgUnitTypeId)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/outypes/$orgUnitTypeId";
-=======
         $uri = "/d2l/api/lp/$version/outypes/$orgUnitTypeId";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -715,11 +602,7 @@ class OrganizationStructure
      */
     public function getOutypesDepartment($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/outypes/department";
-=======
         $uri = "/d2l/api/lp/$version/outypes/department";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -735,11 +618,7 @@ class OrganizationStructure
      */
     public function getOutypesSemester($version)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/outypes/semester";
-=======
         $uri = "/d2l/api/lp/$version/outypes/semester";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -756,15 +635,10 @@ class OrganizationStructure
      */
     public function postOutypes($version, $createOrgUnitTypeData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/outypes/";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/outypes/";
         $body = $createOrgUnitTypeData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 
 
@@ -782,14 +656,9 @@ class OrganizationStructure
      */
     public function postOutypesOrgUnitTypeId($version, $orgUnitTypeId, $createOrgUnitTypeData)
     {
-<<<<<<< HEAD
-        $uri = "d2l/api/lp/$version/outypes/$orgUnitTypeId";
-        return new Request('GET', $uri);
-=======
         $uri = "/d2l/api/lp/$version/outypes/$orgUnitTypeId";
         $body = $createOrgUnitTypeData;
         $headers = ["content-type" => 'application/json'];
         return new Request("PUT", $uri, $headers, $body);
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
     }
 }

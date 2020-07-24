@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Course updates for end users — Developer Platform (September 2019)
+ * Course updates for end users — Developer Platform (July 2020)
  * @see https://docs.valence.desire2learn.com/res/updates.html
  */
 class CourseUpdatesForEndUsers
@@ -31,11 +31,7 @@ class CourseUpdatesForEndUsers
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/$orgUnitId/updates/myUpdates?$queryString";
-=======
         $uri = "/d2l/api/le/$version/$orgUnitId/updates/myUpdates?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 
@@ -65,11 +61,7 @@ class CourseUpdatesForEndUsers
 
         ];
         $queryString = http_build_query($queryParrams);
-<<<<<<< HEAD
-        $uri = "d2l/api/le/$version/updates/myUpdates/?$queryString";
-=======
         $uri = "/d2l/api/le/$version/updates/myUpdates/?$queryString";
->>>>>>> 0535b8d255b2df503137b1546ebffafde5cc19ad
         return new Request('GET', $uri);
     }
 }
