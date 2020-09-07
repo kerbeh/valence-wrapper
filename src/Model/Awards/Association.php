@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\Association;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * When you use an action that retrieves award associations, the
  * service returns a block like this:
@@ -11,67 +13,67 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class Association
 {
-	/**
-	 * @param Award
-	 * @type { <composite:Awards.Award> }
-	 */
-	private $Award;
+    /**
+     * @param Award
+     * @type { <composite:Awards.Award> }
+     */
+    private $Award;
 
-	/**
-	 * @param AssociationId
-	 * @type <number:D2LID>
-	 */
-	private $AssociationId;
+    /**
+     * @param AssociationId
+     * @type <number:D2LID>
+     */
+    private $AssociationId;
 
-	/**
-	 * @param OrgUnitId
-	 * @type <number:D2LID>
-	 */
-	private $OrgUnitId;
+    /**
+     * @param OrgUnitId
+     * @type <number:D2LID>
+     */
+    private $OrgUnitId;
 
-	/**
-	 * @param ConditionSet
-	 * @type {
-	 */
-	private $ConditionSet;
+    /**
+     * @param ConditionSet
+     * @type {
+     */
+    private $ConditionSet;
 
-	/**
-	 * @param ConditionSetId
-	 * @type <number:D2LID>
-	 */
-	private $ConditionSetId;
+    /**
+     * @param ConditionSetId
+     * @type <number:D2LID>
+     */
+    private $ConditionSetId;
 
-	/**
-	 * @param ConditionSetType
-	 * @type <number:D2LID>
-	 */
-	private $ConditionSetType;
+    /**
+     * @param ConditionSetType
+     * @type <number:D2LID>
+     */
+    private $ConditionSetType;
 
-	/**
-	 * @param Credit
-	 * @type <number:decimal>
-	 */
-	private $Credit;
+    /**
+     * @param Credit
+     * @type <number:decimal>
+     */
+    private $Credit;
 
-	/**
-	 * @param HiddenAward
-	 * @type <boolean>
-	 */
-	private $HiddenAward;
+    /**
+     * @param HiddenAward
+     * @type <boolean>
+     */
+    private $HiddenAward;
 
 
-	/**
-	 * Constructor for Association
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->Award = $attributes["Award"];
-		$this->AssociationId = $attributes["AssociationId"];
-		$this->OrgUnitId = $attributes["OrgUnitId"];
-		$this->ConditionSet = $attributes["ConditionSet"];
-		$this->ConditionSetId = $attributes["ConditionSetId"];
-		$this->ConditionSetType = $attributes["ConditionSetType"];
-		$this->Credit = $attributes["Credit"];
-		$this->HiddenAward = $attributes["HiddenAward"];
-	}
+    /**
+     * Constructor for Association
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->Award = $attributes["Award"];
+        $this->AssociationId = $attributes["AssociationId"];
+        $this->OrgUnitId = $attributes["OrgUnitId"];
+        $this->ConditionSet = $attributes["ConditionSet"];
+        $this->ConditionSetId = $attributes["ConditionSetId"];
+        $this->ConditionSetType = $attributes["ConditionSetType"];
+        $this->Credit = $attributes["Credit"];
+        $this->HiddenAward = $attributes["HiddenAward"];
+    }
 }

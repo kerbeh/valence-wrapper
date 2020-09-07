@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\AuditedUser;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * Auditors are users that have permission to audit the presence of other users
  * (auditees). In these structures, the properties AuditorId and AuditeeId are
@@ -13,25 +15,25 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class AuditedUser
 {
-	/**
-	 * @param AuditeeId
-	 * @type <number:D2LID>
-	 */
-	private $AuditeeId;
+    /**
+     * @param AuditeeId
+     * @type <number:D2LID>
+     */
+    private $AuditeeId;
 
-	/**
-	 * @param DisplayName
-	 * @type <string>
-	 */
-	private $DisplayName;
+    /**
+     * @param DisplayName
+     * @type <string>
+     */
+    private $DisplayName;
 
 
-	/**
-	 * Constructor for AuditedUser
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->AuditeeId = $attributes["AuditeeId"];
-		$this->DisplayName = $attributes["DisplayName"];
-	}
+    /**
+     * Constructor for AuditedUser
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->AuditeeId = $attributes["AuditeeId"];
+        $this->DisplayName = $attributes["DisplayName"];
+    }
 }

@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\CompetencyObject;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * If your query retrieved an object with children visible within your
  * specified search depth, this will be a
@@ -21,53 +23,53 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class CompetencyObject
 {
-	/**
-	 * @param Id
-	 * @type <number:D2LID>
-	 */
-	private $Id;
+    /**
+     * @param Id
+     * @type <number:D2LID>
+     */
+    private $Id;
 
-	/**
-	 * @param ObjectTypeId
-	 * @type <number:COMPOBJECT_T>
-	 */
-	private $ObjectTypeId;
+    /**
+     * @param ObjectTypeId
+     * @type <number:COMPOBJECT_T>
+     */
+    private $ObjectTypeId;
 
-	/**
-	 * @param Name
-	 * @type <string>
-	 */
-	private $Name;
+    /**
+     * @param Name
+     * @type <string>
+     */
+    private $Name;
 
-	/**
-	 * @param Description
-	 * @type <string>
-	 */
-	private $Description;
+    /**
+     * @param Description
+     * @type <string>
+     */
+    private $Description;
 
-	/**
-	 * @param ChildrenPage
-	 * @type null
-	 */
-	private $ChildrenPage;
+    /**
+     * @param ChildrenPage
+     * @type null
+     */
+    private $ChildrenPage;
 
-	/**
-	 * @param MoreChildren
-	 * @type <string:APIURL>
-	 */
-	private $MoreChildren;
+    /**
+     * @param MoreChildren
+     * @type <string:APIURL>
+     */
+    private $MoreChildren;
 
 
-	/**
-	 * Constructor for CompetencyObject
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->Id = $attributes["Id"];
-		$this->ObjectTypeId = $attributes["ObjectTypeId"];
-		$this->Name = $attributes["Name"];
-		$this->Description = $attributes["Description"];
-		$this->ChildrenPage = $attributes["ChildrenPage"];
-		$this->MoreChildren = $attributes["MoreChildren"];
-	}
+    /**
+     * Constructor for CompetencyObject
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->Id = $attributes["Id"];
+        $this->ObjectTypeId = $attributes["ObjectTypeId"];
+        $this->Name = $attributes["Name"];
+        $this->Description = $attributes["Description"];
+        $this->ChildrenPage = $attributes["ChildrenPage"];
+        $this->MoreChildren = $attributes["MoreChildren"];
+    }
 }

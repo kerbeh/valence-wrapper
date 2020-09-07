@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Surveys — Developer Platform (July 2020)
+ * Surveys — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/survey.html
  */
 class Surveys
@@ -25,10 +25,28 @@ class Surveys
 
 
     /**
+     * Remove survey special access for a user.
+     * @see https://docs.valence.desire2learn.com/res/survey.html#delete--d2l-api-le-(version)-(orgUnitId)-surveys-(surveyId)-specialaccess-(userId)
+     * @return /PSR7 (Request)
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $surveyId Survey ID.
+     * @param [D2LID] $userId User ID.
+     */
+    public function deleteSurveysSpecialaccessOrgUnitIdSurveyIdUserId($version, $orgUnitId, $surveyId, $userId)
+    {
+        $uri = "/d2l/api/le/$version/$orgUnitId/surveys/$surveyId/specialaccess/$userId";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
      * Retrieve the surveys belonging to an org unit.
      * @see https://docs.valence.desire2learn.com/res/survey.html#get--d2l-api-le-(version)-(orgUnitId)-surveys-
      * @return /PSR7 (Request)
-     * Return. This action returns an ObjectListPage JSON block containing a list of SurveyReadData JSON blocks belonging to the org unit.
+     * Return. This action returns an ObjectListPage
+     * JSON block containing a list of SurveyReadData
+     * JSON blocks belonging to the org unit.
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
@@ -62,7 +80,8 @@ class Surveys
      * Retrieve a list of users with access to a specified survey.
      * @see https://docs.valence.desire2learn.com/res/survey.html#get--d2l-api-le-(version)-(orgUnitId)-surveys-(surveyId)-access-
      * @return /PSR7 (Request)
-     * Return. This action returns a object list page containing the resulting UserAccess blocks.
+     * Return. This action returns a object list page
+     * containing the resulting UserAccess blocks.
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
@@ -85,12 +104,49 @@ class Surveys
 
 
     /**
-     * Create a new surveys belonging to an org unit.
+     * Retrieve special access rules in a survey.
+     * @see https://docs.valence.desire2learn.com/res/survey.html#get--d2l-api-le-(version)-(orgUnitId)-surveys-(surveyId)-specialaccess-
+     * @return /PSR7 (Request)
+     * Return. This action returns a object list page
+     * containing the resulting SpecialAccessUserData
+     * blocks.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $surveyId Survey ID.
+     */
+    public function getSurveysSpecialaccessOrgUnitIdSurveyId($version, $orgUnitId, $surveyId)
+    {
+        $uri = "/d2l/api/le/$version/$orgUnitId/surveys/$surveyId/specialaccess/";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Retrieve a user’s special access rule for a survey.
+     * @see https://docs.valence.desire2learn.com/res/survey.html#get--d2l-api-le-(version)-(orgUnitId)-surveys-(surveyId)-specialaccess-(userId)
+     * @return /PSR7 (Request)
+     * Return. This action returns a SpecialAccessData
+     * JSON block.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $surveyId Survey ID.
+     * @param [D2LID] $userId User ID.
+     */
+    public function getSurveysSpecialaccessOrgUnitIdSurveyIdUserId($version, $orgUnitId, $surveyId, $userId)
+    {
+        $uri = "/d2l/api/le/$version/$orgUnitId/surveys/$surveyId/specialaccess/$userId";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Create a new survey belonging to an org unit.
      * @see https://docs.valence.desire2learn.com/res/survey.html#post--d2l-api-le-(version)-(orgUnitId)-surveys-
      * @return /PSR7 (Request)
-     * Return. This action returns a
-     * SurveyReadData JSON block containing the
-     * properties of your new survey.
+     * Return. This action returns a SurveyReadData
+     * JSON block containing the properties of your new survey.
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
@@ -106,7 +162,26 @@ class Surveys
 
 
     /**
-     * Update a new surveys belonging to an org unit.
+     * Create or update a special access rule for a user and survey.
+     * @see https://docs.valence.desire2learn.com/res/survey.html#put--d2l-api-le-(version)-(orgUnitId)-surveys-(surveyId)-specialaccess-(userId)
+     * @return /PSR7 (Request)
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $surveyId Survey ID.
+     * @param [D2LID] $userId User ID.
+     * @param [SpecialAccessData] $specialAccessData Special access data.
+     */
+    public function putSurveysSpecialaccessOrgUnitIdSurveyIdUserId($version, $orgUnitId, $surveyId, $userId, $specialAccessData)
+    {
+        $uri = "/d2l/api/le/$version/$orgUnitId/surveys/$surveyId/specialaccess/$userId";
+        $body = $specialAccessData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+    }
+
+
+    /**
+     * Update a survey belonging to an org unit.
      * @see https://docs.valence.desire2learn.com/res/survey.html#put--d2l-api-le-(version)-(orgUnitId)-surveys-(surveyId)
      * @return /PSR7 (Request)
      * Return. This action returns a
@@ -131,17 +206,24 @@ class Surveys
      * Retrieve a list of attempts for a survey.
      * @see https://docs.valence.desire2learn.com/res/survey.html#get--d2l-api-le-(version)-(orgUnitId)-surveys-(surveyId)-attempts-
      * @return /PSR7 (Request)
-     * Return. This action returns an ObjectListPage JSON block containing a list of
-     * SurveyAttemptData belonging to the
-     * survey.
+     * Return. This action returns an ObjectListPage
+     * JSON block containing a list of SurveyAttemptData
+     * belonging to the survey.
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
      * @param [D2LID] $surveyId Survey ID.
+     * @param [D2LID] $userId Optional. Retrieve attempts for a single user.
+     * userId
      */
-    public function getSurveysAttemptsOrgUnitIdSurveyId($version, $orgUnitId, $surveyId)
+    public function getSurveysAttemptsOrgUnitIdSurveyId($version, $orgUnitId, $surveyId, $userId = null)
     {
-        $uri = "/d2l/api/le/$version/$orgUnitId/surveys/$surveyId/attempts/";
+        $queryParrams = [
+                            "userId" => $userId
+
+        ];
+        $queryString = http_build_query($queryParrams);
+        $uri = "/d2l/api/le/$version/$orgUnitId/surveys/$surveyId/attempts/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -150,9 +232,6 @@ class Surveys
      * Retrieve a survey attempt.
      * @see https://docs.valence.desire2learn.com/res/survey.html#get--d2l-api-le-(version)-(orgUnitId)-surveys-(surveyId)-attempts-(attemptId)
      * @return /PSR7 (Request)
-     * Return. This action returns a SurveyAttemptData JSON block containing the properties of your
-     * identified survey attempt.
-     *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
      * @param [D2LID] $surveyId Survey ID.
@@ -184,9 +263,9 @@ class Surveys
      * Retrieve the survey categories belonging to an org unit.
      * @see https://docs.valence.desire2learn.com/res/survey.html#get--d2l-api-le-(version)-(orgUnitId)-surveys-categories-
      * @return /PSR7 (Request)
-     * Return. This action returns an ObjectListPage JSON block containing a list of
-     * SurveyCategoryReadData belonging
-     * to the org unit.
+     * Return. This action returns an ObjectListPage
+     * JSON block containing a list of SurveyCategoryReadData
+     * belonging to the org unit.
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
@@ -227,7 +306,7 @@ class Surveys
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
-     * @param [SurveyCategoryData] $categoryData New survey category data.
+     * @param [SurveyCategory Data] $categoryData New survey category data.
      */
     public function postSurveysCategoriesOrgUnitId($version, $orgUnitId, $categoryData)
     {
@@ -264,9 +343,10 @@ class Surveys
      * Retrieve all the questions in a survey.
      * @see https://docs.valence.desire2learn.com/res/survey.html#get--d2l-api-le-(version)-(orgUnitId)-surveys-(surveyId)-questions-
      * @return /PSR7 (Request)
-     * Return. This action returns an ObjectListPage JSON block containing a list of QuestionData belonging to the survey you specified, blocks
-     * for the segment following your bookmark parameter (or the first segment if
-     * that parameter is empty or missing).
+     * Return. This action returns an ObjectListPage
+     * JSON block containing a list of QuestionData
+     * belonging to the survey you specified, blocks for the segment following your
+     * bookmark parameter (or the first segment if that parameter is empty or missing).
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.

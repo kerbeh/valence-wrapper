@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * LTI Advantage management (registrations, deployments, and links) — Developer Platform (July 2020)
+ * LTI Advantage management (registrations, deployments, and links) — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/ltiadvantage.html
  */
 class LtiAdvantageManagement

@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * API Properties (versions, logging, authentication) — Developer Platform (July 2020)
+ * API Properties (versions, logging, authentication) — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/apiprop.html
  */
 class ApiProperties

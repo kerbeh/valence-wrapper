@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Course updates for end users — Developer Platform (July 2020)
+ * Course updates for end users — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/updates.html
  */
 class CourseUpdatesForEndUsers

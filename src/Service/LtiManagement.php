@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * LTI management (links and tool providers) — Developer Platform (July 2020)
+ * LTI management (links and tool providers) — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/lti.html
  */
 class LtiManagement

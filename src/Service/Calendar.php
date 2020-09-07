@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Calendar (Events and scheduling) — Developer Platform (July 2020)
+ * Calendar (Events and scheduling) — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/calendar.html
  */
 class Calendar

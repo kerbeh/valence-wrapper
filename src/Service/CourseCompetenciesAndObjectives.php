@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Course competencies and objectives — Developer Platform (July 2020)
+ * Course competencies and objectives — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/competency.html
  */
 class CourseCompetenciesAndObjectives

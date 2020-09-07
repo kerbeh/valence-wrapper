@@ -4,11 +4,27 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Dropboxes (Folders, categories, submissions, feedback) — Developer Platform (July 2020)
+ * Dropboxes (Folders, categories, submissions, feedback) — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/dropbox.html
  */
 class Dropboxes
 {
+    /**
+     * Delete the special access rule for a user in a specified dropbox folder.
+     * @see https://docs.valence.desire2learn.com/res/dropbox.html#delete--d2l-api-le-(version)-(orgUnitId)-dropbox-folders-(folderId)-specialaccess-(userId)
+     * @return /PSR7 (Request)
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $folderId Folder ID for the specific dropbox folder.
+     * @param [D2LID] $userId User ID.
+     */
+    public function deleteDropboxFoldersSpecialaccessOrgUnitIdFolderIdUserId($version, $orgUnitId, $folderId, $userId)
+    {
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/specialaccess/$userId";
+        return new Request('GET', $uri);
+    }
+
+
     /**
      * Retrieve all dropbox folders for an org unit.
      * @see https://docs.valence.desire2learn.com/res/dropbox.html#get--d2l-api-le-(version)-(orgUnitId)-dropbox-folders-
@@ -54,9 +70,9 @@ class Dropboxes
      * @see https://docs.valence.desire2learn.com/res/dropbox.html#get--d2l-api-le-(version)-(orgUnitId)-dropbox-folders-(folderId)-access-
      * @return /PSR7 (Request)
      * Return. This action returns a object list page
-     * containing the resulting UserAccess
-     * blocks for the segment following your bookmark parameter (or the first
-     * segment if that parameter is empty or missing).
+     * containing the resulting UserAccess blocks for
+     * the segment following your bookmark parameter (or the first segment if that
+     * parameter is empty or missing).
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
@@ -79,6 +95,43 @@ class Dropboxes
 
 
     /**
+     * Retrieve special access rules for users in a specified dropbox folder.
+     * @see https://docs.valence.desire2learn.com/res/dropbox.html#get--d2l-api-le-(version)-(orgUnitId)-dropbox-folders-(folderId)-specialaccess-
+     * @return /PSR7 (Request)
+     * Return. This action returns an object list page
+     * containing the resulting SpecialAccessUserData blocks.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $folderId Folder ID for the specific dropbox folder.
+     */
+    public function getDropboxFoldersSpecialaccessOrgUnitIdFolderId($version, $orgUnitId, $folderId)
+    {
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/specialaccess/";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Retrieve the special access rule for a user in a specified dropbox folder.
+     * @see https://docs.valence.desire2learn.com/res/dropbox.html#get--d2l-api-le-(version)-(orgUnitId)-dropbox-folders-(folderId)-specialaccess-(userId)
+     * @return /PSR7 (Request)
+     * Return. This action returns a SpecialAccessData
+     * JSON block.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $folderId Folder ID for the specific dropbox folder.
+     * @param [D2LID] $userId User ID.
+     */
+    public function getDropboxFoldersSpecialaccessOrgUnitIdFolderIdUserId($version, $orgUnitId, $folderId, $userId)
+    {
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/specialaccess/$userId";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
      * Retrieve a file attachment (identified by file ID) from a specific dropbox folder.
      * @see https://docs.valence.desire2learn.com/res/dropbox.html#get--d2l-api-le-(version)-(orgUnitId)-dropbox-folders-(folderId)-attachments-(fileId)
      * @return /PSR7 (Request)
@@ -92,6 +145,31 @@ class Dropboxes
     public function getDropboxFoldersAttachmentsOrgUnitIdFolderIdFileId($version, $orgUnitId, $folderId, $fileId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/attachments/$fileId";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Retrieve a list of org units for which the current user context has an
+     * assessment role on their dropbox folders (can see submissions and provide
+     * feedback).
+     * @see https://docs.valence.desire2learn.com/res/dropbox.html#get--d2l-api-le-(version)-dropbox-orgUnits-feedback-
+     * @return /PSR7 (Request)
+     * Return. This action returns a JSON array of OrgUnitCoreInfo
+     * structures to enumerate all the org units for which the current user context may provide feedback.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [integer] $type Optional. Provide 0 for all org units, or 1 to filter for only active org units.
+     * type
+     */
+    public function getDropboxOrgunitsFeedback($version, $type = null)
+    {
+        $queryParrams = [
+                            "type" => $type
+
+        ];
+        $queryString = http_build_query($queryParrams);
+        $uri = "/d2l/api/le/$version/dropbox/orgUnits/feedback/?$queryString";
         return new Request('GET', $uri);
     }
 
@@ -134,28 +212,21 @@ class Dropboxes
 
 
     /**
-     * Retrieve a list of org units for which the current user context has an
-     * assessment role on their dropbox folders (can see submissions and provide
-     * feedback).
-     * @see https://docs.valence.desire2learn.com/res/dropbox.html#get--d2l-api-le-(version)-dropbox-orgUnits-feedback-
+     * Create or update a special access rule for a user in a dropbox folder.
+     * @see https://docs.valence.desire2learn.com/res/dropbox.html#put--d2l-api-le-(version)-(orgUnitId)-dropbox-folders-(folderId)-specialaccess-(userId)
      * @return /PSR7 (Request)
-     * Return. This action returns a JSON array of
-     * OrgUnitCoreInfo structures to enumerate
-     * all the org units for which the current user context may provide feedback.
-     *
      * @param [D2LVERSION] $version API version.
-     * @param [integer] $type Optional. Provide 0 for all org units, or 1 to filter for only active org units.
-     * type
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $folderId Folder ID for the specific dropbox folder.
+     * @param [D2LID] $userId User ID.
+     * @param [SpecialAccessData] $specialAccessData Special access data.
      */
-    public function getDropboxOrgunitsFeedback($version, $type = null)
+    public function putDropboxFoldersSpecialaccessOrgUnitIdFolderIdUserId($version, $orgUnitId, $folderId, $userId, $specialAccessData)
     {
-        $queryParrams = [
-                            "type" => $type
-
-        ];
-        $queryString = http_build_query($queryParrams);
-        $uri = "/d2l/api/le/$version/dropbox/orgUnits/feedback/?$queryString";
-        return new Request('GET', $uri);
+        $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/specialaccess/$userId";
+        $body = $specialAccessData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
     }
 
 
@@ -163,11 +234,10 @@ class Dropboxes
      * Retrieve all the submissions for a specific dropbox folder.
      * @see https://docs.valence.desire2learn.com/res/dropbox.html#get--d2l-api-le-(version)-(orgUnitId)-dropbox-folders-(folderId)-submissions-
      * @return /PSR7 (Request)
-     * Return. This action retrieves a JSON array of
-     * EntityDropbox structures that fully
-     * enumerates all the submissions currently provided to the dropbox folders by
-     * all the entities. Any submission that already has feedback will come with the
-     * feedback as well.
+     * Return. This action retrieves a JSON array of EntityDropbox
+     * structures that fully enumerates all the submissions currently provided to
+     * the dropbox folders by all the entities. Any submission that already has
+     * feedback will come with the feedback as well.
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
@@ -259,9 +329,9 @@ class Dropboxes
      * Mark a submitted file as read.
      * @see https://docs.valence.desire2learn.com/res/dropbox.html#post--d2l-api-le-(version)-(orgUnitId)-dropbox-folders-(folderId)-submissions-(submissionId)-files-(fileId)-markAsRead
      * @return /PSR7 (Request)
-     * Input. Provide an empty post body. You should ensure that
-     * your request includes a Content-Length: 0 HTTP header value (some HTTP
-     * client libraries may neglect to do this with empty post calls).
+     * Input. Provide an empty post body. You should ensure that your request
+     * includes a Content-Length: 0 HTTP header value (some HTTP client libraries
+     * may neglect to do this with empty post calls).
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
@@ -383,8 +453,8 @@ class Dropboxes
 
 
     /**
-     * Initiate a resumable file upload request for a particular entity’s feedback for a
-     * specific dropbox folder.
+     * Initiate a resumable file upload request for a particular entity’s feedback
+     * for a specific dropbox folder.
      * @see https://docs.valence.desire2learn.com/res/dropbox.html#post--d2l-api-le-(version)-(orgUnitId)-dropbox-folders-(folderId)-feedback-(entityType)-(entityId)-upload
      * @return /PSR7 (Request)
      * Input. Initiate a resumable upload

@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * News service (news items, user feed) — Developer Platform (July 2020)
+ * News service (news items, user feed) — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/news.html
  */
 class NewsService

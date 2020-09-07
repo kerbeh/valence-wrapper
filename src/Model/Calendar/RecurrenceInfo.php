@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\RecurrenceInfo;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * Recurrence frequency unit type (recurrence expressed
  * in days, weeks, months, years, or no recurrence).
@@ -19,39 +21,39 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class RecurrenceInfo
 {
-	/**
-	 * @param RepeatOnInfo
-	 * @type { <composite:Calendar.RepeatOnInfo> }
-	 */
-	private $RepeatOnInfo;
+    /**
+     * @param RepeatOnInfo
+     * @type { <composite:Calendar.RepeatOnInfo> }
+     */
+    private $RepeatOnInfo;
 
-	/**
-	 * @param RepeatType
-	 * @type <number:REPEAT_T>
-	 */
-	private $RepeatType;
+    /**
+     * @param RepeatType
+     * @type <number:REPEAT_T>
+     */
+    private $RepeatType;
 
-	/**
-	 * @param RepeatEvery
-	 * @type <number>
-	 */
-	private $RepeatEvery;
+    /**
+     * @param RepeatEvery
+     * @type <number>
+     */
+    private $RepeatEvery;
 
-	/**
-	 * @param RepeatUntilDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $RepeatUntilDate;
+    /**
+     * @param RepeatUntilDate
+     * @type <string:UTCDateTime>
+     */
+    private $RepeatUntilDate;
 
 
-	/**
-	 * Constructor for RecurrenceInfo
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->RepeatOnInfo = $attributes["RepeatOnInfo"];
-		$this->RepeatType = $attributes["RepeatType"];
-		$this->RepeatEvery = $attributes["RepeatEvery"];
-		$this->RepeatUntilDate = $attributes["RepeatUntilDate"];
-	}
+    /**
+     * Constructor for RecurrenceInfo
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->RepeatOnInfo = $attributes["RepeatOnInfo"];
+        $this->RepeatType = $attributes["RepeatType"];
+        $this->RepeatEvery = $attributes["RepeatEvery"];
+        $this->RepeatUntilDate = $attributes["RepeatUntilDate"];
+    }
 }

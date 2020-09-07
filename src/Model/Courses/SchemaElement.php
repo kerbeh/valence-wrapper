@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\SchemaElement;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * This block describes constraints for parent org units of course offerings
  * (that is, whether particular org units are not permitted as parents
@@ -18,32 +20,32 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class SchemaElement
 {
-	/**
-	 * @param Type
-	 * @type { <composite:OrgUnit.OrgUnitTypeInfo> }
-	 */
-	private $Type;
+    /**
+     * @param Type
+     * @type { <composite:OrgUnit.OrgUnitTypeInfo> }
+     */
+    private $Type;
 
-	/**
-	 * @param IsNotAllowed
-	 * @type <boolean>
-	 */
-	private $IsNotAllowed;
+    /**
+     * @param IsNotAllowed
+     * @type <boolean>
+     */
+    private $IsNotAllowed;
 
-	/**
-	 * @param IsRequired
-	 * @type <boolean>
-	 */
-	private $IsRequired;
+    /**
+     * @param IsRequired
+     * @type <boolean>
+     */
+    private $IsRequired;
 
 
-	/**
-	 * Constructor for SchemaElement
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->Type = $attributes["Type"];
-		$this->IsNotAllowed = $attributes["IsNotAllowed"];
-		$this->IsRequired = $attributes["IsRequired"];
-	}
+    /**
+     * Constructor for SchemaElement
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->Type = $attributes["Type"];
+        $this->IsNotAllowed = $attributes["IsNotAllowed"];
+        $this->IsRequired = $attributes["IsRequired"];
+    }
 }

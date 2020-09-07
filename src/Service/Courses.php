@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Courses (course offerings, templates, schemas) — Developer Platform (July 2020)
+ * Courses (course offerings, templates, schemas) — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/course.html
  */
 class Courses

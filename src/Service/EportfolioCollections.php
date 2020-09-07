@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * ePortfolio Collections — Developer Platform (July 2020)
+ * ePortfolio Collections — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/collection.html
  */
 class EportfolioCollections

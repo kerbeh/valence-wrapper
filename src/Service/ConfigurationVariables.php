@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Configuration variables — Developer Platform (July 2020)
+ * Configuration variables — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/config.html
  */
 class ConfigurationVariables

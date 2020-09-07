@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Data Hub and Data Export Framework — Developer Platform (July 2020)
+ * Data Hub and Data Export Framework — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/dataExport.html
  */
 class DataHubAndDataExportFramework

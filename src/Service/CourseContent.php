@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Course content (content objects, ISBNs, tables of content) — Developer Platform (July 2020)
+ * Course content (content objects, ISBNs, tables of content) — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/content.html
  */
 class CourseContent
@@ -475,6 +475,9 @@ class CourseContent
      * can also filter the data retrieved based on its
      * completion status or whether an item’s due date falls
      * within a provided time window. Exempted items do not have due dates.
+     * Additionally, you can filter the data on its exemption status.
+     * Combining this with startDateTime or endDateTime will return exempted items within the due date,
+     * even though the items are not due.
      *
      * Return. This action returns an ObjectListPage
      * JSON block containing a list of ScheduledItem
@@ -490,11 +493,20 @@ class CourseContent
      * startDateTime
      * @param [UTCDateTime] $endDateTime Optional. End of time window to examine.
      * endDateTime
+     * @param [EXEMPTION_T] $exemption Optional. Exemption status.
+     * exemption
      */
-    public function getContentItemsUserId($version, $userId, $completion = null, $orgUnitIdsCSV, $startDateTime = null, $endDateTime = null)
-    {
+    public function getContentItemsUserId(
+        $version,
+        $userId,
+        $completion = null,
+        $orgUnitIdsCSV,
+        $startDateTime = null,
+        $endDateTime = null,
+        $exemption = null
+    ) {
         $queryParrams = [
-                            "completion" => $completion,                    "orgUnitIdsCSV" => $orgUnitIdsCSV,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime
+                            "completion" => $completion,                    "orgUnitIdsCSV" => $orgUnitIdsCSV,                    "startDateTime" => $startDateTime,                    "endDateTime" => $endDateTime,                    "exemption" => $exemption
 
         ];
         $queryString = http_build_query($queryParrams);

@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Users (user data, whoami) — Developer Platform (July 2020)
+ * Users (user data, whoami) — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/user.html
  */
 class Users

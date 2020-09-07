@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * ePortfolio Learning Objective — Developer Platform (July 2020)
+ * ePortfolio Learning Objective — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/epobjective.html
  */
 class EportfolioLearningObjective

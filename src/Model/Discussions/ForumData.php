@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\ForumData;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * When you use actions that create or edit a Forum on the service, you should
  * provide a block that looks like this:
@@ -33,109 +35,109 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class ForumData
 {
-	/**
-	 * @param Description
-	 * @type { <composite:RichText> }
-	 */
-	private $Description;
+    /**
+     * @param Description
+     * @type { <composite:RichText> }
+     */
+    private $Description;
 
-	/**
-	 * @param Name
-	 * @type <string>
-	 */
-	private $Name;
+    /**
+     * @param Name
+     * @type <string>
+     */
+    private $Name;
 
-	/**
-	 * @param ShowDescriptionInTopics
-	 * @type <boolean>
-	 */
-	private $ShowDescriptionInTopics;
+    /**
+     * @param ShowDescriptionInTopics
+     * @type <boolean>
+     */
+    private $ShowDescriptionInTopics;
 
-	/**
-	 * @param StartDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $StartDate;
+    /**
+     * @param StartDate
+     * @type <string:UTCDateTime>
+     */
+    private $StartDate;
 
-	/**
-	 * @param EndDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $EndDate;
+    /**
+     * @param EndDate
+     * @type <string:UTCDateTime>
+     */
+    private $EndDate;
 
-	/**
-	 * @param PostStartDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $PostStartDate;
+    /**
+     * @param PostStartDate
+     * @type <string:UTCDateTime>
+     */
+    private $PostStartDate;
 
-	/**
-	 * @param PostEndDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $PostEndDate;
+    /**
+     * @param PostEndDate
+     * @type <string:UTCDateTime>
+     */
+    private $PostEndDate;
 
-	/**
-	 * @param AllowAnonymous
-	 * @type <boolean>
-	 */
-	private $AllowAnonymous;
+    /**
+     * @param AllowAnonymous
+     * @type <boolean>
+     */
+    private $AllowAnonymous;
 
-	/**
-	 * @param IsLocked
-	 * @type <boolean>
-	 */
-	private $IsLocked;
+    /**
+     * @param IsLocked
+     * @type <boolean>
+     */
+    private $IsLocked;
 
-	/**
-	 * @param IsHidden
-	 * @type <boolean>
-	 */
-	private $IsHidden;
+    /**
+     * @param IsHidden
+     * @type <boolean>
+     */
+    private $IsHidden;
 
-	/**
-	 * @param RequiresApproval
-	 * @type <boolean>
-	 */
-	private $RequiresApproval;
+    /**
+     * @param RequiresApproval
+     * @type <boolean>
+     */
+    private $RequiresApproval;
 
-	/**
-	 * @param MustPostToParticipate
-	 * @type <boolean>
-	 */
-	private $MustPostToParticipate;
+    /**
+     * @param MustPostToParticipate
+     * @type <boolean>
+     */
+    private $MustPostToParticipate;
 
-	/**
-	 * @param DisplayInCalendar
-	 * @type <boolean>
-	 */
-	private $DisplayInCalendar;
+    /**
+     * @param DisplayInCalendar
+     * @type <boolean>
+     */
+    private $DisplayInCalendar;
 
-	/**
-	 * @param DisplayPostDatesInCalendar
-	 * @type <boolean>
-	 */
-	private $DisplayPostDatesInCalendar;
+    /**
+     * @param DisplayPostDatesInCalendar
+     * @type <boolean>
+     */
+    private $DisplayPostDatesInCalendar;
 
 
-	/**
-	 * Constructor for ForumData
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->Description = $attributes["Description"];
-		$this->Name = $attributes["Name"];
-		$this->ShowDescriptionInTopics = $attributes["ShowDescriptionInTopics"];
-		$this->StartDate = $attributes["StartDate"];
-		$this->EndDate = $attributes["EndDate"];
-		$this->PostStartDate = $attributes["PostStartDate"];
-		$this->PostEndDate = $attributes["PostEndDate"];
-		$this->AllowAnonymous = $attributes["AllowAnonymous"];
-		$this->IsLocked = $attributes["IsLocked"];
-		$this->IsHidden = $attributes["IsHidden"];
-		$this->RequiresApproval = $attributes["RequiresApproval"];
-		$this->MustPostToParticipate = $attributes["MustPostToParticipate"];
-		$this->DisplayInCalendar = $attributes["DisplayInCalendar"];
-		$this->DisplayPostDatesInCalendar = $attributes["DisplayPostDatesInCalendar"];
-	}
+    /**
+     * Constructor for ForumData
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->Description = $attributes["Description"];
+        $this->Name = $attributes["Name"];
+        $this->ShowDescriptionInTopics = $attributes["ShowDescriptionInTopics"];
+        $this->StartDate = $attributes["StartDate"];
+        $this->EndDate = $attributes["EndDate"];
+        $this->PostStartDate = $attributes["PostStartDate"];
+        $this->PostEndDate = $attributes["PostEndDate"];
+        $this->AllowAnonymous = $attributes["AllowAnonymous"];
+        $this->IsLocked = $attributes["IsLocked"];
+        $this->IsHidden = $attributes["IsHidden"];
+        $this->RequiresApproval = $attributes["RequiresApproval"];
+        $this->MustPostToParticipate = $attributes["MustPostToParticipate"];
+        $this->DisplayInCalendar = $attributes["DisplayInCalendar"];
+        $this->DisplayPostDatesInCalendar = $attributes["DisplayPostDatesInCalendar"];
+    }
 }

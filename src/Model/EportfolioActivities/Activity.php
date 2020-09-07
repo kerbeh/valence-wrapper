@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\Activity;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * Org ID for the owner of the acted-upon object.
  * @see https://docs.valence.desire2learn.com#EP.Activity
@@ -21,67 +23,67 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class Activity
 {
-	/**
-	 * @param ActionType
-	 * @type <number:ACTIVITYACTION_T>
-	 */
-	private $ActionType;
+    /**
+     * @param ActionType
+     * @type <number:ACTIVITYACTION_T>
+     */
+    private $ActionType;
 
-	/**
-	 * @param ActivityTime
-	 * @type <string:UTCDateTime>
-	 */
-	private $ActivityTime;
+    /**
+     * @param ActivityTime
+     * @type <string:UTCDateTime>
+     */
+    private $ActivityTime;
 
-	/**
-	 * @param ActivityType
-	 * @type <number:ACTIVITY_T>
-	 */
-	private $ActivityType;
+    /**
+     * @param ActivityType
+     * @type <number:ACTIVITY_T>
+     */
+    private $ActivityType;
 
-	/**
-	 * @param ObjectId
-	 * @type <number:D2LID>
-	 */
-	private $ObjectId;
+    /**
+     * @param ObjectId
+     * @type <number:D2LID>
+     */
+    private $ObjectId;
 
-	/**
-	 * @param OrgId
-	 * @type <number:D2LID>
-	 */
-	private $OrgId;
+    /**
+     * @param OrgId
+     * @type <number:D2LID>
+     */
+    private $OrgId;
 
-	/**
-	 * @param OwnerId
-	 * @type <number:D2LID>
-	 */
-	private $OwnerId;
+    /**
+     * @param OwnerId
+     * @type <number:D2LID>
+     */
+    private $OwnerId;
 
-	/**
-	 * @param RefObjectId
-	 * @type <string:D2LID>
-	 */
-	private $RefObjectId;
+    /**
+     * @param RefObjectId
+     * @type <string:D2LID>
+     */
+    private $RefObjectId;
 
-	/**
-	 * @param UserId
-	 * @type <number:D2LID>
-	 */
-	private $UserId;
+    /**
+     * @param UserId
+     * @type <number:D2LID>
+     */
+    private $UserId;
 
 
-	/**
-	 * Constructor for Activity
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->ActionType = $attributes["ActionType"];
-		$this->ActivityTime = $attributes["ActivityTime"];
-		$this->ActivityType = $attributes["ActivityType"];
-		$this->ObjectId = $attributes["ObjectId"];
-		$this->OrgId = $attributes["OrgId"];
-		$this->OwnerId = $attributes["OwnerId"];
-		$this->RefObjectId = $attributes["RefObjectId"];
-		$this->UserId = $attributes["UserId"];
-	}
+    /**
+     * Constructor for Activity
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->ActionType = $attributes["ActionType"];
+        $this->ActivityTime = $attributes["ActivityTime"];
+        $this->ActivityType = $attributes["ActivityType"];
+        $this->ObjectId = $attributes["ObjectId"];
+        $this->OrgId = $attributes["OrgId"];
+        $this->OwnerId = $attributes["OwnerId"];
+        $this->RefObjectId = $attributes["RefObjectId"];
+        $this->UserId = $attributes["UserId"];
+    }
 }

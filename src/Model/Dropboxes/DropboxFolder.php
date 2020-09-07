@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\DropboxFolder;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * When you use actions that retrieve dropbox folder information,
  * the service provides a block like this:
@@ -37,193 +39,193 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class DropboxFolder
 {
-	/**
-	 * @param Assessment
-	 * @type {
-	 */
-	private $Assessment;
+    /**
+     * @param Assessment
+     * @type {
+     */
+    private $Assessment;
 
-	/**
-	 * @param ScoreDenominator
-	 * @type <number:decimal>
-	 */
-	private $ScoreDenominator;
+    /**
+     * @param ScoreDenominator
+     * @type <number:decimal>
+     */
+    private $ScoreDenominator;
 
-	/**
-	 * @param Rubrics
-	 * @type
-	 */
-	private $Rubrics;
+    /**
+     * @param Rubrics
+     * @type
+     */
+    private $Rubrics;
 
-	/**
-	 * @param Id
-	 * @type <number:D2LID>
-	 */
-	private $Id;
+    /**
+     * @param Id
+     * @type <number:D2LID>
+     */
+    private $Id;
 
-	/**
-	 * @param CategoryId
-	 * @type <number:D2LID>
-	 */
-	private $CategoryId;
+    /**
+     * @param CategoryId
+     * @type <number:D2LID>
+     */
+    private $CategoryId;
 
-	/**
-	 * @param Name
-	 * @type <string>
-	 */
-	private $Name;
+    /**
+     * @param Name
+     * @type <string>
+     */
+    private $Name;
 
-	/**
-	 * @param CustomInstructions
-	 * @type
-	 */
-	private $CustomInstructions;
+    /**
+     * @param CustomInstructions
+     * @type
+     */
+    private $CustomInstructions;
 
-	/**
-	 * @param TotalFiles
-	 * @type <number>
-	 */
-	private $TotalFiles;
+    /**
+     * @param TotalFiles
+     * @type <number>
+     */
+    private $TotalFiles;
 
-	/**
-	 * @param UnreadFiles
-	 * @type <number>
-	 */
-	private $UnreadFiles;
+    /**
+     * @param UnreadFiles
+     * @type <number>
+     */
+    private $UnreadFiles;
 
-	/**
-	 * @param FlaggedFiles
-	 * @type <number>
-	 */
-	private $FlaggedFiles;
+    /**
+     * @param FlaggedFiles
+     * @type <number>
+     */
+    private $FlaggedFiles;
 
-	/**
-	 * @param TotalUsers
-	 * @type <number>
-	 */
-	private $TotalUsers;
+    /**
+     * @param TotalUsers
+     * @type <number>
+     */
+    private $TotalUsers;
 
-	/**
-	 * @param TotalUsersWithSubmissions
-	 * @type <number>
-	 */
-	private $TotalUsersWithSubmissions;
+    /**
+     * @param TotalUsersWithSubmissions
+     * @type <number>
+     */
+    private $TotalUsersWithSubmissions;
 
-	/**
-	 * @param TotalUsersWithFeedback
-	 * @type <number>
-	 */
-	private $TotalUsersWithFeedback;
+    /**
+     * @param TotalUsersWithFeedback
+     * @type <number>
+     */
+    private $TotalUsersWithFeedback;
 
-	/**
-	 * @param Availability
-	 * @type {
-	 */
-	private $Availability;
+    /**
+     * @param Availability
+     * @type {
+     */
+    private $Availability;
 
-	/**
-	 * @param StartDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $StartDate;
+    /**
+     * @param StartDate
+     * @type <string:UTCDateTime>
+     */
+    private $StartDate;
 
-	/**
-	 * @param EndDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $EndDate;
+    /**
+     * @param EndDate
+     * @type <string:UTCDateTime>
+     */
+    private $EndDate;
 
-	/**
-	 * @param GroupTypeId
-	 * @type <number:D2LID>
-	 */
-	private $GroupTypeId;
+    /**
+     * @param GroupTypeId
+     * @type <number:D2LID>
+     */
+    private $GroupTypeId;
 
-	/**
-	 * @param DueDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $DueDate;
+    /**
+     * @param DueDate
+     * @type <string:UTCDateTime>
+     */
+    private $DueDate;
 
-	/**
-	 * @param DisplayInCalendar
-	 * @type <boolean>
-	 */
-	private $DisplayInCalendar;
+    /**
+     * @param DisplayInCalendar
+     * @type <boolean>
+     */
+    private $DisplayInCalendar;
 
-	/**
-	 * @param NotificationEmail
-	 * @type <string>
-	 */
-	private $NotificationEmail;
+    /**
+     * @param NotificationEmail
+     * @type <string>
+     */
+    private $NotificationEmail;
 
-	/**
-	 * @param IsHidden
-	 * @type <boolean>
-	 */
-	private $IsHidden;
+    /**
+     * @param IsHidden
+     * @type <boolean>
+     */
+    private $IsHidden;
 
-	/**
-	 * @param ActivityId
-	 * @type <string>
-	 */
-	private $ActivityId;
+    /**
+     * @param ActivityId
+     * @type <string>
+     */
+    private $ActivityId;
 
-	/**
-	 * @param IsAnonymous
-	 * @type <boolean>
-	 */
-	private $IsAnonymous;
+    /**
+     * @param IsAnonymous
+     * @type <boolean>
+     */
+    private $IsAnonymous;
 
-	/**
-	 * @param DropboxType
-	 * @type <string:DROPBOXTYPE_T>
-	 */
-	private $DropboxType;
+    /**
+     * @param DropboxType
+     * @type <string:DROPBOXTYPE_T>
+     */
+    private $DropboxType;
 
-	/**
-	 * @param SubmissionType
-	 * @type <string:SUBMISSIONTYPE_T>
-	 */
-	private $SubmissionType;
+    /**
+     * @param SubmissionType
+     * @type <string:SUBMISSIONTYPE_T>
+     */
+    private $SubmissionType;
 
-	/**
-	 * @param CompletionType
-	 * @type <string:COMPLETIONTYPE_T>
-	 */
-	private $CompletionType;
+    /**
+     * @param CompletionType
+     * @type <string:COMPLETIONTYPE_T>
+     */
+    private $CompletionType;
 
 
-	/**
-	 * Constructor for DropboxFolder
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->Assessment = $attributes["Assessment"];
-		$this->ScoreDenominator = $attributes["ScoreDenominator"];
-		$this->Rubrics = $attributes["Rubrics"];
-		$this->Id = $attributes["Id"];
-		$this->CategoryId = $attributes["CategoryId"];
-		$this->Name = $attributes["Name"];
-		$this->CustomInstructions = $attributes["CustomInstructions"];
-		$this->TotalFiles = $attributes["TotalFiles"];
-		$this->UnreadFiles = $attributes["UnreadFiles"];
-		$this->FlaggedFiles = $attributes["FlaggedFiles"];
-		$this->TotalUsers = $attributes["TotalUsers"];
-		$this->TotalUsersWithSubmissions = $attributes["TotalUsersWithSubmissions"];
-		$this->TotalUsersWithFeedback = $attributes["TotalUsersWithFeedback"];
-		$this->Availability = $attributes["Availability"];
-		$this->StartDate = $attributes["StartDate"];
-		$this->EndDate = $attributes["EndDate"];
-		$this->GroupTypeId = $attributes["GroupTypeId"];
-		$this->DueDate = $attributes["DueDate"];
-		$this->DisplayInCalendar = $attributes["DisplayInCalendar"];
-		$this->NotificationEmail = $attributes["NotificationEmail"];
-		$this->IsHidden = $attributes["IsHidden"];
-		$this->ActivityId = $attributes["ActivityId"];
-		$this->IsAnonymous = $attributes["IsAnonymous"];
-		$this->DropboxType = $attributes["DropboxType"];
-		$this->SubmissionType = $attributes["SubmissionType"];
-		$this->CompletionType = $attributes["CompletionType"];
-	}
+    /**
+     * Constructor for DropboxFolder
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->Assessment = $attributes["Assessment"];
+        $this->ScoreDenominator = $attributes["ScoreDenominator"];
+        $this->Rubrics = $attributes["Rubrics"];
+        $this->Id = $attributes["Id"];
+        $this->CategoryId = $attributes["CategoryId"];
+        $this->Name = $attributes["Name"];
+        $this->CustomInstructions = $attributes["CustomInstructions"];
+        $this->TotalFiles = $attributes["TotalFiles"];
+        $this->UnreadFiles = $attributes["UnreadFiles"];
+        $this->FlaggedFiles = $attributes["FlaggedFiles"];
+        $this->TotalUsers = $attributes["TotalUsers"];
+        $this->TotalUsersWithSubmissions = $attributes["TotalUsersWithSubmissions"];
+        $this->TotalUsersWithFeedback = $attributes["TotalUsersWithFeedback"];
+        $this->Availability = $attributes["Availability"];
+        $this->StartDate = $attributes["StartDate"];
+        $this->EndDate = $attributes["EndDate"];
+        $this->GroupTypeId = $attributes["GroupTypeId"];
+        $this->DueDate = $attributes["DueDate"];
+        $this->DisplayInCalendar = $attributes["DisplayInCalendar"];
+        $this->NotificationEmail = $attributes["NotificationEmail"];
+        $this->IsHidden = $attributes["IsHidden"];
+        $this->ActivityId = $attributes["ActivityId"];
+        $this->IsAnonymous = $attributes["IsAnonymous"];
+        $this->DropboxType = $attributes["DropboxType"];
+        $this->SubmissionType = $attributes["SubmissionType"];
+        $this->CompletionType = $attributes["CompletionType"];
+    }
 }
