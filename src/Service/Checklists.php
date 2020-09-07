@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Checklists (Checklists, Categories, Checklist Items) — Developer Platform (July 2020)
+ * Checklists (Checklists, Categories, Checklist Items) — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/checklist.html
  */
 class Checklists

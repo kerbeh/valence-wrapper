@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Assessments and rubrics — Developer Platform (July 2020)
+ * Assessments and rubrics — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/assessment.html
  */
 class AssessmentsAndRubrics

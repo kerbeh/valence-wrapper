@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\TimeZone;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * Contains information about time zone.
  * @see https://docs.valence.desire2learn.com#TimeZones.TimeZone
@@ -21,46 +23,46 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class TimeZone
 {
-	/**
-	 * @param Identifier
-	 * @type <string:TimeZone>
-	 */
-	private $Identifier;
+    /**
+     * @param Identifier
+     * @type <string:TimeZone>
+     */
+    private $Identifier;
 
-	/**
-	 * @param SimpleName
-	 * @type <string>
-	 */
-	private $SimpleName;
+    /**
+     * @param SimpleName
+     * @type <string>
+     */
+    private $SimpleName;
 
-	/**
-	 * @param Name
-	 * @type <string>
-	 */
-	private $Name;
+    /**
+     * @param Name
+     * @type <string>
+     */
+    private $Name;
 
-	/**
-	 * @param CurrentOffset
-	 * @type <string:TimeSpan>
-	 */
-	private $CurrentOffset;
+    /**
+     * @param CurrentOffset
+     * @type <string:TimeSpan>
+     */
+    private $CurrentOffset;
 
-	/**
-	 * @param CurrentStandardOffset
-	 * @type <string:TimeSpan>
-	 */
-	private $CurrentStandardOffset;
+    /**
+     * @param CurrentStandardOffset
+     * @type <string:TimeSpan>
+     */
+    private $CurrentStandardOffset;
 
 
-	/**
-	 * Constructor for TimeZone
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->Identifier = $attributes["Identifier"];
-		$this->SimpleName = $attributes["SimpleName"];
-		$this->Name = $attributes["Name"];
-		$this->CurrentOffset = $attributes["CurrentOffset"];
-		$this->CurrentStandardOffset = $attributes["CurrentStandardOffset"];
-	}
+    /**
+     * Constructor for TimeZone
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->Identifier = $attributes["Identifier"];
+        $this->SimpleName = $attributes["SimpleName"];
+        $this->Name = $attributes["Name"];
+        $this->CurrentOffset = $attributes["CurrentOffset"];
+        $this->CurrentStandardOffset = $attributes["CurrentStandardOffset"];
+    }
 }

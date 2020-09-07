@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Demographics (data types, fields, users and org units) — Developer Platform (July 2020)
+ * Demographics (data types, fields, users and org units) — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/demographics.html
  */
 class Demographics

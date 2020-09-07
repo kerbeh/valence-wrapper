@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\GoogleAppsLinkingItem;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * This block describes the linking relationship between a D2L user and a
  * Google Apps user.
@@ -17,39 +19,39 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class GoogleAppsLinkingItem
 {
-	/**
-	 * @param UserName
-	 * @type <string>
-	 */
-	private $UserName;
+    /**
+     * @param UserName
+     * @type <string>
+     */
+    private $UserName;
 
-	/**
-	 * @param ExternalUserName
-	 * @type <string>
-	 */
-	private $ExternalUserName;
+    /**
+     * @param ExternalUserName
+     * @type <string>
+     */
+    private $ExternalUserName;
 
-	/**
-	 * @param Domain
-	 * @type <string>
-	 */
-	private $Domain;
+    /**
+     * @param Domain
+     * @type <string>
+     */
+    private $Domain;
 
-	/**
-	 * @param ShouldNotify
-	 * @type <boolean>
-	 */
-	private $ShouldNotify;
+    /**
+     * @param ShouldNotify
+     * @type <boolean>
+     */
+    private $ShouldNotify;
 
 
-	/**
-	 * Constructor for GoogleAppsLinkingItem
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->UserName = $attributes["UserName"];
-		$this->ExternalUserName = $attributes["ExternalUserName"];
-		$this->Domain = $attributes["Domain"];
-		$this->ShouldNotify = $attributes["ShouldNotify"];
-	}
+    /**
+     * Constructor for GoogleAppsLinkingItem
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->UserName = $attributes["UserName"];
+        $this->ExternalUserName = $attributes["ExternalUserName"];
+        $this->Domain = $attributes["Domain"];
+        $this->ShouldNotify = $attributes["ShouldNotify"];
+    }
 }

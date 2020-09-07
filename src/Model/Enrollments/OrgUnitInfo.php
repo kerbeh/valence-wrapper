@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\OrgUnitInfo;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * In rare cases, an org unit may have no code set for it; in that case, you
  * may get null for the code on actions that retrieve this
@@ -21,53 +23,53 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class OrgUnitInfo
 {
-	/**
-	 * @param Type
-	 * @type { <composite:OrgUnit.OrgUnitTypeInfo> }
-	 */
-	private $Type;
+    /**
+     * @param Type
+     * @type { <composite:OrgUnit.OrgUnitTypeInfo> }
+     */
+    private $Type;
 
-	/**
-	 * @param Id
-	 * @type <number:D2LID>
-	 */
-	private $Id;
+    /**
+     * @param Id
+     * @type <number:D2LID>
+     */
+    private $Id;
 
-	/**
-	 * @param Name
-	 * @type <string>
-	 */
-	private $Name;
+    /**
+     * @param Name
+     * @type <string>
+     */
+    private $Name;
 
-	/**
-	 * @param Code
-	 * @type <string>
-	 */
-	private $Code;
+    /**
+     * @param Code
+     * @type <string>
+     */
+    private $Code;
 
-	/**
-	 * @param HomeUrl
-	 * @type <string:URL>
-	 */
-	private $HomeUrl;
+    /**
+     * @param HomeUrl
+     * @type <string:URL>
+     */
+    private $HomeUrl;
 
-	/**
-	 * @param ImageUrl
-	 * @type <string:APIURL>
-	 */
-	private $ImageUrl;
+    /**
+     * @param ImageUrl
+     * @type <string:APIURL>
+     */
+    private $ImageUrl;
 
 
-	/**
-	 * Constructor for OrgUnitInfo
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->Type = $attributes["Type"];
-		$this->Id = $attributes["Id"];
-		$this->Name = $attributes["Name"];
-		$this->Code = $attributes["Code"];
-		$this->HomeUrl = $attributes["HomeUrl"];
-		$this->ImageUrl = $attributes["ImageUrl"];
-	}
+    /**
+     * Constructor for OrgUnitInfo
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->Type = $attributes["Type"];
+        $this->Id = $attributes["Id"];
+        $this->Name = $attributes["Name"];
+        $this->Code = $attributes["Code"];
+        $this->HomeUrl = $attributes["HomeUrl"];
+        $this->ImageUrl = $attributes["ImageUrl"];
+    }
 }

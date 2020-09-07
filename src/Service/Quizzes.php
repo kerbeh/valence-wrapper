@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Quizzes — Developer Platform (July 2020)
+ * Quizzes — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/quiz.html
  */
 class Quizzes
@@ -20,6 +20,22 @@ class Quizzes
     public function deleteQuizzesOrgUnitIdQuizId($version, $orgUnitId, $quizId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/$quizId";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Delete a user’s special access rule for a quiz.
+     * @see https://docs.valence.desire2learn.com/res/quiz.html#delete--d2l-api-le-(version)-(orgUnitId)-quizzes-(quizId)-specialaccess-(userId)
+     * @return /PSR7 (Request)
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $quizId Quiz ID.
+     * @param [D2LID] $userId User ID.
+     */
+    public function deleteQuizzesSpecialaccessOrgUnitIdQuizIdUserId($version, $orgUnitId, $quizId, $userId)
+    {
+        $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/$quizId/specialaccess/$userId";
         return new Request('GET', $uri);
     }
 
@@ -64,8 +80,10 @@ class Quizzes
      * Retrieve a list of users with access to a specified quiz.
      * @see https://docs.valence.desire2learn.com/res/quiz.html#get--d2l-api-le-(version)-(orgUnitId)-quizzes-(quizId)-access-
      * @return /PSR7 (Request)
-     * Return. This action returns a paged result set containing the resulting UserAccess blocks for the segment following your bookmark
-     * parameter (or the first segment if that parameter is empty or missing).
+     * Return. This action returns a paged result set
+     * containing the resulting UserAccess blocks for
+     * the segment following your bookmark  parameter (or the first segment if that
+     * parameter is empty or missing).
      *
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
@@ -83,6 +101,42 @@ class Quizzes
         ];
         $queryString = http_build_query($queryParrams);
         $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/$quizId/access/?$queryString";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Retrieve special access rules for users in a quiz.
+     * @see https://docs.valence.desire2learn.com/res/quiz.html#get--d2l-api-le-(version)-(orgUnitId)-quizzes-(quizId)-specialaccess-
+     * @return /PSR7 (Request)
+     * Return. This action returns a object list page
+     * containing the resulting Quiz.SpecialAccessUserData blocks.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $quizId Quiz ID.
+     */
+    public function getQuizzesSpecialaccessOrgUnitIdQuizId($version, $orgUnitId, $quizId)
+    {
+        $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/$quizId/specialaccess/";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
+     * Retrieve a user’s special access rule for a quiz.
+     * @see https://docs.valence.desire2learn.com/res/quiz.html#get--d2l-api-le-(version)-(orgUnitId)-quizzes-(quizId)-specialaccess-(userId)
+     * @return /PSR7 (Request)
+     * Return. This action returns a Quiz.SpecialAccessData JSON block.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $quizId Quiz ID.
+     * @param [D2LID] $userId User ID.
+     */
+    public function getQuizzesSpecialaccessOrgUnitIdQuizIdUserId($version, $orgUnitId, $quizId, $userId)
+    {
+        $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/$quizId/specialaccess/$userId";
         return new Request('GET', $uri);
     }
 
@@ -132,6 +186,50 @@ class Quizzes
 
 
     /**
+     * Create or update a user’s special access rule for a quiz.
+     * @see https://docs.valence.desire2learn.com/res/quiz.html#put--d2l-api-le-(version)-(orgUnitId)-quizzes-(quizId)-specialaccess-(userId)
+     * @return /PSR7 (Request)
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $quizId Quiz ID.
+     * @param [D2LID] $userId User ID.
+     * @param [SpecialAccessData] $specialAccessData Special access data.
+     */
+    public function putQuizzesSpecialaccessOrgUnitIdQuizIdUserId($version, $orgUnitId, $quizId, $userId, $specialAccessData)
+    {
+        $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/$quizId/specialaccess/$userId";
+        $body = $specialAccessData;
+        $headers = ["content-type" => 'application/json'];
+        return new Request("PUT", $uri, $headers, $body);
+    }
+
+
+    /**
+     * Retrieve a list of attempts for a quiz.
+     * @see https://docs.valence.desire2learn.com/res/quiz.html#get--d2l-api-le-(version)-(orgUnitId)-quizzes-(quizId)-attempts-
+     * @return /PSR7 (Request)
+     * Return. This action returns an ObjectListPage
+     * JSON block containing a list of Quiz.QuizAttemptData belonging to the quiz.
+     *
+     * @param [D2LVERSION] $version API version.
+     * @param [D2LID] $orgUnitId Org unit ID.
+     * @param [D2LID] $quizId Quiz ID.
+     * @param [D2LID] $userId Optional. Retrieve attempts for a single user.
+     * userId
+     */
+    public function getQuizzesAttemptsOrgUnitIdQuizId($version, $orgUnitId, $quizId, $userId = null)
+    {
+        $queryParrams = [
+                            "userId" => $userId
+
+        ];
+        $queryString = http_build_query($queryParrams);
+        $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/$quizId/attempts/?$queryString";
+        return new Request('GET', $uri);
+    }
+
+
+    /**
      * Retrieve a quiz attempt.
      * @see https://docs.valence.desire2learn.com/res/quiz.html#get--d2l-api-le-(version)-(orgUnitId)-quizzes-(quizId)-attempts-(attemptId)
      * @return /PSR7 (Request)
@@ -141,8 +239,9 @@ class Quizzes
      * @param [D2LVERSION] $version API version.
      * @param [D2LID] $orgUnitId Org unit ID.
      * @param [D2LID] $quizId Quiz ID.
+     * @param [D2LID] $attemptId Attempt ID.
      */
-    public function getQuizzesAttemptsOrgUnitIdQuizId($version, $orgUnitId, $quizId)
+    public function getQuizzesAttemptsOrgUnitIdQuizIdAttemptId($version, $orgUnitId, $quizId, $attemptId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/$quizId/attempts/$attemptId";
         return new Request('GET', $uri);

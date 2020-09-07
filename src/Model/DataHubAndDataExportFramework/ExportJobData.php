@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\ExportJobData;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * This composite contains information about a data export job.
  * @see https://docs.valence.desire2learn.com#DataExport.ExportJobData
@@ -14,53 +16,53 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class ExportJobData
 {
-	/**
-	 * @param ExportJobId
-	 * @type <string:GUID>
-	 */
-	private $ExportJobId;
+    /**
+     * @param ExportJobId
+     * @type <string:GUID>
+     */
+    private $ExportJobId;
 
-	/**
-	 * @param DataSetId
-	 * @type <string:GUID>
-	 */
-	private $DataSetId;
+    /**
+     * @param DataSetId
+     * @type <string:GUID>
+     */
+    private $DataSetId;
 
-	/**
-	 * @param Name
-	 * @type <string>
-	 */
-	private $Name;
+    /**
+     * @param Name
+     * @type <string>
+     */
+    private $Name;
 
-	/**
-	 * @param SubmitDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $SubmitDate;
+    /**
+     * @param SubmitDate
+     * @type <string:UTCDateTime>
+     */
+    private $SubmitDate;
 
-	/**
-	 * @param Status
-	 * @type <int:EXPORTJOBSTATUS_T>
-	 */
-	private $Status;
+    /**
+     * @param Status
+     * @type <int:EXPORTJOBSTATUS_T>
+     */
+    private $Status;
 
-	/**
-	 * @param Category
-	 * @type <string>
-	 */
-	private $Category;
+    /**
+     * @param Category
+     * @type <string>
+     */
+    private $Category;
 
 
-	/**
-	 * Constructor for ExportJobData
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->ExportJobId = $attributes["ExportJobId"];
-		$this->DataSetId = $attributes["DataSetId"];
-		$this->Name = $attributes["Name"];
-		$this->SubmitDate = $attributes["SubmitDate"];
-		$this->Status = $attributes["Status"];
-		$this->Category = $attributes["Category"];
-	}
+    /**
+     * Constructor for ExportJobData
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->ExportJobId = $attributes["ExportJobId"];
+        $this->DataSetId = $attributes["DataSetId"];
+        $this->Name = $attributes["Name"];
+        $this->SubmitDate = $attributes["SubmitDate"];
+        $this->Status = $attributes["Status"];
+        $this->Category = $attributes["Category"];
+    }
 }

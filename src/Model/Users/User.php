@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\User;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * This structure gets used as a composite to include in resource blocks
  * returned by a variety of services (for example, enrollments).
@@ -17,53 +19,53 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class User
 {
-	/**
-	 * @param Identifier
-	 * @type <string>
-	 */
-	private $Identifier;
+    /**
+     * @param Identifier
+     * @type <string>
+     */
+    private $Identifier;
 
-	/**
-	 * @param DisplayName
-	 * @type <string>
-	 */
-	private $DisplayName;
+    /**
+     * @param DisplayName
+     * @type <string>
+     */
+    private $DisplayName;
 
-	/**
-	 * @param EmailAddress
-	 * @type <string>
-	 */
-	private $EmailAddress;
+    /**
+     * @param EmailAddress
+     * @type <string>
+     */
+    private $EmailAddress;
 
-	/**
-	 * @param OrgDefinedId
-	 * @type <string>
-	 */
-	private $OrgDefinedId;
+    /**
+     * @param OrgDefinedId
+     * @type <string>
+     */
+    private $OrgDefinedId;
 
-	/**
-	 * @param ProfileBadgeUrl
-	 * @type <string:APIURL>
-	 */
-	private $ProfileBadgeUrl;
+    /**
+     * @param ProfileBadgeUrl
+     * @type <string:APIURL>
+     */
+    private $ProfileBadgeUrl;
 
-	/**
-	 * @param ProfileIdentifier
-	 * @type <string>
-	 */
-	private $ProfileIdentifier;
+    /**
+     * @param ProfileIdentifier
+     * @type <string>
+     */
+    private $ProfileIdentifier;
 
 
-	/**
-	 * Constructor for User
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->Identifier = $attributes["Identifier"];
-		$this->DisplayName = $attributes["DisplayName"];
-		$this->EmailAddress = $attributes["EmailAddress"];
-		$this->OrgDefinedId = $attributes["OrgDefinedId"];
-		$this->ProfileBadgeUrl = $attributes["ProfileBadgeUrl"];
-		$this->ProfileIdentifier = $attributes["ProfileIdentifier"];
-	}
+    /**
+     * Constructor for User
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->Identifier = $attributes["Identifier"];
+        $this->DisplayName = $attributes["DisplayName"];
+        $this->EmailAddress = $attributes["EmailAddress"];
+        $this->OrgDefinedId = $attributes["OrgDefinedId"];
+        $this->ProfileBadgeUrl = $attributes["ProfileBadgeUrl"];
+        $this->ProfileIdentifier = $attributes["ProfileIdentifier"];
+    }
 }

@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\DataSetReportInfo;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * This composite contains information about the plugins that are available
  * for you to use with Brightspace Data Sets.
@@ -14,53 +16,53 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class DataSetReportInfo
 {
-	/**
-	 * @param PluginId
-	 * @type <string:GUID>
-	 */
-	private $PluginId;
+    /**
+     * @param PluginId
+     * @type <string:GUID>
+     */
+    private $PluginId;
 
-	/**
-	 * @param Name
-	 * @type <string>
-	 */
-	private $Name;
+    /**
+     * @param Name
+     * @type <string>
+     */
+    private $Name;
 
-	/**
-	 * @param Description
-	 * @type <string>
-	 */
-	private $Description;
+    /**
+     * @param Description
+     * @type <string>
+     */
+    private $Description;
 
-	/**
-	 * @param CreatedDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $CreatedDate;
+    /**
+     * @param CreatedDate
+     * @type <string:UTCDateTime>
+     */
+    private $CreatedDate;
 
-	/**
-	 * @param DownloadLink
-	 * @type <string:APIURL>
-	 */
-	private $DownloadLink;
+    /**
+     * @param DownloadLink
+     * @type <string:APIURL>
+     */
+    private $DownloadLink;
 
-	/**
-	 * @param DownloadSize
-	 * @type <number>
-	 */
-	private $DownloadSize;
+    /**
+     * @param DownloadSize
+     * @type <number>
+     */
+    private $DownloadSize;
 
 
-	/**
-	 * Constructor for DataSetReportInfo
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->PluginId = $attributes["PluginId"];
-		$this->Name = $attributes["Name"];
-		$this->Description = $attributes["Description"];
-		$this->CreatedDate = $attributes["CreatedDate"];
-		$this->DownloadLink = $attributes["DownloadLink"];
-		$this->DownloadSize = $attributes["DownloadSize"];
-	}
+    /**
+     * Constructor for DataSetReportInfo
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->PluginId = $attributes["PluginId"];
+        $this->Name = $attributes["Name"];
+        $this->Description = $attributes["Description"];
+        $this->CreatedDate = $attributes["CreatedDate"];
+        $this->DownloadLink = $attributes["DownloadLink"];
+        $this->DownloadSize = $attributes["DownloadSize"];
+    }
 }

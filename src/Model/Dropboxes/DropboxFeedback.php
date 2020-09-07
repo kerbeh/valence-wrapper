@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\DropboxFeedback;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * When you use this API to post feedback against a submission, you provide a
  * feedback block without file attachments, and then use the API to upload files
@@ -16,32 +18,32 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class DropboxFeedback
 {
-	/**
-	 * @param Feedback
-	 * @type { <composite:RichText> }
-	 */
-	private $Feedback;
+    /**
+     * @param Feedback
+     * @type { <composite:RichText> }
+     */
+    private $Feedback;
 
-	/**
-	 * @param Score
-	 * @type <number:decimal>
-	 */
-	private $Score;
+    /**
+     * @param Score
+     * @type <number:decimal>
+     */
+    private $Score;
 
-	/**
-	 * @param IsGraded
-	 * @type <boolean>
-	 */
-	private $IsGraded;
+    /**
+     * @param IsGraded
+     * @type <boolean>
+     */
+    private $IsGraded;
 
 
-	/**
-	 * Constructor for DropboxFeedback
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->Feedback = $attributes["Feedback"];
-		$this->Score = $attributes["Score"];
-		$this->IsGraded = $attributes["IsGraded"];
-	}
+    /**
+     * Constructor for DropboxFeedback
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->Feedback = $attributes["Feedback"];
+        $this->Score = $attributes["Score"];
+        $this->IsGraded = $attributes["IsGraded"];
+    }
 }

@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Grades (grade objects, categories, values, schemes) — Developer Platform (July 2020)
+ * Grades (grade objects, categories, values, schemes) — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/grade.html
  */
 class Grades

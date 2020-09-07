@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Release Conditions — Developer Platform (July 2020)
+ * Release Conditions — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/releaseconditions.html
  */
 class ReleaseConditions

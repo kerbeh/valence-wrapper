@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\GradeObject;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * A grade object describes a single point of assessment for an org unit,
  * containing the parameters within which participants will get assessed. The
@@ -21,116 +23,116 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class GradeObject
 {
-	/**
-	 * @param AssociatedTool
-	 * @type { <composite:AssociatedTool> }
-	 */
-	private $AssociatedTool;
+    /**
+     * @param AssociatedTool
+     * @type { <composite:AssociatedTool> }
+     */
+    private $AssociatedTool;
 
-	/**
-	 * @param MaxPoints
-	 * @type <number:decimal>
-	 */
-	private $MaxPoints;
+    /**
+     * @param MaxPoints
+     * @type <number:decimal>
+     */
+    private $MaxPoints;
 
-	/**
-	 * @param CanExceedMaxPoints
-	 * @type <boolean>
-	 */
-	private $CanExceedMaxPoints;
+    /**
+     * @param CanExceedMaxPoints
+     * @type <boolean>
+     */
+    private $CanExceedMaxPoints;
 
-	/**
-	 * @param IsBonus
-	 * @type <boolean>
-	 */
-	private $IsBonus;
+    /**
+     * @param IsBonus
+     * @type <boolean>
+     */
+    private $IsBonus;
 
-	/**
-	 * @param ExcludeFromFinalGradeCalculation
-	 * @type <boolean>
-	 */
-	private $ExcludeFromFinalGradeCalculation;
+    /**
+     * @param ExcludeFromFinalGradeCalculation
+     * @type <boolean>
+     */
+    private $ExcludeFromFinalGradeCalculation;
 
-	/**
-	 * @param GradeSchemeId
-	 * @type <number:D2LID>
-	 */
-	private $GradeSchemeId;
+    /**
+     * @param GradeSchemeId
+     * @type <number:D2LID>
+     */
+    private $GradeSchemeId;
 
-	/**
-	 * @param Id
-	 * @type <number:D2LID>
-	 */
-	private $Id;
+    /**
+     * @param Id
+     * @type <number:D2LID>
+     */
+    private $Id;
 
-	/**
-	 * @param Name
-	 * @type <string>
-	 */
-	private $Name;
+    /**
+     * @param Name
+     * @type <string>
+     */
+    private $Name;
 
-	/**
-	 * @param ShortName
-	 * @type <string>
-	 */
-	private $ShortName;
+    /**
+     * @param ShortName
+     * @type <string>
+     */
+    private $ShortName;
 
-	/**
-	 * @param GradeType
-	 * @type
-	 */
-	private $GradeType;
+    /**
+     * @param GradeType
+     * @type
+     */
+    private $GradeType;
 
-	/**
-	 * @param CategoryId
-	 * @type <number:D2LID>
-	 */
-	private $CategoryId;
+    /**
+     * @param CategoryId
+     * @type <number:D2LID>
+     */
+    private $CategoryId;
 
-	/**
-	 * @param Description
-	 * @type { <composite:RichText> }
-	 */
-	private $Description;
+    /**
+     * @param Description
+     * @type { <composite:RichText> }
+     */
+    private $Description;
 
-	/**
-	 * @param GradeSchemeUrl
-	 * @type <string:APIURL>
-	 */
-	private $GradeSchemeUrl;
+    /**
+     * @param GradeSchemeUrl
+     * @type <string:APIURL>
+     */
+    private $GradeSchemeUrl;
 
-	/**
-	 * @param Weight
-	 * @type <number:decimal>
-	 */
-	private $Weight;
+    /**
+     * @param Weight
+     * @type <number:decimal>
+     */
+    private $Weight;
 
-	/**
-	 * @param ActivityId
-	 * @type <string:D2LID>
-	 */
-	private $ActivityId;
+    /**
+     * @param ActivityId
+     * @type <string:D2LID>
+     */
+    private $ActivityId;
 
 
-	/**
-	 * Constructor for GradeObject
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->AssociatedTool = $attributes["AssociatedTool"];
-		$this->MaxPoints = $attributes["MaxPoints"];
-		$this->CanExceedMaxPoints = $attributes["CanExceedMaxPoints"];
-		$this->IsBonus = $attributes["IsBonus"];
-		$this->ExcludeFromFinalGradeCalculation = $attributes["ExcludeFromFinalGradeCalculation"];
-		$this->GradeSchemeId = $attributes["GradeSchemeId"];
-		$this->Id = $attributes["Id"];
-		$this->Name = $attributes["Name"];
-		$this->ShortName = $attributes["ShortName"];
-		$this->GradeType = $attributes["GradeType"];
-		$this->CategoryId = $attributes["CategoryId"];
-		$this->Description = $attributes["Description"];
-		$this->GradeSchemeUrl = $attributes["GradeSchemeUrl"];
-		$this->Weight = $attributes["Weight"];
-		$this->ActivityId = $attributes["ActivityId"];
-	}
+    /**
+     * Constructor for GradeObject
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->AssociatedTool = $attributes["AssociatedTool"];
+        $this->MaxPoints = $attributes["MaxPoints"];
+        $this->CanExceedMaxPoints = $attributes["CanExceedMaxPoints"];
+        $this->IsBonus = $attributes["IsBonus"];
+        $this->ExcludeFromFinalGradeCalculation = $attributes["ExcludeFromFinalGradeCalculation"];
+        $this->GradeSchemeId = $attributes["GradeSchemeId"];
+        $this->Id = $attributes["Id"];
+        $this->Name = $attributes["Name"];
+        $this->ShortName = $attributes["ShortName"];
+        $this->GradeType = $attributes["GradeType"];
+        $this->CategoryId = $attributes["CategoryId"];
+        $this->Description = $attributes["Description"];
+        $this->GradeSchemeUrl = $attributes["GradeSchemeUrl"];
+        $this->Weight = $attributes["Weight"];
+        $this->ActivityId = $attributes["ActivityId"];
+    }
 }

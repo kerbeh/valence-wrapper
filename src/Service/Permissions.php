@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Permissions — Developer Platform (July 2020)
+ * Permissions — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/permissions.html
  */
 class Permissions

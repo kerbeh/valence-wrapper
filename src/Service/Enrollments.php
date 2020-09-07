@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Enrollments (groups, sections, auditors) — Developer Platform (July 2020)
+ * Enrollments (groups, sections, auditors) — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/enroll.html
  */
 class Enrollments

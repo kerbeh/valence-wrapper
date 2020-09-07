@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Subscriptions to user and object activities — Developer Platform (July 2020)
+ * Subscriptions to user and object activities — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/subscription.html
  */
 class SubscriptionsToUserAndObjectActivities

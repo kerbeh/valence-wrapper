@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\UserOrgUnit;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * If the enrollment was directly made by a user, provides the user ID
  * of the person who created this enrollment. If the enrollment was made by
@@ -21,46 +23,46 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class UserOrgUnit
 {
-	/**
-	 * @param Role
-	 * @type { <composite:Enrollment.RoleInfo> }
-	 */
-	private $Role;
+    /**
+     * @param Role
+     * @type { <composite:Enrollment.RoleInfo> }
+     */
+    private $Role;
 
-	/**
-	 * @param OrgUnit
-	 * @type { <composite:Enrollment.OrgUnitInfo> }
-	 */
-	private $OrgUnit;
+    /**
+     * @param OrgUnit
+     * @type { <composite:Enrollment.OrgUnitInfo> }
+     */
+    private $OrgUnit;
 
-	/**
-	 * @param IsCascading
-	 * @type <boolean>
-	 */
-	private $IsCascading;
+    /**
+     * @param IsCascading
+     * @type <boolean>
+     */
+    private $IsCascading;
 
-	/**
-	 * @param EnrolledByUserId
-	 * @type <number:D2LID>
-	 */
-	private $EnrolledByUserId;
+    /**
+     * @param EnrolledByUserId
+     * @type <number:D2LID>
+     */
+    private $EnrolledByUserId;
 
-	/**
-	 * @param EnrolledByUserDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $EnrolledByUserDate;
+    /**
+     * @param EnrolledByUserDate
+     * @type <string:UTCDateTime>
+     */
+    private $EnrolledByUserDate;
 
 
-	/**
-	 * Constructor for UserOrgUnit
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->Role = $attributes["Role"];
-		$this->OrgUnit = $attributes["OrgUnit"];
-		$this->IsCascading = $attributes["IsCascading"];
-		$this->EnrolledByUserId = $attributes["EnrolledByUserId"];
-		$this->EnrolledByUserDate = $attributes["EnrolledByUserDate"];
-	}
+    /**
+     * Constructor for UserOrgUnit
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->Role = $attributes["Role"];
+        $this->OrgUnit = $attributes["OrgUnit"];
+        $this->IsCascading = $attributes["IsCascading"];
+        $this->EnrolledByUserId = $attributes["EnrolledByUserId"];
+        $this->EnrolledByUserDate = $attributes["EnrolledByUserDate"];
+    }
 }

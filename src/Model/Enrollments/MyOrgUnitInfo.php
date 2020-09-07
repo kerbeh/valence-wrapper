@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\MyOrgUnitInfo;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * If present, presents the start date of the org unit.
  * @see https://docs.valence.desire2learn.com#Enrollment.MyOrgUnitInfo
@@ -22,74 +24,74 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class MyOrgUnitInfo
 {
-	/**
-	 * @param Access
-	 * @type {
-	 */
-	private $Access;
+    /**
+     * @param Access
+     * @type {
+     */
+    private $Access;
 
-	/**
-	 * @param IsActive
-	 * @type <boolean>
-	 */
-	private $IsActive;
+    /**
+     * @param IsActive
+     * @type <boolean>
+     */
+    private $IsActive;
 
-	/**
-	 * @param StartDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $StartDate;
+    /**
+     * @param StartDate
+     * @type <string:UTCDateTime>
+     */
+    private $StartDate;
 
-	/**
-	 * @param EndDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $EndDate;
+    /**
+     * @param EndDate
+     * @type <string:UTCDateTime>
+     */
+    private $EndDate;
 
-	/**
-	 * @param CanAccess
-	 * @type <boolean>
-	 */
-	private $CanAccess;
+    /**
+     * @param CanAccess
+     * @type <boolean>
+     */
+    private $CanAccess;
 
-	/**
-	 * @param ClasslistRoleName
-	 * @type <string>
-	 */
-	private $ClasslistRoleName;
+    /**
+     * @param ClasslistRoleName
+     * @type <string>
+     */
+    private $ClasslistRoleName;
 
-	/**
-	 * @param LISRoles
-	 * @type
-	 */
-	private $LISRoles;
+    /**
+     * @param LISRoles
+     * @type
+     */
+    private $LISRoles;
 
-	/**
-	 * @param OrgUnit
-	 * @type { <composite:Enrollment.OrgUnitInfo> }
-	 */
-	private $OrgUnit;
+    /**
+     * @param OrgUnit
+     * @type { <composite:Enrollment.OrgUnitInfo> }
+     */
+    private $OrgUnit;
 
-	/**
-	 * @param PinDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $PinDate;
+    /**
+     * @param PinDate
+     * @type <string:UTCDateTime>
+     */
+    private $PinDate;
 
 
-	/**
-	 * Constructor for MyOrgUnitInfo
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->Access = $attributes["Access"];
-		$this->IsActive = $attributes["IsActive"];
-		$this->StartDate = $attributes["StartDate"];
-		$this->EndDate = $attributes["EndDate"];
-		$this->CanAccess = $attributes["CanAccess"];
-		$this->ClasslistRoleName = $attributes["ClasslistRoleName"];
-		$this->LISRoles = $attributes["LISRoles"];
-		$this->OrgUnit = $attributes["OrgUnit"];
-		$this->PinDate = $attributes["PinDate"];
-	}
+    /**
+     * Constructor for MyOrgUnitInfo
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->Access = $attributes["Access"];
+        $this->IsActive = $attributes["IsActive"];
+        $this->StartDate = $attributes["StartDate"];
+        $this->EndDate = $attributes["EndDate"];
+        $this->CanAccess = $attributes["CanAccess"];
+        $this->ClasslistRoleName = $attributes["ClasslistRoleName"];
+        $this->LISRoles = $attributes["LISRoles"];
+        $this->OrgUnit = $attributes["OrgUnit"];
+        $this->PinDate = $attributes["PinDate"];
+    }
 }

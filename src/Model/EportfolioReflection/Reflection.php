@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\Reflection;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * A Reflection EP object’s structure does not differ from the general form of
  * the EpObject, except it has an appropriate
@@ -11,10 +13,10 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class Reflection
 {
-	/**
-	 * Constructor for Reflection
-	 */
-	public function __construct(array $attributes = [])
-	{
-	}
+    /**
+     * Constructor for Reflection
+     */
+    public function __construct(array $attributes = [])
+    {
+    }
 }

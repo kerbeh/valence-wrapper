@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\UrlArtifact;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * An UrlArtifact EP object’s structure differs in two ways from the general
  * form of the EpObject:
@@ -10,10 +12,10 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class UrlArtifact
 {
-	/**
-	 * Constructor for UrlArtifact
-	 */
-	public function __construct(array $attributes = [])
-	{
-	}
+    /**
+     * Constructor for UrlArtifact
+     */
+    public function __construct(array $attributes = [])
+    {
+    }
 }

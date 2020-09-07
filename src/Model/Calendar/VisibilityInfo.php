@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\VisibilityInfo;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * This structure provides an encoding for the event’s visibility. By default,
  * events are Visible.
@@ -39,46 +41,46 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class VisibilityInfo
 {
-	/**
-	 * @param Type
-	 * @type <number:VISIBILITY_T>
-	 */
-	private $Type;
+    /**
+     * @param Type
+     * @type <number:VISIBILITY_T>
+     */
+    private $Type;
 
-	/**
-	 * @param Range
-	 * @type <number>
-	 */
-	private $Range;
+    /**
+     * @param Range
+     * @type <number>
+     */
+    private $Range;
 
-	/**
-	 * @param HiddenRangeUnitType
-	 * @type <number:HIDDENUNIT_T>
-	 */
-	private $HiddenRangeUnitType;
+    /**
+     * @param HiddenRangeUnitType
+     * @type <number:HIDDENUNIT_T>
+     */
+    private $HiddenRangeUnitType;
 
-	/**
-	 * @param StartDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $StartDate;
+    /**
+     * @param StartDate
+     * @type <string:UTCDateTime>
+     */
+    private $StartDate;
 
-	/**
-	 * @param EndDate
-	 * @type <string:UTCDateTime>
-	 */
-	private $EndDate;
+    /**
+     * @param EndDate
+     * @type <string:UTCDateTime>
+     */
+    private $EndDate;
 
 
-	/**
-	 * Constructor for VisibilityInfo
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->Type = $attributes["Type"];
-		$this->Range = $attributes["Range"];
-		$this->HiddenRangeUnitType = $attributes["HiddenRangeUnitType"];
-		$this->StartDate = $attributes["StartDate"];
-		$this->EndDate = $attributes["EndDate"];
-	}
+    /**
+     * Constructor for VisibilityInfo
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->Type = $attributes["Type"];
+        $this->Range = $attributes["Range"];
+        $this->HiddenRangeUnitType = $attributes["HiddenRangeUnitType"];
+        $this->StartDate = $attributes["StartDate"];
+        $this->EndDate = $attributes["EndDate"];
+    }
 }

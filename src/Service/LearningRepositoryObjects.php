@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Learning Repository objects — Developer Platform (July 2020)
+ * Learning Repository objects — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/lor.html
  */
 class LearningRepositoryObjects

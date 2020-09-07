@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Awards — Developer Platform (July 2020)
+ * Awards — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/awards.html
  */
 class Awards

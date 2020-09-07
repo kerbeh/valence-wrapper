@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Discussions (forums, topics, posts) — Developer Platform (July 2020)
+ * Discussions (forums, topics, posts) — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/discuss.html
  */
 class Discussions

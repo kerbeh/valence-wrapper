@@ -1,8 +1,10 @@
 <?php
 namespace ValenceWrapper\Model\CreateCopyJobRequest;
+
 use ValenceWrapper\Model\BaseValenceModel;
 use ValenceWrapper\Model\Basic\UtcDateTime;
 use ValenceWrapper\Model\Basic\RichText;
+
 /**
  * Course offering copy jobs can selectively copy distinct course
  * components. These string labels identify the various course components:
@@ -94,46 +96,46 @@ use ValenceWrapper\Model\Basic\RichText;
  */
 class CreateCopyJobRequest
 {
-	/**
-	 * @param SourceOrgUnitId
-	 * @type <number:D2LID>
-	 */
-	private $SourceOrgUnitId;
+    /**
+     * @param SourceOrgUnitId
+     * @type <number:D2LID>
+     */
+    private $SourceOrgUnitId;
 
-	/**
-	 * @param CallbackUrl
-	 * @type <string>
-	 */
-	private $CallbackUrl;
+    /**
+     * @param CallbackUrl
+     * @type <string>
+     */
+    private $CallbackUrl;
 
-	/**
-	 * @param DaysToOffsetDates
-	 * @type <number:integer>
-	 */
-	private $DaysToOffsetDates;
+    /**
+     * @param DaysToOffsetDates
+     * @type <number:integer>
+     */
+    private $DaysToOffsetDates;
 
-	/**
-	 * @param HoursToOffsetDates
-	 * @type <number:decimal>
-	 */
-	private $HoursToOffsetDates;
+    /**
+     * @param HoursToOffsetDates
+     * @type <number:decimal>
+     */
+    private $HoursToOffsetDates;
 
-	/**
-	 * @param OffsetByStartDateDifference
-	 * @type <boolean>
-	 */
-	private $OffsetByStartDateDifference;
+    /**
+     * @param OffsetByStartDateDifference
+     * @type <boolean>
+     */
+    private $OffsetByStartDateDifference;
 
 
-	/**
-	 * Constructor for CreateCopyJobRequest
-	 */
-	public function __construct(array $attributes = [])
-	{
-		$this->SourceOrgUnitId = $attributes["SourceOrgUnitId"];
-		$this->CallbackUrl = $attributes["CallbackUrl"];
-		$this->DaysToOffsetDates = $attributes["DaysToOffsetDates"];
-		$this->HoursToOffsetDates = $attributes["HoursToOffsetDates"];
-		$this->OffsetByStartDateDifference = $attributes["OffsetByStartDateDifference"];
-	}
+    /**
+     * Constructor for CreateCopyJobRequest
+     */
+    public function __construct(array $attributes = [])
+    {
+        $this->SourceOrgUnitId = $attributes["SourceOrgUnitId"];
+        $this->CallbackUrl = $attributes["CallbackUrl"];
+        $this->DaysToOffsetDates = $attributes["DaysToOffsetDates"];
+        $this->HoursToOffsetDates = $attributes["HoursToOffsetDates"];
+        $this->OffsetByStartDateDifference = $attributes["OffsetByStartDateDifference"];
+    }
 }

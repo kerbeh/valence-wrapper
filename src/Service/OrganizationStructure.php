@@ -4,7 +4,7 @@ namespace ValenceWrapper\Service;
 use GuzzleHttp\Psr7\Request;
 
 /**
- * Organization structure (Org units, structure) — Developer Platform (July 2020)
+ * Organization structure (Org units, structure) — Developer Platform (September 2020)
  * @see https://docs.valence.desire2learn.com/res/orgunit.html
  */
 class OrganizationStructure
