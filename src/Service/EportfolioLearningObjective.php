@@ -20,7 +20,7 @@ class EportfolioLearningObjective
     public function deleteLearningobjectiveAssociationObjectiveIdObjectId($version, $objectiveId, $objectId)
     {
         $uri = "/d2l/api/eP/$version/learningobjective/$objectiveId/association/$objectId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -34,7 +34,7 @@ class EportfolioLearningObjective
     public function deleteLearningobjectiveObjectiveId($version, $objectiveId)
     {
         $uri = "/d2l/api/eP/$version/learningobjective/$objectiveId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -78,7 +78,7 @@ class EportfolioLearningObjective
         $uri = "/d2l/api/eP/$version/learningobjective/$objectiveId";
         $body = $learningObjective;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -93,6 +93,6 @@ class EportfolioLearningObjective
     public function postLearningobjectiveAssociationObjectiveIdObjectId($version, $objectiveId, $objectId)
     {
         $uri = "/d2l/api/eP/$version/learningobjective/$objectiveId/association/$objectId";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 }

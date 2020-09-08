@@ -53,7 +53,7 @@ class OrganizationStructure
     public function deleteOrgstructureChildrenOrgUnitIdChildOrgUnitId($version, $orgUnitId, $childOrgUnitId)
     {
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/children/$childOrgUnitId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -68,7 +68,7 @@ class OrganizationStructure
     public function deleteOrgstructureParentsOrgUnitIdParentOrgUnitId($version, $orgUnitId, $parentOrgUnitId)
     {
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/parents/$parentOrgUnitId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -371,7 +371,7 @@ class OrganizationStructure
         $uri = "/d2l/api/lp/$version/orgstructure/";
         $body = $orgUnitCreateData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -392,7 +392,7 @@ class OrganizationStructure
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/children/";
         $body = $orgUnitId;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -413,7 +413,7 @@ class OrganizationStructure
         $uri = "/d2l/api/lp/$version/orgstructure/$orgUnitId/parents/";
         $body = $orgUnitId;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -489,7 +489,7 @@ class OrganizationStructure
     public function deleteOrgstructureRecyclebinOrgUnitId($version, $orgUnitId)
     {
         $uri = "/d2l/api/lp/$version/orgstructure/recyclebin/$orgUnitId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -528,7 +528,7 @@ class OrganizationStructure
     public function postOrgstructureRecyclebinRecycleOrgUnitId($version, $orgUnitId)
     {
         $uri = "/d2l/api/lp/$version/orgstructure/recyclebin/$orgUnitId/recycle";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -542,7 +542,7 @@ class OrganizationStructure
     public function postOrgstructureRecyclebinRestoreOrgUnitId($version, $orgUnitId)
     {
         $uri = "/d2l/api/lp/$version/orgstructure/recyclebin/$orgUnitId/restore";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -556,7 +556,7 @@ class OrganizationStructure
     public function deleteOutypesOrgUnitTypeId($version, $orgUnitTypeId)
     {
         $uri = "/d2l/api/lp/$version/outypes/$orgUnitTypeId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -638,7 +638,7 @@ class OrganizationStructure
         $uri = "/d2l/api/lp/$version/outypes/";
         $body = $createOrgUnitTypeData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -659,6 +659,6 @@ class OrganizationStructure
         $uri = "/d2l/api/lp/$version/outypes/$orgUnitTypeId";
         $body = $createOrgUnitTypeData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 }

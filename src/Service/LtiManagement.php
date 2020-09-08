@@ -19,7 +19,7 @@ class LtiManagement
     public function deleteLtiLinkLtiLinkId($version, $ltiLinkId)
     {
         $uri = "/d2l/api/le/$version/lti/link/$ltiLinkId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -76,7 +76,7 @@ class LtiManagement
         $uri = "/d2l/api/le/$version/lti/link/$orgUnitId";
         $body = $createLtiLinkData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -98,7 +98,7 @@ class LtiManagement
     public function postLtiQuicklinkOrgUnitIdLtiLinkId($version, $orgUnitId, $ltiLinkId)
     {
         $uri = "/d2l/api/le/$version/lti/quicklink/$orgUnitId/$ltiLinkId";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -133,7 +133,7 @@ class LtiManagement
     public function deleteLtiLinkSharingOrgUnitIdLinkId($version, $orgUnitId, $linkId)
     {
         $uri = "/d2l/api/le/$version/lti/link/$orgUnitId/$linkId/sharing/$sharingOrgUnitId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -174,7 +174,7 @@ class LtiManagement
         $uri = "/d2l/api/le/$version/lti/link/$orgUnitId/$linkId/sharing/";
         $body = $createSharingRule;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -194,7 +194,7 @@ class LtiManagement
     public function putLtiLinkSharingOrgUnitIdLinkIdSharingOrgUnitId($version, $orgUnitId, $linkId, $sharingOrgUnitId)
     {
         $uri = "/d2l/api/le/$version/lti/link/$orgUnitId/$linkId/sharing/$sharingOrgUnitId";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 
 
@@ -208,7 +208,7 @@ class LtiManagement
     public function deleteLtiTpTpId($version, $tpId)
     {
         $uri = "/d2l/api/le/$version/lti/tp/$tpId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -267,7 +267,7 @@ class LtiManagement
         $uri = "/d2l/api/le/$version/lti/tp/$orgUnitId";
         $body = $createLtiProviderData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -302,7 +302,7 @@ class LtiManagement
     public function deleteLtiTpSharingOrgUnitIdTpId($version, $orgUnitId, $tpId)
     {
         $uri = "/d2l/api/le/$version/lti/tp/$orgUnitId/$tpId/sharing/$sharingOrgUnitId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -343,7 +343,7 @@ class LtiManagement
         $uri = "/d2l/api/le/$version/lti/tp/$orgUnitId/$tpId/sharing/";
         $body = $createSharingRule;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -363,6 +363,6 @@ class LtiManagement
     public function putLtiTpSharingOrgUnitIdTpIdSharingOrgUnitId($version, $orgUnitId, $tpId, $sharingOrgUnitId)
     {
         $uri = "/d2l/api/le/$version/lti/tp/$orgUnitId/$tpId/sharing/$sharingOrgUnitId";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 }

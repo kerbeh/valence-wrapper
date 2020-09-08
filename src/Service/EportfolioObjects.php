@@ -398,7 +398,7 @@ class EportfolioObjects
     public function postObjectShareDeleteObjectId($version, $objectId)
     {
         $uri = "/d2l/api/eP/$version/object/$objectId/share/delete";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -419,7 +419,7 @@ class EportfolioObjects
     public function postObjectShareNewObjectId($version, $objectId)
     {
         $uri = "/d2l/api/eP/$version/object/$objectId/share/new";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -455,7 +455,7 @@ class EportfolioObjects
         $uri = "/d2l/api/eP/$version/ignoredusers/add";
         $body = $userId;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -475,6 +475,6 @@ class EportfolioObjects
         $uri = "/d2l/api/eP/$version/ignoredusers/remove";
         $body = $userId;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 }

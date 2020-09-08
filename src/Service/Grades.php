@@ -20,7 +20,7 @@ class Grades
     public function deleteGradesOrgUnitIdGradeObjectID($version, $orgUnitId, $gradeObjectID)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -106,7 +106,7 @@ class Grades
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/";
         $body = $gradeObject;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -146,7 +146,7 @@ class Grades
     public function deleteGradesCategoriesOrgUnitIdCategoryId($version, $orgUnitId, $categoryId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/categories/$categoryId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -202,7 +202,7 @@ class Grades
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/categories/";
         $body = $gradeCategoryData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -467,7 +467,7 @@ class Grades
     public function postGradesFinalCalculatedOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/final/calculated/$userId";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -481,7 +481,7 @@ class Grades
     public function postGradesFinalCalculatedAllOrgUnitId($version, $orgUnitId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/final/calculated/all";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -538,7 +538,7 @@ class Grades
     public function deleteGradesCoursecompletionOrgUnitIdCompletionId($version, $orgUnitId, $completionId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/courseCompletion/$completionId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -628,7 +628,7 @@ class Grades
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/courseCompletion/";
         $body = $courseCompletionData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -703,7 +703,7 @@ class Grades
     public function putGradesSetupOrgUnitId($version, $orgUnitId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/setup/";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 
 
@@ -756,7 +756,7 @@ class Grades
     public function postGradesExemptionsOrgUnitIdGradeObjectIdUserId($version, $orgUnitId, $gradeObjectId, $userId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/$userId";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -772,7 +772,7 @@ class Grades
     public function deleteGradesExemptionsOrgUnitIdGradeObjectIdUserId($version, $orgUnitId, $gradeObjectId, $userId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/$gradeObjectId/exemptions/$userId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -813,6 +813,6 @@ class Grades
     public function postGradesExemptionsOrgUnitIdUserId($version, $orgUnitId, $userId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/grades/exemptions/$userId";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 }

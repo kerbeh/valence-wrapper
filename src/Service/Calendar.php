@@ -20,7 +20,7 @@ class Calendar
     public function deleteCalendarEventOrgUnitIdEventId($version, $orgUnitId, $eventId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/calendar/event/$eventId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -285,7 +285,7 @@ class Calendar
         $uri = "/d2l/api/le/$version/$orgUnitId/calendar/event/";
         $body = $eventData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 

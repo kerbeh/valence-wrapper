@@ -19,7 +19,7 @@ class LtiAdvantageManagement
     public function deleteLtiadvantageRegistrationClientId($version, $clientId)
     {
         $uri = "/d2l/api/le/$version/ltiadvantage/registration/$clientId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -80,7 +80,7 @@ class LtiAdvantageManagement
         $uri = "/d2l/api/le/$version/ltiadvantage/registration/";
         $body = $createRegistrationData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -114,7 +114,7 @@ class LtiAdvantageManagement
     public function deleteLtiadvantageDeploymentDeploymentId($version, $deploymentId)
     {
         $uri = "/d2l/api/le/$version/ltiadvantage/deployment/$deploymentId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -179,7 +179,7 @@ class LtiAdvantageManagement
         $uri = "/d2l/api/le/$version/ltiadvantage/deployment/";
         $body = $createDeploymentData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -213,7 +213,7 @@ class LtiAdvantageManagement
     public function deleteLtiadvantageDeploymentSharingDeploymentId($version, $deploymentId)
     {
         $uri = "/d2l/api/le/$version/ltiadvantage/deployment/$deploymentId/sharing/";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -228,7 +228,7 @@ class LtiAdvantageManagement
     public function deleteLtiadvantageDeploymentSharingDeploymentIdSharingOrgUnitId($version, $deploymentId, $sharingOrgUnitId)
     {
         $uri = "/d2l/api/le/$version/ltiadvantage/deployment/$deploymentId/sharing/$sharingOrgUnitId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -276,7 +276,7 @@ class LtiAdvantageManagement
         $uri = "/d2l/api/le/$version/ltiadvantage/deployment/$deploymentId/sharing/";
         $body = $createSharingRuleData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -313,7 +313,7 @@ class LtiAdvantageManagement
     public function deleteLtiadvantageLinksOrgunitOrgUnitIdLinkId($version, $orgUnitId, $linkId)
     {
         $uri = "/d2l/api/le/$version/ltiadvantage/links/orgunit/$orgUnitId/$linkId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -423,7 +423,7 @@ class LtiAdvantageManagement
         $uri = "/d2l/api/le/$version/ltiadvantage/links/organization/";
         $body = $createLTIAdvantageLinkData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -443,7 +443,7 @@ class LtiAdvantageManagement
         $uri = "/d2l/api/le/$version/ltiadvantage/links/orgunit/$orgUnitId/";
         $body = $createLTIAdvantageLinkData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -464,7 +464,7 @@ class LtiAdvantageManagement
     public function postLtiadvantageQuicklinksOrgunitLinkOrgUnitIdLinkId($version, $orgUnitId, $linkId)
     {
         $uri = "/d2l/api/le/$apiVersion/ltiadvantage/quicklinks/orgunit/$orgUnitId/link/$linkId";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -525,6 +525,6 @@ class LtiAdvantageManagement
         $uri = "/d2l/api/le/$version/ltiadvantage/migration/links/$linkId";
         $body = $migrationData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 }

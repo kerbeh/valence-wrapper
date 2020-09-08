@@ -19,7 +19,7 @@ class EportfolioPresentation
     public function deletePresentationObjectId($version, $objectId)
     {
         $uri = "/d2l/api/eP/$version/presentation/$objectId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -59,7 +59,7 @@ class EportfolioPresentation
     public function postPresentationsNew($version)
     {
         $uri = "/d2l/api/eP/$version/presentations/new";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -76,6 +76,6 @@ class EportfolioPresentation
     public function postPresentationObjectId($version, $objectId)
     {
         $uri = "/d2l/api/eP/$version/presentation/$objectId";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 }

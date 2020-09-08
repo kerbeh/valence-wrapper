@@ -20,7 +20,7 @@ class Surveys
     public function deleteSurveysOrgUnitIdSurveyId($version, $orgUnitId, $surveyId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/surveys/$surveyId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -36,7 +36,7 @@ class Surveys
     public function deleteSurveysSpecialaccessOrgUnitIdSurveyIdUserId($version, $orgUnitId, $surveyId, $userId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/surveys/$surveyId/specialaccess/$userId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -157,7 +157,7 @@ class Surveys
         $uri = "/d2l/api/le/$version/$orgUnitId/surveys/";
         $body = $surveyWriteData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -255,7 +255,7 @@ class Surveys
     public function deleteSurveysCategoriesOrgUnitIdCategoryId($version, $orgUnitId, $categoryId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/surveys/categories/$categoryId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -313,7 +313,7 @@ class Surveys
         $uri = "/d2l/api/le/$version/$orgUnitId/surveys/categories/";
         $body = $categoryData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 

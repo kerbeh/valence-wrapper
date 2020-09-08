@@ -19,7 +19,7 @@ class SubscriptionsToUserAndObjectActivities
     public function deleteSubscriptionsObjectsId($version, $id)
     {
         $uri = "/d2l/api/eP/$version/subscriptions/objects/$objectId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -72,7 +72,7 @@ class SubscriptionsToUserAndObjectActivities
     public function postSubscriptionsObjectsId($version, $id)
     {
         $uri = "/d2l/api/eP/$version/subscriptions/objects/$objectId";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -86,7 +86,7 @@ class SubscriptionsToUserAndObjectActivities
     public function deleteSubscriptionsUsersId($version, $id)
     {
         $uri = "/d2l/api/eP/$version/subscriptions/users/$userId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -138,6 +138,6 @@ class SubscriptionsToUserAndObjectActivities
     public function postSubscriptionsUsersId($version, $id)
     {
         $uri = "/d2l/api/eP/$version/subscriptions/users/$userId";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 }

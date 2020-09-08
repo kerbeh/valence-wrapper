@@ -19,7 +19,7 @@ class Users
     public function deleteUsersUserId($version, $userId)
     {
         $uri = "/d2l/api/lp/$version/users/$userId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -122,7 +122,7 @@ class Users
         $uri = "/d2l/api/lp/$version/users/";
         $body = $createUserData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -217,7 +217,7 @@ class Users
         $uri = "/d2l/api/gae/$version/linkuser";
         $body = $googleAppsLinkingItem;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -233,7 +233,7 @@ class Users
     public function deleteNotificationsInstantCarriersSubscriptionsCarrierIdMessageTypeId($version, $carrierId, $messageTypeId)
     {
         $uri = "/d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -250,7 +250,7 @@ class Users
     public function deleteNotificationsInstantCarriersSubscriptionsUsersCarrierIdMessageTypeIdUserId($version, $carrierId, $messageTypeId, $userId)
     {
         $uri = "/d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId/users/$userId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -265,7 +265,7 @@ class Users
     public function deleteNotificationsInstantNumbersNotificationNumber($version, $notificationNumber)
     {
         $uri = "/d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -281,7 +281,7 @@ class Users
     public function deleteNotificationsInstantNumbersUsersNotificationNumberUserId($version, $notificationNumber, $userId)
     {
         $uri = "/d2l/api/lp/$version/notifications/instant/numbers/$notificationNumber/users/$userId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -295,7 +295,7 @@ class Users
     public function deleteNotificationsInstantUsersNumberUserId($version, $userId)
     {
         $uri = "/d2l/api/lp/$version/notifications/instant/users/$userId/number";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -438,7 +438,7 @@ class Users
     public function putNotificationsInstantCarriersSubscriptionsCarrierIdMessageTypeId($version, $carrierId, $messageTypeId)
     {
         $uri = "/d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 
 
@@ -455,7 +455,7 @@ class Users
     public function putNotificationsInstantCarriersSubscriptionsUsersCarrierIdMessageTypeIdUserId($version, $carrierId, $messageTypeId, $userId)
     {
         $uri = "/d2l/api/lp/$version/notifications/instant/carriers/$carrierId/subscriptions/$messageTypeId/users/$userId";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 
 
@@ -509,7 +509,7 @@ class Users
     public function deleteUsersPasswordUserId($version, $userId)
     {
         $uri = "/d2l/api/lp/$version/users/$userId/password";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -523,7 +523,7 @@ class Users
     public function postUsersPasswordUserId($version, $userId)
     {
         $uri = "/d2l/api/lp/$version/users/$userId/password";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -553,7 +553,7 @@ class Users
     public function deleteProfileMyprofileImage($version)
     {
         $uri = "/d2l/api/lp/$version/profile/myProfile/image";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -567,7 +567,7 @@ class Users
     public function deleteProfileImageProfileId($version, $profileId)
     {
         $uri = "/d2l/api/lp/$version/profile/$profileId/image";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -581,7 +581,7 @@ class Users
     public function deleteProfileUserImageUserId($version, $userId)
     {
         $uri = "/d2l/api/lp/$version/profile/user/$userId/image";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -722,7 +722,7 @@ class Users
     public function postProfileMyprofileImage($version)
     {
         $uri = "/d2l/api/lp/$version/profile/myProfile/image";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -740,7 +740,7 @@ class Users
     public function postProfileImageProfileId($version, $profileId)
     {
         $uri = "/d2l/api/lp/$version/profile/$profileId/image";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -758,7 +758,7 @@ class Users
     public function postProfileUserImageUserId($version, $userId)
     {
         $uri = "/d2l/api/lp/$version/profile/user/$userId/image";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -887,7 +887,7 @@ class Users
         $uri = "/d2l/api/lp/$version/roles/?$queryString";
         $body = $roleCopyData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -901,7 +901,7 @@ class Users
     public function deleteSessionsUserId($version, $userId)
     {
         $uri = "/d2l/api/lp/$version/sessions/$userId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -1029,7 +1029,7 @@ class Users
     public function deleteGlobalusermappingUsersUserId($version, $userId)
     {
         $uri = "/d2l/api/lp/$version/globalusermapping/users/$userid";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -1096,7 +1096,7 @@ class Users
     public function deleteRelationships($version)
     {
         $uri = "/d2l/api/bfp/$version/relationships/";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 

@@ -20,7 +20,7 @@ class NewsService
     public function deleteNewsOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -36,7 +36,7 @@ class NewsService
     public function deleteNewsAttachmentsOrgUnitIdNewsItemIdFileId($version, $orgUnitId, $newsItemId, $fileId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/$fileId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -249,7 +249,7 @@ class NewsService
         $uri = "/d2l/api/le/$version/$orgUnitId/news/";
         $body = $newsItemData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -267,7 +267,7 @@ class NewsService
     public function postNewsDeletedRestoreOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/news/deleted/$newsItemId/restore";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -286,7 +286,7 @@ class NewsService
     public function postNewsAttachmentsOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/attachments/";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -301,7 +301,7 @@ class NewsService
     public function postNewsDismissOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/dismiss";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -316,7 +316,7 @@ class NewsService
     public function postNewsPublishOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/publish";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -331,7 +331,7 @@ class NewsService
     public function postNewsRestoreOrgUnitIdNewsItemId($version, $orgUnitId, $newsItemId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/news/$newsItemId/restore";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 

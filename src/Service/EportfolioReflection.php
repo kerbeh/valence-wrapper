@@ -19,7 +19,7 @@ class EportfolioReflection
     public function deleteReflectionObjectId($version, $objectId)
     {
         $uri = "/d2l/api/eP/$version/reflection/$objectId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -34,7 +34,7 @@ class EportfolioReflection
     public function deleteReflectionOnReflectionIdObjectId($version, $reflectionId, $objectId)
     {
         $uri = "/d2l/api/eP/$version/reflection/$reflectionId/on/$objectId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -77,7 +77,7 @@ class EportfolioReflection
         $uri = "/d2l/api/eP/$version/reflections/new";
         $body = $reflection;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -97,7 +97,7 @@ class EportfolioReflection
         $uri = "/d2l/api/eP/$version/reflection/$objectId";
         $body = $reflection;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -112,6 +112,6 @@ class EportfolioReflection
     public function postReflectionOnReflectionIdObjectId($version, $reflectionId, $objectId)
     {
         $uri = "/d2l/api/eP/$version/reflection/$reflectionId/on/$objectId";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 }

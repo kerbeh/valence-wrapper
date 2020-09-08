@@ -19,7 +19,7 @@ class Discussions
     public function deleteDiscussionsForumsOrgUnitId($version, $orgUnitId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -56,7 +56,7 @@ class Discussions
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/";
         $body = $forumData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -126,7 +126,7 @@ class Discussions
     public function deleteDiscussionsForumsTopicsOrgUnitIdForumIdTopicId($version, $orgUnitId, $forumId, $topicId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -175,7 +175,7 @@ class Discussions
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/groupRestrictions/";
         $body = $groupRestriction;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("DELETE", $uri, $headers, $body);
     }
 
 
@@ -253,7 +253,7 @@ class Discussions
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/";
         $body = $createTopicData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -311,7 +311,7 @@ class Discussions
     public function deleteDiscussionsForumsTopicsPostsOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -328,7 +328,7 @@ class Discussions
     public function deleteDiscussionsForumsTopicsPostsRatingMyratingOrgUnitIdForumIdTopicIdPostId($version, $orgUnitId, $forumId, $topicId, $postId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/$postId/Rating/MyRating";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -570,7 +570,7 @@ class Discussions
         $uri = "/d2l/api/le/$version/$orgUnitId/discussions/forums/$forumId/topics/$topicId/posts/";
         $body = $createPostData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 

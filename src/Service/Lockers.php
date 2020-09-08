@@ -24,7 +24,7 @@ class Lockers
     public function deleteLockerMylockerPath($version, $path)
     {
         $uri = "/d2l/api/le/$version/locker/myLocker/$path";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -44,7 +44,7 @@ class Lockers
     public function deleteLockerUserUserIdPath($version, $userId, $path)
     {
         $uri = "/d2l/api/le/$version/locker/user/$userId/$path";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -114,7 +114,7 @@ class Lockers
         $uri = "/d2l/api/le/$version/locker/myLocker/$path";
         $body = $folderName;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -138,7 +138,7 @@ class Lockers
         $uri = "/d2l/api/le/$version/locker/user/$userId/$path";
         $body = $folderName;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -200,7 +200,7 @@ class Lockers
     public function deleteLockerGroupOrgUnitIdGroupIdPath($version, $orgUnitId, $groupId, $path)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/locker/group/$groupId/$path";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -261,7 +261,7 @@ class Lockers
     public function postGroupcategoriesLockerOrgUnitIdGroupCategoryId($version, $orgUnitId, $groupCategoryId)
     {
         $uri = "/d2l/api/lp/$version/$orgUnitId/groupcategories/$groupCategoryId/locker";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -286,7 +286,7 @@ class Lockers
         $uri = "/d2l/api/le/$version/$orgUnitId/locker/group/$groupId/$path";
         $body = $folderName;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 

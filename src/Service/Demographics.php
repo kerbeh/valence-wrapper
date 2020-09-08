@@ -28,7 +28,7 @@ class Demographics
         ];
         $queryString = http_build_query($queryParrams);
         $uri = "/d2l/api/lp/$version/demographics/users/$userId?$queryString";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -219,7 +219,7 @@ class Demographics
     public function deleteDemographicsFieldsFieldId($version, $fieldId)
     {
         $uri = "/d2l/api/lp/$version/demographics/fields/$fieldId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -288,7 +288,7 @@ class Demographics
         $uri = "/d2l/api/lp/$version/demographics/fields/";
         $body = $demographicsField;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 

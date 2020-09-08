@@ -20,7 +20,7 @@ class CourseContent
     public function deleteContentModulesOrgUnitIdModuleId($version, $orgUnitId, $moduleId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/content/modules/$moduleId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -35,7 +35,7 @@ class CourseContent
     public function deleteContentTopicsOrgUnitIdTopicId($version, $orgUnitId, $topicId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/content/topics/$topicId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -220,7 +220,7 @@ class CourseContent
         ];
         $queryString = http_build_query($queryParrams);
         $uri = "/d2l/api/le/$version/$orgUnitId/content/modules/$moduleId/structure/?$queryString";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -240,7 +240,7 @@ class CourseContent
         $uri = "/d2l/api/le/$version/$orgUnitId/content/root/";
         $body = $contentObjectData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -305,7 +305,7 @@ class CourseContent
     public function putContentTopicsFileOrgUnitIdTopicId($version, $orgUnitId, $topicId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/content/topics/$topicId/file";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 
 
@@ -354,7 +354,7 @@ class CourseContent
     public function deleteContentIsbnOrgUnitIdIsbn($version, $orgUnitId, $isbn)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/content/isbn/$isbn";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -426,7 +426,7 @@ class CourseContent
         $uri = "/d2l/api/le/$version/$orgUnitId/content/isbn/";
         $body = $isbnAssociationData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -1132,7 +1132,7 @@ class CourseContent
         $uri = "/d2l/api/le/$version/$orgUnitId/content/userprogress/";
         $body = $userProgressData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -1184,7 +1184,7 @@ class CourseContent
     public function putContentPacingOrgUnitId($version, $orgUnitId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/content/pacing";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 
 
@@ -1199,6 +1199,6 @@ class CourseContent
     public function putContentPacingModulesOrgUnitIdModuleId($version, $orgUnitId, $moduleId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/content/pacing/modules/$moduleId";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 }

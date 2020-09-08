@@ -170,7 +170,7 @@ class LearningRepositoryObjects
     public function postObjectsDeleteObjectId($version, $objectId)
     {
         $uri = "/d2l/api/lr/$version/objects/$objectId/delete/";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -194,7 +194,7 @@ class LearningRepositoryObjects
     public function postObjectsObjectId($version, $objectId)
     {
         $uri = "/d2l/api/lr/$version/objects/$objectId/";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -222,7 +222,7 @@ class LearningRepositoryObjects
         $uri = "/d2l/api/lr/$version/objects/$objectId/properties/";
         $body = $lRWSObjectPropertiesInput;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -251,7 +251,7 @@ class LearningRepositoryObjects
         $uri = "/d2l/api/lr/$version/objects/$objectId/$objectVersion/properties/";
         $body = $lRWSObjectPropertiesInput;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -274,7 +274,7 @@ class LearningRepositoryObjects
     public function putObjects($version)
     {
         $uri = "/d2l/api/lr/$version/objects/";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 
 

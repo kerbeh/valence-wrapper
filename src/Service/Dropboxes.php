@@ -21,7 +21,7 @@ class Dropboxes
     public function deleteDropboxFoldersSpecialaccessOrgUnitIdFolderIdUserId($version, $orgUnitId, $folderId, $userId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/specialaccess/$userId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -188,7 +188,7 @@ class Dropboxes
     public function postDropboxFoldersOrgUnitId($version, $orgUnitId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -207,7 +207,7 @@ class Dropboxes
     public function putDropboxFoldersOrgUnitIdFolderId($version, $orgUnitId, $folderId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 
 
@@ -297,7 +297,7 @@ class Dropboxes
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/group/$groupId";
         $body = $description;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -321,7 +321,7 @@ class Dropboxes
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/mysubmissions/";
         $body = $description;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -341,7 +341,7 @@ class Dropboxes
     public function postDropboxFoldersSubmissionsFilesMarkasreadOrgUnitIdFolderIdSubmissionId($version, $orgUnitId, $folderId, $submissionId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/submissions/$submissionId/files/$fileId/markAsRead";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -360,7 +360,7 @@ class Dropboxes
     public function deleteDropboxFoldersFeedbackAttachmentsOrgUnitIdFolderIdEntityTypeEntityIdFileId($version, $orgUnitId, $folderId, $entityType, $entityId, $fileId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/attachments/$fileId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -425,7 +425,7 @@ class Dropboxes
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId";
         $body = $dropboxFeedback;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -448,7 +448,7 @@ class Dropboxes
     public function postDropboxFoldersFeedbackAttachOrgUnitIdFolderIdEntityTypeEntityId($version, $orgUnitId, $folderId, $entityType, $entityId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/attach";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -475,7 +475,7 @@ class Dropboxes
     public function postDropboxFoldersFeedbackUploadOrgUnitIdFolderIdEntityTypeEntityId($version, $orgUnitId, $folderId, $entityType, $entityId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/feedback/$entityType/$entityId/upload";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -496,7 +496,7 @@ class Dropboxes
     public function putDropboxFoldersEntitiesCompletionOrgUnitIdFolderIdEntityId($version, $orgUnitId, $folderId, $entityId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/folders/$folderId/entities/$entityId/completion";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 
 
@@ -511,7 +511,7 @@ class Dropboxes
     public function deleteDropboxCategoriesOrgUnitIdCategoryId($version, $orgUnitId, $categoryId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/categories/$categoryId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -562,7 +562,7 @@ class Dropboxes
     public function postDropboxCategoriesOrgUnitId($version, $orgUnitId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/categories/";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -581,6 +581,6 @@ class Dropboxes
     public function putDropboxCategoriesOrgUnitIdCategoryId($version, $orgUnitId, $categoryId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/dropbox/categories/$categoryId";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 }

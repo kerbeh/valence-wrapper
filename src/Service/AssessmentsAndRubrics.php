@@ -96,6 +96,6 @@ class AssessmentsAndRubrics
         ];
         $queryString = http_build_query($queryParrams);
         $uri = "/d2l/api/le/$version/$orgUnitId/assessment?$queryString";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 }

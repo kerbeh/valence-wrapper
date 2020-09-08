@@ -86,7 +86,7 @@ class SettingsForUserAccounts
     public function deleteWidgetdataOrgUnitIdCustomWidgetId($version, $orgUnitId, $customWidgetId)
     {
         $uri = "/d2l/api/lp/$version/$orgUnitId/widgetdata/$customWidgetId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -101,7 +101,7 @@ class SettingsForUserAccounts
     public function deleteWidgetdataMydataOrgUnitIdCustomWidgetId($version, $orgUnitId, $customWidgetId)
     {
         $uri = "/d2l/api/lp/$version/$orgUnitId/widgetdata/$customWidgetId/mydata";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 

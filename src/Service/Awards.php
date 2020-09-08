@@ -20,7 +20,7 @@ class Awards
     public function deleteOrgunitsAssociationsOrgUnitIdAssociationId($version, $orgUnitId, $associationId)
     {
         $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/associations/$associationId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -158,7 +158,7 @@ class Awards
         $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/associations/";
         $body = $associationCreate;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -193,7 +193,7 @@ class Awards
     public function deleteAwardsAwardId($version, $awardId)
     {
         $uri = "/d2l/api/bas/$version/awards/$awardId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -258,7 +258,7 @@ class Awards
         $uri = "/d2l/api/bas/$version/awards/";
         $body = $awardCreate;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -396,7 +396,7 @@ class Awards
     public function deleteIssuedOrgUnitIdIssuedId($version, $orgUnitId, $issuedId)
     {
         $uri = "/d2l/api/bas/$version/issued/$issuedId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -545,7 +545,7 @@ class Awards
         $uri = "/d2l/api/bas/$version/orgunits/$orgUnitId/issued/";
         $body = $issuedAwardCreate;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -579,7 +579,7 @@ class Awards
     public function deleteLibraryIconsFileName($version, $fileName)
     {
         $uri = "/d2l/api/bas/$version/library/icons/$fileName";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -593,7 +593,7 @@ class Awards
     public function deleteLibraryTemplatesFileName($version, $fileName)
     {
         $uri = "/d2l/api/bas/$version/library/templates/$fileName";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -697,7 +697,7 @@ class Awards
         $uri = "/d2l/api/bas/$version/library/icons/";
         $body = $libraryInputFileInfo;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -715,7 +715,7 @@ class Awards
         $uri = "/d2l/api/bas/$version/library/templates/";
         $body = $libraryInputFileInfo;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -729,7 +729,7 @@ class Awards
     public function deleteIssuedSharingProfileIssuedId($version, $issuedId)
     {
         $uri = "/d2l/api/bas/$version/issued/$issuedId/sharing/profile";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -743,6 +743,6 @@ class Awards
     public function putIssuedSharingProfileIssuedId($version, $issuedId)
     {
         $uri = "/d2l/api/bas/$version/issued/$issuedId/sharing/profile";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 }

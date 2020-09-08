@@ -19,7 +19,7 @@ class EportfolioCollections
     public function deleteCollectionObjectId($version, $objectId)
     {
         $uri = "/d2l/api/eP/$version/collection/$objectId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -88,7 +88,7 @@ class EportfolioCollections
         $uri = "/d2l/api/eP/$version/collections/new";
         $body = $collection;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -108,7 +108,7 @@ class EportfolioCollections
         $uri = "/d2l/api/eP/$version/collection/$objectId";
         $body = $collection;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -123,7 +123,7 @@ class EportfolioCollections
     public function postCollectionAddCollectionIdObjectId($version, $collectionId, $objectId)
     {
         $uri = "/d2l/api/eP/$version/collection/$collectionId/add/$objectId";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -138,6 +138,6 @@ class EportfolioCollections
     public function postCollectionRemoveCollectionIdObjectId($version, $collectionId, $objectId)
     {
         $uri = "/d2l/api/eP/$version/collection/$collectionId/remove/$objectId";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 }

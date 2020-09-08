@@ -19,7 +19,7 @@ class Courses
     public function deleteCoursesOrgUnitId($version, $orgUnitId)
     {
         $uri = "/d2l/api/lp/$version/courses/$orgUnitId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -97,7 +97,7 @@ class Courses
         $uri = "/d2l/api/lp/$version/courses/";
         $body = $createCourseOffering;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -133,7 +133,7 @@ class Courses
     public function putCoursesImageOrgUnitId($version, $orgUnitId)
     {
         $uri = "/d2l/api/lp/$version/courses/$orgUnitId/image";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 
 
@@ -147,7 +147,7 @@ class Courses
     public function deleteCoursetemplatesOrgUnitId($version, $orgUnitId)
     {
         $uri = "/d2l/api/lp/$version/coursetemplates/$orgUnitId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -200,7 +200,7 @@ class Courses
         $uri = "/d2l/api/lp/$version/coursetemplates/";
         $body = $createCourseTemplate;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -258,7 +258,7 @@ class Courses
         $uri = "/d2l/api/le/$version/import/$orgUnitId/copy/";
         $body = $createCopyJobRequest;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -363,6 +363,6 @@ class Courses
         ];
         $queryString = http_build_query($queryParrams);
         $uri = "/d2l/api/le/$version/import/$orgUnitId/imports/?$queryString";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 }

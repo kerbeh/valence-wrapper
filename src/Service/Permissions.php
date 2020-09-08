@@ -20,7 +20,7 @@ class Permissions
     public function deletePermissionsToolsCapabilitiesToolIdCapabilityId($version, $toolId, $capabilityId)
     {
         $uri = "/d2l/api/lp/$version/permissions/tools/$toolId/capabilities/$capabilityId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -35,7 +35,7 @@ class Permissions
     public function deletePermissionsToolsClaimsAllowedToolIdGrantId($version, $toolId, $grantId)
     {
         $uri = "/d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/$grantId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -225,7 +225,7 @@ class Permissions
         $uri = "/d2l/api/lp/$version/permissions/tools/$toolId/capabilities/";
         $body = $capability;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -244,6 +244,6 @@ class Permissions
     public function putPermissionsToolsClaimsAllowedToolIdGrantId($version, $toolId, $grantId)
     {
         $uri = "/d2l/api/lp/$version/permissions/tools/$toolId/claims/allowed/$grantId";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 }

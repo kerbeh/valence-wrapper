@@ -20,7 +20,7 @@ class Checklists
     public function deleteChecklistsOrgUnitIdChecklistId($version, $orgUnitId, $checklistId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/checklists/$checklistId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -36,7 +36,7 @@ class Checklists
     public function deleteChecklistsCategoriesOrgUnitIdChecklistIdCategoryId($version, $orgUnitId, $checklistId, $categoryId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/checklists/$checklistId/categories/$categoryId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -52,7 +52,7 @@ class Checklists
     public function deleteChecklistsItemsOrgUnitIdChecklistIdChecklistItemId($version, $orgUnitId, $checklistId, $checklistItemId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/checklists/$checklistId/items/$checklistItemId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -184,7 +184,7 @@ class Checklists
         $uri = "/d2l/api/le/$version/$orgUnitId/checklists/";
         $body = $checklistData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -205,7 +205,7 @@ class Checklists
         $uri = "/d2l/api/le/$version/$orgUnitId/checklists/$checklistId/categories/";
         $body = $checklistCategoryData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -226,7 +226,7 @@ class Checklists
         $uri = "/d2l/api/le/$version/$orgUnitId/checklists/$checklistId/items/";
         $body = $checklistItemData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 

@@ -310,7 +310,7 @@ class ConfigurationVariables
     public function deleteConfigvariablesResolverVariableId($version, $variableId)
     {
         $uri = "/d2l/api/lp/$version/configVariables/$variableId/resolver";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 

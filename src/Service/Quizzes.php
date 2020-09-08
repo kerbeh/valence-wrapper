@@ -20,7 +20,7 @@ class Quizzes
     public function deleteQuizzesOrgUnitIdQuizId($version, $orgUnitId, $quizId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/$quizId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -36,7 +36,7 @@ class Quizzes
     public function deleteQuizzesSpecialaccessOrgUnitIdQuizIdUserId($version, $orgUnitId, $quizId, $userId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/$quizId/specialaccess/$userId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -157,7 +157,7 @@ class Quizzes
         $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/";
         $body = $quizData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -259,7 +259,7 @@ class Quizzes
     public function deleteQuizzesCategoriesOrgUnitIdCategoryId($version, $orgUnitId, $categoryId)
     {
         $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/categories/$categoryId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -315,7 +315,7 @@ class Quizzes
         $uri = "/d2l/api/le/$version/$orgUnitId/quizzes/categories/";
         $body = $categoryData;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 

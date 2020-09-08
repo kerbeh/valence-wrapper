@@ -70,7 +70,7 @@ class Tools
     public function putToolsOrgToolId($version, $toolId)
     {
         $uri = "/d2l/api/lp/$version/tools/org/$toolId";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 
 
@@ -87,7 +87,7 @@ class Tools
     public function putToolsOrgOudefaultToolId($version, $toolId)
     {
         $uri = "/d2l/api/lp/$version/tools/org/$toolId/OUDefault";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 
 
@@ -104,7 +104,7 @@ class Tools
     public function putToolsOrgOudefaultOverrideToolId($version, $toolId)
     {
         $uri = "/d2l/api/lp/$version/tools/org/$toolId/OUDefault/override";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 
 
@@ -213,6 +213,6 @@ class Tools
     public function putToolsOrgunitsOrgUnitIdToolId($version, $orgUnitId, $toolId)
     {
         $uri = "/d2l/api/lp/$version/tools/orgUnits/$orgUnitId/$toolId";
-        return new Request('GET', $uri);
+        return new Request('PUT', $uri);
     }
 }

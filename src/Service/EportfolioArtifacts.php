@@ -19,7 +19,7 @@ class EportfolioArtifacts
     public function deleteArtifactObjectId($version, $objectId)
     {
         $uri = "/d2l/api/eP/$version/artifact/$objectId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -33,7 +33,7 @@ class EportfolioArtifacts
     public function deleteArtifactFileObjectId($version, $objectId)
     {
         $uri = "/d2l/api/eP/$version/artifact/file/$objectId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -47,7 +47,7 @@ class EportfolioArtifacts
     public function deleteArtifactLinkObjectId($version, $objectId)
     {
         $uri = "/d2l/api/eP/$version/artifact/link/$objectId";
-        return new Request('GET', $uri);
+        return new Request('DELETE', $uri);
     }
 
 
@@ -136,7 +136,7 @@ class EportfolioArtifacts
         $uri = "/d2l/api/eP/$version/artifacts/file/new";
         $body = $fileArtifact;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -161,7 +161,7 @@ class EportfolioArtifacts
         ];
         $queryString = http_build_query($queryParrams);
         $uri = "/d2l/api/eP/$version/artifacts/file/upload?$queryString";
-        return new Request('GET', $uri);
+        return new Request('POST', $uri);
     }
 
 
@@ -181,7 +181,7 @@ class EportfolioArtifacts
         $uri = "/d2l/api/eP/$version/artifact/file/$objectId";
         $body = $fileArtifact;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -200,7 +200,7 @@ class EportfolioArtifacts
         $uri = "/d2l/api/eP/$version/artifacts/link/new";
         $body = $urlArtifact;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 
 
@@ -220,6 +220,6 @@ class EportfolioArtifacts
         $uri = "/d2l/api/eP/$version/artifact/link/$objectId";
         $body = $urlArtifact;
         $headers = ["content-type" => 'application/json'];
-        return new Request("PUT", $uri, $headers, $body);
+        return new Request("POST", $uri, $headers, $body);
     }
 }
